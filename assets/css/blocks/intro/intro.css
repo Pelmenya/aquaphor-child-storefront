@@ -1,0 +1,21 @@
+@import url(./__title/intro__title.css);
+@import url(./__solutions/intro__solutions.css);
+@import url(./__wrap/intro__wrap.css);
+@import url(./__swiper/intro__swiper.css);
+@import url(./__swiper-slide/intro__swiper-slide.css);
+@import url(./__service-bg-pic/intro__service-bg-pic.css);
+@import url(./__swiper-slide-bg-pic/intro__swiper-slide-bg-pic.css);
+@import url(./__swiper-slide-info/intro__swiper-slide-info.css);
+@import url(./__swiper-slide-config/intro__swiper-slide-config.css);
+@import url(./__swiper-slide-title/intro__swiper-slide-title.css);
+@import url(./__swiper-slide-offer/intro__swiper-slide-offer.css);
+@import url(./__service/intro__service.css);
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:transparent;
+  width: 100%;
+}
+

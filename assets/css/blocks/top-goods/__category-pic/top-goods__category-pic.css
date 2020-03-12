@@ -1,0 +1,8 @@
+.top-goods__category-pic {
+    width: 150px;
+    background-position: center;
+    box-sizing: border-box;
+    background-size:contain;
+    background-repeat: no-repeat;
+    margin-right: 24px;
+}

@@ -1,0 +1,14 @@
+.top-goods__category-link {
+  text-decoration: none;
+  color: #1d2b36;
+  line-height: 22px;
+  }
+
+.top-goods__category-link::before {
+  content: '\25BB\00a0 ';
+}
+
+.top-goods__category-link:hover {
+  color: #164cb5;
+
+}

@@ -1,0 +1,9 @@
+.header__menu-col {
+  display: flex;
+  flex-direction: column;
+  padding-right: 36px;
+}
+
+.header__menu-col:last-of-type {
+  padding-right: 0px;
+}

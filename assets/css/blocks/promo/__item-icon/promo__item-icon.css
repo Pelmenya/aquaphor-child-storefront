@@ -1,0 +1,9 @@
+.promo__item-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  background-size: cover;
+  background-image: url(../../../images/phone_white.png);
+  background-repeat: no-repeat;
+
+}

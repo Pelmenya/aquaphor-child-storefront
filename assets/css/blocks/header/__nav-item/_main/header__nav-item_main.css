@@ -1,0 +1,17 @@
+.header__nav-item_main {
+    font-size: 17px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: -0.11px;
+    color: var(--dark);
+
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+}
+
+.header__nav-item_main:first-of-type {
+  padding-left: 0;
+}

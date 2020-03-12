@@ -1,0 +1,28 @@
+{
+  "name": "aquaphor-child-storefront",
+  "version": "1.0.0",
+  "description": "Aquaphor Site of company Aquaphor Engineering on WordPress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pelmenya/aquaphor-child-storefront.git"
+  },
+  "author": "Dmitry Lyapin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pelmenya/aquaphor-child-storefront/issues"
+  },
+  "homepage": "https://github.com/Pelmenya/aquaphor-child-storefront#readme",
+  "devDependencies": {
+    "bem-tools-core": "0.0.3",
+    "bem-tools-create": "^2.3.0",
+    "eslint": "6.6.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-plugin-import": "2.18.2",
+    "prettier": "1.19.1",
+    "prettier-airbnb-config": "1.0.0"
+  }
+}

@@ -1,0 +1,8 @@
+.intro__service-bg-pic {
+  height: 250px;
+  transition: transform 0.5s ease;
+}
+
+.intro__service-bg-pic:hover {
+  transform: scale(1.2);
+}

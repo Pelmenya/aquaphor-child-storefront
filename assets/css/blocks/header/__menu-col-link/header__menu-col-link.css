@@ -1,0 +1,15 @@
+.header__menu-col-link {
+  cursor: url('../../../images/lapka.png'), pointer;
+  text-decoration: none;
+  color: #1d2b36;
+  margin-top: 15px;
+}
+
+.header__menu-col-link:first-of-type {
+  margin-top: 0px;
+}
+
+.header__menu-col-link:hover {
+  color: #164cb5;
+}
+
