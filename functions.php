@@ -8,15 +8,15 @@
  */
 
 
-if( ! defined('AQUAPHOR_THEME_VERSION') )  define('AQUAPHOR_THEME_VERSION', wp_get_theme()->get( 'Version' ) ); 
-if( ! defined('AQUAPHOR_THEME_PATH') )     define('AQUAPHOR_THEME_PATH', get_template_directory() ); 
-if( ! defined('AQUAPHOR_THEME_URL') )      define('AQUAPHOR_THEME_URL', get_template_directory_uri() ); 
-if( ! defined('AQUAPHOR_THEME_ASSETS') )   define('AQUAPHOR_THEME_ASSETS', get_template_directory_uri().'/assets' ); 
+if( ! defined('AQUAPHOR_THEME_VERSION') )  define('AQUAPHOR_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
+if( ! defined('AQUAPHOR_THEME_PATH') )     define('AQUAPHOR_THEME_PATH', get_template_directory() );
+if( ! defined('AQUAPHOR_THEME_URL') )      define('AQUAPHOR_THEME_URL', get_template_directory_uri() );
+if( ! defined('AQUAPHOR_THEME_ASSETS') )   define('AQUAPHOR_THEME_ASSETS', get_template_directory_uri().'/assets' );
 
 /**
  *  Отключаем блоки в header
- * 
- * 
+ *
+ *
  */
 
 
@@ -97,7 +97,7 @@ register_sidebar( array(
     'before_widget' => '<div class="header-widget">',
     'after_widget'  => '</div>'
  ) );
- 
+
 /**
  *  Грузим наши стили
  */

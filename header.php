@@ -27,7 +27,7 @@
 <div id="page" class="hfeed site">
 
 	<?php do_action( 'storefront_before_header' ); ?>
-	
+
 
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
 	<header class="header">
@@ -129,7 +129,7 @@
             </g>
           </g>
         </svg>
-        
+
         <nav class="header__nav">
           <div class="header__nav-item header__nav-item_main header__nav-item_page">Системы</div>
           <div class="header__nav-item header__nav-item_main">Магистральные</div>
@@ -140,11 +140,12 @@
 
         <div class="header__search-container">
             <?php the_widget( 'WC_Widget_Product_Search', 'title=' ); ?>
-        </div> 
+        </div>
 
         <div class="header__basket-container">
+        <?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
         </div>
-          <a href="#" class="header__nav-item">Личный кабинет</a>
+          <a href="#" class="header__nav-item header__nav-item_one">Личный кабинет</a>
       </div>
     </header>
 

@@ -7,6 +7,7 @@
 @import url(./__nav/header__nav.css);
 @import url(./__nav-item/header__nav-item.css);
 @import url(./__nav-item/_main/header__nav-item_main.css);
+@import url(./__nav-item/_one/header__nav-item_one.css);
 @import url(./__nav-item/_page/header__nav-item_page.css);
 @import url(./__nav-item/_menu/header__nav-item_menu.css);
 @import url(./__menu/header__menu.css);
@@ -19,6 +20,8 @@
 @import url(./__nav-item/_menu/header__nav-item_menu_services.css);
 @import url(./__item-icon/header__item-icon.css);
 @import url(./__item-icons/header__item-icons.css);
+@import url(./__basket-container/header__basket-container.css);
+@import url(./__search-container/header__search-container.css);
 @import url(./__item-icon/_basket/header__item-icon_basket.css);
 @import url(./__item-icon/_search/header__item-icon_search.css);
 
@@ -31,7 +34,11 @@
   align-items: center;
   background-color: #fff;
   font-family: Proxima Nova Rg;
+}
+
+/*{
 
   border: 1px solid red;
   box-sizing: border-box;
-}
+
+}*/
