@@ -1,0 +1,8 @@
+.header__item-icon {
+  height: 16px;
+  width: 16px;
+  padding-right: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: url('../../../images/lapka.png'), pointer;
+}

@@ -1,0 +1,16 @@
+@import url(./__content/promo__content.css);
+@import url(./__wrap/promo__wrap.css);
+@import url(./__item-wrap/promo__item-wrap.css);
+@import url(./__item-icon/promo__item-icon.css);
+@import url(./__item/promo__item.css);
+@import url(./__title/promo__title.css);
+
+.promo {
+  background: #164cb5;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}

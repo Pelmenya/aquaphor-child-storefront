@@ -1,0 +1,8 @@
+.intro__solutions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 524px;
+  max-width: 1152px;
+  padding-bottom: 50px;
+}

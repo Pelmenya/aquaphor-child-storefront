@@ -1,0 +1,20 @@
+
+@import url(./__title/top-goods__title.css);
+@import url(./__wrap/top-goods__wrap.css);
+@import url(./__category/top-goods__category.css);
+@import url(./__category-info/top-goods__category-info.css);
+@import url(./__category-link/top-goods__category-link.css);
+@import url(./__category-links/top-goods__category-links.css);
+@import url(./__category-pic/top-goods__category-pic.css);
+@import url(./__category-select/top-goods__category-select.css);
+
+
+.top-goods {
+  display: flex;
+  align-items: center;
+  max-width: 1152px;
+  width: 100%;
+  background-color: #fff;
+  color: #556575;
+  border: 1px solid #e0e0e0;
+}

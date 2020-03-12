@@ -1,0 +1,83 @@
+/*
+ Theme Name:   StoreFront Child Theme
+ description:  A child theme of the Store default WooCommerce theme
+ Author:       Aquaphor Develop Team
+ Template:     storefront
+ Version:      1.0.0
+*/
+
+@import url(./assets/fonts/ProximaNova/stylesheet.css);
+@import url(./assets/css/blocks/promo/promo.css);
+@import url(./assets/css/blocks/header/header.css);
+@import url(./assets/css/blocks/top-goods/top-goods.css);
+@import url(./assets/css/blocks/intro/intro.css);
+
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+/* модернизируем блок search*/
+.widget_product_search form::before {
+  content: none;
+}
+
+.widget_product_search form::after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  line-height: inherit;
+  vertical-align: baseline;
+  content: "\f002";
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  line-height: 1;
+}
+
+.widget_product_search form input[type="search"] {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 8px;
+  padding-right: 2.617924em;
+  height: 28px;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+.widget_product_search form input[type="search"] {
+  outline-style: none;
+}
+
+.woocommerce-product-search {
+  width: 243px;
+  margin-bottom: 0px;
+}
+
+:root {
+  --blue-blue: #164cb5;
+  --cornflower-blue: #4b7dd7;
+  --pale-grey: #f1f6ff;
+  --dull-orange: #ec8928;
+  --dark: #28293c;
+  --black-70: rgba(26, 26, 26, 0.7);
+  --dark-40: rgba(40, 41, 60, 0.4);
+  --dark-24: rgba(40, 41, 60, 0.24);
+  --dark-10: rgba(40, 41, 60, 0.1);
+  --dark-4: rgba(40, 41, 60, 0.04);
+  --white: #ffffff;
+  --white-70: rgba(255, 255, 255, 0.7);
+  --white-40: rgba(255, 255, 255, 0.4);
+  --white-24: rgba(255, 255, 255, 0.24);
+  --white-10: rgba(255, 255, 255, 0.1);
+  --white-4: rgba(255, 255, 255, 0.04);
+}

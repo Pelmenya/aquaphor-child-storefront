@@ -1,0 +1,9 @@
+.top-goods__wrap {
+   padding-left: 24px;
+   padding-top:64px;
+   padding-bottom: 56px;
+   padding-right: 24px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}

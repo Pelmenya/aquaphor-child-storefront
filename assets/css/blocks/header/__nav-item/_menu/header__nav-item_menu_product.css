@@ -1,0 +1,7 @@
+.header__nav-item_menu_product{
+  position: relative;
+}
+
+.header__nav-item_menu_product:hover .header__menu_product {
+  display: flex;
+}

@@ -1,0 +1,11 @@
+.promo__content {
+  width: 100%;
+  max-width: 1152px;
+  height: inherit;
+  color: #fff;
+  font-size: 12px;
+  font-family: 'icomoon', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

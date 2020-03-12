@@ -1,0 +1,10 @@
+.header__tel {
+  margin-right: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: -0.11px;
+  color: var(--dark);
+}

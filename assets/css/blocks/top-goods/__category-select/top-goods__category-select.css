@@ -1,0 +1,9 @@
+.top-goods__category-select {
+  color: #164cb5;
+  text-decoration: none;
+  margin-top: 24px;
+}
+
+.top-goods__category-select::after {
+  content: '\00a0\00a0\00a0\279F';
+}

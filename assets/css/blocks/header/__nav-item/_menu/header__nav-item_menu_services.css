@@ -1,0 +1,7 @@
+.header__nav-item_menu_services {
+  position: relative;
+}
+
+.header__nav-item_menu_services:hover .header__menu_services {
+  display: flex;
+}

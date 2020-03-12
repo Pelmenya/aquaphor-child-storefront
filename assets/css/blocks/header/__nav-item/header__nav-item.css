@@ -1,0 +1,29 @@
+.header__nav-item {
+  padding-left: 40px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.47;
+  letter-spacing: -0.1px;
+  color: var(--dark);
+}
+
+.header__nav-item:focus {
+  outline-style: none;
+}
+
+.header__nav-item:hover {
+  color: var(--cornflower-blue);
+}
+
+.header__nav-item:first-of-type {
+  padding-left: 220px;
+}
