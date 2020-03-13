@@ -21,6 +21,8 @@
 @import url(./__item-icon/header__item-icon.css);
 @import url(./__item-icons/header__item-icons.css);
 @import url(./__basket-container/header__basket-container.css);
+@import url(./__basket-popup/header__basket-popup.css);
+@import url(./__goods-count/header__goods-count.css);
 @import url(./__search-container/header__search-container.css);
 @import url(./__item-icon/_basket/header__item-icon_basket.css);
 @import url(./__item-icon/_search/header__item-icon_search.css);

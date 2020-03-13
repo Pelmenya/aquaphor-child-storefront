@@ -65,38 +65,50 @@ if ( ! function_exists( 'storefront_secondary_navigation' ) ) {
 	}
 }
 
-if ( ! function_exists( 'storefront_header_cart' ) ) {
+if ( ! function_exists( 'storefront_cart_link' ) ) {
 	/**
-	 * Display Header Cart
+	 * Cart Link
+	 * Displayed a link to the cart including the number of items present and the cart total
 	 *
-	 * @since  1.0.0
-	 * @uses  storefront_is_woocommerce_activated() check if WooCommerce is activated
 	 * @return void
+	 * @since  1.0.0
+   *
+   * Переопределил базовую функцию для вывода числа товаров
 	 */
-	function storefront_header_cart() {
+	function storefront_cart_link() {
+		?>
+			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
+				<?php /* translators: %d: number of items in cart */ ?>
+				 <span class="count"><?php echo wp_kses_data(  WC()->cart->get_cart_contents_count() ); ?></span>
+			</a>
+		<?php
 	}
 }
+
+function storefront_header_cart() {}
 
 
 /**
  *  Регистрируем виджеты в header
  */
-
-register_sidebar( array(
+function aquaphor_widgets_init(){
+  register_sidebar( array(
    'name'          => 'Header Top Widget',
    'id'            => 'header-top-widget',
    'class'         => 'header-top-widget',
    'before_widget' => '<div class="header-top-widget">',
    'after_widget'  => '</div>'
 ) );
-
-register_sidebar( array(
+  register_sidebar( array(
     'name'          => 'Header Widget',
     'id'            => 'header-widget',
     'class'         => 'header-widget',
     'before_widget' => '<div class="header-widget">',
     'after_widget'  => '</div>'
  ) );
+};
+
+add_action( 'widgets_init', 'aquaphor_widgets_init');
 
 /**
  *  Грузим наши стили

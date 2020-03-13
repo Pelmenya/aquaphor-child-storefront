@@ -131,11 +131,11 @@
         </svg>
 
         <nav class="header__nav">
-          <div class="header__nav-item header__nav-item_main header__nav-item_page">Системы</div>
-          <div class="header__nav-item header__nav-item_main">Магистральные</div>
-          <div class="header__nav-item header__nav-item_main">Обратный осмос</div>
-          <div class="header__nav-item header__nav-item_main">Расходники</div>
-          <div class="header__nav-item header__nav-item_main">Запчасти</div>
+          <a href="#" class="header__nav-item header__nav-item_main header__nav-item_page">Системы</a>
+          <a href="#" class="header__nav-item header__nav-item_main">Магистральные</a>
+          <a href="#" class="header__nav-item header__nav-item_main">Обратный осмос</a>
+          <a href="#" class="header__nav-item header__nav-item_main">Расходники</a>
+          <a href="#" class="header__nav-item header__nav-item_main">Запчасти</a>
         </nav>
 
         <div class="header__search-container">
@@ -143,7 +143,14 @@
         </div>
 
         <div class="header__basket-container">
-        <?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+          <span class="header__goods-count">
+            <?php storefront_cart_link(); ?>
+          </span>
+
+          <div class="header__basket-popup">
+            <?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+          </div>
+          
         </div>
           <a href="#" class="header__nav-item header__nav-item_one">Личный кабинет</a>
       </div>
