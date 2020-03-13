@@ -1,6 +1,7 @@
 .header__basket-popup {
   display: none;
   position: absolute;
+  width: 300px;
   top: 10px;
   left: 10px;
 }

@@ -129,6 +129,7 @@
             </g>
           </g>
         </svg>
+  <div class="header__wrap">
 
         <nav class="header__nav">
           <a href="#" class="header__nav-item header__nav-item_main header__nav-item_page">Системы</a>
@@ -150,10 +151,12 @@
           <div class="header__basket-popup">
             <?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
           </div>
-          
+
         </div>
           <a href="#" class="header__nav-item header__nav-item_one">Личный кабинет</a>
       </div>
+
+    </div>
     </header>
 
 
