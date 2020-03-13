@@ -63,6 +63,46 @@
   margin-bottom: 0px;
 }
 
+/* кнопки корзина*/
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+.button:hover,
+.widget a.button:hover {
+  border-radius: 3px;
+  background-color: var(--dark-10);
+  color: #333333;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button,
+.widget a.button {
+  border-radius: 3px;
+  background-color: var(--dark-4);
+  color: #333333;
+}
+
+.added_to_cart.alt:hover,
+.added_to_cart:hover,
+.widget a.button.checkout:hover {
+  border-radius: 3px;
+  background-color: var(--cornflower-blue);
+  color: #ffffff;
+}
+
+.added_to_cart.alt,
+.added_to_cart,
+.widget a.button.checkout {
+  border-radius: 3px;
+  background-color: var(--blue-blue);
+  color: #ffffff;
+}
+
 :root {
   --blue-blue: #164cb5;
   --cornflower-blue: #4b7dd7;
