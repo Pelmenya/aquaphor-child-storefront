@@ -1,0 +1,17 @@
+.footer__col-link {
+  text-decoration: none;
+  opacity: 0.4;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: -0.1px;
+  color: #fff;
+  margin-top: 12px;
+}
+
+.footer__col-link:hover {
+  opacity: 1;
+
+}

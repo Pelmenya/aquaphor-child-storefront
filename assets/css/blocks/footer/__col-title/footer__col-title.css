@@ -1,0 +1,9 @@
+.footer__col-title {
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.18;
+  letter-spacing: -0.5px;
+  color: var(--white);
+}

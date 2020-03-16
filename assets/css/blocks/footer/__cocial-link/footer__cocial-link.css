@@ -1,0 +1,12 @@
+.footer__cocial-link::before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f009';
+  font-size: 25px;
+  margin-right: 25px;
+  color: #fff;
+}
+
+.footer__cocial-link:hover {
+
+}
+

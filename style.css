@@ -9,6 +9,7 @@
 @import url(./assets/fonts/ProximaNova/stylesheet.css);
 @import url(./assets/css/blocks/promo/promo.css);
 @import url(./assets/css/blocks/header/header.css);
+@import url(./assets/css/blocks/footer/footer.css);
 @import url(./assets/css/blocks/top-goods/top-goods.css);
 @import url(./assets/css/blocks/intro/intro.css);
 
@@ -18,6 +19,15 @@
   align-items: center;
   padding-top: 0px;
   padding-bottom: 0px;
+}
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #fff;
 }
 
 /* модернизируем блок search*/
