@@ -8,6 +8,10 @@
 @import url(./__wrap/footer__wrap.css);
 @import url(./__copyright/footer__copyright.css);
 @import url(./__cocial-link/footer__cocial-link.css);
+@import url(./__cocial-link/_vk/footer__cocial-link_vk.css);
+@import url(./__cocial-link/_ok/footer__cocial-link_ok.css);
+@import url(./__cocial-link/_in/footer__cocial-link_in.css);
+@import url(./__cocial-link/_fb/footer__cocial-link_fb.css);
 @import url(./__columns/footer__columns.css);
 
 .footer {
@@ -23,5 +27,5 @@
   font-family: Proxima Nova Rg, sans-serif;
   color: var(--white);
   width: 100%;
-  background-color: transparent;
+  background-color: var(--dark);
  }

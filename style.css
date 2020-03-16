@@ -5,7 +5,8 @@
  Template:     storefront
  Version:      1.0.0
 */
-
+@import url(./assets/fonts/fontawesome-free-5.12.1-web/css/all.min.css);
+@import url(./assets/fonts/fontawesome-free-5.12.1-web/css/fontawesome.css);
 @import url(./assets/fonts/ProximaNova/stylesheet.css);
 @import url(./assets/css/blocks/promo/promo.css);
 @import url(./assets/css/blocks/header/header.css);
