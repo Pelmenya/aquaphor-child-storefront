@@ -12,6 +12,8 @@
 @import url(./__cocial-link/_ok/footer__cocial-link_ok.css);
 @import url(./__cocial-link/_in/footer__cocial-link_in.css);
 @import url(./__cocial-link/_fb/footer__cocial-link_fb.css);
+@import url(./__cocial-link/_mastercard/footer__cocial-link_mastercard.css);
+@import url(./__cocial-link/_visacard/footer__cocial-link_visacard.css);
 @import url(./__columns/footer__columns.css);
 
 .footer {

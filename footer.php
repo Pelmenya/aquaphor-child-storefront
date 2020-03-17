@@ -21,10 +21,14 @@
         <img class="footer__logo" src="http://aquaphor.store/wp-content/uploads/2020/03/logo_white.png" alt="Логотип Аквафор">
         <p class="footer__copyright">ООО&nbsp;«Аквафор&nbsp;Инжиниринг»&nbsp;&copy;&nbsp;<?php  echo  absint( date('Y' ) ); ?></p>
         <div class="footer__cocial">
-         <i class="footer__cocial-link footer__cocial-link_vk"></i>
-         <i class="footer__cocial-link footer__cocial-link_ok"></i>
-         <i class="footer__cocial-link footer__cocial-link_fb"></i>
-         <i class="footer__cocial-link footer__cocial-link_in"></i>
+         <a href="#" class="footer__cocial-link footer__cocial-link_vk"></a>
+         <a href="#" class="footer__cocial-link footer__cocial-link_ok"></a>
+         <a href="#" class="footer__cocial-link footer__cocial-link_fb"></a>
+         <a href="#" class="footer__cocial-link footer__cocial-link_in"></a>
+        </div>
+        <div class="footer__cocial">
+         <a href="#" class="footer__cocial-link footer__cocial-link_mastercard"></a>
+         <a href="#" class="footer__cocial-link footer__cocial-link_visacard"></a>
         </div>
       </div>
       <div class="footer__columns">

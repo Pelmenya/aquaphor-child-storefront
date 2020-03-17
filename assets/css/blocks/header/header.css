@@ -1,4 +1,5 @@
 @import url(./__wrap/header__wrap.css);
+@import url(./__spliter/header__spliter.css);
 @import url(./__wrap/_top/header__wrap_top.css);
 @import url(./__container-flex/header__container-flex.css);
 @import url(./__tel/header__tel.css);
@@ -29,7 +30,6 @@
 
 .header {
   width: 100%;
-  max-width: 1440px;
   margin: inherit;
   display: flex;
   flex-direction: column;

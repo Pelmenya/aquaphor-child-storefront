@@ -85,7 +85,12 @@ if ( ! function_exists( 'storefront_cart_link' ) ) {
 	}
 }
 
+// отключили корзину в хедере
 function storefront_header_cart() {}
+
+// отключили хлебные крошки
+function woocommerce_breadcrumb() {}
+
 
 
 /**

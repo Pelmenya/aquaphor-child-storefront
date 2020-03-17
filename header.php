@@ -43,6 +43,7 @@
           <span class="header__dealer">Официальный&nbsp;дилер</span>
         </div>
       </div>
+      <div class="header__spliter"></div>
       <div class="header__wrap">
         <svg  class="header__logo" xmlns="http://www.w3.org/2000/svg" width="366" height="68" viewBox="0 0 366 68">
           <metadata id="metadata8">image/svg+xml</metadata>
@@ -153,7 +154,7 @@
           </div>
 
         </div>
-          <a href="#" class="header__nav-item header__nav-item_one">Личный кабинет</a>
+          <a href="my-account" class="header__nav-item header__nav-item_one">Личный кабинет</a>
       </div>
 
     </div>
