@@ -11,7 +11,9 @@
 if( ! defined('AQUAPHOR_THEME_VERSION') )  define('AQUAPHOR_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
 if( ! defined('AQUAPHOR_THEME_PATH') )     define('AQUAPHOR_THEME_PATH', get_template_directory() );
 if( ! defined('AQUAPHOR_THEME_URL') )      define('AQUAPHOR_THEME_URL', get_template_directory_uri() );
-if( ! defined('AQUAPHOR_THEME_ASSETS') )   define('AQUAPHOR_THEME_ASSETS', get_template_directory_uri().'/assets' );
+if( ! defined('AQUAPHOR_THEME_ASSETS') )   define('AQUAPHOR_THEME_ASSETS', get_template_directory() . '/assets' );
+
+if( ! defined('AQUAPHOR_THEME_JS') )   define('AQUAPHOR_THEME_JS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js' );
 
 /**
  *  Отключаем блоки в header
@@ -134,17 +136,11 @@ function aquaphor_enqueue_styles() {
 	);
 }
 
+function aquaphor_theme_scripts() {
 
-function aquaphor_wp_head(){
-	?>
-	<script>
-	let  a = 6;
-	let  b = 8;
-	let  m = a + b;
-
-	</script>
-
-	<?php
+  if (is_page('my-account')){
+    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . '/index.js', true);
+  }
 }
 
-add_action( 'wp_head', 'aquaphor_wp_head');
+add_action( 'wp_footer', 'aquaphor_theme_scripts' );

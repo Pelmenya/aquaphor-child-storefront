@@ -93,7 +93,59 @@ textarea,
   border-radius: 3px;
   background-color: rgba(34, 60, 82, 0.04);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.125);
+  font-size: 15px;
 }
+
+/*Placeholder input */
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea,
+.input-text::placeholder {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  font-size: 13px;
+  line-height: 13px;
+  font-family: Proxima Nova Rg;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #686976;
+}
+
+.u-column1 label{
+  font-family: Proxima Nova Rg;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.86;
+    letter-spacing: normal;
+    color: var(--dark);
+}
+
+.u-column2 label{
+  font-family: Proxima Nova Rg;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.86;
+    letter-spacing: normal;
+    color: var(--dark);
+}
+
+
+/* кнопки формы регистрации*/
+
 
 /* модернизируем блок search*/
 .widget_product_search form::before {
