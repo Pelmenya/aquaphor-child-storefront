@@ -13,7 +13,10 @@ if( ! defined('AQUAPHOR_THEME_PATH') )     define('AQUAPHOR_THEME_PATH', get_tem
 if( ! defined('AQUAPHOR_THEME_URL') )      define('AQUAPHOR_THEME_URL', get_template_directory_uri() );
 if( ! defined('AQUAPHOR_THEME_ASSETS') )   define('AQUAPHOR_THEME_ASSETS', get_template_directory() . '/assets' );
 
-if( ! defined('AQUAPHOR_THEME_JS') )   define('AQUAPHOR_THEME_JS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js' );
+if( ! defined('SITE_URL') )     define('SITE_URL', get_site_url() . '/' );
+
+
+if( ! defined('AQUAPHOR_THEME_JS') )   define('AQUAPHOR_THEME_JS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/pages/' );
 
 /**
  *  Отключаем блоки в header
@@ -139,8 +142,13 @@ function aquaphor_enqueue_styles() {
 function aquaphor_theme_scripts() {
 
   if (is_page('my-account')){
-    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . '/index.js', true);
+    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/index.js', true);
   }
+
+  if (is_page('my-account/lost-password')){
+    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'lost-password/index.js', true);
+  }
+
 }
 
 add_action( 'wp_footer', 'aquaphor_theme_scripts' );

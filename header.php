@@ -33,10 +33,11 @@
 	<header class="header">
       <div class="header__wrap header__wrap_top">
         <nav class="header__nav">
-          <a href="water-analysis" class="header__nav-item"><span>Анализ воды</span></a>
-          <a href="choice-devices" class="header__nav-item">Подбор оборудования</a>
-          <a href="service-support" class="header__nav-item">Сервисное обслуживание</a>
-          <a href="payment-and-delivery" class="header__nav-item">Оплата и доставка</a>
+
+          <a href="<?php echo SITE_URL?>water-analysis" class="header__nav-item"><span>Анализ воды</span></a>
+          <a href="<?php echo SITE_URL?>choice-devices" class="header__nav-item">Подбор оборудования</a>
+          <a href="<?php echo SITE_URL?>service-support" class="header__nav-item">Сервисное обслуживание</a>
+          <a href="<?php echo SITE_URL?>payment-and-delivery" class="header__nav-item">Оплата и доставка</a>
         </nav>
         <div class="header__container-flex">
           <span class="header__tel">+7&nbsp;(499)&nbsp;577&nbsp;03&nbsp;79</span>
@@ -133,11 +134,11 @@
   <div class="header__wrap">
 
         <nav class="header__nav">
-          <a href="#" class="header__nav-item header__nav-item_main header__nav-item_page">Системы</a>
-          <a href="#" class="header__nav-item header__nav-item_main">Магистральные</a>
-          <a href="#" class="header__nav-item header__nav-item_main">Обратный осмос</a>
-          <a href="#" class="header__nav-item header__nav-item_main">Расходники</a>
-          <a href="#" class="header__nav-item header__nav-item_main">Запчасти</a>
+          <a href="<?php echo SITE_URL?>" class="header__nav-item header__nav-item_main header__nav-item_page">Системы</a>
+          <a href="<?php echo SITE_URL?>" class="header__nav-item header__nav-item_main">Магистральные</a>
+          <a href="<?php echo SITE_URL?>" class="header__nav-item header__nav-item_main">Обратный осмос</a>
+          <a href="<?php echo SITE_URL?>" class="header__nav-item header__nav-item_main">Расходники</a>
+          <a href="<?php echo SITE_URL?>" class="header__nav-item header__nav-item_main">Запчасти</a>
         </nav>
 
         <div class="header__search-container">
