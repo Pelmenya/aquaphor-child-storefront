@@ -13,6 +13,7 @@
 	</div><!-- #content -->
 
 	<?php do_action( 'storefront_before_footer' ); ?>
+  <?php wc_get_account_menu_items();?>
 
 	<footer class="footer">
   <div class="footer__container">

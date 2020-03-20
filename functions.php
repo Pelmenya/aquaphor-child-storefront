@@ -7,6 +7,10 @@
  * @package aquaphor
  */
 
+/**
+ *  Константы путей
+ *
+ */
 
 if( ! defined('AQUAPHOR_THEME_VERSION') )  define('AQUAPHOR_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
 if( ! defined('AQUAPHOR_THEME_PATH') )     define('AQUAPHOR_THEME_PATH', get_template_directory() );
@@ -14,8 +18,6 @@ if( ! defined('AQUAPHOR_THEME_URL') )      define('AQUAPHOR_THEME_URL', get_temp
 if( ! defined('AQUAPHOR_THEME_ASSETS') )   define('AQUAPHOR_THEME_ASSETS', get_template_directory() . '/assets' );
 
 if( ! defined('SITE_URL') )     define('SITE_URL', get_site_url() . '/' );
-
-
 if( ! defined('AQUAPHOR_THEME_JS') )   define('AQUAPHOR_THEME_JS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/pages/' );
 
 /**
@@ -97,6 +99,36 @@ function storefront_header_cart() {}
 function woocommerce_breadcrumb() {}
 
 
+// сформировал нужное меню
+function aquaphor_remove_my_account_links( $menu_links ){
+
+	//unset( $menu_links['edit-address'] ); // Addresses
+	unset( $menu_links['dashboard'] ); // Dashboard
+	unset( $menu_links['payment-methods'] ); // Payment Methods
+	//unset( $menu_links['orders'] ); // Orders
+	unset( $menu_links['downloads'] ); // Downloads
+	//unset( $menu_links['edit-account'] ); // Account details
+	//unset( $menu_links['customer-logout'] ); // Logout
+
+	return $menu_links;
+}
+
+add_filter ( 'woocommerce_account_menu_items', 'aquaphor_remove_my_account_links' );
+
+// отключил платежный адрес
+
+function aquaphor_remove_billing_adress_my_account_menu( $array, $customer_id ){
+
+  unset($array['billing']);
+
+  return $array;
+}
+
+add_filter( 'woocommerce_my_account_get_addresses', 'aquaphor_remove_billing_adress_my_account_menu', 10, 2 );
+
+
+
+
 
 /**
  *  Регистрируем виджеты в header
@@ -140,14 +172,34 @@ function aquaphor_enqueue_styles() {
 }
 
 function aquaphor_theme_scripts() {
+  /* Путь к странице*/
+  $url = $_SERVER['REQUEST_URI'];
+  $url = explode('?', $url);
 
-  if (is_page('my-account')){
+  /* Путь до параметров запроса */
+  $url_str = substr($url[0], 0, -1);
+
+  /* Параметры запроса */
+
+  $url_query = $url[1];
+
+
+  $url_my_account = '/my-account';
+  $url_my_account_lost_password = '/my-account/lost-password';
+
+
+  if (strcasecmp($url_str, $url_my_account) == 0){
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/index.js', true);
   }
 
-  if (is_page('my-account/lost-password')){
-    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'lost-password/index.js', true);
+  if ((strcasecmp($url_str, $url_my_account_lost_password) == 0)&&(strcasecmp($url_query, '') == 0)) {
+    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/lost-password/index.js', true);
   }
+
+  if ((strcasecmp($url_str, $url_my_account_lost_password) == 0)&&(strcasecmp($url_query, 'show-reset-form=true') == 0)) {
+    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/lost-password/show-reset-form/index.js', true);
+  }
+
 
 }
 

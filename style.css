@@ -21,6 +21,27 @@ button:focus {
   outline: none;
 }
 
+/* Страница Мой аккаунт*/
+.woocommerce {
+  display: flex;
+  width: 100%;
+}
+
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--orders a::before {
+  content: '';
+}
+
+.woocommerce-MyAccount-navigation{
+  flex-basis: 393px;
+  padding-right: 40px;
+  
+}
+
+
+/************************************************************************************************/
+
+
+
 .entry-title {
   margin-top: 105px;
   text-align: start;
@@ -121,31 +142,29 @@ textarea,
   color: #686976;
 }
 
-.u-column1 label{
+.u-column1 label {
   font-family: Proxima Nova Rg;
-    font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.86;
-    letter-spacing: normal;
-    color: var(--dark);
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: normal;
+  color: var(--dark);
 }
 
-.u-column2 label{
+.u-column2 label {
   font-family: Proxima Nova Rg;
-    font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.86;
-    letter-spacing: normal;
-    color: var(--dark);
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: normal;
+  color: var(--dark);
 }
-
 
 /* кнопки формы регистрации*/
-
 
 /* модернизируем блок search*/
 .widget_product_search form::before {
