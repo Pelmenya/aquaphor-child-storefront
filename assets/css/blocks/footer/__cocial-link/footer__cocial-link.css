@@ -1,0 +1,14 @@
+.footer__cocial-link {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-size: 25px;
+  margin-right: 25px;
+  color: #fff;
+  opacity: 0.4;
+  transition: transform .5s, opacity 5.s ease;
+}
+
+.footer__cocial-link:hover {
+  transform: translateX(15px);
+  opacity: 1;
+}

@@ -6,11 +6,62 @@
  Version:      1.0.0
 */
 
+@import url(./assets/fonts/fontawesome-free-5.12.1-web/css/brands.min.css);
 @import url(./assets/fonts/ProximaNova/stylesheet.css);
 @import url(./assets/css/blocks/promo/promo.css);
 @import url(./assets/css/blocks/header/header.css);
+@import url(./assets/css/blocks/footer/footer.css);
 @import url(./assets/css/blocks/top-goods/top-goods.css);
 @import url(./assets/css/blocks/intro/intro.css);
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+/* Страница Мой аккаунт*/
+.woocommerce {
+  display: flex;
+  width: 100%;
+}
+
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--orders a::before {
+  content: '';
+}
+
+.woocommerce-MyAccount-navigation{
+  flex-basis: 393px;
+  padding-right: 40px;
+  
+}
+
+
+/************************************************************************************************/
+
+
+
+.entry-title {
+  margin-top: 105px;
+  text-align: start;
+  font-family: Proxima Nova Rg;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.storefront-full-width-content.woocommerce-cart .entry-header,
+.storefront-full-width-content.woocommerce-checkout .entry-header,
+.storefront-full-width-content.woocommerce-account .entry-header,
+.storefront-full-width-content .woocommerce-products-header {
+  text-align: center;
+  padding: 0 0 3em;
+}
 
 .site-header {
   display: flex;
@@ -18,7 +69,102 @@
   align-items: center;
   padding-top: 0px;
   padding-bottom: 0px;
+  border-bottom: none;
 }
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #fff;
+}
+
+/* форма регистрации*/
+
+h2 {
+  font-family: Proxima Nova Rg;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--blue-blue);
+}
+
+/* инпуты формы регистрации*/
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea,
+.input-text {
+  padding: 0.6180469716em;
+  color: #43454b;
+  border: 0;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  font-weight: normal;
+  border-radius: 3px;
+  background-color: rgba(34, 60, 82, 0.04);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.125);
+  font-size: 15px;
+}
+
+/*Placeholder input */
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea,
+.input-text::placeholder {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  font-size: 13px;
+  line-height: 13px;
+  font-family: Proxima Nova Rg;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #686976;
+}
+
+.u-column1 label {
+  font-family: Proxima Nova Rg;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.u-column2 label {
+  font-family: Proxima Nova Rg;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+/* кнопки формы регистрации*/
 
 /* модернизируем блок search*/
 .widget_product_search form::before {
@@ -61,6 +207,46 @@
 .woocommerce-product-search {
   width: 243px;
   margin-bottom: 0px;
+}
+
+/* кнопки корзина*/
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+.button:hover,
+.widget a.button:hover {
+  border-radius: 3px;
+  background-color: var(--dark-10);
+  color: #333333;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button,
+.widget a.button {
+  border-radius: 3px;
+  background-color: var(--dark-4);
+  color: #333333;
+}
+
+.added_to_cart.alt:hover,
+.added_to_cart:hover,
+.widget a.button.checkout:hover {
+  border-radius: 3px;
+  background-color: var(--cornflower-blue);
+  color: #ffffff;
+}
+
+.added_to_cart.alt,
+.added_to_cart,
+.widget a.button.checkout {
+  border-radius: 3px;
+  background-color: var(--blue-blue);
+  color: #ffffff;
 }
 
 :root {

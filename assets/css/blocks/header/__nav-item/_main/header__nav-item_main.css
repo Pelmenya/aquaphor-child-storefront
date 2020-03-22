@@ -7,9 +7,9 @@
     letter-spacing: -0.11px;
     color: var(--dark);
 
+    padding-left: 43px;
     padding-top: 14px;
     padding-bottom: 14px;
-
 }
 
 .header__nav-item_main:first-of-type {

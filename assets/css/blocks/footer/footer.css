@@ -1,0 +1,33 @@
+@import url(./__info/footer__info.css);
+@import url(./__container/footer__container.css);
+@import url(./__cocials/footer__cocials.css);
+@import url(./__col/footer__col.css);
+@import url(./__col-link/footer__col-link.css);
+@import url(./__col-title/footer__col-title.css);
+@import url(./__logo/footer__logo.css);
+@import url(./__wrap/footer__wrap.css);
+@import url(./__copyright/footer__copyright.css);
+@import url(./__cocial-link/footer__cocial-link.css);
+@import url(./__cocial-link/_vk/footer__cocial-link_vk.css);
+@import url(./__cocial-link/_ok/footer__cocial-link_ok.css);
+@import url(./__cocial-link/_in/footer__cocial-link_in.css);
+@import url(./__cocial-link/_fb/footer__cocial-link_fb.css);
+@import url(./__cocial-link/_mastercard/footer__cocial-link_mastercard.css);
+@import url(./__cocial-link/_visacard/footer__cocial-link_visacard.css);
+@import url(./__columns/footer__columns.css);
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: -0.1px;
+  font-family: Proxima Nova Rg, sans-serif;
+  color: var(--white);
+  width: 100%;
+  background-color: var(--dark);
+ }

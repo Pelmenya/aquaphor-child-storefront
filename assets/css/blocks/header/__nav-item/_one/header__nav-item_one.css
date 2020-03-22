@@ -1,0 +1,8 @@
+.header__nav-item_one {
+  padding-right: 100px;
+}
+
+.header__nav-item_one:first-of-type {
+  padding-left: 0px;
+  padding-right: 100px;
+}

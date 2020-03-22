@@ -1,12 +1,15 @@
 @import url(./__wrap/header__wrap.css);
+@import url(./__spliter/header__spliter.css);
 @import url(./__wrap/_top/header__wrap_top.css);
 @import url(./__container-flex/header__container-flex.css);
 @import url(./__tel/header__tel.css);
 @import url(./__dealer/header__dealer.css);
 @import url(./__logo/header__logo.css);
 @import url(./__nav/header__nav.css);
+@import url(./__nav-top/header__nav-top.css);
 @import url(./__nav-item/header__nav-item.css);
 @import url(./__nav-item/_main/header__nav-item_main.css);
+@import url(./__nav-item/_one/header__nav-item_one.css);
 @import url(./__nav-item/_page/header__nav-item_page.css);
 @import url(./__nav-item/_menu/header__nav-item_menu.css);
 @import url(./__menu/header__menu.css);
@@ -19,19 +22,26 @@
 @import url(./__nav-item/_menu/header__nav-item_menu_services.css);
 @import url(./__item-icon/header__item-icon.css);
 @import url(./__item-icons/header__item-icons.css);
+@import url(./__basket-container/header__basket-container.css);
+@import url(./__basket-popup/header__basket-popup.css);
+@import url(./__goods-count/header__goods-count.css);
+@import url(./__search-container/header__search-container.css);
 @import url(./__item-icon/_basket/header__item-icon_basket.css);
 @import url(./__item-icon/_search/header__item-icon_search.css);
 
 .header {
   width: 100%;
-  max-width: 1440px;
   margin: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fff;
-  font-family: Proxima Nova Rg;
+  font-family: Proxima Nova Rg, sans-serif;
+}
+
+/*{
 
   border: 1px solid red;
   box-sizing: border-box;
-}
+
+}*/
