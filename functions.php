@@ -105,8 +105,11 @@ function aquaphor_remove_my_account_links( $menu_links ){
 	//unset( $menu_links['edit-address'] ); // Addresses
 	unset( $menu_links['dashboard'] ); // Dashboard
 	unset( $menu_links['payment-methods'] ); // Payment Methods
-	//unset( $menu_links['orders'] ); // Orders
-	unset( $menu_links['downloads'] ); // Downloads
+  //unset( $menu_links['orders'] ); // Orders
+  if ( isset( $menu_links['edit-address'] ) ) {
+     $menu_links['edit-address'] = 'Адрес' ;
+	}
+  unset( $menu_links['downloads'] ); // Downloads
 	//unset( $menu_links['edit-account'] ); // Account details
 	//unset( $menu_links['customer-logout'] ); // Logout
 
@@ -187,7 +190,9 @@ function aquaphor_theme_scripts() {
 
   $url_my_account = '/my-account';
   $url_my_account_lost_password = '/my-account/lost-password';
-	$url_my_account_edit_adress_shiping = '/my-account/edit-address/shipping';
+	$url_my_account_edit_address = '/my-account/edit-address';
+  $url_my_account_edit_address_shiping = '/my-account/edit-address/shipping';
+  $url_my_account_orders = '/my-account/orders';
 
 
 
@@ -195,7 +200,16 @@ function aquaphor_theme_scripts() {
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/index.js', true);
   }
 
-  if ((strcasecmp($url_str, $url_my_account_edit_adress_shiping) == 0)&&(strcasecmp($url_query, '') == 0)) {
+  if ((strcasecmp($url_str, $url_my_account_orders) == 0)&&(strcasecmp($url_query, '') == 0)) {
+    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/orders/index.js', true);
+  }
+
+
+  if ((strcasecmp($url_str, $url_my_account_edit_address) == 0)&&(strcasecmp($url_query, '') == 0)) {
+    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/edit-address/index.js', true);
+  }
+
+  if ((strcasecmp($url_str, $url_my_account_edit_address_shiping) == 0)&&(strcasecmp($url_query, '') == 0)) {
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/edit-address/shipping/index.js', true);
   }
 

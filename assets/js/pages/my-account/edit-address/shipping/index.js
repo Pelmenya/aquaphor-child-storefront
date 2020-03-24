@@ -23,6 +23,9 @@ function main() {
   formAll[1].save_address.style.height = '50px';
 
   /* все подписи к инпутам */
+  const entryWoocommerce = document.querySelector('.entry-content .woocommerce');
+  entryWoocommerce.style.display = 'flex';
+  entryWoocommerce.style.width = '100%';
 
   const formLabels = formAll[1].querySelectorAll('label');
 

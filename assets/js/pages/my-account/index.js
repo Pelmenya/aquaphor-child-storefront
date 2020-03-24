@@ -9,6 +9,12 @@ function main() {
    */
   const formRegister = document.querySelector('.register');
 
+  if (!(formLogin && formRegister)) {
+    const entryWoocommerce = document.querySelector('.entry-content .woocommerce');
+    entryWoocommerce.style.display = 'flex';
+    entryWoocommerce.style.width = '100%';
+  }
+
   if (formLogin && formRegister) {
     const formLoginLabels = formLogin.querySelectorAll('label');
     const formLoginCheckBoxSave = formLoginLabels[2].querySelector('span');

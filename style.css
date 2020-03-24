@@ -21,11 +21,20 @@ button:focus {
   outline: none;
 }
 
-/* Страница Мой аккаунт */
-.woocommerce {
-  display: flex;
-  width: 100%;
+/* Заказы */
+
+
+.my_account_orders .button.view::after {
+  color: var(--blue-blue);
+  margin-left: 0.5407911001em;
 }
+
+table thead th{
+  padding: 1em;
+}
+/***************************/
+
+/* Страница Мой аккаунт */
 
 .woocommerce-MyAccount-navigation ul li {
   padding-left: 40px;
@@ -86,7 +95,7 @@ button:focus {
 }
 
 .woocommerce-MyAccount-navigation {
-  flex-basis: 353px;
+  flex-basis: 500px;
   padding-right: 40px;
 }
 
@@ -144,7 +153,17 @@ h2 {
   color: var(--blue-blue);
 }
 
-/* форма дичный кабинет*/
+
+address {
+  font-family: Proxima Nova Rg;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.47;
+  letter-spacing: -0.1px;
+  color: var(--dark);
+}
 
 h3 {
   font-family: Proxima Nova Rg;
@@ -191,7 +210,6 @@ label {
   background-color: rgba(34, 60, 82, 0.04);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.125);
 }
-
 
 option {
   font-family: Proxima Nova Rg, sans-serif;
