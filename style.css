@@ -21,26 +21,76 @@ button:focus {
   outline: none;
 }
 
-/* Страница Мой аккаунт*/
+/* Страница Мой аккаунт */
 .woocommerce {
   display: flex;
   width: 100%;
+}
+
+.woocommerce-MyAccount-navigation ul li {
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e9e9eb;
+  border-top: none;
+  height: 54px;
+  cursor: pointer;
+}
+
+.woocommerce-MyAccount-navigation ul li a {
+  box-sizing: border-box;
+  font-family: Proxima Nova Rg;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.woocommerce-MyAccount-navigation ul li:hover a {
 }
 
 .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--orders a::before {
   content: '';
 }
 
-.woocommerce-MyAccount-navigation{
-  flex-basis: 393px;
-  padding-right: 40px;
-  
+.woocommerce-MyAccount-navigation
+  ul
+  li.woocommerce-MyAccount-navigation-link--edit-address
+  a::before {
+  content: '';
 }
 
+.woocommerce-MyAccount-navigation
+  ul
+  li.woocommerce-MyAccount-navigation-link--edit-account
+  a::before {
+  content: '';
+}
+
+.woocommerce-MyAccount-navigation
+  ul
+  li.woocommerce-MyAccount-navigation-link--customer-logout
+  a::before {
+  content: '';
+}
+
+.woocommerce-MyAccount-navigation ul li:hover {
+  background-color: var(--pale-grey);
+}
+
+.woocommerce-MyAccount-navigation ul li:active {
+}
+
+.woocommerce-MyAccount-navigation {
+  flex-basis: 353px;
+  padding-right: 40px;
+}
 
 /************************************************************************************************/
-
-
 
 .entry-title {
   margin-top: 105px;
@@ -94,6 +144,64 @@ h2 {
   color: var(--blue-blue);
 }
 
+/* форма дичный кабинет*/
+
+h3 {
+  font-family: Proxima Nova Rg;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.optional {
+  display: none;
+}
+
+label {
+  font-family: Proxima Nova Rg;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.select {
+  font-family: Proxima Nova Rg;
+  font-size: 13px;
+  padding-top: 18px;
+  padding-left: 20px;
+  padding-bottom: 18px;
+  border: 0;
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+  border-radius: 3px;
+  background-color: rgba(34, 60, 82, 0.04);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.125);
+}
+
+
+option {
+  font-family: Proxima Nova Rg, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
 /* инпуты формы регистрации*/
 
 input[type="text"],

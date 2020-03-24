@@ -120,6 +120,7 @@ add_filter ( 'woocommerce_account_menu_items', 'aquaphor_remove_my_account_links
 function aquaphor_remove_billing_adress_my_account_menu( $array, $customer_id ){
 
   unset($array['billing']);
+ 	//unset($array['shipping']);
 
   return $array;
 }
@@ -186,13 +187,19 @@ function aquaphor_theme_scripts() {
 
   $url_my_account = '/my-account';
   $url_my_account_lost_password = '/my-account/lost-password';
+	$url_my_account_edit_adress_shiping = '/my-account/edit-address/shipping';
+
 
 
   if (strcasecmp($url_str, $url_my_account) == 0){
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/index.js', true);
   }
 
-  if ((strcasecmp($url_str, $url_my_account_lost_password) == 0)&&(strcasecmp($url_query, '') == 0)) {
+  if ((strcasecmp($url_str, $url_my_account_edit_adress_shiping) == 0)&&(strcasecmp($url_query, '') == 0)) {
+    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/edit-address/shipping/index.js', true);
+  }
+
+	if ((strcasecmp($url_str, $url_my_account_lost_password) == 0)&&(strcasecmp($url_query, '') == 0)) {
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/lost-password/index.js', true);
   }
 
