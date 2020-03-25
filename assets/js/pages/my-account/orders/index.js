@@ -37,6 +37,35 @@ function main() {
 
   const accountOrdersTable = document.querySelector('.account-orders-table');
 
+  function dataToStrRus(str) {
+    const strObj = str.split('.');
+    /* const date = new Date(str.split('-'))
+       const year = date.getFullYear(date);
+       const month = date.getMonth(date);
+       const day = date.getDate(date);
+    срабатывает в браузерах  Google, Opera, FireFox и в других,
+    но не работает в Safari, EDGE.
+     */
+    const day = strObj[0];
+    const month = strObj[1];
+    const year = strObj[2];
+    const objMonth = [
+      'января',
+      'февраля',
+      'марта',
+      'апреля',
+      'мая',
+      'июня',
+      'июля',
+      'августа',
+      'сентября',
+      'октября',
+      'ноября',
+      'декабря',
+    ];
+    return `${day} ${objMonth[Number(month) - 1]}, ${year}`;
+  }
+
   if (accountOrdersTable) {
     const accountOrdersTableTH = accountOrdersTable.querySelectorAll('.nobr');
     accountOrdersTableTH[0].textContent = 'Номер';
@@ -51,6 +80,24 @@ function main() {
       accountOrdersTableTH[i].style.fontWeight = 'bold';
       accountOrdersTableTH[i].style.padding = '1em';
       accountOrdersTableTH[i].style.color = 'var(--dark)';
+    });
+    const amounts = accountOrdersTable.querySelectorAll('.amount');
+
+    Object.keys(amounts).forEach((i) => {
+      amounts[i].nextSibling.textContent = '';
+      amounts[i].lastChild.textContent = ' руб.';
+    });
+
+    const times = accountOrdersTable.querySelectorAll('time');
+    Object.keys(times).forEach((i) => {
+      times[i].textContent = dataToStrRus(times[i].textContent);
+    });
+
+    const ordersNumbers = accountOrdersTable.querySelectorAll(
+      '.woocommerce-orders-table__cell-order-number a',
+    );
+    Object.keys(ordersNumbers).forEach((i) => {
+      ordersNumbers[i].textContent = ordersNumbers[i].textContent.replace('№', '#');
     });
   }
 }

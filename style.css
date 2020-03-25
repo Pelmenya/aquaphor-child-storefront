@@ -22,15 +22,68 @@ button:focus {
 }
 
 /* Заказы */
+.woocommerce-orders-table__cell-order-number a,
+.woocommerce-orders-table__cell-order-date,
+.woocommerce-orders-table__cell-order-status,
+.woocommerce-orders-table__cell-order-total {
+  font-family: Proxima Nova Rg, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: normal;
+  color: var(--dark);
+}
 
+.woocommerce-orders-table__cell-order-number a{
+  font-weight: bold;
+}
 
 .my_account_orders .button.view::after {
+  font-size: 12px;
   color: var(--blue-blue);
   margin-left: 0.5407911001em;
 }
 
-table thead th{
+table thead th {
   padding: 1em;
+}
+
+table td,
+table th {
+  padding: 1em 1em;
+  text-align: left;
+  vertical-align: top;
+}
+
+table:not(.has-background) tbody tr:nth-child(2n-1) td,
+fieldset,
+fieldset legend {
+  background-color: var(--white);
+}
+
+table:not(.has-background) tbody tr:nth-child(2n) td,
+fieldset,
+fieldset legend {
+  background-color: var(--pale-grey);
+}
+
+.my_account_orders .button {
+  padding: 0;
+  font-family: Proxima Nova Rg;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: normal;
+  background-color: transparent;
+  color: var(--dark);
+}
+
+.my_account_orders .button:hover:hover {
+  background-color: transparent;
 }
 /***************************/
 
@@ -59,8 +112,6 @@ table thead th{
   color: var(--dark);
 }
 
-.woocommerce-MyAccount-navigation ul li:hover a {
-}
 
 .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--orders a::before {
   content: '';
@@ -89,9 +140,6 @@ table thead th{
 
 .woocommerce-MyAccount-navigation ul li:hover {
   background-color: var(--pale-grey);
-}
-
-.woocommerce-MyAccount-navigation ul li:active {
 }
 
 .woocommerce-MyAccount-navigation {
@@ -152,7 +200,6 @@ h2 {
   letter-spacing: normal;
   color: var(--blue-blue);
 }
-
 
 address {
   font-family: Proxima Nova Rg;
