@@ -78,14 +78,13 @@ function main() {
       accountOrdersTableTH[i].style.fontSize = '16px';
       accountOrdersTableTH[i].style.fontFamily = 'Proxima Nova Rg';
       accountOrdersTableTH[i].style.fontWeight = 'bold';
-      accountOrdersTableTH[i].style.padding = '1em';
+      // accountOrdersTableTH[i].style.padding = '1em';
       accountOrdersTableTH[i].style.color = 'var(--dark)';
     });
     const amounts = accountOrdersTable.querySelectorAll('.amount');
 
     Object.keys(amounts).forEach((i) => {
       amounts[i].nextSibling.textContent = '';
-      amounts[i].lastChild.textContent = ' руб.';
     });
 
     const times = accountOrdersTable.querySelectorAll('time');

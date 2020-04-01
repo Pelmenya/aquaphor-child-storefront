@@ -118,6 +118,14 @@ function aquaphor_remove_my_account_links( $menu_links ){
 
 add_filter ( 'woocommerce_account_menu_items', 'aquaphor_remove_my_account_links' );
 
+
+function aquaphor_filter_woocommerce_cart_needs_shipping_new($needs_shipping) {
+    if (is_cart()) return false;
+    return true;
+}
+
+add_filter( 'woocommerce_cart_needs_shipping', 'aquaphor_filter_woocommerce_cart_needs_shipping_new');
+
 // отключил платежный адрес
 
 function aquaphor_remove_billing_adress_my_account_menu( $array, $customer_id ){
@@ -193,11 +201,20 @@ function aquaphor_theme_scripts() {
 	$url_my_account_edit_address = '/my-account/edit-address';
   $url_my_account_edit_address_shiping = '/my-account/edit-address/shipping';
   $url_my_account_orders = '/my-account/orders';
+  $url_my_account_edit_account = '/my-account/edit-account';
+  $url_cart = '/cart';
 
 
+  if (strcasecmp($url_str, $url_cart) == 0){
+    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'cart/index.js', true);
+  }
 
   if (strcasecmp($url_str, $url_my_account) == 0){
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/index.js', true);
+  }
+
+  if ((strcasecmp($url_str, $url_my_account_edit_account) == 0)&&(strcasecmp($url_query, '') == 0)) {
+    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . '/my-account/edit-account/index.js', true);
   }
 
   if ((strcasecmp($url_str, $url_my_account_orders) == 0)&&(strcasecmp($url_query, '') == 0)) {
