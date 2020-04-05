@@ -1,3 +1,24 @@
+function createElementDOM(
+  element,
+  classElement,
+  textContent = '',
+  styleElement = '',
+  datetime = '',
+) {
+  const newElement = document.createElement(element);
+  newElement.className = classElement;
+  if (textContent !== '') {
+    newElement.textContent = textContent;
+  }
+  if (styleElement !== '') {
+    newElement.style = styleElement;
+  }
+  if (datetime !== '') {
+    newElement.dateTime = datetime;
+  }
+  return newElement;
+}
+
 function main() {
   // Заголовок
   const h1 = document.querySelector('.entry-title');
@@ -17,7 +38,6 @@ function main() {
   const contentConainer = document.querySelector('.woocommerce-MyAccount-content');
   const contentAddressTitle = document.querySelector('.woocommerce-Address-title');
   const h3 = contentAddressTitle.querySelector('h3');
-  const a = contentAddressTitle.querySelector('a');
   const address = contentConainer.querySelector('address');
   const pAll = contentConainer.querySelectorAll('p');
 
@@ -31,11 +51,13 @@ function main() {
   contentAddressTitle.style.display = 'flex';
 
   h3.style.color = 'var(--blue-blue)';
+  h3.textContent = '';
   h3.style.marginBottom = '0px';
-  a.style.marginTop = '0px';
-  a.style.marginLeft = '12px';
-  a.style.fontSize = '14px';
-  a.style.color = 'var(--blue-blue)';
+
+  const span = createElementDOM('span', 'span-icon');
+
+  contentAddressTitle.appendChild(span);
+
 
   if (address.textContent.trim() === 'Вы пока не указали этот тип адреса.') {
     address.textContent = 'Информация отсуствует';

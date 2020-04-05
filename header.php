@@ -35,6 +35,7 @@
 
     $url_str = substr($url[0], 0, -1);
     $url_query = $url[1];
+    $url_my_account_view_order = '\/my-account\/view-order';
 
     if (strcasecmp($url_query, '') == 0)
          echo 'true' ;
@@ -47,6 +48,12 @@
     <br>
     <?php
     echo $url_query;
+    ?>
+    <br>
+    <?php
+      if (preg_match("/$url_my_account_view_order/i", $url_str)) {
+        echo "Вхождение найдено.";
+      }
 
 
   ?>
@@ -91,7 +98,7 @@
             <?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
           </div>
         </div>
-        <a href="<?php echo SITE_URL?>my-account" class="header__nav-item header__nav-item_one">Личный кабинет</a>
+        <a href="<?php echo SITE_URL?>my-account/orders" class="header__nav-item header__nav-item_one">Личный кабинет</a>
 
       </div>
    </div>

@@ -92,6 +92,11 @@ function main() {
       times[i].textContent = dataToStrRus(times[i].textContent);
     });
 
+    const view = accountOrdersTable.querySelectorAll('.view');
+    Object.keys(view).forEach((i) => {
+      view[i].textContent = 'Детали';
+    });
+
     const ordersNumbers = accountOrdersTable.querySelectorAll(
       '.woocommerce-orders-table__cell-order-number a',
     );

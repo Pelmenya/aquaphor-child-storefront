@@ -18,8 +18,6 @@
 @import url(./assets/css/pages/cart.css);
 @import url(./assets/css/pages/orders.css);
 
-
-
 h2 {
   font-family: Proxima Nova Rg;
   font-size: 18px;
@@ -69,20 +67,58 @@ table th {
 }
 
 /* Страница Мой аккаунт */
+/*Адрес доставки*/
 
-.woocommerce-MyAccount-navigation ul li {
-  padding-left: 40px;
-  padding-right: 40px;
-  display: flex;
-  align-items: center;
-  border: 1px solid #e9e9eb;
-  border-top: none;
-  height: 54px;
-  cursor: pointer;
+.addresses header.title a {
+  margin-top: 0;
+  margin-left: 0;
 }
 
-.woocommerce-MyAccount-navigation ul li a {
+.addresses header.title a::before {
+  content: 'Адрес доставки ';
+  width: 200px;
+  font-family: Proxima Nova Rg;
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--blue-blue);
+}
+
+.span-icon::before {
+  content: '\f044';
+  font-family: 'Font Awesome 5 Free';
+  color: var(--blue-blue);
+  margin-left: 120px;
+  text-align: start;
+  font-weight: 900;
+  line-height: inherit;
+
+}
+
+.page-template-template-fullwidth-php .woocommerce-MyAccount-navigation {
+  margin-right: 40px;
+}
+
+.hentry
+  .entry-content
+  .woocommerce-MyAccount-navigation
+  ul
+  li.woocommerce-MyAccount-navigation-link
+  a {
   box-sizing: border-box;
+  text-decoration: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 54px;
+  border-left: 1px solid #e9e9eb;
+  border-right: 1px solid #e9e9eb;
+  border-bottom: 1px solid #e9e9eb;
+  cursor: pointer;
   font-family: Proxima Nova Rg;
   font-size: 13px;
   font-weight: normal;
@@ -91,6 +127,18 @@ table th {
   line-height: normal;
   letter-spacing: normal;
   color: var(--dark);
+}
+
+.hentry .entry-content .woocommerce-MyAccount-navigation ul li:hover {
+  list-style: none;
+  border: 1px solid transparent;
+  background-color: var(--pale-grey);
+  color: var(--dark);
+}
+
+.hentry .entry-content .woocommerce-MyAccount-navigation ul li {
+  list-style: none;
+  border-bottom: none;
 }
 
 .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--orders a::before {
@@ -118,13 +166,8 @@ table th {
   content: '';
 }
 
-.woocommerce-MyAccount-navigation ul li:hover {
-  background-color: var(--pale-grey);
-}
-
 .woocommerce-MyAccount-navigation {
   flex-basis: 500px;
-  padding-right: 40px;
 }
 
 /************************************************************************************************/
