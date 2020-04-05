@@ -10,9 +10,11 @@ function main() {
   const formRegister = document.querySelector('.register');
 
   if (!(formLogin && formRegister)) {
+    document.querySelector('h1').textContent = 'Заказы';
     const entryWoocommerce = document.querySelector('.entry-content .woocommerce');
-    entryWoocommerce.style.display = 'flex';
-    entryWoocommerce.style.width = '100%';
+    entryWoocommerce.style.display = 'none';
+    const url = new URL(window.location.href).origin;
+    window.location.href = `${url}/my-account/orders`;
   }
 
   if (formLogin && formRegister) {
@@ -39,6 +41,8 @@ function main() {
     formRegister.elements.email.placeholder = 'Введите @почту';
 
     /** Кнопки */
+    // вытаскиваем адрес сайта
+
     formLogin.elements.login.style.backgroundColor = 'var(--blue-blue)';
     formLogin.elements.login.style.color = '#fff';
     formLogin.elements.login.style.width = '160px';
