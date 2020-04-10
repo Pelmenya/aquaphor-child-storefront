@@ -17,6 +17,8 @@
 @import url(./assets/css/widgets/widget-cart.css);
 @import url(./assets/css/pages/cart.css);
 @import url(./assets/css/pages/orders.css);
+@import url(./assets/css/pages/view-order.css);
+@import url(./assets/css/pages/product.css);
 
 h2 {
   font-family: Proxima Nova Rg;
@@ -131,7 +133,8 @@ table th {
 
 .hentry .entry-content .woocommerce-MyAccount-navigation ul li:hover {
   list-style: none;
-  border: 1px solid transparent;
+  box-sizing: border-box;
+  box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.125);
   background-color: var(--pale-grey);
   color: var(--dark);
 }

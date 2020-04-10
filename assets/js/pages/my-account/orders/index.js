@@ -1,3 +1,38 @@
+function amountNormalize(str) {
+  const arr = str.split('.');
+  arr.splice(arr.length - 1, 1);
+  return `${arr.join(' ')} руб.`;
+}
+
+function dataToStrRus(str) {
+  const strObj = str.split('.');
+  /* const date = new Date(str.split('-'))
+     const year = date.getFullYear(date);
+     const month = date.getMonth(date);
+     const day = date.getDate(date);
+  срабатывает в браузерах  Google, Opera, FireFox и в других,
+  но не работает в Safari, EDGE.
+   */
+  const day = strObj[0];
+  const month = strObj[1];
+  const year = strObj[2];
+  const objMonth = [
+    'января',
+    'февраля',
+    'марта',
+    'апреля',
+    'мая',
+    'июня',
+    'июля',
+    'августа',
+    'сентября',
+    'октября',
+    'ноября',
+    'декабря',
+  ];
+  return `${day} ${objMonth[Number(month) - 1]}, ${year}`;
+}
+
 function main() {
   /**
    *  Ссылка на меню активная
@@ -37,35 +72,6 @@ function main() {
 
   const accountOrdersTable = document.querySelector('.account-orders-table');
 
-  function dataToStrRus(str) {
-    const strObj = str.split('.');
-    /* const date = new Date(str.split('-'))
-       const year = date.getFullYear(date);
-       const month = date.getMonth(date);
-       const day = date.getDate(date);
-    срабатывает в браузерах  Google, Opera, FireFox и в других,
-    но не работает в Safari, EDGE.
-     */
-    const day = strObj[0];
-    const month = strObj[1];
-    const year = strObj[2];
-    const objMonth = [
-      'января',
-      'февраля',
-      'марта',
-      'апреля',
-      'мая',
-      'июня',
-      'июля',
-      'августа',
-      'сентября',
-      'октября',
-      'ноября',
-      'декабря',
-    ];
-    return `${day} ${objMonth[Number(month) - 1]}, ${year}`;
-  }
-
   if (accountOrdersTable) {
     const accountOrdersTableTH = accountOrdersTable.querySelectorAll('.nobr');
     accountOrdersTableTH[0].textContent = 'Номер';
@@ -102,6 +108,11 @@ function main() {
     );
     Object.keys(ordersNumbers).forEach((i) => {
       ordersNumbers[i].textContent = ordersNumbers[i].textContent.replace('№', '#');
+    });
+
+    const ordersAmounts = accountOrdersTable.querySelectorAll('.amount');
+    Object.keys(ordersAmounts).forEach((i) => {
+      ordersAmounts[i].textContent = amountNormalize(ordersAmounts[i].textContent);
     });
   }
 }

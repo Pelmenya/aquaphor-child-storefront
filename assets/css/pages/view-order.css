@@ -1,0 +1,176 @@
+.order-number,
+.order-date,
+.order-status {
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: var(--dark);
+  font-weight: bold;
+}
+
+.woocommerce-order-details__title {
+  font-family: Proxima Nova Rg;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+
+.woocommerce-order-details table th {
+  padding: 1em;
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.woocommerce-order-details table.order_details {
+  border: 1px solid #e9e9eb;
+  margin-bottom: 60px;
+}
+
+.woocommerce-order-details table td {
+  padding: 1em;
+}
+
+.woocommerce-order-details .product-name a {
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.woocommerce-order-details .product-name .product-quantity {
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.woocommerce-order-details tfoot th {
+  background-color: #fff;
+  border-top: 1px solid #e9e9eb;
+  border-right: 1px solid #e9e9eb;
+}
+
+.woocommerce-order-details tfoot td {
+  background-color: #fff;
+  border-top: 1px solid #e9e9eb;
+}
+
+.woocommerce-order-details .product-total {
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.woocommerce-order-details tfoot td {
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.woocommerce-order-details .order-again .button {
+  border-radius: 3px;
+  background-color: var(--blue-blue);
+  color: #fff;
+  margin-bottom: 55px;
+}
+
+p.order-again {
+  margin-bottom: 0;
+}
+
+.woocommerce-order-details p.order-again .button::after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  line-height: inherit;
+  vertical-align: baseline;
+  content: "";
+  margin-left: 0em;
+}
+
+.woocommerce-customer-details .woocommerce-column__title {
+  font-family: Proxima Nova Rg;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.woocommerce-customer-details p.woocommerce-customer-details--phone {
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+.woocommerce-customer-details p.woocommerce-customer-details--phone::before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  line-height: inherit;
+  vertical-align: baseline;
+  content: '\f095';
+  padding-right: 5px;
+  color: var(--blue-blue);
+}
+
+.woocommerce-customer-details p.woocommerce-customer-details--email::before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  line-height: inherit;
+  vertical-align: baseline;
+  content: '\f0e0';
+  padding-right: 5px;
+  color: var(--blue-blue);
+}

@@ -18,23 +18,9 @@
 	<footer class="footer">
   <div class="footer__container">
     <div class="footer__wrap">
-    <div class="footer__info">
-        <img class="footer__logo" src="http://aquaphor.store/wp-content/uploads/2020/03/logo_white.png" alt="Логотип Аквафор">
-        <p class="footer__copyright">ООО&nbsp;«Аквафор&nbsp;Инжиниринг»&nbsp;&copy;&nbsp;<?php  echo  absint( date('Y' ) ); ?></p>
-        <div class="footer__cocial">
-         <a href="#" class="footer__cocial-link footer__cocial-link_vk"></a>
-         <a href="#" class="footer__cocial-link footer__cocial-link_ok"></a>
-         <a href="#" class="footer__cocial-link footer__cocial-link_fb"></a>
-         <a href="#" class="footer__cocial-link footer__cocial-link_in"></a>
-        </div>
-        <div class="footer__cocial">
-         <a href="#" class="footer__cocial-link footer__cocial-link_mastercard"></a>
-         <a href="#" class="footer__cocial-link footer__cocial-link_visacard"></a>
-        </div>
-      </div>
       <div class="footer__columns">
         <div class="footer__col">
-            <h4 class="footer__col-title">Системы</h4>
+            <h4 class="footer__col-title">Комплексные</h4>
             <a class="footer__col-link" href="#">WaterBoss</a>
             <a class="footer__col-link" href="#">WaterMax</a>
             <a class="footer__col-link" href="#">Аквафор</a>
@@ -81,8 +67,22 @@
             <a class="footer__col-link" href="#">Процесс&nbsp;передачи&nbsp;данных</a>
          </div>
       </div>
+      <div class="footer__info">
+        <div class="footer__social">
+        <h4 class="footer__col-title">+7&nbsp;(499)&nbsp;577&nbsp;03&nbsp;79</h4>
+        <p class="footer__col-address" href="#">info&#64;aquaphor.email</p>
+        <p class="footer__col-address" href="#">Московская&nbsp;область,</p>
+        <p class="footer__col-address" href="#">г.&nbsp;Ступино&nbsp;(142800)</p>
+        <p class="footer__col-address" href="#">ул.&nbsp;Пристанционная,&nbsp;д.&nbsp;6&nbsp;с.&nbsp;3</p>
+
+         <a href="#" class="footer__cocial-link footer__cocial-link_mastercard"></a>
+         <a href="#" class="footer__cocial-link footer__cocial-link_visacard"></a>
+         <a href="#" class="fa fa-credit-card footer__cocial-link_creditcard"></a>
+        </div>
+      </div>
 
     </div>
+    <p class="footer__copyright">&copy;&nbsp;<?php  echo  absint( date('Y' ) ); ?>, ИП Ефимов А.В., ИНН 504504369609, ОГРН 313504526100015</p>
   </div>
 	</footer><!-- #colophon -->
 

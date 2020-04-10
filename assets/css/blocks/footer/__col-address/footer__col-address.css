@@ -1,4 +1,4 @@
-.footer__col-link {
+.footer__col-address {
   text-decoration: none;
   opacity: 0.4;
   font-size: 13px;
@@ -9,10 +9,10 @@
   letter-spacing: -0.1px;
   color: #fff;
   margin-top: 12px;
-  transition: transform .3s, opacity .5s ease;
+  transition: opacity .5s ease;
+
 }
 
-.footer__col-link:hover {
-  transform: translateX(10px);
+.footer__col-address:hover {
   opacity: 1;
 }

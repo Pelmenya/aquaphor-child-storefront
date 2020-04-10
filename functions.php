@@ -19,14 +19,13 @@ if( ! defined('AQUAPHOR_THEME_ASSETS') )   define('AQUAPHOR_THEME_ASSETS', get_t
 
 if( ! defined('SITE_URL') )     define('SITE_URL', get_site_url() . '/' );
 if( ! defined('AQUAPHOR_THEME_JS') )   define('AQUAPHOR_THEME_JS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/pages/' );
+if( ! defined('AQUAPHOR_THEME_JS_FUNCTIONS') )   define('AQUAPHOR_THEME_JS_FUNCTIONS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/functions/' );
 
 /**
  *  Отключаем блоки в header
  *
  *
  */
-
-
 
 if ( ! function_exists( 'storefront_product_search' ) ) {
     function storefront_product_search() {
@@ -95,8 +94,43 @@ if ( ! function_exists( 'storefront_cart_link' ) ) {
 // отключили корзину в хедере
 function storefront_header_cart() {}
 
-// отключили хлебные крошки
-function woocommerce_breadcrumb() {}
+// отключили хлебные крошки ВЕЗДЕ КРОМЕ страницы товара
+function woocommerce_breadcrumb( $args = array() ) {
+  if (is_product()){
+
+  $args = wp_parse_args(
+		$args,
+		apply_filters(
+			'woocommerce_breadcrumb_defaults',
+			array(
+				'delimiter'   => '&nbsp;&#47;&nbsp;',
+				'wrap_before' => '<nav class="woocommerce-breadcrumb">',
+				'wrap_after'  => '</nav>',
+				'before'      => '',
+				'after'       => '',
+				'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
+			)
+		)
+	);
+
+	$breadcrumbs = new WC_Breadcrumb();
+
+	if ( ! empty( $args['home'] ) ) {
+		$breadcrumbs->add_crumb( $args['home'], apply_filters( 'woocommerce_breadcrumb_home_url', home_url() ) );
+	}
+
+	$args['breadcrumb'] = $breadcrumbs->generate();
+
+	/**
+	 * WooCommerce Breadcrumb hook
+	 *
+	 * @hooked WC_Structured_Data::generate_breadcrumblist_data() - 10
+	 */
+	do_action( 'woocommerce_breadcrumb', $breadcrumbs, $args );
+
+  wc_get_template( 'global/breadcrumb.php', $args );
+  }
+}
 
 
 // сформировал нужное меню
@@ -130,8 +164,8 @@ add_filter( 'woocommerce_cart_needs_shipping', 'aquaphor_filter_woocommerce_cart
 
 function aquaphor_remove_billing_adress_my_account_menu( $array, $customer_id ){
 
-  unset($array['billing']);
- 	//unset($array['shipping']);
+  //unset($array['billing']);
+ 	unset($array['shipping']);
 
   return $array;
 }
@@ -206,6 +240,8 @@ function aquaphor_enqueue_styles() {
 	);
 }
 
+
+
 function aquaphor_theme_scripts() {
   /* Путь к странице*/
   $url = $_SERVER['REQUEST_URI'];
@@ -223,6 +259,8 @@ function aquaphor_theme_scripts() {
   $url_my_account_lost_password = '/my-account/lost-password';
 	$url_my_account_edit_address = '/my-account/edit-address';
   $url_my_account_edit_address_shiping = '/my-account/edit-address/shipping';
+  $url_my_account_edit_address_billing = '/my-account/edit-address/billing';
+
   $url_my_account_orders = '/my-account/orders';
   $url_my_account_view_order = '\/my-account\/view-order';
   $url_my_account_edit_account = '/my-account/edit-account';
@@ -230,7 +268,7 @@ function aquaphor_theme_scripts() {
 
 
   if (strcasecmp($url_str, $url_cart) == 0){
-    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'cart/index.js', true);
+    wp_enqueue_script( 'custom', AQUAPHOR_THEME_JS . 'cart/index.js', array('jquery') );
   }
 
   if (strcasecmp($url_str, $url_my_account) == 0){
@@ -251,12 +289,9 @@ function aquaphor_theme_scripts() {
   */
   if (preg_match("/$url_my_account_view_order/i", $url_str)) {
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/view-order/index.js', true);
+    wp_enqueue_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmount.js', true);
+
   }
-
-
-
-
-
 
   if ((strcasecmp($url_str, $url_my_account_edit_address) == 0)&&(strcasecmp($url_query, '') == 0)) {
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/edit-address/index.js', true);
@@ -266,6 +301,11 @@ function aquaphor_theme_scripts() {
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/edit-address/shipping/index.js', true);
   }
 
+  if ((strcasecmp($url_str, $url_my_account_edit_address_billing) == 0)&&(strcasecmp($url_query, '') == 0)) {
+    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/edit-address/billing/index.js', true);
+  }
+
+
 	if ((strcasecmp($url_str, $url_my_account_lost_password) == 0)&&(strcasecmp($url_query, '') == 0)) {
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/lost-password/index.js', true);
   }
@@ -274,6 +314,10 @@ function aquaphor_theme_scripts() {
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/lost-password/show-reset-form/index.js', true);
   }
 
+  if (is_product()) {
+    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'product/index.js', true);
+    add_action( 'storefront_before_content', 'woocommerce_breadcrumb', 10 );
+  }
 
 }
 

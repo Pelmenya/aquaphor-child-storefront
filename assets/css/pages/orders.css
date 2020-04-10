@@ -35,10 +35,17 @@
   background-color: transparent;
   color: var(--dark);
 }
+
 table.account-orders-table th, td {
   padding-left: 1em;
   padding-right: 1em;
 }
+
+table.account-orders-table{
+  border: 1px solid #e9e9eb;
+}
+
+
 .my_account_orders .button:hover:hover {
   background-color: transparent;
 }

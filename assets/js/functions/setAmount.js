@@ -4,15 +4,11 @@ function amountNormalize(str) {
   return `${arr.join(' ')} руб.`;
 }
 
-function refreshCart() {
+function main() {
   const amounts = document.querySelectorAll('.amount');
   Object.keys(amounts).forEach((i) => {
     amounts[i].textContent = amountNormalize(amounts[i].textContent);
   });
 }
 
-/** jQuery нужен для отслеживания обновления корзины */
-jQuery(document.body).on('updated_cart_totals', () => refreshCart());
-jQuery(document.body).on('applied_coupon', () => refreshCart());
-
-refreshCart();
+main();
