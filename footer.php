@@ -70,10 +70,10 @@
       <div class="footer__info">
         <div class="footer__social">
         <h4 class="footer__col-title">+7&nbsp;(499)&nbsp;577&nbsp;03&nbsp;79</h4>
-        <p class="footer__col-address" href="#">info&#64;aquaphor.email</p>
-        <p class="footer__col-address" href="#">Московская&nbsp;область,</p>
-        <p class="footer__col-address" href="#">г.&nbsp;Ступино&nbsp;(142800)</p>
-        <p class="footer__col-address" href="#">ул.&nbsp;Пристанционная,&nbsp;д.&nbsp;6&nbsp;с.&nbsp;3</p>
+        <p class="footer__col-address footer__col-address_bold">info&#64;aquaphor.email</p>
+        <p class="footer__col-address">Московская&nbsp;область,</p>
+        <p class="footer__col-address">г.&nbsp;Ступино&nbsp;(142800)</p>
+        <p class="footer__col-address">ул.&nbsp;Пристанционная,&nbsp;д.&nbsp;6&nbsp;с.&nbsp;3</p>
 
          <a href="#" class="footer__cocial-link footer__cocial-link_mastercard"></a>
          <a href="#" class="footer__cocial-link footer__cocial-link_visacard"></a>

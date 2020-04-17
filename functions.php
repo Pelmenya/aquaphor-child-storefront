@@ -240,7 +240,16 @@ function aquaphor_enqueue_styles() {
 	);
 }
 
+function woocommerce_output_related_products() {
 
+	$args = array(
+		'posts_per_page' => 1,
+		'columns'        => 1,
+		'orderby'        => 'rand', // @codingStandardsIgnoreLine.
+	);
+
+	woocommerce_related_products( apply_filters( 'woocommerce_output_related_products_args', $args ) );
+}
 
 function aquaphor_theme_scripts() {
   /* Путь к странице*/
