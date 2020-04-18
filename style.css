@@ -431,6 +431,7 @@ input[type="submit"],
   --dull-orange: #ec8928;
   --dark: #28293c;
   --black-70: rgba(26, 26, 26, 0.7);
+  --dark-70: rgba(40, 41, 60, 0.7);
   --dark-40: rgba(40, 41, 60, 0.4);
   --dark-24: rgba(40, 41, 60, 0.24);
   --dark-10: rgba(40, 41, 60, 0.1);

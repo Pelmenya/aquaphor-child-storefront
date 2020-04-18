@@ -1,0 +1,21 @@
+.header__top-item-text {
+  font-family: Proxima Nova Rg;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.11px;
+  color: var(--dark-40);
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.header__top-item-text::before {
+  content: '\00A0';
+}
+
+.header__top-item-text:hover {
+  color: rgba(40, 41, 60, 70);
+}
