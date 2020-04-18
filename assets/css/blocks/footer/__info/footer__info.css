@@ -1,5 +1,5 @@
 .footer__info {
   display: flex;
   flex-direction: column;
-  margin-right: 100px;
+  max-width: 1440px;
  }

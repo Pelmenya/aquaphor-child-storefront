@@ -4,6 +4,7 @@
     "no-underscore-dangle": ["error", { "allow": ["_id"], "enforceInMethodNames": false, "allowAfterThis": true }]},
   "env": {
       "browser": true,
-      "node": true
+      "node": true,
+      "jquery": true
   }
 }

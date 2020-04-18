@@ -1,0 +1,260 @@
+/*рисунок*/
+.woocommerce-product-gallery__wrapper {
+  background-color: #f7f8f9;
+}
+
+/* лупа */
+.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+  display: none;
+}
+
+.single-product div.product .woocommerce-product-gallery .zoomImg {
+  cursor: pointer;
+  background-color: #f7f8f9;
+}
+
+div.storefront-breadcrumb {
+  margin: 0;
+  margin-top: 84px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: #f7f8f9;
+}
+
+.woocommerce-breadcrumb a:first-of-type::before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  line-height: inherit;
+  vertical-align: baseline;
+  content: '';
+  margin-right: 0.5407911001em;
+}
+
+.woocommerce-breadcrumb .breadcrumb-separator::after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  font-weight: 900;
+  line-height: inherit;
+  content: "/";
+  display: block;
+  font-size: 0.875em;
+  text-indent: 0;
+  line-height: initial;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  font-family: Proxima Nova Rg;
+  font-size: 12px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+}
+
+div.storefront-breadcrumb .woocommerce-breadcrumb {
+  font-family: Proxima Nova Rg;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.woocommerce-breadcrumb a {
+  font-family: Proxima Nova Rg;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.summary h1.product_title.entry-title {
+  font-family: Proxima Nova Rg;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+  margin-top: 0px;
+}
+
+.product_meta .posted_in {
+  font-family: Proxima Nova Rg;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: normal;
+  color: var(--dark);
+  font-weight: normal;
+}
+
+.product_meta .posted_in a {
+  font-family: Proxima Nova Rg;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.woocommerce-tabs.wc-tabs-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.storefront-full-width-content .woocommerce-tabs .panel {
+  width: 100%;
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+
+.woocommerce-tabs ul.tabs {
+  display: flex;
+  border-top: none;
+  margin-bottom: 25px;
+}
+
+#tab-title-reviews.reviews_tab {
+  display: none;
+}
+
+#tab-title-description.description_tab {
+  width: 50%;
+}
+
+.woocommerce-tabs ul.tabs li {
+  text-align: center;
+  font-family: Proxima Nova Rg;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--dark);
+  border-top: solid 1px #f5f7f7;
+  border-right: solid 1px #f5f7f7;
+  border-left: solid 1px #f5f7f7;
+  border-bottom: solid 3px var(--blue-blue);
+}
+.woocommerce-tabs ul.tabs li::after {
+  content: '';
+}
+
+.single-product div.product .product_meta {
+  border-top: none;
+}
+
+.woocommerce-tabs .panel h2:first-of-type {
+  font-family: Proxima Nova Rg;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+
+.related > h2:first-child,
+.upsells > h2:first-child {
+  font-family: Proxima Nova Rg;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+  margin-bottom: 26px;
+}
+
+.storefront-full-width-content .related.products > h2:first-child {
+  text-align: left;
+}
+
+ul.products li.product .price {
+  font-family: Proxima Nova Rg;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.button.product_type_simple.add_to_cart_button.ajax_add_to_cart {
+  width: 156px;
+  height: 50px;
+  border-radius: 3px;
+  background-color: var(--blue-blue);
+  color: var(--white);
+  text-align: center;
+  padding-top: 16px;
+  padding-left: 0;
+  padding-right: 0;
+  font-family: Proxima Nova Rg;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--white);
+}
+
+.button.product_type_simple.add_to_cart_button.ajax_add_to_cart:hover {
+  background-color: var(--cornflower-blue);
+}
+
+.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
+  padding: 10px 10px 10px 10px;
+}
+
+ button.single_add_to_cart_button.button.alt{
+  background-color: var(--blue-blue);
+}
+
+button.single_add_to_cart_button.button.alt:hover{
+  background-color: var(--cornflower-blue);
+}

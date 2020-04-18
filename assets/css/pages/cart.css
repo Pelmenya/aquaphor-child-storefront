@@ -1,0 +1,268 @@
+/*Корзина*/
+
+table.cart th,
+table.cart td {
+  padding: 1em;
+}
+
+table.cart td {
+  font-family: Proxima Nova Rg;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: normal;
+  color: var(--dark);
+  vertical-align: middle;
+}
+
+table.cart {
+  border: solid 1px #f5f7f7;
+}
+
+table.cart button {
+  background-color: trans;
+}
+
+table.cart td.actions input {
+  display: inline-block;
+  width: auto;
+  height: 44px;
+  padding-top: 13px;
+  padding-right: 100px;
+  border: solid 1px var(--dark);
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 0px;
+  margin-left: 21px;
+}
+
+.woocommerce-cart-form a {
+  vertical-align: middle;
+  font-size: 14px;
+  font-family: Proxima Nova Rg;
+  font-weight: bold;
+  color: var(--dark);
+}
+
+table.cart td.product-remove a.remove {
+  float: none;
+  position: relative;
+  top: auto;
+  right: auto;
+  font-size: 14px;
+}
+
+th.product-remove,
+th.product-price,
+th.product-quantity {
+  font-size: 16px;
+  font-family: Proxima Nova Rg;
+  font-weight: bold;
+  padding: 1em;
+  vertical-align: middle;
+  color: var(--dark);
+}
+
+th.product-remove {
+  width: 80px;
+}
+
+th.product-remove::before {
+  content: 'Товар';
+}
+
+.product-subtotal::before {
+  content: 'Сумма';
+  font-size: 16px;
+  padding: 1em;
+  padding-left: 0px;
+  font-family: Proxima Nova Rg;
+  font-weight: bold;
+  vertical-align: middle;
+  color: var(--dark);
+}
+
+.coupon .button {
+  background-color: transparent;
+}
+
+.coupon .button:hover {
+  background-color: transparent;
+}
+
+table.cart .actions .button {
+  background-color: transparent;
+  font-family: Proxima Nova Rg;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  vertical-align: middle;
+  color: var(--dark);
+  padding-top: 1em;
+}
+
+.woocommerce-Price-currencySymbol,
+th.product-name,
+th.product-subtotal {
+  color: transparent;
+}
+
+.product-thumbnail {
+  width: 85px;
+  margin-left: 0em;
+}
+
+.woocommerce-Price-currencySymbol::after {
+  content: 'руб.';
+  color: var(--dark);
+}
+
+a.remove::before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  line-height: inherit;
+  vertical-align: baseline;
+  content: "\f00d";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: black;
+  text-indent: 0;
+  text-align: center;
+}
+
+table:not(.has-background) tbody tr:nth-child(2n) td.actions {
+  background-color: var(--white);
+  border-top: solid 1px #f5f7f7;
+  padding: 1em;
+}
+
+table.cart td.actions {
+  border-top: 0;
+  background-color: transparent;
+  padding: 1em;
+}
+
+/*Корзина низ*/
+
+.cart_totals h2 {
+  color: transparent;
+  text-align: right;
+}
+
+.cart_totals h2::after {
+  content: 'Сумма к оплате';
+  font-family: Proxima Nova Rg;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.cart_totals table tr:nth-child(2n) th {
+  width: 50%;
+  background-color: #fff;
+  border-top: solid 1px #f5f7f7;
+  border-left: solid 1px #f5f7f7;
+  border-bottom: solid 1px #f5f7f7;
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.cart_totals table tr:nth-child(2n-1) th {
+  width: 50%;
+  background-color: #fff;
+  border-top: solid 1px #f5f7f7;
+  border-left: solid 1px #f5f7f7;
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.cart_totals table:not(.has-background) tbody tr:nth-child(2n) td {
+  width: 50%;
+  background-color: #fff;
+  border-top: solid 1px #f5f7f7;
+  border-bottom: solid 1px #f5f7f7;
+  border-right: solid 1px #f5f7f7;
+  border-left: solid 1px #f5f7f7;
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.cart_totals table:not(.has-background) tbody tr:nth-child(2n-1) td {
+  width: 50%;
+  background-color: #fff;
+  border-top: solid 1px #f5f7f7;
+  border-right: solid 1px #f5f7f7;
+  border-left: solid 1px #f5f7f7;
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.wc-proceed-to-checkout {
+  font-family: Proxima Nova Rg;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--white);
+}
+
+.wc-proceed-to-checkout .wc-forward::after {
+  content: '';
+}
+
+.wc-proceed-to-checkout .button {
+  background-color: var(--blue-blue);
+  margin-left: 50%;
+}
+
+.wc-proceed-to-checkout .button:hover {
+  background-color: var(--cornflower-blue);
+  margin-left: 50%;
+}
+/***********************/

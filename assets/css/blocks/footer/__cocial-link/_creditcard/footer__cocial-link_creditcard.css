@@ -1,0 +1,11 @@
+.footer__cocial-link_creditcard {
+  opacity: 0.4;
+  font-style: normal;
+  font-size: 25px;
+  margin-right: 25px;
+  color: #fff;
+}
+
+.footer__cocial-link_creditcard:hover{
+  opacity: 1;
+}
