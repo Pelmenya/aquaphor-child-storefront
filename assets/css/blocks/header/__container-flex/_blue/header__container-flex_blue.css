@@ -1,0 +1,8 @@
+.header__container-flex_blue {
+  background-color: var(--blue-blue);
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
