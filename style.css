@@ -345,61 +345,6 @@ textarea,
 
 /* кнопки формы регистрации*/
 
-/* модернизируем блок search*/
-
-.woocommerce-product-search {
-  width: 700px;
-  margin-bottom: 0px;
-}
-
-.widget_product_search form::before {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: inline-block;
-  font-size: 16px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  line-height: 1;
-  font-family: 'Font Awesome 5 Free';
-  line-height: inherit;
-  vertical-align: baseline;
-  content: "\f002";
-  position: absolute;
-  top: 8px;
-  left: 12px;
-  line-height: 1;
-  color: rgba(26, 26, 26, 1);
-}
-
-.widget_product_search form input[type="search"] {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-right: 8px;
-  padding-left: 40px;
-  padding-right: 40px;
-  height: 32px;
-  background-color: #f7f7f7;
-  outline-style: none;
-  font-family: Proxima Nova Rg;
-  font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.83;
-  letter-spacing: -0.1px;
-  border-radius: 3px;
-  box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.1);
-  background-color: rgb(171, 187, 252);
-  opacity: .6;
-}
-
-.widget_product_search form input[type="search"]:focus {
-  background-color: rgb(171, 187, 252);
-  opacity: 1;
-  color: rgba(26, 26, 26, 1);
-}
-
 /* кнопки корзина*/
 
 button:hover,

@@ -12,8 +12,9 @@
 
   position: absolute;
   width: 300px;
-  top: 50px;
+  top: 32px;
   left: -140px;
+  z-index: 90;
 }
 
 .header__basket-popup:hover{
