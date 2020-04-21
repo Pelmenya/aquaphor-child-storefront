@@ -21,50 +21,48 @@
       <div class="footer__columns">
         <div class="footer__col">
             <h4 class="footer__col-title">Комплексные</h4>
-            <a class="footer__col-link" href="#">WaterBoss</a>
-            <a class="footer__col-link" href="#">WaterMax</a>
-            <a class="footer__col-link" href="#">Аквафор</a>
-            <a class="footer__col-link" href="#">Aquaphor Pro</a>
-            <a class="footer__col-link" href="#">Колонны</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>product-category/systems/waterboss/">WaterBoss</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>product-category/systems/watermax/">WaterMax</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>product-category/systems/aquaphor-pro/">Aquaphor Pro</a>
          </div>
       </div>
       <div class="footer__columns">
         <div class="footer__col">
             <h4 class="footer__col-title">Магистральные</h4>
-            <a class="footer__col-link" href="#">Гросс&nbsp;20</a>
-            <a class="footer__col-link" href="#">Гросс&nbsp;10</a>
-            <a class="footer__col-link" href="#">Викинг</a>
-            <a class="footer__col-link" href="#">Викинг&nbsp;миди</a>
-            <a class="footer__col-link" href="#">Викинг&nbsp;мини</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>product/корпус-аквафор-гросс-20/">Гросс&nbsp;20</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>product/корпус-аквафор-гросс-10/">Гросс&nbsp;10</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>product/корпус-аквафор-викинг/">Викинг</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>product/корпус-аквафор-викинг-миди/">Викинг&nbsp;миди</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>product/корпус-аквафор-викинг-мини/">Викинг&nbsp;мини</a>
          </div>
       </div>
       <div class="footer__columns">
         <div class="footer__col">
             <h4 class="footer__col-title">Обратный&nbsp;осмос</h4>
-            <a class="footer__col-link" href="#">DWM-101S&nbsp;«Морион»</a>
-            <a class="footer__col-link" href="#">DWM-201</a>
-            <a class="footer__col-link" href="#">Осмо-50</a>
-            <a class="footer__col-link" href="#">Осмо&nbsp;Классика</a>
-            <a class="footer__col-link" href="#">Осмо-Кристалл</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>product/аквафор-dwm-101s-морион/">DWM-101S&nbsp;«Морион»</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>product/аквафор-dwm-201/">DWM-201</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>product/аквафор-осмо-50-исп-5/">Осмо-50</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>">Осмо&nbsp;Классика</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>">Осмо-Кристалл</a>
          </div>
       </div>
       <div class="footer__columns">
         <div class="footer__col">
             <h4 class="footer__col-title">Услуги</h4>
-            <a class="footer__col-link" href="#">Анализ&nbsp;воды</a>
-            <a class="footer__col-link" href="#">Подбор&nbsp;оборудивания</a>
-            <a class="footer__col-link" href="#">Сервис&nbsp;и&nbsp;ремонт</a>
-            <a class="footer__col-link" href="#">Регистрация&nbsp;фильтра</a>
-            <a class="footer__col-link" href="#">Оплата&nbsp;и&nbsp;доставка</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>">Анализ&nbsp;воды</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>">Подбор&nbsp;оборудивания</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>">Сервис&nbsp;и&nbsp;ремонт</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>">Регистрация&nbsp;фильтра</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>">Оплата&nbsp;и&nbsp;доставка</a>
          </div>
       </div>
       <div class="footer__columns">
         <div class="footer__col">
             <h4 class="footer__col-title">Информация</h4>
-            <a class="footer__col-link" href="#">Договор&nbsp;оферты</a>
-            <a class="footer__col-link" href="#">Политика&nbsp;конфиденциальности</a>
-            <a class="footer__col-link" href="#">Пользовательское&nbsp;соглашение</a>
-            <a class="footer__col-link" href="#">Процесс&nbsp;передачи&nbsp;данных</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>">Договор&nbsp;оферты</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>">Политика&nbsp;конфиденциальности</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>">Пользовательское&nbsp;соглашение</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>">Процесс&nbsp;передачи&nbsp;данных</a>
          </div>
       </div>
       <div class="footer__info">
@@ -75,9 +73,9 @@
         <p class="footer__col-address">г.&nbsp;Ступино&nbsp;(142800)</p>
         <p class="footer__col-address">ул.&nbsp;Пристанционная,&nbsp;д.&nbsp;6&nbsp;с.&nbsp;3</p>
 
-         <a href="#" class="footer__cocial-link footer__cocial-link_mastercard"></a>
-         <a href="#" class="footer__cocial-link footer__cocial-link_visacard"></a>
-         <a href="#" class="fa fa-credit-card footer__cocial-link_creditcard"></a>
+         <a href="<?php echo SITE_URL?>" class="footer__cocial-link footer__cocial-link_mastercard"></a>
+         <a href="<?php echo SITE_URL?>" class="footer__cocial-link footer__cocial-link_visacard"></a>
+         <a href="<?php echo SITE_URL?>" class="fa fa-credit-card footer__cocial-link_creditcard"></a>
         </div>
       </div>
 
