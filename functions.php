@@ -328,8 +328,6 @@ function aquaphor_theme_scripts() {
     add_action( 'storefront_before_content', 'woocommerce_breadcrumb', 10 );
   }
 
-  wp_enqueue_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmount.js', true);
-
 }
 
 add_action( 'wp_footer', 'aquaphor_theme_scripts' );

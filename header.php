@@ -261,8 +261,39 @@
       <!-- Нижнее меню -->
       <div class="header__container-flex header__container-flex_blue header__container-flex_grey">
             <nav class="header__wrap">
-              <a href="" class="header__nav-bottom">
-                <strong class="header__nav-bottom-text">КОМПЛЕКСНЫЕ</strong>
+              <div class="header__nav-bottom header__nav-bottom_systems">
+                <div class="header__menu header__menu_systems">
+                  <div class="header__menu-col">
+                    <a href="<?php echo SITE_URL?>product-category/systems/waterboss/" class="header__menu-col-title-link">
+                      <h4 class="header__menu-col-title">WATERBOSS</h4>
+                    </a>
+                    <a href="<?php echo SITE_URL?>product/waterboss-400/" class="header__menu-col-link">WaterBoss&nbsp;400</a>
+                    <a href="<?php echo SITE_URL?>product/waterboss-400p/" class="header__menu-col-link">WaterBoss&nbsp;400P</a>
+                    <a href="<?php echo SITE_URL?>product/waterboss-700/" class="header__menu-col-link">WaterBoss&nbsp;700</a>
+                    <a href="<?php echo SITE_URL?>product/waterboss-800/" class="header__menu-col-link">WaterBoss&nbsp;800</a>
+                    <a href="<?php echo SITE_URL?>product/waterboss-900/" class="header__menu-col-link">WaterBoss&nbsp;900</a>
+                    <a href="<?php echo SITE_URL?>product/waterboss-1000/" class="header__menu-col-link">WaterBoss&nbsp;1000</a>
+                  </div>
+                  <div class="header__menu-col">
+                    <a href="<?php echo SITE_URL?>product-category/systems/watermax/" class="header__menu-col-title-link">
+                      <h4 class="header__menu-col-title">WATERMAX</h4>
+                    </a>
+                    <a href="<?php echo SITE_URL?>product/watermax-akq/" class="header__menu-col-link">WaterMax&nbsp;AKQ</a>
+                    <a href="<?php echo SITE_URL?>product/watermax-apq/" class="header__menu-col-link">WaterMax&nbsp;APQ</a>
+                    <a href="<?php echo SITE_URL?>product/watermax-beq/" class="header__menu-col-link">WaterMax&nbsp;BEQ</a>
+                    <a href="<?php echo SITE_URL?>product/watermax-maq/" class="header__menu-col-link">WaterMax&nbsp;MAQ</a>
+                    <a href="<?php echo SITE_URL?>product/watermax-mxq/" class="header__menu-col-link">WaterMax&nbsp;MXQ</a>
+                  </div>
+                  <div class="header__menu-col">
+                    <a href="<?php echo SITE_URL?>product-category/systems/aquaphor-pro/" class="header__menu-col-title-link">
+                      <h4 class="header__menu-col-title">AQUAPHOR&nbsp;PRO</h4>
+                    </a>
+                    <a href="<?php echo SITE_URL?>product/аквафор-pro-180/" class="header__menu-col-link">Аквафор&nbsp;Pro&nbsp;180</a>
+                    <a href="<?php echo SITE_URL?>product/аквафор-proplus-380/" class="header__menu-col-link">Аквафор&nbsp;ProPlus&nbsp;380</a>
+                    <a href="<?php echo SITE_URL?>product/аквафор-proplus-380p/" class="header__menu-col-link">Аквафор&nbsp;ProPlus&nbsp;380P</a>
+                  </div>
+                </div>
+                <a href="<?php echo SITE_URL?>product-category/systems/" class="header__nav-bottom-text">КОМПЛЕКСНЫЕ</a>
                 <svg class="header__item-icon" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                       <g class="header__icon-blue" id="81-mini-icons" transform="translate(-209.000000, -55.000000)" fill-rule="nonzero">
@@ -272,9 +303,28 @@
                       </g>
                   </g>
                 </svg>
-              </a>
-              <a href="" class="header__nav-bottom">
-                <strong class="header__nav-bottom-text">МАГИСТРАЛЬНЫЕ</strong>
+              </div>
+              <div class="header__nav-bottom header__nav-bottom_trunk">
+                <div class="header__menu header__menu_trunk">
+                  <div class="header__menu-col">
+                    <a href="<?php echo SITE_URL?>product-category/trunk/горячая/" class="header__menu-col-title-link">
+                      <h4 class="header__menu-col-title">Горячая</h4>
+                    </a>
+                    <a href="<?php echo SITE_URL?>product/корпус-аквафор-викинг/" class="header__menu-col-link">Корпус&nbsp;Аквафор&nbsp;Викинг</a>
+                    <a href="<?php echo SITE_URL?>product/корпус-аквафор-викинг-миди/" class="header__menu-col-link">Корпус&nbsp;Аквафор&nbsp;Викинг&nbsp;Миди</a>
+                    <a href="<?php echo SITE_URL?>product/корпус-аквафор-викинг-мини/" class="header__menu-col-link">Корпус&nbsp;Аквафор&nbsp;Викинг&nbsp;Мини</a>
+                    <a href="<?php echo SITE_URL?>product/корпус-предфильтра-для-горячей-воды-1-2/" class="header__menu-col-link">Корпус&nbsp;предфильтра&nbsp;для&nbsp;горячей&nbsp;воды&nbsp;&frac12;</a>
+                  </div>
+                  <div class="header__menu-col">
+                    <a href="<?php echo SITE_URL?>" class="header__menu-col-title-link">
+                      <h4 class="header__menu-col-title">Холодная&nbsp;</h4>
+                    </a>
+                    <a href="<?php echo SITE_URL?>product/корпус-аквафор-гросс-10/" class="header__menu-col-link">Корпус&nbsp;Аквафор&nbsp;Гросс&nbsp;10</a>
+                    <a href="<?php echo SITE_URL?>product/корпус-аквафор-гросс-20/" class="header__menu-col-link">Корпус&nbsp;Аквафор&nbsp;Гросс&nbsp;20</a>
+                    <a href="<?php echo SITE_URL?>product/корпус-предфильтра-для-холодной-воды-3/" class="header__menu-col-link">Корпус&nbsp;предфильтра&nbsp;для&nbsp;холодной&nbsp;воды&nbsp;&frac34;</a>
+                  </div>
+                </div>
+                <a href="<?php echo SITE_URL?>product-category/trunk" class="header__nav-bottom-text">МАГИСТРАЛЬНЫЕ</a>
                 <svg class="header__item-icon" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                       <g class="header__icon-blue" id="81-mini-icons" transform="translate(-209.000000, -55.000000)" fill-rule="nonzero">
@@ -284,9 +334,8 @@
                       </g>
                   </g>
                 </svg>
-              </a>
-
-              <a href="" class="header__nav-bottom">
+              </div>
+              <a href="<?php echo SITE_URL?>" class="header__nav-bottom">
                 <strong class="header__nav-bottom-text">ПИТЬЕВЫЕ</strong>
                 <svg class="header__item-icon" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -298,7 +347,7 @@
                   </g>
                 </svg>
               </a>
-              <a href="" class="header__nav-bottom">
+              <a href="<?php echo SITE_URL?>" class="header__nav-bottom">
                 <strong class="header__nav-bottom-text">РАСХОДНИКИ</strong>
                 <svg class="header__item-icon" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -310,13 +359,22 @@
                   </g>
                 </svg>
               </a>
-              <a href="" class="header__nav-bottom">
-                СКИДКИ
+              <a href="<?php echo SITE_URL?>" class="header__nav-bottom">
+                <strong class="header__nav-bottom-text header__nav-bottom-text_orange">СКИДКИ</strong>
+                <svg width="12px" height="18px" viewBox="0 0 12 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g class="header__item-icon header__item-icon_orange" id="81-mini-icons" transform="translate(-209.000000, -281.000000)" fill="#ec8928">
+                          <g id="icon-" transform="translate(203.000000, 278.000000)">
+                              <path d="M12.7452396,3.52242405 C13.8159622,2.31747772 15.7825327,3.36902541 15.3760263,4.9290896 L14.0514291,10.0050507 L16.2442627,10.8824909 C17.2313829,11.2774924 17.5274423,12.5315263 16.8218085,13.3261313 L10.4642018,20.4775759 C9.3934793,21.6825223 7.42690871,20.6309746 7.83341511,19.0709104 L9.15801239,13.9949493 L6.9651788,13.1175091 C5.97805854,12.7232746 5.68199916,11.4684737 6.38763291,10.6738687 L12.7452396,3.52242405 Z M13.8911275,4.54175803 L7.53428776,11.6932027 L10.9834562,13.0730235 L9.31831397,19.458242 L15.6751537,12.3067973 L12.2259852,10.9269765 L13.8911275,4.54175803 L13.8911275,4.54175803 Z" id="Fill-1170"></path>
+                          </g>
+                      </g>
+                  </g>
+                </svg>
               </a>
-              <a href="" class="header__nav-bottom">
+              <a href="<?php echo SITE_URL?>" class="header__nav-bottom">
                 АНАЛИЗ ВОДЫ
               </a>
-              <a href="" class="header__nav-bottom">
+              <a href="<?php echo SITE_URL?>" class="header__nav-bottom">
                 ОБСЛУЖИВАНИЕ
               </a>
             </nav>

@@ -1,7 +1,12 @@
 .header__menu-col-link {
-  cursor: url('../../../images/lapka.png'), pointer;
-  text-decoration: none;
-  color: #1d2b36;
+  font-family: Proxima Nova Rg;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.1px;
+  color: var(--dark);
   margin-top: 15px;
 }
 

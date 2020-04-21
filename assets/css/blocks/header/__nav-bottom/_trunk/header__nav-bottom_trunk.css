@@ -1,0 +1,7 @@
+.header__nav-bottom_trunk {
+  position: relative;
+}
+
+.header__nav-bottom_trunk:hover .header__menu_trunk {
+  display: flex;
+}

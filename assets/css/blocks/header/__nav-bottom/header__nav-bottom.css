@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
 
-  position: relative;
 
   font-family: Proxima Nova Rg;
   font-size: 15px;
@@ -12,5 +11,29 @@
   line-height: normal;
   letter-spacing: -0.13px;
   color: var(--blue-blue);
-  text-transform: uppercase;
+
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.header__nav-bottom:hover .header__nav-bottom-text {
+  color: var(--cornflower-blue);
+}
+
+.header__nav-bottom:hover .header__item-icon {
+  fill: var(--cornflower-blue);
+}
+
+.header__nav-bottom:hover {
+  background-color: #fff;
+  color: var(--cornflower-blue);
+}
+
+.header__nav-bottom:hover .header__nav-bottom-text_orange {
+  color: var(--dull-orange);
+}
+
+.header__nav-bottom:hover .header__item-icon_orange{
+  fill: var(--dull-orange);
+  opacity: .6;
 }

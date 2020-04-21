@@ -2,13 +2,13 @@
   display: none;
   background-color: #fff;
 
-  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+  box-shadow: 0px 5px 15px rgba(176, 176, 183, 0.2);
   box-sizing: border-box;
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  border-radius: 10px;
+  border-radius: 3px;
 
   position: absolute;
   width: 300px;
@@ -17,6 +17,6 @@
   z-index: 90;
 }
 
-.header__basket-popup:hover{
+.header__basket-popup:hover {
   display: block;
 }
