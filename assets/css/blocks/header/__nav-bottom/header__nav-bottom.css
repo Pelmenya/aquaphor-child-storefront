@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
 
-
   font-family: Proxima Nova Rg;
   font-size: 15px;
   font-weight: 600;
@@ -20,8 +19,14 @@
   color: var(--cornflower-blue);
 }
 
-.header__nav-bottom:hover .header__item-icon {
-  fill: var(--cornflower-blue);
+.header__nav-bottom:hover .header__item-icon_rotating {
+  transition: transform .5s;
+  transform: rotate(180deg);
+}
+
+.header__nav-bottom:hover .header__item-icon-sale {
+  transition: transform .5s;
+  transform: rotate(360deg);
 }
 
 .header__nav-bottom:hover {
@@ -31,9 +36,10 @@
 
 .header__nav-bottom:hover .header__nav-bottom-text_orange {
   color: var(--dull-orange);
+  opacity: .6;
 }
 
-.header__nav-bottom:hover .header__item-icon_orange{
+.header__nav-bottom:hover .header__item-icon_orange {
   fill: var(--dull-orange);
   opacity: .6;
 }

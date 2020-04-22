@@ -1,0 +1,7 @@
+.header__item-icon_rotating {
+  transition: transform .5s;
+}
+
+.header__item-icon_rotating:hover {
+  transform: rotate(180deg);
+}
