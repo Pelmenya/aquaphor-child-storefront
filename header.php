@@ -132,7 +132,6 @@
           </a>
        </div>
       </div>
-
       <div class="header__container-flex header__container-flex_blue">
         <div class="header__wrap">
 
@@ -219,12 +218,9 @@
                   </g>
                 </svg>
               </a>
-
               <div class="header__search-container">
                 <?php the_widget( 'WC_Widget_Product_Search', 'title=' ); ?>
               </div>
-
-
             <div class="header__item-icons">
               <a href="<?php echo SITE_URL?>cart" class="header__basket-container">
                 <svg class="header__item-icon header__item-icon_19px" viewBox="0 1 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -316,7 +312,7 @@
                     <a href="<?php echo SITE_URL?>product/корпус-предфильтра-для-горячей-воды-1-2/" class="header__menu-col-link">Корпус&nbsp;предфильтра&nbsp;для&nbsp;горячей&nbsp;воды&nbsp;&frac12;</a>
                   </div>
                   <div class="header__menu-col">
-                    <a href="<?php echo SITE_URL?>" class="header__menu-col-title-link">
+                    <a href="<?php echo SITE_URL?>product-category/trunk/холодная/" class="header__menu-col-title-link">
                       <h4 class="header__menu-col-title">Холодная</h4>
                     </a>
                     <a href="<?php echo SITE_URL?>product/корпус-аквафор-гросс-10/" class="header__menu-col-link">Корпус&nbsp;Аквафор&nbsp;Гросс&nbsp;10</a>
