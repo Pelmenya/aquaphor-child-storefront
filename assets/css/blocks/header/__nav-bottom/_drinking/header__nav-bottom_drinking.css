@@ -1,0 +1,7 @@
+.header__nav-bottom_drinking {
+  position: relative;
+}
+
+.header__nav-bottom_drinking:hover .header__menu_drinking {
+  display: flex;
+}

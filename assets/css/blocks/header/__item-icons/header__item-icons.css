@@ -1,4 +1,5 @@
 .header__item-icons {
    display: flex;
-   
+   align-items: center;
+   margin-left: 20px;
 }

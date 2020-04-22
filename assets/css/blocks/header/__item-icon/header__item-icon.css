@@ -7,6 +7,6 @@
 }
 
 .header__item-icon:hover + .header__top-item-text {
-  color: rgba(40, 41, 60, 70);
+  color: var(--dark-70);
 }
 

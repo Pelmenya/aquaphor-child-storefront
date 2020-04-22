@@ -1,3 +1,6 @@
-.header__basket-popup a {
+
+.header__basket-popup .woocommerce-Price-amount.amount,
+strong,
+a {
   color: var(--dark);
 }

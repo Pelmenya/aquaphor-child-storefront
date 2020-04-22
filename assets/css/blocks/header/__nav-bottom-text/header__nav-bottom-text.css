@@ -1,0 +1,12 @@
+.header__nav-bottom-text {
+  margin-right: 6px;
+  font-family: Proxima Nova Rg;
+  font-size: 15px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.13px;
+  color: var(--blue-blue);
+  text-transform: uppercase;
+}

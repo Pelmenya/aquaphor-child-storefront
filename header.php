@@ -132,10 +132,291 @@
           </a>
        </div>
       </div>
-   </div>
+      <div class="header__container-flex header__container-flex_blue">
+        <div class="header__wrap">
+
+              <a class="header__logo-link" href="<?php echo SITE_URL?>">
+                <svg  class="header__logo" xmlns="http://www.w3.org/2000/svg" width="366" height="68" viewBox="0 0 366 68">
+                  <metadata id="metadata8">image/svg+xml</metadata>
+                  <defs>
+                    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath16">
+                      <path d="m-156 1237.09l595.28 0 0-841.89 -595.28 0 0 841.89z" id="path18"/>
+                    </clipPath>
+                  </defs>
+                  <rect fill="none" id="canvas_background" height="70" width="368" y="-1" x="-1"/>
+                  <g id="g10" transform="matrix(1.25,0,0,-1.25,0,1052.3625) ">
+                    <g id="g12">
+                      <g id="g14" clip-path="url(#clipPath16)">
+                        <g id="g20">
+                          <path fill="#fff" fill-rule="evenodd" d="m119.38 793.98c0-1.2-0.69-1.62-2.63-1.69l-1.39 0 -1.59 0c-1.87 0-2.43 0.7-2.43 1.69l0 1.62c0 0.92 0.63 1.7 2.49 1.7l1.53 0 1.39 0c1.94 0 2.64-0.5 2.64-1.7l0-1.62zm-2.15 4.94l-1.87 0 -1.8 0c-0.97 0-1.59-0.21-2.08-0.43 -0.07 0-0.07-0.07-0.14-0.07l0 0.14 0 0.35 -2 0 0-0.35 0-10.93 2 0 0 3.53c0.42-0.21 1.18-0.49 2.35-0.49l1.67 0 1.87 0c1.38 0 2.42 0.28 3.12 0.91 0.77 0.57 1.11 1.41 1.11 2.4l0 1.62c0 0.85-0.28 1.7-0.96 2.33 -0.69 0.64-1.73 0.99-3.26 0.99" id="path22"/>
+                        </g>
+                        <g id="g24">
+                          <path fill="#fff" fill-rule="evenodd" d="m95.88 798.92l11.92 0 0-0.35 0-1.27 -4.99 0 0-6.28 0-0.35 -1.94 0 0 6.63 -4.99 0 0 0.35 0 1.27z" id="path26"/>
+                        </g>
+                        <g id="g28">
+                          <path fill="#fff" fill-rule="evenodd" d="m92.7 793.06c0-0.49 0-0.7-1.59-0.78l-2.29 0 -3.95 0 0 2.04 3.95 0 2.29 0c1.59-0.07 1.59-0.21 1.59-0.7l0-0.56zm-1.11 2.89l-2.77 0 -3.95 0 0 2.97 -0.34 0 -1.32 0 -0.35 0 0-8.25 5.96 0 2.57 0c1.94 0 3.39 0.7 3.39 2.32l0 0.85c0 1.27-1.18 2.11-3.19 2.11" id="path30"/>
+                        </g>
+                        <g id="g32">
+                          <path fill="#fff" fill-rule="evenodd" d="m49.86 793.98c-0.07-1.2-0.76-1.62-2.7-1.69l-0.42 0 -0.62 0c-1.87 0-2.43 0.78-2.49 1.69l0 1.62c0 0.92 0.9 1.7 2.49 1.7l0.62 0 0.42 0c1.87 0 2.63-0.5 2.7-1.7l0-1.62zm-8.18 0c0-0.99-0.69-1.69-2.49-1.69l-0.63 0 -0.35 0c-1.94 0-2.7 0.49-2.77 1.69l0 1.62c0.07 1.2 0.83 1.7 2.71 1.7l0.42 0 0.63 0c1.87 0 2.42-0.71 2.49-1.7l0-1.62zm5.96 4.94l-0.9 0 -0.9 0c-0.9 0-1.59-0.21-2.01-0.43 -0.07 0-0.14-0.07-0.2-0.07l0 3.45 -1.94 0 0-3.45c-0.48 0.21-1.18 0.5-2.22 0.5l-0.9 0 -0.83 0c-1.53 0-2.56-0.35-3.26-0.99 -0.69-0.63-0.97-1.48-0.97-2.33l0-1.62c0-0.99 0.35-1.83 1.04-2.4 0.76-0.63 1.8-0.91 3.19-0.91l0.83 0 0.76 0c1.11 0 1.87 0.28 2.36 0.5l0-3.53 0.35 0 1.25 0 0.35 0 0 3.53c0.48-0.21 1.25-0.49 2.35-0.49l0.76 0 0.83 0c1.39 0 2.43 0.28 3.19 0.91 0.69 0.57 1.04 1.41 1.04 2.4l0 1.62c0 0.85-0.28 1.7-0.97 2.33 -0.69 0.64-1.73 0.99-3.19 0.99" id="path34"/>
+                        </g>
+                        <g id="g36">
+                          <path fill="#fff" fill-rule="evenodd" d="m69.89 798.92l10.88 0 0-8.25 -2.01 0 0 6.63 -6.93 0 0-3.46c0-0.98-0.35-1.83-0.97-2.4 -0.62-0.56-1.52-0.77-2.63-0.77l-0.69 0 0 0.35 0 1.27 0.35 0 0.34 0c1.18 0.07 1.59 0.35 1.66 1.55l0 5.08z" id="path38"/>
+                        </g>
+                        <g id="g40">
+                          <path fill="#fff" fill-rule="evenodd" d="m63.38 798.92l2.7 0 0-8.25 -2.08 0 0 6.55 -7.35-6.55 -2.7 0 0 8.25 0.28 0 1.32 0 0.34 0 0-6.7 7.49 6.7z" id="path42"/>
+                        </g>
+                        <g id="g44">
+                          <path fill="#fff" fill-rule="evenodd" d="m248.29 793.06c0-0.42-0.07-0.71-1.66-0.78l-2.29 0 -3.95 0 0 2.04 3.95 0 2.36 0c1.59-0.07 1.59-0.21 1.59-0.7l0-0.56zm-1.18 2.89l-2.78 0 -3.95 0 0 2.96 -0.28 0 -1.38 0 -0.34 0 0-8.25 5.96 0 2.57 0c1.95 0 3.4 0.7 3.4 2.32l0 0.85c0 1.27-1.11 2.11-3.19 2.11m6.17 2.96l0.35 0 0-8.25 -1.94 0 0 8.25 0.35 0 1.25 0z" id="path46"/>
+                        </g>
+                        <g id="g48">
+                          <path fill="#fff" fill-rule="evenodd" d="m219.32 793.98c0-1.2-0.77-1.62-2.36-1.69l-1.73 0 -1.73 0c-1.8 0.07-2.36 0.57-2.43 1.69l0 1.62c0.07 1.27 0.62 1.62 2.43 1.7l1.73 0 1.73 0c1.67 0 2.36-0.56 2.36-1.7l0-1.62zm-2.29 4.94l-1.8 0 -1.8 0c-1.52 0-2.57-0.35-3.32-0.92 -0.69-0.63-0.97-1.49-0.97-2.4l0-1.62c0-1.05 0.35-1.91 1.11-2.46 0.69-0.57 1.81-0.84 3.19-0.84l1.8 0 1.73 0c1.52 0 2.63 0.35 3.4 0.99 0.69 0.56 0.97 1.48 0.97 2.33l0 1.62c0 0.85-0.27 1.77-0.97 2.33 -0.69 0.64-1.73 0.99-3.32 0.99" id="path50"/>
+                        </g>
+                        <g id="g52">
+                          <path fill="#fff" fill-rule="evenodd" d="m205.18 792.99c0-0.42-0.34-0.7-1.66-0.7l-2.36 0 -4.02 0 0 1.77 4.02 0 2.22 0c1.94-0.14 1.73-0.35 1.8-0.71l0-0.36zm-8.04 4.31l4.02 0 2.42 0c1.04 0 1.39-0.28 1.39-0.71l0-0.29c0-0.42-0.28-0.63-1.39-0.7l-2.42 0 -4.02 0 0 1.7zm9.08-2.4c0.49 0.28 0.77 0.78 0.77 1.41l0 0.29c0 1.48-1.32 2.33-3.54 2.33l-2.29 0 -6.1 0 0-8.25 0.35 0 5.75 0 2.42 0c2.29 0 3.61 0.84 3.68 2.32l0 0.36c0 0.57-0.42 1.2-1.04 1.55" id="path54"/>
+                        </g>
+                        <g id="g56">
+                          <path fill="#fff" fill-rule="evenodd" d="m184.8 795.25l-3.88 0 -2.29 0c-1.73 0.07-1.59 0.21-1.66 0.7l0 0.56c0.07 0.5 0.07 0.71 1.67 0.78l2.29 0 3.88 0 0-2.05zm-6.44 3.67c-1.94 0-3.39-0.7-3.39-2.33l0-0.85c0-1.13 0.9-1.97 2.56-2.11l-4.09-2.96 3.05 0 3.67 2.96 0.76 0 3.88 0 0-2.96 2.08 0 0 8.25 -5.96 0 -2.56 0z" id="path58"/>
+                        </g>
+                        <g id="g60">
+                          <path fill="#fff" fill-rule="evenodd" d="m156.18 792.29l-3.6 0 -3.67 0c0.55 0.78 0.62 1.91 0.62 2.68l0 2.33 3.06 0 3.61 0 0-5.01zm2 6.63l-5.61 0 -4.99 0 0-4.09c0-1.26-0.34-2.11-1.18-2.54l-0.62 0 -0.35 0 0-4.44 1.94 0 0 2.82 5.2 0 4.71 0 0-2.82 1.59 0 0.35 0 0 4.44 -1.04 0 0 6.63z" id="path62"/>
+                        </g>
+                        <g id="g64">
+                          <path fill="#fff" fill-rule="evenodd" d="m173.44 798.92l0-8.25 -2.01 0 0 6.63 -6.86 0 0-3.46c0-0.98-0.35-1.83-0.97-2.4 -0.69-0.56-1.6-0.77-2.64-0.77l-0.76 0 0 0.35 0 1.27 0.35 0 0.42 0c1.18 0.07 1.53 0.35 1.6 1.55l0 5.08 10.88 0z" id="path66"/>
+                        </g>
+                        <g id="g68">
+                          <path fill="#fff" fill-rule="evenodd" d="m138.02 798.92l0.35 0 0-8.25 -2.01 0 0 8.25 0.35 0 1.32 0zm-4.99-5.85c-0.07-0.42-0.07-0.7-1.74-0.78l-2.21 0 -3.95 0 0 2.04 3.95 0 2.29 0c1.66-0.07 1.59-0.21 1.66-0.7l0-0.57zm-1.18 2.89l-2.77 0 -3.95 0 0 2.97 -0.35 0 -1.38 0 -0.28 0 0-8.25 5.96 0 2.49 0c2.01 0 3.4 0.7 3.4 2.32l0 0.85c0 1.27-1.11 2.11-3.12 2.11" id="path70"/>
+                        </g>
+                        <g id="g72">
+                          <path fill="#fff" fill-rule="evenodd" d="m233.81 792.29l-3.68 0 -3.74 0c0.55 0.78 0.62 1.91 0.62 2.68l0 2.33 3.12 0 3.68 0 0-5.01zm1.94 6.63l-5.62 0 -5.05 0 0-4.09c0-1.27-0.35-2.11-1.18-2.54l-0.62 0 -0.34 0 0-4.44 1.59 0 0.35 0 0 2.82 5.26 0 4.72 0 0-2.82 1.94 0 0 4.44 -1.04 0 0 6.63z" id="path74"/>
+                        </g>
+                        <g id="g76">
+                          <path fill="#fff" fill-rule="evenodd" d="m21.76 816.89l-5.82 0 5.82 16.08 0.28 0.92 0.14 0 5.4-16.99 -5.82 0zm6.93 24.54l-6.93 0 -6.1 0 -15.11-36.73 10.81 0 2.08 5.29 8.32 0 8.32 0 1.8-5.29 12.2 0 -15.39 36.73z" id="path78"/>
+                        </g>
+                        <g id="g80">
+                          <path fill="#fff" fill-rule="evenodd" d="m57.04 804.69l-10.67 0 0 36.73 10.67 0 0-15.02 0.08 0 11.99 15.02 12.75 0 -14.69-17.06 15.8-19.67 -13.45 0 -12.4 16.64 -0.08 0 0-16.64z" id="path82"/>
+                        </g>
+                        <g id="g84">
+                          <path fill="#fff" fill-rule="evenodd" d="m96.82 811.67l0 8.68 3.19 0c0.62 0 1.18-0.07 1.8-0.07 3.12-0.21 6.03-0.98 6.03-4.3 0-3.17-2.85-4.09-6.03-4.23 -0.62-0.07-1.25-0.07-1.87-0.07l-3.12 0zm0 22.77l3.05 0c0.7 0 1.32 0 1.94-0.07 2.7-0.14 4.99-0.85 4.99-3.6 0-2.47-2.29-3.45-4.99-3.81 -0.69-0.07-1.38-0.07-2.08-0.07l-2.91 0 0 7.55zm6.17-29.68c7.07 0 15.45 1.84 15.45 10.58 0 4.44-2.7 7.12-7.97 8.11l0 0.14c4.37 1.34 6.93 3.88 6.93 8.52 0 6.27-5.48 9.31-12.89 9.31l-2.7 0 -15.59 0 0-36.66 15.59 0 1.18 0z" id="path86"/>
+                        </g>
+                        <g id="g88">
+                          <path fill="#fff" fill-rule="evenodd" d="m192.4 816.54c-1.18-0.57-2.5-0.92-3.95-0.92l0 14.94c1.45 0 2.77-0.28 3.95-0.85 2.28-1.2 3.88-3.6 3.88-6.7 0-2.88-1.6-5.21-3.88-6.48m-14.56-0.92c-1.45 0-2.77 0.35-3.88 0.92 -2.35 1.27-3.95 3.6-3.95 6.48 0 3.17 1.6 5.43 3.95 6.63 1.11 0.56 2.42 0.91 3.88 0.91l0-14.94zm29.39 7.4c0 8.89-6.24 13.68-14.83 14.8 -1.25 0.15-2.57 0.22-3.95 0.22l0 3.39 -10.61 0 0-3.39c-1.32 0-2.63-0.07-3.88-0.21 -8.67-1.12-14.9-5.92-14.9-14.8 0-8.73 6.24-13.6 14.9-14.73 1.25-0.14 2.56-0.21 3.88-0.21l0-3.38 10.61 0 0 3.38c1.38 0 2.7 0.08 3.95 0.21 8.59 1.13 14.83 6 14.83 14.73" id="path90"/>
+                        </g>
+                        <g id="g92">
+                          <path fill="#fff" fill-rule="evenodd" d="m230.23 834.79c6.52 0 9.09-5.35 9.09-11.77 0-5.99-2.56-11.7-9.09-11.7 -6.44 0-9.01 5.71-9.01 11.7 0 6.42 2.57 11.77 9.01 11.77m0-30.66c13.03 0 19.97 7.26 19.97 18.89 0 11.85-6.8 19.04-19.97 19.04 -13.1 0-19.96-7.19-19.96-19.04 0-11.63 7-18.89 19.96-18.89" id="path94"/>
+                        </g>
+                        <g id="g96">
+                          <path fill="#fff" fill-rule="evenodd" d="m268.77 824.64c-0.62-0.14-1.24-0.14-1.87-0.14l-2.78 0 0 9.94 2.78 0c0.63 0 1.25-0.07 1.87-0.14 2.71-0.35 4.64-1.69 4.64-4.72 0-3.17-1.94-4.58-4.64-4.94m0 16.71c-0.83 0.07-1.73 0.07-2.63 0.07l-12.62 0 0-36.74 10.6 0 0 12.9 4.09 0 0.56 0c9.56 0.14 15.25 4.52 15.25 11.77 0 7.68-4.85 11.49-15.25 11.99" id="path98"/>
+                        </g>
+                        <g id="g100">
+                          <path fill="#fff" fill-rule="evenodd" d="m139.65 816.89l-5.82 0 5.82 15.93 0.35 1.06 0.07 0 5.41-16.99 -5.82 0zm10.19-12.2l12.06 0 -15.32 36.73 -6.93 0 -6.02 0 -15.19-36.73 10.81 0 2.15 5.29 8.24 0 8.32 0 1.87-5.29z" id="path102"/>
+                        </g>
+                        <g id="g104">
+                          <path fill="#fff" fill-rule="evenodd" d="m289.58 837.97c-0.14-0.14-0.28-0.21-0.48-0.21l-0.21 0 -0.49 0 0 1.27 0.49 0 0.21 0c0.21-0.06 0.35-0.14 0.49-0.21 0.07-0.14 0.13-0.28 0.13-0.42 0-0.14-0.07-0.28-0.13-0.43m0.9 0.5c0 0.14 0 0.28-0.07 0.5 -0.07 0.21-0.2 0.42-0.48 0.56 -0.22 0.14-0.49 0.21-0.84 0.28l-0.21 0 -1.25 0 0-4.3 0.77 0 0 1.62 0.07 0 0.63-0.92 0.42-0.7 0.97 0 -1.18 1.62c0.41 0 0.7 0.14 0.91 0.43 0.21 0.21 0.28 0.56 0.28 0.91m1.17-2.39c-0.27-0.5-0.69-0.85-1.17-1.13 -0.42-0.21-0.9-0.35-1.39-0.43l-0.21 0c-0.55 0-1.11 0.14-1.53 0.43 -0.48 0.28-0.9 0.71-1.17 1.13 -0.28 0.49-0.42 0.99-0.42 1.62 0 0.57 0.14 1.06 0.42 1.55 0.28 0.49 0.69 0.85 1.18 1.13 0.42 0.28 0.97 0.42 1.53 0.42l0.21 0c0.49 0 0.97-0.14 1.39-0.42 0.48-0.28 0.9-0.64 1.17-1.13 0.28-0.42 0.42-0.99 0.42-1.55 0-0.63-0.14-1.13-0.42-1.62m0.63 3.52c-0.35 0.64-0.83 1.06-1.39 1.41 -0.56 0.36-1.18 0.49-1.8 0.49 -0.07 0.07-0.14 0.07-0.21 0.07 -0.69-0.07-1.32-0.21-1.94-0.57 -0.55-0.35-1.04-0.77-1.38-1.41 -0.34-0.57-0.48-1.2-0.48-1.91 0-0.7 0.14-1.4 0.49-1.97 0.35-0.57 0.83-1.06 1.39-1.42 0.63-0.35 1.25-0.49 1.94-0.49l0.21 0c0.62 0 1.25 0.22 1.8 0.49 0.56 0.35 1.04 0.85 1.39 1.42 0.35 0.57 0.48 1.27 0.48 1.97 0 0.71-0.13 1.34-0.48 1.91" id="path106"/>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <div class="header__search-container">
+                <?php the_widget( 'WC_Widget_Product_Search', 'title=' ); ?>
+              </div>
+            <div class="header__item-icons">
+              <a href="<?php echo SITE_URL?>cart" class="header__basket-container">
+                <svg class="header__item-icon header__item-icon_19px" viewBox="0 1 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="81-mini-icons" transform="translate(-149.000000, -455.000000)" fill="white">
+                          <g id="icon-" transform="translate(145.000000, 452.000000)">
+                              <path d="M12.0632376,4.5 C10.8204876,4.5 9.81323761,5.505 9.81323761,6.75 L14.3132376,6.75 C14.3132376,5.505 13.3059876,4.5 12.0632376,4.5 Z M14.3132376,8.25 L14.3132376,9 C14.3132376,9.4125 14.6492376,9.75 15.0632376,9.75 C15.4772376,9.75 15.8132376,9.4125 15.8132376,9 L15.8132376,8.25 L16.7297376,8.25 C17.1099876,8.25 17.4294876,8.535 17.4744876,8.91 L18.6212376,18.66 C18.6737376,19.11 18.3257376,19.5 17.8764876,19.5 L6.24998761,19.5 C5.80073761,19.5 5.45273761,19.11 5.50523761,18.66 L6.65198761,8.91 C6.69698761,8.535 7.01648761,8.25 7.39673761,8.25 L8.31323761,8.25 L8.31323761,9 C8.31323761,9.4125 8.64923761,9.75 9.06323761,9.75 C9.47723761,9.75 9.81323761,9.4125 9.81323761,9 L9.81323761,8.25 L14.3132376,8.25 Z M8.31323761,6.75 L7.39673761,6.75 C6.25598761,6.75 5.29598761,7.605 5.16248761,8.7375 L4.01573761,18.4875 C3.85823761,19.8225 4.90298761,21 6.24998761,21 L17.8764876,21 C19.2234876,21 20.2682376,19.8225 20.1107376,18.4875 L18.9639876,8.7375 C18.8304876,7.605 17.8704876,6.75 16.7297376,6.75 L15.8132376,6.75 C15.8132376,4.68 14.1339876,3 12.0632376,3 C9.99173761,3 8.31323761,4.68 8.31323761,6.75 L8.31323761,6.75 Z" id="Fill-929"></path>
+                          </g>
+                      </g>
+                  </g>
+                </svg>
+                <!--span class="header__goods-count">
+                  <php storefront_cart_link(); ?>
+                </span-->
+                <div class="header__basket-popup">
+                  <?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+                </div>
+              </a>
+              <a href="<?php echo SITE_URL?>my-account/orders" class="header__my-account-link">
+                <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="81-mini-icons" transform="translate(-438.000000, -513.000000)" fill="#fff" fill-rule="nonzero">
+                          <g id="icon-" transform="translate(435.000000, 510.000000)">
+                              <path d="M12,3 C16.9705627,3 21,7.02943725 21,12 C21,16.9705627 16.9705627,21 12,21 C7.02943725,21 3,16.9705627 3,12 C3,7.02943725 7.02943725,3 12,3 Z M12,8.07692308 C10.6260336,8.07692308 9.46153846,9.20236214 9.46153846,10.7694175 C9.46153846,11.6812619 9.75684694,12.2753026 10.3850691,12.8688456 C10.6109005,13.0558734 10.7866321,13.2719416 10.9123417,13.510266 C11.163779,13.9869489 11.1924433,14.4791942 11.0950488,14.9291059 C11.075114,15.0211939 11.0531914,15.0944755 11.0531134,15.0863986 C10.8351124,15.896024 10.2713483,16.2433995 9.03408731,16.6660133 L9.03408731,16.6660133 L8.62288925,16.8048634 C8.46308541,16.8590851 8.33831318,16.9027854 8.21900227,16.9468222 C7.63244308,17.1633171 7.21148798,17.3844601 6.90680184,17.6601909 C8.25634769,18.8763446 10.0418678,19.6153846 12,19.6153846 C13.9576527,19.6153846 15.7427779,18.8767065 17.0918561,17.6628697 C16.7903429,17.3936956 16.3717892,17.1804549 15.7782835,16.9668294 C15.6749624,16.9296402 15.5668139,16.8923149 15.429635,16.8461681 L15.429635,16.8461681 L15.0738063,16.7270381 C13.7857631,16.2924799 13.2059368,15.9411974 12.9564297,15.118691 C12.9406702,15.0697736 12.9224686,15.0000969 12.9058326,14.9123227 C12.8282323,14.5028903 12.8457668,14.0591879 13.0330557,13.6224733 C13.1548839,13.3383981 13.3421182,13.0834856 13.5763702,12.8883423 C14.2361645,12.2922329 14.5384615,11.6821383 14.5384615,10.7694175 C14.5384615,9.22951895 13.3566975,8.07692308 12,8.07692308 Z M12,4.38461538 C7.79413921,4.38461538 4.38461538,7.79413921 4.38461538,12 C4.38461538,13.7477719 4.97339589,15.3580267 5.96343155,16.643239 C6.4158192,16.2277735 6.9929106,15.9234461 7.73956498,15.6478612 C7.8721444,15.5989271 8.00760298,15.551484 8.17799909,15.4936684 L8.17799909,15.4936684 L8.58652988,15.3557262 C9.3839776,15.0833404 9.66695542,14.9089775 9.73527834,14.6662908 C9.73293847,14.6726187 9.73636446,14.6611665 9.74177838,14.636157 C9.77614379,14.4774068 9.76610308,14.3049797 9.68765486,14.1562551 C9.64712452,14.0794164 9.58753521,14.0061492 9.46885954,13.9060413 C8.54653931,13.0374677 8.07692308,12.0927906 8.07692308,10.7694175 C8.07692308,8.42689119 9.87170173,6.69230769 12,6.69230769 C14.113762,6.69230769 15.9230769,8.45696539 15.9230769,10.7694175 C15.9230769,12.0967159 15.4409251,13.0697927 14.4844945,13.9332157 C14.3994922,14.0042691 14.3427796,14.0814813 14.3055856,14.168209 C14.242525,14.3152517 14.2355218,14.4924663 14.2662294,14.6544848 C14.2716086,14.6828667 14.2754222,14.6974654 14.2778577,14.7053523 C14.3488344,14.9392303 14.6539949,15.1241091 15.5164337,15.4150774 L15.5164337,15.4150774 L15.8711077,15.5338185 C16.0167006,15.5827957 16.133373,15.6230628 16.2472085,15.6640366 C17.0068127,15.9374473 17.5840747,16.2336595 18.0357952,16.6431504 C19.0262971,15.3588662 19.6153846,13.7482275 19.6153846,12 C19.6153846,7.79413921 16.2058608,4.38461538 12,4.38461538 Z" id="Shape"></path>
+                          </g>
+                      </g>
+                  </g>
+                </svg>
+              </a>
+            </div>
+        </div>
+      </div>
+      <!--  - - - - - - -->
+      <!-- Нижнее меню -->
+      <div class="header__container-flex header__container-flex_blue header__container-flex_grey">
+            <nav class="header__wrap">
+              <div class="header__nav-bottom header__nav-bottom_systems">
+                <div class="header__menu header__menu_systems">
+                  <div class="header__menu-col">
+                    <a href="<?php echo SITE_URL?>product-category/systems/waterboss/" class="header__menu-col-title-link">
+                      <h4 class="header__menu-col-title">WATERBOSS</h4>
+                    </a>
+                    <a href="<?php echo SITE_URL?>product/waterboss-400/" class="header__menu-col-link">WaterBoss&nbsp;400</a>
+                    <a href="<?php echo SITE_URL?>product/waterboss-400p/" class="header__menu-col-link">WaterBoss&nbsp;400P</a>
+                    <a href="<?php echo SITE_URL?>product/waterboss-700/" class="header__menu-col-link">WaterBoss&nbsp;700</a>
+                    <a href="<?php echo SITE_URL?>product/waterboss-800/" class="header__menu-col-link">WaterBoss&nbsp;800</a>
+                    <a href="<?php echo SITE_URL?>product/waterboss-900/" class="header__menu-col-link">WaterBoss&nbsp;900</a>
+                    <a href="<?php echo SITE_URL?>product/waterboss-1000/" class="header__menu-col-link">WaterBoss&nbsp;1000</a>
+                  </div>
+                  <div class="header__menu-col">
+                    <a href="<?php echo SITE_URL?>product-category/systems/watermax/" class="header__menu-col-title-link">
+                      <h4 class="header__menu-col-title">WATERMAX</h4>
+                    </a>
+                    <a href="<?php echo SITE_URL?>product/watermax-akq/" class="header__menu-col-link">WaterMax&nbsp;AKQ</a>
+                    <a href="<?php echo SITE_URL?>product/watermax-apq/" class="header__menu-col-link">WaterMax&nbsp;APQ</a>
+                    <a href="<?php echo SITE_URL?>product/watermax-beq/" class="header__menu-col-link">WaterMax&nbsp;BEQ</a>
+                    <a href="<?php echo SITE_URL?>product/watermax-maq/" class="header__menu-col-link">WaterMax&nbsp;MAQ</a>
+                    <a href="<?php echo SITE_URL?>product/watermax-mxq/" class="header__menu-col-link">WaterMax&nbsp;MXQ</a>
+                  </div>
+                  <div class="header__menu-col">
+                    <a href="<?php echo SITE_URL?>product-category/systems/aquaphor-pro/" class="header__menu-col-title-link">
+                      <h4 class="header__menu-col-title">AQUAPHOR&nbsp;PRO</h4>
+                    </a>
+                    <a href="<?php echo SITE_URL?>product/аквафор-pro-180/" class="header__menu-col-link">Аквафор&nbsp;Pro&nbsp;180</a>
+                    <a href="<?php echo SITE_URL?>product/аквафор-proplus-380/" class="header__menu-col-link">Аквафор&nbsp;ProPlus&nbsp;380</a>
+                    <a href="<?php echo SITE_URL?>product/аквафор-proplus-380p/" class="header__menu-col-link">Аквафор&nbsp;ProPlus&nbsp;380P</a>
+                  </div>
+                </div>
+                <a href="<?php echo SITE_URL?>product-category/systems/" class="header__nav-bottom-text">КОМПЛЕКСНЫЕ</a>
+                <svg class="header__item-icon" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g class="header__icon-blue" id="81-mini-icons" transform="translate(-209.000000, -55.000000)" fill-rule="nonzero">
+                          <g id="icon-" transform="translate(203.000000, 46.000000)">
+                              <path d="M7.28033009,9.21966991 C6.98743687,8.9267767 6.51256313,8.9267767 6.21966991,9.21966991 C5.9267767,9.51256313 5.9267767,9.98743687 6.21966991,10.2803301 L11.2196699,15.2803301 C11.5125631,15.5732233 11.9874369,15.5732233 12.2803301,15.2803301 L17.2803301,10.2803301 C17.5732233,9.98743687 17.5732233,9.51256313 17.2803301,9.21966991 C16.9874369,8.9267767 16.5125631,8.9267767 16.2196699,9.21966991 L11.75,13.6893398 L7.28033009,9.21966991 Z" id="Shape"></path>
+                          </g>
+                      </g>
+                  </g>
+                </svg>
+              </div>
+              <div class="header__nav-bottom header__nav-bottom_trunk">
+                <div class="header__menu header__menu_trunk">
+                  <div class="header__menu-col">
+                    <a href="<?php echo SITE_URL?>product-category/trunk/горячая/" class="header__menu-col-title-link">
+                      <h4 class="header__menu-col-title">Горячая</h4>
+                    </a>
+                    <a href="<?php echo SITE_URL?>product/корпус-аквафор-викинг/" class="header__menu-col-link">Корпус&nbsp;Аквафор&nbsp;Викинг</a>
+                    <a href="<?php echo SITE_URL?>product/корпус-аквафор-викинг-миди/" class="header__menu-col-link">Корпус&nbsp;Аквафор&nbsp;Викинг&nbsp;Миди</a>
+                    <a href="<?php echo SITE_URL?>product/корпус-аквафор-викинг-мини/" class="header__menu-col-link">Корпус&nbsp;Аквафор&nbsp;Викинг&nbsp;Мини</a>
+                    <a href="<?php echo SITE_URL?>product/корпус-предфильтра-для-горячей-воды-1-2/" class="header__menu-col-link">Корпус&nbsp;предфильтра&nbsp;для&nbsp;горячей&nbsp;воды&nbsp;&frac12;</a>
+                  </div>
+                  <div class="header__menu-col">
+                    <a href="<?php echo SITE_URL?>product-category/trunk/холодная/" class="header__menu-col-title-link">
+                      <h4 class="header__menu-col-title">Холодная</h4>
+                    </a>
+                    <a href="<?php echo SITE_URL?>product/корпус-аквафор-гросс-10/" class="header__menu-col-link">Корпус&nbsp;Аквафор&nbsp;Гросс&nbsp;10</a>
+                    <a href="<?php echo SITE_URL?>product/корпус-аквафор-гросс-20/" class="header__menu-col-link">Корпус&nbsp;Аквафор&nbsp;Гросс&nbsp;20</a>
+                    <a href="<?php echo SITE_URL?>product/корпус-предфильтра-для-холодной-воды-3/" class="header__menu-col-link">Корпус&nbsp;предфильтра&nbsp;для&nbsp;холодной&nbsp;воды&nbsp;&frac34;</a>
+                  </div>
+                </div>
+                <a href="<?php echo SITE_URL?>product-category/trunk" class="header__nav-bottom-text">МАГИСТРАЛЬНЫЕ</a>
+                <svg class="header__item-icon" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g class="header__icon-blue" id="81-mini-icons" transform="translate(-209.000000, -55.000000)" fill-rule="nonzero">
+                          <g id="icon-" transform="translate(203.000000, 46.000000)">
+                              <path d="M7.28033009,9.21966991 C6.98743687,8.9267767 6.51256313,8.9267767 6.21966991,9.21966991 C5.9267767,9.51256313 5.9267767,9.98743687 6.21966991,10.2803301 L11.2196699,15.2803301 C11.5125631,15.5732233 11.9874369,15.5732233 12.2803301,15.2803301 L17.2803301,10.2803301 C17.5732233,9.98743687 17.5732233,9.51256313 17.2803301,9.21966991 C16.9874369,8.9267767 16.5125631,8.9267767 16.2196699,9.21966991 L11.75,13.6893398 L7.28033009,9.21966991 Z" id="Shape"></path>
+                          </g>
+                      </g>
+                  </g>
+                </svg>
+              </div>
+
+
+              <div class="header__nav-bottom header__nav-bottom_drinking">
+              <div class="header__menu header__menu_drinking">
+                <div class="header__menu-col">
+                  <a href="<?php echo SITE_URL?>product-category/drinking/обратный-осмос/" class="header__menu-col-title-link">
+                    <h4 class="header__menu-col-title">Обратный&nbsp;осмос</h4>
+                  </a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-dwm-101s-морион/" class="header__menu-col-link">Аквафор&nbsp;DWM-101S&nbsp;Морион</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-dwm-102s-морион/" class="header__menu-col-link">Аквафор&nbsp;DWM-102S&nbsp;Морион</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-dwm-201/" class="header__menu-col-link">Аквафор&nbsp;DWM-201</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-dwm-203/" class="header__menu-col-link">Аквафор&nbsp;DWM-203</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-dwm-70s/" class="header__menu-col-link">Аквафор&nbsp;DWM-70S</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-осмо-50-исп-5/" class="header__menu-col-link">Аквафор&nbsp;Осмо&nbsp;50&nbsp;исп.5</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-осмо-кристалл-100-исп-4м/" class="header__menu-col-link">Аквафор&nbsp;Осмо-Кристалл&nbsp;100&nbsp;исп.&nbsp;4М</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-осмо-кристалл-50-исп-4м/" class="header__menu-col-link">Аквафор&nbsp;Осмо-Кристалл&nbsp;50&nbsp;исп.&nbsp;4М</a>
+                </div>
+                <div class="header__menu-col">
+                  <a href="<?php echo SITE_URL?>product-category/drinking/проточный/" class="header__menu-col-title-link">
+                    <h4 class="header__menu-col-title">Проточный</h4>
+                  </a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-eco-pro/" class="header__menu-col-link">Аквафор&nbsp;Eco&nbsp;Pro</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-eco-pro-h/" class="header__menu-col-link">Аквафор&nbsp;Eco&nbsp;Pro&nbsp;H</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-кристалл/" class="header__menu-col-link">Аквафор&nbsp;Кристалл</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-кристалл-а/" class="header__menu-col-link">Аквафор&nbsp;Кристалл&nbsp;А</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-кристалл-а-для-жесткой-воды/" class="header__menu-col-link">Аквафор Кристалл&nbsp;А&nbsp;для&nbsp;жесткой&nbsp;воды</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-кристалл-квадро/" class="header__menu-col-link">Аквафор&nbsp;Кристалл&nbsp;Квадро</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-кристалл-квадро-2н/" class="header__menu-col-link">Аквафор&nbsp;Кристалл&nbsp;Квадро&nbsp;2Н</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-кристалл-квадро-в/" class="header__menu-col-link">Аквафор&nbsp;Кристалл&nbsp;Квадро&nbsp;В</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-кристалл-квадро-н/" class="header__menu-col-link">Аквафор&nbsp;Кристалл&nbsp;Квадро&nbsp;Н</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-кристалл-квадро-нв/" class="header__menu-col-link">Аквафор&nbsp;Кристалл&nbsp;Квадро&nbsp;НВ</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-кристалл-н/" class="header__menu-col-link">Аквафор&nbsp;Кристалл&nbsp;Н</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-кристалл-соло/" class="header__menu-col-link">Аквафор&nbsp;Кристалл&nbsp;Соло</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-кристалл-эко/" class="header__menu-col-link">Аквафор&nbsp;Кристалл&nbsp;Эко</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-кристалл-эко-н/" class="header__menu-col-link">Аквафор&nbsp;Кристалл&nbsp;Эко&nbsp;Н</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-трио-fe/" class="header__menu-col-link">Аквафор&nbsp;Трио&nbsp;Fe</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-трио-fe-н/" class="header__menu-col-link">Аквафор&nbsp;Трио&nbsp;Fe&nbsp;Н</a>
+                  <a href="<?php echo SITE_URL?>product/аквафор-трио-норма-умягчающий/" class="header__menu-col-link">Аквафор&nbsp;Трио&nbsp;Норма&nbsp;Умягчающий</a>
+                </div>
+              </div>
+                <a href="<?php echo SITE_URL?>product-category/drinking/" class="header__nav-bottom-text">ПИТЬЕВЫЕ</a>
+                <svg class="header__item-icon" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g class="header__icon-blue" id="81-mini-icons" transform="translate(-209.000000, -55.000000)" fill-rule="nonzero">
+                          <g id="icon-" transform="translate(203.000000, 46.000000)">
+                              <path d="M7.28033009,9.21966991 C6.98743687,8.9267767 6.51256313,8.9267767 6.21966991,9.21966991 C5.9267767,9.51256313 5.9267767,9.98743687 6.21966991,10.2803301 L11.2196699,15.2803301 C11.5125631,15.5732233 11.9874369,15.5732233 12.2803301,15.2803301 L17.2803301,10.2803301 C17.5732233,9.98743687 17.5732233,9.51256313 17.2803301,9.21966991 C16.9874369,8.9267767 16.5125631,8.9267767 16.2196699,9.21966991 L11.75,13.6893398 L7.28033009,9.21966991 Z" id="Shape"></path>
+                          </g>
+                      </g>
+                  </g>
+                </svg>
+              </div>
+              <a href="<?php echo SITE_URL?>" class="header__nav-bottom">
+                <strong class="header__nav-bottom-text">РАСХОДНИКИ</strong>
+                <svg class="header__item-icon" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g class="header__icon-blue" id="81-mini-icons" transform="translate(-209.000000, -55.000000)" fill-rule="nonzero">
+                          <g id="icon-" transform="translate(203.000000, 46.000000)">
+                              <path d="M7.28033009,9.21966991 C6.98743687,8.9267767 6.51256313,8.9267767 6.21966991,9.21966991 C5.9267767,9.51256313 5.9267767,9.98743687 6.21966991,10.2803301 L11.2196699,15.2803301 C11.5125631,15.5732233 11.9874369,15.5732233 12.2803301,15.2803301 L17.2803301,10.2803301 C17.5732233,9.98743687 17.5732233,9.51256313 17.2803301,9.21966991 C16.9874369,8.9267767 16.5125631,8.9267767 16.2196699,9.21966991 L11.75,13.6893398 L7.28033009,9.21966991 Z" id="Shape"></path>
+                          </g>
+                      </g>
+                  </g>
+                </svg>
+              </a>
+              <a href="<?php echo SITE_URL?>" class="header__nav-bottom">
+                <strong class="header__nav-bottom-text header__nav-bottom-text_orange">СКИДКИ</strong>
+                <svg width="12px" height="18px" viewBox="0 0 12 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g class="header__item-icon header__item-icon_orange" id="81-mini-icons" transform="translate(-209.000000, -281.000000)" fill="#ec8928">
+                          <g id="icon-" transform="translate(203.000000, 278.000000)">
+                              <path d="M12.7452396,3.52242405 C13.8159622,2.31747772 15.7825327,3.36902541 15.3760263,4.9290896 L14.0514291,10.0050507 L16.2442627,10.8824909 C17.2313829,11.2774924 17.5274423,12.5315263 16.8218085,13.3261313 L10.4642018,20.4775759 C9.3934793,21.6825223 7.42690871,20.6309746 7.83341511,19.0709104 L9.15801239,13.9949493 L6.9651788,13.1175091 C5.97805854,12.7232746 5.68199916,11.4684737 6.38763291,10.6738687 L12.7452396,3.52242405 Z M13.8911275,4.54175803 L7.53428776,11.6932027 L10.9834562,13.0730235 L9.31831397,19.458242 L15.6751537,12.3067973 L12.2259852,10.9269765 L13.8911275,4.54175803 L13.8911275,4.54175803 Z" id="Fill-1170"></path>
+                          </g>
+                      </g>
+                  </g>
+                </svg>
+              </a>
+              <a href="<?php echo SITE_URL?>" class="header__nav-bottom">
+                АНАЛИЗ ВОДЫ
+              </a>
+              <a href="<?php echo SITE_URL?>" class="header__nav-bottom">
+                ОБСЛУЖИВАНИЕ
+              </a>
+            </nav>
+      </div>
+      <!--  - - - - - - -->
+    </div>
   </header>
-
-
 		<?php
 		/**
 		 * Functions hooked into storefront_header action

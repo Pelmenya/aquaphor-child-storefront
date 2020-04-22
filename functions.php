@@ -96,7 +96,7 @@ function storefront_header_cart() {}
 
 // отключили хлебные крошки ВЕЗДЕ КРОМЕ страницы товара
 function woocommerce_breadcrumb( $args = array() ) {
-  if (is_product()){
+  if ((is_product()) || (is_product_category())){
 
   $args = wp_parse_args(
 		$args,
@@ -274,7 +274,7 @@ function aquaphor_theme_scripts() {
   $url_my_account_view_order = '\/my-account\/view-order';
   $url_my_account_edit_account = '/my-account/edit-account';
   $url_cart = '/cart';
-
+  $url_product_category = '\/producr-category/';
 
   if (strcasecmp($url_str, $url_cart) == 0){
     wp_enqueue_script( 'custom', AQUAPHOR_THEME_JS . 'cart/index.js', array('jquery') );
@@ -325,8 +325,12 @@ function aquaphor_theme_scripts() {
 
   if (is_product()) {
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'product/index.js', true);
-    add_action( 'storefront_before_content', 'woocommerce_breadcrumb', 10 );
   }
+
+  if (is_product_category()) {
+    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'product-category/index.js', true);
+  }
+
 
 }
 

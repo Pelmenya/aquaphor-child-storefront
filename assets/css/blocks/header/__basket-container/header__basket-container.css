@@ -1,11 +1,18 @@
 .header__basket-container {
   position: relative;
+  height: 31px;
+  width: 24px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  height: 50px;
+  margin-right: 20px;
+  color: var(--white);
 }
 
-.header__basket-container:hover .header__basket-popup{
+.header__basket-container:hover .header__item-icon_19px {
+  opacity: .7;
+}
+
+.header__basket-container:hover .header__basket-popup {
   display: block;
 }

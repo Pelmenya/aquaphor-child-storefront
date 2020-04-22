@@ -1,0 +1,8 @@
+.header__nav-bottom-text_orange {
+  color: var(--dull-orange);
+}
+
+.header__nav-bottom-text_orange:hover {
+  color: var(--dull-orange);
+  opacity: .6;
+}

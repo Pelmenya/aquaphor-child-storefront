@@ -1,0 +1,7 @@
+.header__nav-bottom_systems {
+  position: relative;
+}
+
+.header__nav-bottom_systems:hover .header__menu_systems {
+  display: flex;
+}

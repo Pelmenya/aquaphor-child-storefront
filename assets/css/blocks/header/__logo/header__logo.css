@@ -1,5 +1,7 @@
 .header__logo {
-  width: 200px;
-  height: 21px;
- /* cursor: url('../../../images/lapka.png'), pointer;*/
+  color: var(--white);
+  fill: var(--white);
+  max-width: 139px;
+  height: 32px;
+  /* cursor: url('../../../images/lapka.png'), pointer;*/
 }
