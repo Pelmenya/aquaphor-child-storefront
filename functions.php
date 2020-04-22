@@ -331,6 +331,11 @@ function aquaphor_theme_scripts() {
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'product-category/index.js', true);
   }
 
+  if (is_shop()) {
+    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'product-category/index.js', true);
+  }
+
+
 
 }
 
