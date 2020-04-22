@@ -290,7 +290,7 @@
                   </div>
                 </div>
                 <a href="<?php echo SITE_URL?>product-category/systems/" class="header__nav-bottom-text">КОМПЛЕКСНЫЕ</a>
-                <svg class="header__item-icon" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg class="header__item-icon header__item-icon_rotating" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                       <g class="header__icon-blue" id="81-mini-icons" transform="translate(-209.000000, -55.000000)" fill-rule="nonzero">
                           <g id="icon-" transform="translate(203.000000, 46.000000)">
@@ -321,7 +321,7 @@
                   </div>
                 </div>
                 <a href="<?php echo SITE_URL?>product-category/trunk" class="header__nav-bottom-text">МАГИСТРАЛЬНЫЕ</a>
-                <svg class="header__item-icon" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg class="header__item-icon header__item-icon_rotating" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                       <g class="header__icon-blue" id="81-mini-icons" transform="translate(-209.000000, -55.000000)" fill-rule="nonzero">
                           <g id="icon-" transform="translate(203.000000, 46.000000)">
@@ -372,7 +372,7 @@
                 </div>
               </div>
                 <a href="<?php echo SITE_URL?>product-category/drinking/" class="header__nav-bottom-text">ПИТЬЕВЫЕ</a>
-                <svg class="header__item-icon" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg class="header__item-icon header__item-icon_rotating" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                       <g class="header__icon-blue" id="81-mini-icons" transform="translate(-209.000000, -55.000000)" fill-rule="nonzero">
                           <g id="icon-" transform="translate(203.000000, 46.000000)">
@@ -384,7 +384,7 @@
               </div>
               <a href="<?php echo SITE_URL?>" class="header__nav-bottom">
                 <strong class="header__nav-bottom-text">РАСХОДНИКИ</strong>
-                <svg class="header__item-icon" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg class="header__item-icon header__item-icon_rotating" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                       <g class="header__icon-blue" id="81-mini-icons" transform="translate(-209.000000, -55.000000)" fill-rule="nonzero">
                           <g id="icon-" transform="translate(203.000000, 46.000000)">
@@ -396,7 +396,7 @@
               </a>
               <a href="<?php echo SITE_URL?>" class="header__nav-bottom">
                 <strong class="header__nav-bottom-text header__nav-bottom-text_orange">СКИДКИ</strong>
-                <svg width="12px" height="18px" viewBox="0 0 12 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg class="header__item-icon-sale" width="12px" height="18px" viewBox="0 0 12 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                       <g class="header__item-icon header__item-icon_orange" id="81-mini-icons" transform="translate(-209.000000, -281.000000)" fill="#ec8928">
                           <g id="icon-" transform="translate(203.000000, 278.000000)">

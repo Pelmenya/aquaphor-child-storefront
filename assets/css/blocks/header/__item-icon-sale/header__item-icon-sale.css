@@ -1,0 +1,7 @@
+.header__item-icon-sale {
+   transition: transform .5s;
+}
+
+.header__item-icon-sale:hover {
+  transform: rotate(360deg);
+}
