@@ -36,10 +36,10 @@
 
 .header__nav-bottom:hover .header__nav-bottom-text_orange {
   color: var(--dull-orange);
-  opacity: .6;
+  opacity: .7;
 }
 
 .header__nav-bottom:hover .header__item-icon_orange {
   fill: var(--dull-orange);
-  opacity: .6;
+  opacity: .7;
 }
