@@ -173,30 +173,29 @@ function aquaphor_remove_billing_adress_my_account_menu( $array, $customer_id ){
 add_filter( 'woocommerce_my_account_get_addresses', 'aquaphor_remove_billing_adress_my_account_menu', 10, 2 );
 
 
-/*
+
 function custom_override_checkout_fields( $fields ) {
-  unset($fields['shipping']['shipping_first_name']);
-  unset($fields['billing']['billing_last_name']);
-  unset($fields['billing']['billing_company']);
-  unset($fields['billing']['billing_address_1']);
-  unset($fields['billing']['billing_address_2']);
-  unset($fields['billing']['billing_city']);
-  unset($fields['billing']['billing_postcode']);
+  // unset($fields['billing']['billing_last_name']);
+  // unset($fields['billing']['billing_company']);
+  // unset($fields['billing']['billing_address_1']);
+  // unset($fields['billing']['billing_address_2']);
+  // unset($fields['billing']['billing_city']);
+  // unset($fields['billing']['billing_postcode']);
   unset($fields['billing']['billing_country']);
-  unset($fields['billing']['billing_state']);
-  unset($fields['billing']['billing_phone']);
-  unset($fields['order']['order_comments']);
-  unset($fields['billing']['billing_email']);
-  unset($fields['account']['account_username']);
-  unset($fields['account']['account_password']);
-  unset($fields['account']['account_password-2']);
+  // unset($fields['billing']['billing_state']);
+  // unset($fields['billing']['billing_phone']);
+  // unset($fields['order']['order_comments']);
+  // unset($fields['billing']['billing_email']);
+  // unset($fields['account']['account_username']);
+  // unset($fields['account']['account_password']);
+  // unset($fields['account']['account_password-2']);
 
   return $fields;
 }
 
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 
-*/
+
 
 
 /**
@@ -250,6 +249,35 @@ function woocommerce_output_related_products() {
 
 	woocommerce_related_products( apply_filters( 'woocommerce_output_related_products_args', $args ) );
 }
+
+
+
+function action_function_name_4761(){
+  ?>
+   <script>
+    jQuery(document.body).trigger('update_checkout', ()=>{
+      function amountNormalize(str) {
+  const arr = str.split('.');
+  arr.splice(arr.length - 1, 1);
+  return `${arr.join(' ')} руб.`;
+}
+
+function refreshPage() {
+  const amounts = document.querySelectorAll('.amount');
+  Object.keys(amounts).forEach((i) => {
+    amounts[i].textContent = amountNormalize(amounts[i].textContent);
+  });
+}
+  refreshPage();
+
+    });
+  </script>
+
+  <?php
+}
+
+add_action( 'woocommerce_checkout_after_order_review', 'action_function_name_4761' );
+
 
 function aquaphor_theme_scripts() {
   /* Путь к странице*/
@@ -335,8 +363,10 @@ function aquaphor_theme_scripts() {
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'product-category/index.js', true);
   }
 
-
-
+  if (is_checkout()){
+    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'checkout/index.js', true);
+    wp_enqueue_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmountSetInterval.js', true);
+  }
 }
 
 add_action( 'wp_footer', 'aquaphor_theme_scripts' );
