@@ -102,9 +102,8 @@ tfoot tr.cart-subtotal th {
   border-right: solid 1px #f5f7f7;
 }
 
-tfoot tr.cart-subtotal td{
+tfoot tr.cart-subtotal td {
   border-top: solid 1px #f5f7f7;
-
 }
 
 tfoot tr.order-total th {
@@ -121,12 +120,9 @@ tfoot tr.order-total th {
   border-right: solid 1px #f5f7f7;
 }
 
-
-tfoot tr.order-total td{
+tfoot tr.order-total td {
   border-top: solid 1px #f5f7f7;
-
 }
-
 
 tfoot tr.cart-subtotal td .woocommerce-Price-amount.amount {
   font-family: Proxima Nova Rg;
@@ -167,4 +163,33 @@ tr.woocommerce-shipping-totals.shipping th {
 
 tr.woocommerce-shipping-totals.shipping {
   display: none;
+}
+
+#payment .payment_methods > li:not(.woocommerce-notice) {
+  background-color: #fff;
+  display: none;
+}
+
+.woocommerce-privacy-policy-text {
+  display: none;
+}
+
+#payment .place-order {
+  background-color: #fff;
+}
+
+#payment .place-order .button {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  background-color: var(--blue-blue);
+  width: 156px;
+  font-family: Proxima Nova Rg;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--white);
 }
