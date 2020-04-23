@@ -46,7 +46,7 @@
   padding: 0;
 }
 
-#ship-to-different-address{
+#ship-to-different-address {
   margin: 0;
   padding: 0;
 }
@@ -54,4 +54,117 @@
 #order_comments_field {
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.page-template-template-fullwidth-php #order_review_heading {
+  width: 100%;
+  margin-bottom: 27px;
+}
+
+.shop_table.woocommerce-checkout-review-order-table .product-name,
+.product-total {
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.shop_table.woocommerce-checkout-review-order-table td.product-total {
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.shop_table.woocommerce-checkout-review-order-table {
+  border: solid 1px #f5f7f7;
+}
+
+tfoot tr.cart-subtotal th {
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+  background-color: #fff;
+  border-top: solid 1px #f5f7f7;
+  border-right: solid 1px #f5f7f7;
+}
+
+tfoot tr.cart-subtotal td{
+  border-top: solid 1px #f5f7f7;
+
+}
+
+tfoot tr.order-total th {
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+  background-color: #fff;
+  border-top: solid 1px #f5f7f7;
+  border-right: solid 1px #f5f7f7;
+}
+
+
+tfoot tr.order-total td{
+  border-top: solid 1px #f5f7f7;
+
+}
+
+
+tfoot tr.cart-subtotal td .woocommerce-Price-amount.amount {
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+  background-color: #fff;
+}
+
+tfoot strong span.woocommerce-Price-amount.amount {
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+  background-color: #fff;
+}
+
+tr.woocommerce-shipping-totals.shipping th {
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+  background-color: #fff;
+  display: none;
+}
+
+tr.woocommerce-shipping-totals.shipping {
+  display: none;
 }
