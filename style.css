@@ -21,6 +21,7 @@
 @import url(./assets/css/pages/product.css);
 @import url(./assets/css/pages/product-category.css);
 @import url(./assets/css/pages/checkout.css);
+@import url(./assets/css/pages/checkout-order-received.css);
 
 
 .woocommerce-info{

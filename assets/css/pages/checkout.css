@@ -163,12 +163,11 @@ tr.woocommerce-shipping-totals.shipping th {
 
 tr.woocommerce-shipping-totals.shipping {
   display: none;
-
 }
 
 #payment .payment_methods > li:not(.woocommerce-notice) {
   background-color: #fff;
- }
+}
 
 .woocommerce-privacy-policy-text {
   display: none;
@@ -216,13 +215,13 @@ tr.woocommerce-shipping-totals.shipping {
   transition: color, ease, 0.2s;
 }
 
-.payment_box.payment_method_cod p{
-    font-family: Proxima Nova Rg;
-    font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: var(--dark);
+.payment_box.payment_method_cod p {
+  font-family: Proxima Nova Rg;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
 }
