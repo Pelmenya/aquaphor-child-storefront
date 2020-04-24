@@ -302,7 +302,8 @@ function aquaphor_theme_scripts() {
   $url_my_account_view_order = '\/my-account\/view-order';
   $url_my_account_edit_account = '/my-account/edit-account';
   $url_cart = '/cart';
-  $url_product_category = '\/producr-category/';
+  $url_checkout_order_received='\/checkout\/order-received';
+
 
   if (strcasecmp($url_str, $url_cart) == 0){
     wp_enqueue_script( 'custom', AQUAPHOR_THEME_JS . 'cart/index.js', array('jquery') );
@@ -365,8 +366,15 @@ function aquaphor_theme_scripts() {
 
   if (is_checkout()){
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'checkout/index.js', true);
-    wp_enqueue_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmountSetInterval.js', true);
+    wp_enqueue_script( 'amountInterval', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmountSetInterval.js', true);
+    if (preg_match("/$url_checkout_order_received/i", $url_str)){
+      wp_deregister_script('amountInterval');
+      wp_enqueue_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmount.js', true);
+      wp_enqueue_script( 'new_index', AQUAPHOR_THEME_JS . 'checkout/checkout-order-received/index.js', true);
+    }
   }
+
+  wp_enqueue_script( 'cart', AQUAPHOR_THEME_JS_FUNCTIONS . 'visibleCart.js', true);
 }
 
 add_action( 'wp_footer', 'aquaphor_theme_scripts' );

@@ -7,12 +7,9 @@
   line-height: normal;
   letter-spacing: -0.1px;
   color: var(--dark);
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
-.header__menu-col-link:first-of-type {
-  margin-top: 0px;
-}
 
 .header__menu-col-link:hover {
   color: #164cb5;
