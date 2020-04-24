@@ -304,7 +304,7 @@
                 <div class="header__menu header__menu_trunk">
                   <div class="header__menu-col">
                     <a href="<?php echo SITE_URL?>product-category/trunk/горячая/" class="header__menu-col-title-link">
-                      <h4 class="header__menu-col-title">Горячая</h4>
+                      <h4 class="header__menu-col-title">Горячая вода</h4>
                     </a>
                     <a href="<?php echo SITE_URL?>product/корпус-аквафор-викинг/" class="header__menu-col-link">Корпус&nbsp;Аквафор&nbsp;Викинг</a>
                     <a href="<?php echo SITE_URL?>product/корпус-аквафор-викинг-миди/" class="header__menu-col-link">Корпус&nbsp;Аквафор&nbsp;Викинг&nbsp;Миди</a>
@@ -313,7 +313,7 @@
                   </div>
                   <div class="header__menu-col">
                     <a href="<?php echo SITE_URL?>product-category/trunk/холодная/" class="header__menu-col-title-link">
-                      <h4 class="header__menu-col-title">Холодная</h4>
+                      <h4 class="header__menu-col-title">Холодная вода</h4>
                     </a>
                     <a href="<?php echo SITE_URL?>product/корпус-аквафор-гросс-10/" class="header__menu-col-link">Корпус&nbsp;Аквафор&nbsp;Гросс&nbsp;10</a>
                     <a href="<?php echo SITE_URL?>product/корпус-аквафор-гросс-20/" class="header__menu-col-link">Корпус&nbsp;Аквафор&nbsp;Гросс&nbsp;20</a>

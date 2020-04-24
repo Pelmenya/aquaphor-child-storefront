@@ -373,6 +373,8 @@ function aquaphor_theme_scripts() {
       wp_enqueue_script( 'new_index', AQUAPHOR_THEME_JS . 'checkout/checkout-order-received/index.js', true);
     }
   }
+
+  wp_enqueue_script( 'cart', AQUAPHOR_THEME_JS_FUNCTIONS . 'visibleCart.js', true);
 }
 
 add_action( 'wp_footer', 'aquaphor_theme_scripts' );
