@@ -20,6 +20,8 @@ if( ! defined('AQUAPHOR_THEME_ASSETS') )   define('AQUAPHOR_THEME_ASSETS', get_t
 if( ! defined('SITE_URL') )     define('SITE_URL', get_site_url() . '/' );
 if( ! defined('AQUAPHOR_THEME_JS') )   define('AQUAPHOR_THEME_JS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/pages/' );
 if( ! defined('AQUAPHOR_THEME_JS_FUNCTIONS') )   define('AQUAPHOR_THEME_JS_FUNCTIONS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/functions/' );
+if( ! defined('AQUAPHOR_THEME_CSS') )   define('AQUAPHOR_THEME_CSS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/css/pages/' );
+
 
 /**
  *  Отключаем блоки в header
@@ -94,7 +96,7 @@ if ( ! function_exists( 'storefront_cart_link' ) ) {
 // отключили корзину в хедере
 function storefront_header_cart() {}
 
-// отключили хлебные крошки ВЕЗДЕ КРОМЕ страницы товара
+// отключили хлебные крошки ВЕЗДЕ КРОМЕ страницы товара и категорий
 function woocommerce_breadcrumb( $args = array() ) {
   if ((is_product()) || (is_product_category())){
 
@@ -366,15 +368,39 @@ function aquaphor_theme_scripts() {
 
   if (is_checkout()){
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'checkout/index.js', true);
-    wp_enqueue_script( 'amountInterval', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmountSetInterval.js', true);
+    wp_enqueue_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmountSetInterval.js', true);
+
     if (preg_match("/$url_checkout_order_received/i", $url_str)){
-      wp_deregister_script('amountInterval');
+      wp_deregister_script('amount');
       wp_enqueue_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmount.js', true);
       wp_enqueue_script( 'new_index', AQUAPHOR_THEME_JS . 'checkout/checkout-order-received/index.js', true);
     }
+  }
+
+  if (is_front_page()){
+    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'front-page/index.js', true);
+    wp_enqueue_style( 'front', AQUAPHOR_THEME_CSS . 'front-page.css', array(), '1.1', 'all');
   }
 
   wp_enqueue_script( 'cart', AQUAPHOR_THEME_JS_FUNCTIONS . 'visibleCart.js', true);
 }
 
 add_action( 'wp_footer', 'aquaphor_theme_scripts' );
+
+function iconic_woo_product_price_shortcode( $atts ) {
+	$atts = shortcode_atts( array(
+		'id' => null
+	), $atts, 'iconic_product_price' );
+
+	if ( empty( $atts[ 'id' ] ) ) {
+		return '';
+	}
+
+	$product = wc_get_product( $atts['id'] );
+
+	if ( ! $product ) {
+		return '';
+	}
+
+	return $product->get_price_html();
+}

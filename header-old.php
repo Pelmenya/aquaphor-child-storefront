@@ -57,6 +57,21 @@
 
 
   ?>
+<?php
+$products = wc_get_products( array( 'status' => 'publish', 'limit' => -1 ) );
+
+// Displaying the number of products in this array
+echo '<p>Number of products: ' . sizeof( $products ) . '</p>';
+
+// Loop through products and display some data using WC_Product methods
+foreach ( $products as $product ){
+    echo '<p>';
+    echo 'Type: '  . $product->get_type() . '<br>';  // Product type
+    echo 'ID: '    . $product->get_id() . '<br>';    // Product ID
+    echo 'Title: ' . $product->get_title() . '<br>'; // Product title
+    echo 'Price: ' . $product->get_price();          // Product price
+    echo '</p>';
+}?>
 
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
     <div class="header">

@@ -19,6 +19,4 @@ function main() {
  * Без этого аякс срабатывает позже и перерисовывает наш контент
  * */
 
-window.onload = () => {
-  setInterval(main, 500);
-};
+setInterval(main, 2000);

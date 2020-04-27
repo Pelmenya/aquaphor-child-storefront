@@ -1,0 +1,120 @@
+.top-products {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-products__grid-container {
+  height: 670px;
+  margin: 0;
+  width: 100%;
+  max-width: 1440px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "sales-leader top-product1 top-product2 top-product3"
+    "sales-leader top-product4 top-product5 top-product5";
+}
+
+.top-products__sales-leader {
+  display: flex;
+  align-items: center;
+  grid-area: sales-leader;
+  background-color: var(--blue-blue);
+  position: relative;
+}
+
+.top-products__wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img.top-products__pic-big {
+  width: 100%;
+  flex-basis: 405px;
+  background-color: transparent;
+  align-items: center;
+  transition: transform .5s;
+}
+
+img.top-products__pic-small {
+  width: 168px;
+  height: 168px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-color: transparent;
+  align-items: center;
+  transition: transform .5s;
+}
+
+img.top-products__pic-big:hover {
+  transform: scale(1.2);
+}
+
+img.top-products__pic-small:hover {
+  transform: scale(1.2);
+}
+
+.top-products__title {
+  right: -200px;
+  position: absolute;
+  font-size: 60px;
+  font-family: Proxima Nova Rg;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 60px;
+  letter-spacing: -0.12px;
+  text-align: center;
+  margin: 0;
+  color: #99ccff;
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+  opacity: 0.6;
+}
+
+.top-products__top-product1,
+.top-products__top-product2,
+.top-products__top-product3,
+.top-products__top-product4,
+.top-products__top-product5 {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.top-products__top-product1 {
+  grid-area: top-product1;
+  background-color: var(--white);
+}
+
+.top-products__top-product2 {
+  grid-area: top-product2;
+  background-color: var(--pale-grey);
+}
+
+.top-products__top-product3 {
+  grid-area: top-product3;
+  background-color: var(--blue-blue);
+}
+
+.top-products__top-product4 {
+  grid-area: top-product4;
+  background-color: var(--pale-grey);
+}
+
+.top-products__top-product5 {
+  grid-area: top-product5;
+  background-color: var(--dull-orange);
+}
+
+/* For presentation only, no need to copy the code below
+.top-products__grid-container * {
+  border: 1px solid red;
+}
+*/
