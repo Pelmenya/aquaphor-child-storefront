@@ -12,7 +12,6 @@
  */
 
 get_header(); ?>
-
 <main class="main">
 <section class="promo">
   <div class="promo__content">
@@ -38,62 +37,70 @@ get_header(); ?>
 </section>
 <section class="top-products">
   <div class="top-products__grid-container">
-
-    <a class="top-products__sales-leader" href="<?php echo SITE_URL?>product/waterboss-700/">
-      <img  class="top-products__pic-big" src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-94106.png" alt="Комплексная система очистки воды WATERBOSS 700">
+    <?php $product_id = 531?>
+    <a class="top-products__sales-leader" href="<?php echo get_page_link($product_id)?>">
+    <img  src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($product_id), 'thumbnail' );?>" class="top-products__pic-big" alt="WaterBoss 700">
       <h2 class="top-products__title">Лидеры&nbsp;продаж</h2>
       <div class="top-products__about-product">
-        <?php $product =  wc_get_product( 531 ); ?>
+        <?php $product =  wc_get_product( $product_id );?>
         <h4 class="top-products__product-title"><?php echo $product->get_title(); ?></h4>
         <p class="top-products__product-price"><?php echo $product->get_price(); ?></p>
       </div>
     </a>
-    <a class="top-products__top-product1" href="<?php echo SITE_URL?>product/фирменная-соль-аквафор/">
+    <?php $product_id = 695?>
+    <a class="top-products__top-product1" href="<?php echo get_page_link($product_id)?>">
       <div class="top-products__wrap">
-        <img  src="<?php echo SITE_URL?>wp-content/uploads/2020/04/salt-aquaphor.jpg" class="top-products__pic-small" alt="Фирменная соль Аквафор">
+        <img  src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($product_id), 'thumbnail' );?>" class="top-products__pic-small" alt="Фирменная соль Аквафор">
       </div>
       <div class="top-products__about-product">
-        <?php $product =  wc_get_product( 695 ); ?>
+        <?php $product =  wc_get_product( $product_id );?>
         <h4 class="top-products__product-title top-products__product-title_black_small"><?php echo $product->get_title(); ?></h4>
         <p class="top-products__product-price top-products__product-price_black_small"><?php echo $product->get_price(); ?></p>
       </div>
     </a>
 
-    <a class="top-products__top-product2" href="<?php echo SITE_URL?>product/корпус-аквафор-гросс-20/">
+    <?php $product_id = 543?>
+    <a class="top-products__top-product2" href="<<?php echo get_page_link($product_id)?>">
       <div class="top-products__wrap">
-        <img  src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="top-products__pic-small" alt="Корпус аквафор Гросс-20">
+        <img  src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($product_id), 'thumbnail' );?>" class="top-products__pic-small" alt="Корпус аквафор Гросс-20">
         <div class="top-products__about-product">
-          <?php $product =  wc_get_product( 543 ); ?>
+        <?php $product =  wc_get_product( $product_id );?>
           <h4 class="top-products__product-title top-products__product-title_black_small"><?php echo $product->get_title(); ?></h4>
           <p class="top-products__product-price top-products__product-price_black_small"><?php echo $product->get_price(); ?></p>
         </div>
       </div>
     </a>
-    <a class="top-products__top-product3" href="<?php echo SITE_URL?>product/корпус-аквафор-викинг/">
+
+    <?php $product_id = 545?>
+    <a class="top-products__top-product3" href="<?php echo get_page_link($product_id)?>">
+
       <div class="top-products__wrap">
-        <img  src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-0a088.png" class="top-products__pic-small" alt="Корпус Аквафор Викинг">
+        <img  src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($product_id), 'thumbnail' );?>" class="top-products__pic-small" alt="Корпус Аквафор Викинг">
         <div class="top-products__about-product">
-          <?php $product =  wc_get_product( 545 ); ?>
+          <?php $product =  wc_get_product($product_id);?>
           <h4 class="top-products__product-title top-products__product-title_white_small"><?php echo $product->get_title(); ?></h4>
           <p class="top-products__product-price top-products__product-price_white_small"><?php echo $product->get_price(); ?></p>
         </div>
       </div>
     </a>
-    <a class="top-products__top-product4" href="<?php echo SITE_URL?>product/корпус-аквафор-гросс-20/">
+
+    <?php $product_id = 543 ?>
+    <a class="top-products__top-product4" href="<?php echo get_page_link($product_id)?>">
       <div class="top-products__wrap">
-        <img  src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="top-products__pic-small" alt="Корпус аквафор Гросс-20">
+        <img  src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($product_id), 'thumbnail' );?>" class="top-products__pic-small" alt="Корпус аквафор Гросс-20">
         <div class="top-products__about-product">
-          <?php $product =  wc_get_product( 543 ); ?>
+          <?php $product =  wc_get_product($product_id);?>
           <h4 class="top-products__product-title top-products__product-title_black_small"><?php echo $product->get_title(); ?></h4>
           <p class="top-products__product-price top-products__product-price_black_small"><?php echo $product->get_price(); ?></p>
         </div>
       </div>
     </a>
-    <a class="top-products__top-product5" href="<?php echo SITE_URL?>product/аквафор-dwm-101s-морион/">
+    <?php $product_id = 554 ?>
+    <a class="top-products__top-product5" href="<?php echo get_page_link($product_id)?>">
       <div class="top-products__wrap">
-        <img  src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-80f73.png" class="top-products__pic-small" alt="Аквафор dwm-101s Морион/">
+        <img  src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($product_id), 'thumbnail' );?>" class="top-products__pic-small" alt="Аквафор dwm-101s Морион/">
         <div class="top-products__about-product">
-          <?php $product =  wc_get_product( 554 ); ?>
+        <?php $product =  wc_get_product($product_id);?>
           <h4 class="top-products__product-title top-products__product-title_white_small"><?php echo $product->get_title(); ?></h4>
           <p class="top-products__product-price top-products__product-price_white_small"><?php echo $product->get_price(); ?></p>
         </div>
@@ -102,15 +109,6 @@ get_header(); ?>
   </div>
 </section>
 </main>
-
-
-
-
-
-
-
-
-
 <?php
 
 get_footer();
