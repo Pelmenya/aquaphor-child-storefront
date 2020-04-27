@@ -14,7 +14,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
+   ym(62146852, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/62146852" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 <?php wp_head(); ?>
 </head>
 
@@ -26,9 +39,10 @@
 
 <div id="page" class="hfeed site">
 
-	<?php do_action( 'storefront_before_header' ); ?>
 
-	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
+<?php do_action( 'storefront_before_header' ); ?>
+
+<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
     <div class="header">
       <div class="header__wrap">
         <div class="header__container-flex">
@@ -118,7 +132,7 @@
             </svg>
             <p class="header__top-item-text">Контакты</p>
           </a>
-          <a href="#" class="header__top-item">
+          <a href="<?php echo SITE_URL?>about-company/" class="header__top-item">
             <svg class="header__item-icon" width="18px" height="16px" viewBox="0 0 18 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g class="header__item-icon-fill" id="81-mini-icons" transform="translate(-438.000000, -282.000000)">
@@ -382,9 +396,9 @@
                   </g>
                 </svg>
               </div>
-              <a href="<?php echo SITE_URL?>" class="header__nav-bottom">
+              <a href="<?php echo SITE_URL?>product-category/расходники/" class="header__nav-bottom">
                 <strong class="header__nav-bottom-text">РАСХОДНИКИ</strong>
-                <svg class="header__item-icon header__item-icon_rotating" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!--svg class="header__item-icon header__item-icon_rotating" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                       <g class="header__icon-blue" id="81-mini-icons" transform="translate(-209.000000, -55.000000)" fill-rule="nonzero">
                           <g id="icon-" transform="translate(203.000000, 46.000000)">
@@ -392,7 +406,7 @@
                           </g>
                       </g>
                   </g>
-                </svg>
+                </svg-->
               </a>
               <a href="<?php echo SITE_URL?>" class="header__nav-bottom">
                 <strong class="header__nav-bottom-text header__nav-bottom-text_orange">СКИДКИ</strong>

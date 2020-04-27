@@ -1,0 +1,51 @@
+.services {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1440px;
+}
+
+.services__title{
+  display: none;
+}
+
+.services__title-service{
+  margin-top: 24px;
+  font-family: Proxima Nova Rg;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.12px;
+  text-align: center;
+  color: var(--blue-blue);
+  text-transform: uppercase;
+}
+
+
+.services__grid-container {
+  width: 100%;
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "service1 service2 service3";
+}
+
+.services__service1 {
+  grid-area: service1;
+  background-color: var(--pale-grey);
+}
+
+.services__service2 {
+  grid-area: service2;
+  background-color: rgba(241, 246, 255, 0.4);
+}
+
+.services__service3 {
+  grid-area: service3;
+  background-color: #fff;
+}

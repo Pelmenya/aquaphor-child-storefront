@@ -18,7 +18,6 @@ function main() {
       Object.keys(amounts).forEach((i) => {
         amounts[i].textContent = amountNormalize(amounts[i].textContent);
       });
-
       if (cartPopup.querySelector('p.woocommerce-mini-cart__empty-message')) {
         cartPopup.style.display = 'none';
       }
