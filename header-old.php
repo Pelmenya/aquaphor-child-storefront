@@ -59,7 +59,8 @@
   ?>
 <?php
 $products = wc_get_products( array( 'status' => 'publish', 'limit' => -1 ) );
-
+$product = wc_get_product( 695 );
+echo 'Title: ' . $product->get_title() . '<br>';
 // Displaying the number of products in this array
 echo '<p>Number of products: ' . sizeof( $products ) . '</p>';
 
@@ -72,7 +73,6 @@ foreach ( $products as $product ){
     echo 'Price: ' . $product->get_price();          // Product price
     echo '</p>';
 }?>
-
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
     <div class="header">
       <div class="header__wrap header__wrap_top">

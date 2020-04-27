@@ -26,6 +26,40 @@
   position: relative;
 }
 
+.top-products__about-product {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.top-products__product-title {
+  font-family: Proxima Nova Rg;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--white);
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.top-products__product-price {
+  font-family: Proxima Nova Rg;
+  font-size: 22px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--white);
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
 .top-products__wrap {
   width: 100%;
   display: flex;

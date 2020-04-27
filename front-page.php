@@ -42,12 +42,23 @@ get_header(); ?>
     <a class="top-products__sales-leader" href="<?php echo SITE_URL?>product/waterboss-700/">
       <img  class="top-products__pic-big" src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-94106.png" alt="Комплексная система очистки воды WATERBOSS 700">
       <h2 class="top-products__title">Лидеры&nbsp;продаж</h2>
+      <div class="top-products__about-product">
+        <?php $product531 =  wc_get_product( 531 ); ?>
+        <h4 class="top-products__product-title"><?php echo $product531->get_title(); ?></h4>
+        <p class=top-products__product-price><?php echo $product531->get_price(); ?></p>
+      </div>
     </a>
     <a class="top-products__top-product1" href="<?php echo SITE_URL?>product/фирменная-соль-аквафор/">
       <div class="top-products__wrap">
         <img  src="<?php echo SITE_URL?>wp-content/uploads/2020/04/salt-aquaphor.jpg" class="top-products__pic-small" alt="Фирменная соль Аквафор">
       </div>
+      <div class="top-products__about-product">
+        <?php $product1 =  wc_get_product( 695 ); ?>
+        <h4 class="top-products__product-title"><?php echo $product1->get_title(); ?></h4>
+        <p class=top-products__product-price><?php echo $product1->get_price(); ?></p>
+      </div>
     </a>
+
     <a class="top-products__top-product2" href="<?php echo SITE_URL?>product/корпус-аквафор-гросс-20/">
       <div class="top-products__wrap">
         <img  src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="top-products__pic-small" alt="Корпус аквафор Гросс-20">
