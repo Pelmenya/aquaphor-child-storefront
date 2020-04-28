@@ -44,7 +44,7 @@ get_header(); ?>
       <div class="top-products__about-product">
         <?php $product =  wc_get_product( $product_id );?>
         <h4 class="top-products__product-title"><?php echo $product->get_title(); ?></h4>
-        <p class="top-products__product-price"><?php echo $product->get_price(); ?></p>
+        <p class="top-products__product-price"><?php echo $product->get_price_html(); ?></p>
       </div>
     </a>
     <?php $product_id = 695?>
@@ -55,18 +55,18 @@ get_header(); ?>
       <div class="top-products__about-product">
         <?php $product =  wc_get_product( $product_id );?>
         <h4 class="top-products__product-title top-products__product-title_black_small"><?php echo $product->get_title(); ?></h4>
-        <p class="top-products__product-price top-products__product-price_black_small"><?php echo $product->get_price(); ?></p>
+        <p class="top-products__product-price top-products__product-price_black_small"><?php echo $product->get_price_html(); ?></p>
       </div>
     </a>
 
     <?php $product_id = 543?>
-    <a class="top-products__top-product2" href="<<?php echo get_page_link($product_id)?>">
+    <a class="top-products__top-product2" href="<?php echo get_page_link($product_id)?>">
       <div class="top-products__wrap">
         <img  src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($product_id), 'thumbnail' );?>" class="top-products__pic-small" alt="Корпус аквафор Гросс-20">
         <div class="top-products__about-product">
         <?php $product =  wc_get_product( $product_id );?>
           <h4 class="top-products__product-title top-products__product-title_black_small"><?php echo $product->get_title(); ?></h4>
-          <p class="top-products__product-price top-products__product-price_black_small"><?php echo $product->get_price(); ?></p>
+          <p class="top-products__product-price top-products__product-price_black_small"><?php echo $product->get_price_html(); ?></p>
         </div>
       </div>
     </a>
@@ -79,7 +79,7 @@ get_header(); ?>
         <div class="top-products__about-product">
           <?php $product =  wc_get_product($product_id);?>
           <h4 class="top-products__product-title top-products__product-title_white_small"><?php echo $product->get_title(); ?></h4>
-          <p class="top-products__product-price top-products__product-price_white_small"><?php echo $product->get_price(); ?></p>
+          <p class="top-products__product-price top-products__product-price_white_small"><?php echo $product->get_price_html(); ?></p>
         </div>
       </div>
     </a>
@@ -91,10 +91,11 @@ get_header(); ?>
         <div class="top-products__about-product">
           <?php $product =  wc_get_product($product_id);?>
           <h4 class="top-products__product-title top-products__product-title_black_small"><?php echo $product->get_title(); ?></h4>
-          <p class="top-products__product-price top-products__product-price_black_small"><?php echo $product->get_price(); ?></p>
+          <p class="top-products__product-price top-products__product-price_black_small"><?php echo $product->get_price_html(); ?></p>
         </div>
       </div>
     </a>
+
     <?php $product_id = 554 ?>
     <a class="top-products__top-product5" href="<?php echo get_page_link($product_id)?>">
       <div class="top-products__wrap">
@@ -102,7 +103,7 @@ get_header(); ?>
         <div class="top-products__about-product">
         <?php $product =  wc_get_product($product_id);?>
           <h4 class="top-products__product-title top-products__product-title_white_small"><?php echo $product->get_title(); ?></h4>
-          <p class="top-products__product-price top-products__product-price_white_small"><?php echo $product->get_price(); ?></p>
+          <p class="top-products__product-price top-products__product-price_white_small"><?php echo $product->get_price_html(); ?></p>
         </div>
       </div>
     </a>
