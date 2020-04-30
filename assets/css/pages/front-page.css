@@ -2,6 +2,8 @@
 @import url(../../css/blocks/promo/promo.css);
 @import url(../../css/blocks/services/services.css);
 @import url(../../css/blocks/top-products/top-products.css);
+@import url(../../css/blocks/certificates/certificates.css);
+
 
 
 .home.page:not(.page-template-template-homepage) .site-header,

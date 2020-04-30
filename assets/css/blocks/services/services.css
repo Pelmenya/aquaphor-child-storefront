@@ -4,13 +4,25 @@
   flex-direction: column;
   align-items: center;
   max-width: 1440px;
+  background-color: var(--pale-grey);
 }
 
-.services__title{
+.services__title {
   display: none;
 }
 
-.services__title-service{
+.services__service-description {
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.services__title-service {
   margin-top: 24px;
   font-family: Proxima Nova Rg;
   font-size: 18px;
@@ -19,33 +31,27 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.12px;
-  text-align: center;
   color: var(--blue-blue);
   text-transform: uppercase;
+  margin-bottom: 3px;
 }
 
-
-.services__grid-container {
-  width: 100%;
+.services__container {
+  width: 80%;
   height: 100px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  gap: 1px 1px;
-  grid-template-areas: "service1 service2 service3";
+  display: flex;
+  justify-content: space-between;
 }
 
-.services__service1 {
-  grid-area: service1;
-  background-color: var(--pale-grey);
+.services__service {
+  margin-right: 113px;
 }
 
-.services__service2 {
-  grid-area: service2;
-  background-color: rgba(241, 246, 255, 0.4);
+.services__service:last-of-type {
+  margin-right: 0px;
 }
 
-.services__service3 {
-  grid-area: service3;
-  background-color: #fff;
+/* For presentation only, no need to copy the code below*/
+.services__grid-container * {
+  border: 1px solid red;
 }

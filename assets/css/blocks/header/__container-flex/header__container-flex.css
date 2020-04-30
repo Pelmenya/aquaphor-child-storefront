@@ -1,6 +1,6 @@
 .header__container-flex {
   display: flex;
   align-items: center;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }

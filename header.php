@@ -96,7 +96,7 @@
             </svg>
             <p class="header__top-item-text">Гарантия</p>
           </a>
-          <a href="#" class="header__top-item">
+          <a href="<?php echo SITE_URL?>оплата/" class="header__top-item">
             <svg class="header__item-icon" width="18px" height="14px" viewBox="0 0 18 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g class="header__item-icon-fill" id="81-mini-icons" transform="translate(-90.000000, -457.000000)">
@@ -108,7 +108,7 @@
             </svg>
             <p class="header__top-item-text">Оплата</p>
           </a>
-          <a href="#" class="header__top-item">
+          <a href="<?php echo SITE_URL?>доставка/" class="header__top-item">
             <svg class="header__item-icon" width="17px" height="18px" viewBox="0 0 17 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g class="header__item-icon-fill" id="81-mini-icons" transform="translate(-381.000000, -339.000000)">
@@ -120,7 +120,7 @@
             </svg>
             <p class="header__top-item-text">Доставка</p>
           </a>
-          <a href="#" class="header__top-item">
+          <a href="<?php echo SITE_URL?>контакты/" class="header__top-item">
             <svg class="header__item-icon" width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g class="header__item-icon-fill" id="81-mini-icons" transform="translate(-438.000000, -397.000000)">
@@ -280,9 +280,7 @@
                     <a href="<?php echo SITE_URL?>product/waterboss-400/" class="header__menu-col-link">WaterBoss&nbsp;400</a>
                     <a href="<?php echo SITE_URL?>product/waterboss-400p/" class="header__menu-col-link">WaterBoss&nbsp;400P</a>
                     <a href="<?php echo SITE_URL?>product/waterboss-700/" class="header__menu-col-link">WaterBoss&nbsp;700</a>
-                    <a href="<?php echo SITE_URL?>product/waterboss-800/" class="header__menu-col-link">WaterBoss&nbsp;800</a>
                     <a href="<?php echo SITE_URL?>product/waterboss-900/" class="header__menu-col-link">WaterBoss&nbsp;900</a>
-                    <a href="<?php echo SITE_URL?>product/waterboss-1000/" class="header__menu-col-link">WaterBoss&nbsp;1000</a>
                   </div>
                   <div class="header__menu-col">
                     <a href="<?php echo SITE_URL?>product-category/systems/watermax/" class="header__menu-col-title-link">
@@ -301,6 +299,8 @@
                     <a href="<?php echo SITE_URL?>product/аквафор-pro-180/" class="header__menu-col-link">Аквафор&nbsp;Pro&nbsp;180</a>
                     <a href="<?php echo SITE_URL?>product/аквафор-proplus-380/" class="header__menu-col-link">Аквафор&nbsp;ProPlus&nbsp;380</a>
                     <a href="<?php echo SITE_URL?>product/аквафор-proplus-380p/" class="header__menu-col-link">Аквафор&nbsp;ProPlus&nbsp;380P</a>
+                    <a href="<?php echo SITE_URL?>product/waterboss-800/" class="header__menu-col-link">Аквафор&nbsp;A800</a>
+                    <a href="<?php echo SITE_URL?>product/waterboss-1000/" class="header__menu-col-link">Аквафор&nbsp;A1000</a>
                   </div>
                 </div>
                 <a href="<?php echo SITE_URL?>product-category/systems/" class="header__nav-bottom-text">КОМПЛЕКСНЫЕ</a>
