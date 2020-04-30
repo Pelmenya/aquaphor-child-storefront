@@ -62,8 +62,6 @@
   font-size: 17px;
 }
 
-
-
 .top-products__product-price {
   font-family: Proxima Nova Rg;
   font-size: 22px;
@@ -80,7 +78,6 @@
   color: var(--dark);
 }
 
-
 .top-products__product-price_black_small {
   color: var(--dark);
   font-size: 17px;
@@ -89,7 +86,6 @@
 .top-products__product-price_white_small {
   font-size: 17px;
 }
-
 
 .top-products__wrap {
   width: 100%;

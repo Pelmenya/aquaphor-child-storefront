@@ -300,7 +300,7 @@ function aquaphor_theme_scripts() {
   $url_my_account_edit_address_shiping = '/my-account/edit-address/shipping';
   $url_my_account_edit_address_billing = '/my-account/edit-address/billing';
 
-  $url_my_account_orders = '/my-account/orders';
+  $url_my_account_orders = '\/my-account\/orders';
   $url_my_account_view_order = '\/my-account\/view-order';
   $url_my_account_edit_account = '/my-account/edit-account';
   $url_cart = '/cart';
@@ -319,7 +319,7 @@ function aquaphor_theme_scripts() {
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . '/my-account/edit-account/index.js', true);
   }
 
-  if ((strcasecmp($url_str, $url_my_account_orders) == 0)&&(strcasecmp($url_query, '') == 0)) {
+  if ((preg_match("/$url_my_account_orders/i", $url_str))&&(strcasecmp($url_query, '') == 0)) {
     if (is_user_logged_in()){
       wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/orders/index.js', true);
     } else wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/index.js', true);
