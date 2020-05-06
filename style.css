@@ -21,6 +21,15 @@
 @import url(./assets/css/pages/checkout.css);
 @import url(./assets/css/pages/checkout-order-received.css);
 
+
+div.col-full{
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
 /* Текст для статичных страниц */
 p.content{
   font-family: Proxima Nova Rg;

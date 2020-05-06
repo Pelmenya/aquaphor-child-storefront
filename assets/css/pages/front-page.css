@@ -6,15 +6,17 @@
 
 
 
+
 .home.page:not(.page-template-template-homepage) .site-header,
 .home.post-type-archive-product .site-header {
   margin-bottom: 0;
 }
 
-.col-full {
+
+div.col-full{
   width: 100%;
-  max-width: initial;
-  margin: 0;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 0;
 }
 

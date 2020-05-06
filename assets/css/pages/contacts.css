@@ -1,0 +1,67 @@
+div.col-full {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-contacts {
+  font-family: Proxima Nova Rg;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+  margin-top: 65px;
+  margin-bottom: 25px;
+  display: block;
+  width: 100%;
+  padding-left: 150px;
+  padding-right: 150px;
+  position: relative;
+}
+
+.information {
+  position: absolute;
+  z-index: 77;
+  left: 193px;
+  top: 105px;
+  padding-left: 25px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-right: 25px;
+  background-color: var(--blue-blue);
+  color: var(--white);
+}
+
+.information__contacts {
+  font-family: Proxima Nova Rg;
+  font-size: 22px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--white);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.information__job-time {
+  font-size: 16px;
+  font-family: Proxima Nova Rg;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--white);
+  margin-top: 35px;
+  margin-bottom: 0px;
+}
+
+.information__job-time:last-of-type {
+  margin-top: 0px;
+}

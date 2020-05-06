@@ -12,15 +12,15 @@
  *
  */
 
-if( ! defined('AQUAPHOR_THEME_VERSION') )  define('AQUAPHOR_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
-if( ! defined('AQUAPHOR_THEME_PATH') )     define('AQUAPHOR_THEME_PATH', get_template_directory() );
-if( ! defined('AQUAPHOR_THEME_URL') )      define('AQUAPHOR_THEME_URL', get_template_directory_uri() );
-if( ! defined('AQUAPHOR_THEME_ASSETS') )   define('AQUAPHOR_THEME_ASSETS', get_template_directory() . '/assets' );
+if( ! defined('AQUAPHOR_THEME_VERSION') )       define('AQUAPHOR_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
+if( ! defined('AQUAPHOR_THEME_PATH') )          define('AQUAPHOR_THEME_PATH', get_template_directory() );
+if( ! defined('AQUAPHOR_THEME_URL') )           define('AQUAPHOR_THEME_URL', get_template_directory_uri() );
+if( ! defined('AQUAPHOR_THEME_ASSETS') )        define('AQUAPHOR_THEME_ASSETS', get_template_directory() . '/assets' );
 
-if( ! defined('SITE_URL') )     define('SITE_URL', get_site_url() . '/' );
-if( ! defined('AQUAPHOR_THEME_JS') )   define('AQUAPHOR_THEME_JS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/pages/' );
-if( ! defined('AQUAPHOR_THEME_JS_FUNCTIONS') )   define('AQUAPHOR_THEME_JS_FUNCTIONS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/functions/' );
-if( ! defined('AQUAPHOR_THEME_CSS') )   define('AQUAPHOR_THEME_CSS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/css/pages/' );
+if( ! defined('SITE_URL') )                     define('SITE_URL', get_site_url() . '/' );
+if( ! defined('AQUAPHOR_THEME_JS') )            define('AQUAPHOR_THEME_JS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/pages/' );
+if( ! defined('AQUAPHOR_THEME_JS_FUNCTIONS') )  define('AQUAPHOR_THEME_JS_FUNCTIONS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/functions/' );
+if( ! defined('AQUAPHOR_THEME_CSS') )           define('AQUAPHOR_THEME_CSS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/css/pages/' );
 
 
 /**
@@ -252,35 +252,6 @@ function woocommerce_output_related_products() {
 	woocommerce_related_products( apply_filters( 'woocommerce_output_related_products_args', $args ) );
 }
 
-
-
-function action_function_name_4761(){
-  ?>
-   <script>
-    jQuery(document.body).trigger('update_checkout', ()=>{
-      function amountNormalize(str) {
-  const arr = str.split('.');
-  arr.splice(arr.length - 1, 1);
-  return `${arr.join(' ')} руб.`;
-}
-
-function refreshPage() {
-  const amounts = document.querySelectorAll('.amount');
-  Object.keys(amounts).forEach((i) => {
-    amounts[i].textContent = amountNormalize(amounts[i].textContent);
-  });
-}
-  refreshPage();
-
-    });
-  </script>
-
-  <?php
-}
-
-add_action( 'woocommerce_checkout_after_order_review', 'action_function_name_4761' );
-
-
 function aquaphor_theme_scripts() {
   /* Путь к странице*/
   $url = $_SERVER['REQUEST_URI'];
@@ -305,6 +276,18 @@ function aquaphor_theme_scripts() {
   $url_my_account_edit_account = '/my-account/edit-account';
   $url_cart = '/cart';
   $url_checkout_order_received='\/checkout\/order-received';
+
+/* Заметка про кириллицу и ярлык (слаг)
+Если у вас на сайте кириллица не меняется на латиницу - нет плагина Cyr-To-Lat или ему подобного,
+то при создании записи её ярлык изменяется и кириллица превращается в спец символы
+(контакты - %d0%ba%d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d1%8b), поэтому при проверке нужно это учитывать.
+Т.е. если проверяется не заголовок, а ярлык (post_name), то делайте так:
+is_page('о-сайте');  неправильно
+is_page( sanitize_title('о-сайте') );  правильно  */
+  if (is_page( sanitize_title('контакты') ) ){
+    wp_enqueue_style( 'front', AQUAPHOR_THEME_CSS . 'contacts.css', array(), '1.1', 'all');
+  }
+
 
 
   if (strcasecmp($url_str, $url_cart) == 0){
