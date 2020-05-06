@@ -284,11 +284,13 @@ function aquaphor_theme_scripts() {
 Т.е. если проверяется не заголовок, а ярлык (post_name), то делайте так:
 is_page('о-сайте');  неправильно
 is_page( sanitize_title('о-сайте') );  правильно  */
-  if (is_page( sanitize_title('контакты') ) ){
-    wp_enqueue_style( 'front', AQUAPHOR_THEME_CSS . 'contacts.css', array(), '1.1', 'all');
+  if (is_page( 'contacts' ) ){
+    wp_enqueue_style( 'contacts', AQUAPHOR_THEME_CSS . 'contacts.css', array(), '1.1', 'all');
   }
 
-
+  if (is_page( array('delivery', 'payment', 'guarantees', 'about-company' ) ) ){
+    wp_enqueue_style( 'is-page', AQUAPHOR_THEME_CSS . 'is_page.css', array(), '1.1', 'all');
+  }
 
   if (strcasecmp($url_str, $url_cart) == 0){
     wp_enqueue_script( 'custom', AQUAPHOR_THEME_JS . 'cart/index.js', array('jquery') );
