@@ -16,10 +16,10 @@ get_header();
 
 <h1 class="title-contacts">Контактная информация
   <div class="information">
-    <p class="information__contacts">8 (499) 577 03 79</p>
+    <p class="information__contacts">8&nbsp;(499)&nbsp;577&nbsp;03&nbsp;79</p>
     <p class="information__contacts">info@aquaphor.email</p>
-    <p class="information__job-time">Режим работы:</p>
-    <p class="information__job-time">пн-пт 9:00 - 20:00</p>
+    <p class="information__job-time">Режим&nbsp;работы:</p>
+    <p class="information__job-time">пн-пт&nbsp;9:00&nbsp;-&nbsp;20:00</p>
   </div>
 </h1>
 <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A7dd2c27b6a8a2c7be3373d691dd30c8aac896950c46253d10cc72d54205b4b37&amp;source=constructor" width="100%" height="610" frameborder="0">

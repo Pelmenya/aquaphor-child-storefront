@@ -84,7 +84,7 @@
           </div>
         </div>
         <div class="header__container-flex">
-          <a href="#" class="header__top-item">
+          <a href="<?php echo SITE_URL?>guarantees" class="header__top-item">
             <svg class="header__item-icon" width="15px" height="19px" viewBox="0 0 15 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g id="81-mini-icons" class="header__item-icon-fill" transform="translate(-150.000000, -396.000000)">
@@ -96,7 +96,7 @@
             </svg>
             <p class="header__top-item-text">Гарантия</p>
           </a>
-          <a href="<?php echo SITE_URL?>оплата/" class="header__top-item">
+          <a href="<?php echo SITE_URL?>payment" class="header__top-item">
             <svg class="header__item-icon" width="18px" height="14px" viewBox="0 0 18 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g class="header__item-icon-fill" id="81-mini-icons" transform="translate(-90.000000, -457.000000)">
@@ -108,7 +108,7 @@
             </svg>
             <p class="header__top-item-text">Оплата</p>
           </a>
-          <a href="<?php echo SITE_URL?>доставка/" class="header__top-item">
+          <a href="<?php echo SITE_URL?>delivery" class="header__top-item">
             <svg class="header__item-icon" width="17px" height="18px" viewBox="0 0 17 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g class="header__item-icon-fill" id="81-mini-icons" transform="translate(-381.000000, -339.000000)">
@@ -120,7 +120,7 @@
             </svg>
             <p class="header__top-item-text">Доставка</p>
           </a>
-          <a href="<?php echo SITE_URL?>контакты/" class="header__top-item">
+          <a href="<?php echo SITE_URL?>contacts" class="header__top-item">
             <svg class="header__item-icon" width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g class="header__item-icon-fill" id="81-mini-icons" transform="translate(-438.000000, -397.000000)">
@@ -132,7 +132,7 @@
             </svg>
             <p class="header__top-item-text">Контакты</p>
           </a>
-          <a href="<?php echo SITE_URL?>about-company/" class="header__top-item">
+          <a href="<?php echo SITE_URL?>about-company" class="header__top-item">
             <svg class="header__item-icon" width="18px" height="16px" viewBox="0 0 18 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g class="header__item-icon-fill" id="81-mini-icons" transform="translate(-438.000000, -282.000000)">
