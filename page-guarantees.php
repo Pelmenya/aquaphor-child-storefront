@@ -14,7 +14,7 @@
 get_header();
 ?>
 
-<h1 class="title">Доставка</h1>
+<h1 class="title">Гарантии</h1>
 
 
 <?php
