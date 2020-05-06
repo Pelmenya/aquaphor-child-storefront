@@ -1,3 +1,8 @@
+.main {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
 .title {
   font-family: Proxima Nova Rg;
   font-size: 30px;
@@ -7,7 +12,6 @@
   line-height: normal;
   letter-spacing: normal;
   color: var(--dark);
-  margin-top: 65px;
   margin-bottom: 0px;
 }
 
@@ -30,9 +34,14 @@
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
   letter-spacing: normal;
   color: var(--dark);
+  max-width: 900px;
+  line-height: 1.63;
+}
+
+.description__link {
+  color: var(--blue-blue);
 }
 
 .description__insert {
@@ -45,7 +54,6 @@
 .delivery-adress {
   max-width: 824px;
   border-right: 1px solid #f5f7f7;
-  margin-bottom: 65px;
 }
 
 .delivery-adress__th {
@@ -86,4 +94,3 @@
 .delivery-adress__td-insert {
   font-weight: 600;
 }
-

@@ -13,10 +13,38 @@
 
 get_header();
 ?>
-
-<h1 class="title">Способы оплаты</h1>
-
-
+<main class="main">
+  <h1 class="title">Способы оплаты</h1>
+  <h3 class="sub-title">Наличными</h3>
+  <p class="description">
+    <span class="description__insert">
+      Оплата наличными возможна курьеру,
+      мастеру сервисной службы и в любом пункте самовывоза при получении товара.
+    </span>
+  </p>
+  <h3 class="sub-title">Банковской картой</h3>
+  <p class="description">
+    <span class="description__insert">Оплата картой возможна</span>
+    на сайте
+    <span class="description__insert">или в любом</span>
+    пункте самовывоза.
+  </p>
+  <h3 class="sub-title">Безналичный расчет</h3>
+  <h4 class="description">Физическим лицам:</h4>
+  <p class="description">
+    <span class="description__insert">
+      На стадии оформления заказа вам необходимо верно заполнить ФИО и паспортные данные.
+      Счет можно будет распечатать после подтверждения заказа менеджером.
+    </span>
+  </p>
+  <h4 class="description">Юридическим лицам:</h4>
+  <p class="description">
+    <span class="description__insert">
+      На стадии оформления заказа вам необходимо заполнить реквизиты организации.
+      Счет можно будет распечатать после подтверждения заказа менеджером.
+    </span>
+  </p>
+</main>
 <?php
 get_footer();
 
