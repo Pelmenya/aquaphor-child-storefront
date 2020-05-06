@@ -64,7 +64,7 @@ get_header(); ?>
   <div class="certificates__container">
 
     <div class="certificate__container">
-      <img class="certificate__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/04/nsf_logo.png" alt="Сертификат NSF">
+      <img class="certificate__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/nsf_logo.png" alt="Сертификат NSF">
       <div class="certificate__description">
         <h3 class="certificate__title">Сертификат NSF</h3>
         <p class="certificate__about">Американский стандарт качества</p>
@@ -72,7 +72,7 @@ get_header(); ?>
     </div>
 
     <div class="certificate__container">
-      <img class="certificate__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/04/iso_9001.png" alt="Сертификат ISO">
+      <img class="certificate__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/iso_9001.png" alt="Сертификат ISO">
       <div class="certificate__description">
         <h3 class="certificate__title">Сертификат ISO</h3>
         <p class="certificate__about">Международный стандарт качества (9001:2015)</p>
@@ -80,7 +80,7 @@ get_header(); ?>
     </div>
 
     <div class="certificate__container">
-      <img class="certificate__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/04/iso_45001.png" alt="Сертификат ISO">
+      <img class="certificate__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/iso_45001.png" alt="Сертификат ISO">
       <div class="certificate__description">
         <h3 class="certificate__title">Сертификат ISO</h3>
         <p class="certificate__about">Международный стандарт качества (45001:2018)</p>
