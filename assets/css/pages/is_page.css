@@ -1,3 +1,8 @@
+.main {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
 .title {
   font-family: Proxima Nova Rg;
   font-size: 30px;
@@ -7,8 +12,7 @@
   line-height: normal;
   letter-spacing: normal;
   color: var(--dark);
-  margin-top: 65px;
-  margin-bottom: 35px;
+  margin-bottom: 0px;
 }
 
 .sub-title {
@@ -20,4 +24,73 @@
   line-height: normal;
   letter-spacing: normal;
   color: var(--blue-blue);
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+
+.description {
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+  max-width: 900px;
+  line-height: 1.63;
+}
+
+.description__link {
+  color: var(--blue-blue);
+}
+
+.description__insert {
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--dark);
+}
+
+.delivery-adress {
+  max-width: 900px;
+  border-right: 1px solid #f5f7f7;
+}
+
+.delivery-adress__th {
+  font-family: Proxima Nova Rg;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.delivery-adress__tr {
+  font-family: Proxima Nova Rg;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.delivery-adress__td {
+  font-family: Proxima Nova Rg;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: normal;
+  color: var(--dark);
+  border-left: 1px solid #f5f7f7;
+  border-bottom: 1px solid #f5f7f7;
+}
+
+.delivery-adress__td-insert {
+  font-weight: 600;
 }
