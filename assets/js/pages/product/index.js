@@ -23,12 +23,13 @@ function main() {
       '.woocommerce-product-details__short-description',
     );
 
-    const shortDescriptionP = shortDescription.querySelector('p');
+    if (shortDescription) {
+      const shortDescriptionP = shortDescription.querySelector('p');
 
-    shortDescriptionP.style.fontFamily = 'Proxima Nova Rg';
-    shortDescriptionP.style.fontSize = '16px';
-    shortDescriptionP.style.color = 'var(--dark)';
-
+      shortDescriptionP.style.fontFamily = 'Proxima Nova Rg';
+      shortDescriptionP.style.fontSize = '16px';
+      shortDescriptionP.style.color = 'var(--dark)';
+    }
     const formCart = entrySummary.querySelector('.cart');
 
     const checkCount = formCart.querySelector('.quantity');
