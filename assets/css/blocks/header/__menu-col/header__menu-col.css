@@ -1,6 +1,7 @@
 .header__menu-col {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   padding-right: 36px;
 }
 

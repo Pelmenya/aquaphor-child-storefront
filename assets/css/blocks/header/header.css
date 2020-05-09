@@ -22,8 +22,6 @@
 @import url(./__menu-col-link/header__menu-col-link.css);
 @import url(./__item-icon/_rotating/header__item-icon_rotating.css);
 @import url(./__item-icon-sale/header__item-icon-sale.css);
-
-
 @import url(./__spliter/header__spliter.css);
 @import url(./__tel/header__tel.css);
 @import url(./__dealer/header__dealer.css);
@@ -115,7 +113,6 @@
   opacity: 1;
   color: rgba(26, 26, 26, 1);
 }
-
 
 
 /*{
