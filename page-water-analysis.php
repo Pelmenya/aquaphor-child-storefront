@@ -15,7 +15,6 @@ get_header();
 ?>
 <div class="main">
   <h1 class="title">Анализ воды</h1>
-
   <h3 class="sub-title">Подготовка</h3>
   <ul class="records">
     <li>
