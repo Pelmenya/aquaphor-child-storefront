@@ -94,3 +94,16 @@
 .delivery-adress__td-insert {
   font-weight: 600;
 }
+
+.records {
+  margin-left: 15px;
+  max-width: 900px;
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: var(--dark);
+}
