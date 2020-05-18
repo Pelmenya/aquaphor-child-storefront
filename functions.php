@@ -288,7 +288,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     wp_enqueue_style( 'contacts', AQUAPHOR_THEME_CSS . 'contacts.css', array(), '1.1', 'all');
   }
 
-  if (is_page( array('delivery', 'payment', 'guarantees', 'about-company', 'water-analysis' ) ) ){
+  if (is_page( array('delivery', 'payment', 'guarantees', 'about-company', 'water-analysis', 'equipment-selection' ) ) ){
     wp_enqueue_style( 'is-page', AQUAPHOR_THEME_CSS . 'is_page.css', array(), '1.1', 'all');
   }
 

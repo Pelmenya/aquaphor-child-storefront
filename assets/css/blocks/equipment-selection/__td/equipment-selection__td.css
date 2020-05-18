@@ -1,0 +1,17 @@
+.equipment-selection__td {
+  font-family: Proxima Nova Rg;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: normal;
+  color: var(--dark);
+  border-left: 1px solid #f5f7f7;
+  border-bottom: 1px solid #f5f7f7;
+  width: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;align-items: center;
+  justify-content: space-between;
+}

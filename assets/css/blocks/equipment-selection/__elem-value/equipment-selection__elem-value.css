@@ -1,0 +1,12 @@
+input[type="text"].equipment-selection__elem-value {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--white);
+  box-shadow: none;
+  width: 50%;
+}
+
+input[type="text"].equipment-selection__elem-value:focus {
+  box-shadow: var(--blue-blue);
+  background-color: rgba(34, 60, 82, 0.04);
+}
