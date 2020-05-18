@@ -1,0 +1,15 @@
+@import url(./__form/equipment-selection__form.css);
+@import url(./__choice/equipment-selection__choice.css);
+@import url(./__choice-col/equipment-selection__choice-col.css);
+@import url(./__choice-color/equipment-selection__choice-color.css);
+@import url(./__choice-item/equipment-selection__choice-item.css);
+@import url(./__table/equipment-selection__table.css);
+@import url(./__td/equipment-selection__td.css);
+@import url(./__elem/equipment-selection__elem.css);
+@import url(./__elem-value/equipment-selection__elem-value.css);
+
+.equipment-selection {
+  display: flex;
+  flex-direction: column;
+  max-width: 648px;
+}

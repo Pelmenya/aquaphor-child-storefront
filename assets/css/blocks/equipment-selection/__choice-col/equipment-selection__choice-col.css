@@ -1,0 +1,4 @@
+.equipment-selection__choice-col {
+  display: flex;
+  flex-direction: column;
+}
