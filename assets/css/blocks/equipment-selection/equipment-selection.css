@@ -7,6 +7,10 @@
 @import url(./__td/equipment-selection__td.css);
 @import url(./__elem/equipment-selection__elem.css);
 @import url(./__elem-value/equipment-selection__elem-value.css);
+@import url(./__description/equipment-selection__description.css);
+@import url(./__info/equipment-selection__info.css);
+@import url(./__info-pointer/equipment-selection__info-pointer.css);
+@import url(./__link/equipment-selection__link.css);
 
 .equipment-selection {
   display: flex;

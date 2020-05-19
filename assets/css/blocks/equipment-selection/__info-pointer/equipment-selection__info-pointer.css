@@ -1,0 +1,9 @@
+.equipment-selection__info-pointer {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  background-color: #f7f8f9;
+  transform: rotate(45deg);
+  top:-6px;
+  left: 25px;
+}
