@@ -16,11 +16,11 @@ get_header();
 <main class="main">
   <h1 class="title title_about-company">Подбор оборудования</h1>
   <p class="description">
-    <label class="description__insert">
+    <span class="description__insert">
       Текст-«рыба» — это заготовленный, скопированный или собственноручно написанный текст
       для экономии времени, который вставляется в макет страницы для демонстрации его условного
       внешнего наполнения в процессе разработки или для тестирования шрифта.
-    </label>
+    </span>
   </p>
   <section class="equipment-selection">
     <h3 class="sub-title">Калькулятор системы водоподготовки</h3>
@@ -55,60 +55,66 @@ get_header();
         </div>
       </div>
       <table class="equipment-selection__table">
-    <thead>
-      <tr class="equipment-selection__choice-item">
-        <td class="equipment-selection__td">
-          <label class="equipment-selection__elem" for="hydrogen">Водород</label>
-          <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="hydrogen">
-        </td>
-        <td class="equipment-selection__td">
-          <label class="equipment-selection__elem" for="organics">Органика</label>
-          <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="organics">
-        </td>
-      </tr>
-       <tr class="equipment-selection__choice-item">
-        <td class="equipment-selection__td">
-          <label class="equipment-selection__elem" for="mineralization">Минерализация</label>
-          <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="mineralization">
-        </td>
-        <td class="equipment-selection__td">
-          <label class="equipment-selection__elem" for="manganese">Марганец</label>
-          <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="manganese">
-        </td>
-      </tr>
-       <tr class="equipment-selection__choice-item">
-        <td class="equipment-selection__td">
-          <label class="equipment-selection__elem" for="inflexibility">Жесткость</label>
-          <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="inflexibility">
-        </td>
-        <td class="equipment-selection__td">
-          <label class="equipment-selection__elem" for="fluorides">Фториды</label>
-          <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="fluorides">
-        </td>
-      </tr>
-       <tr class="equipment-selection__choice-item">
-        <td class="equipment-selection__td">
-          <label class="equipment-selection__elem" for="ferrum">Железо</label>
-          <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="ferrum">
-        </td>
-        <td class="equipment-selection__td">
-          <label class="equipment-selection__elem" for="hydrogenSulphide">Сероводород</label>
-          <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="hydrogenSulphide">
-        </td>
-      </tr>
-       <tr class="equipment-selection__choice-item">
-        <td class="equipment-selection__td">
-          <label class="equipment-selection__elem" for="nitrates">Нитраты</label>
-          <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="nitrates">
-        </td>
-        <td class="equipment-selection__td">
-          <label class="equipment-selection__elem" for="sulfides">Сульфиды</label>
-          <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="sulfides">
-        </td>
-      </tr>
-    </thead>
-  </table>
-    </form>
+        <thead>
+          <tr class="equipment-selection__choice-item">
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="hydrogen">Водород</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="hydrogen">
+            </td>
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="organics">Органика</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="organics">
+            </td>
+          </tr>
+          <tr class="equipment-selection__choice-item">
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="mineralization">Минерализация</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="mineralization">
+            </td>
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="manganese">Марганец</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="manganese">
+            </td>
+          </tr>
+          <tr class="equipment-selection__choice-item">
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="inflexibility">Жесткость</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="inflexibility">
+            </td>
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="fluorides">Фториды</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="fluorides">
+            </td>
+          </tr>
+          <tr class="equipment-selection__choice-item">
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="ferrum">Железо</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="ferrum">
+            </td>
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="hydrogenSulphide">Сероводород</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="hydrogenSulphide">
+            </td>
+          </tr>
+          <tr class="equipment-selection__choice-item">
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="nitrates">Нитраты</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="nitrates">
+            </td>
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="sulfides">Сульфиды</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="sulfides">
+            </td>
+          </tr>
+        </thead>
+      </table>
+    <div class="equipment-selection__info">
+      <div class="equipment-selection__info-pointer"></div>
+      <p class="equipment-selection__description">
+          Введите данные полученные с помощью нашего <a href="<?php echo SITE_URL?>water-analysis" class="equipment-selection__link">анализа воды</a> или из другой лаборатории.
+      </p>
+    </div>
+   </form>
   </section>
 </main>
 
