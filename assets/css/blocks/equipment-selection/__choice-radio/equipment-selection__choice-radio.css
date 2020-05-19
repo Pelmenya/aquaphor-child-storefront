@@ -1,0 +1,40 @@
+
+input[type='radio'].equipment-selection__choice-radio {
+  cursor: pointer;
+}
+
+input[type='radio'].equipment-selection__choice-radio {
+  position: relative;
+  height: 16px;
+  width: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+input[type='radio'].equipment-selection__choice-radio::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid var(--blue-blue);
+}
+
+input[type='radio'].equipment-selection__choice-radio:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: var(--blue-blue);
+  transform: translate(-50%, -50%);
+  visibility: visible;
+}

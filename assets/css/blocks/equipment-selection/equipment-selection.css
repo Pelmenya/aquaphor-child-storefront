@@ -13,6 +13,7 @@
 @import url(./__link/equipment-selection__link.css);
 @import url(./__calculate-button/equipment-selection__calculate-button.css);
 @import url(./__point-water/equipment-selection__point-water.css);
+@import url(./__choice-radio/equipment-selection__choice-radio.css);
 
 .equipment-selection {
   display: flex;

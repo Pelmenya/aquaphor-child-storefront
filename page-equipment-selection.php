@@ -29,22 +29,22 @@ get_header();
         <div class="equipment-selection__choice-col">
           <h4 class="description">Какая сейчас вода?</h4>
           <div class="equipment-selection__choice-item">
-            <input class="equipment-selection__choice-color" type="radio" name="choiceColor">
+            <input class="equipment-selection__choice-radio" type="radio" name="choiceColor">
             <label class="equipment-selection__choice-color" for="choiceColor">Прозрачная</label>
           </div>
           <div class="equipment-selection__choice-item">
-            <input  class="equipment-selection__choice-color" type="radio" name="choiceColor">
+            <input  class="equipment-selection__choice-radio" type="radio" name="choiceColor">
             <label class="equipment-selection__choice-color" for="choiceColor">Мутная</label>
           </div>
         </div>
         <div class="equipment-selection__choice-col">
           <h4 class="description">Какая нужна вода?</h4>
           <div class="equipment-selection__choice-item">
-            <input class="equipment-selection__choice-color" type="radio" name="choiceTaste">
+            <input class="equipment-selection__choice-radio" type="radio" name="choiceTaste">
             <label class="equipment-selection__choice-color" for="choiceTaste">Питьевая</label>
           </div>
           <div class="equipment-selection__choice-item">
-            <input  class="equipment-selection__choice-color" type="radio" name="choiceTaste">
+            <input  class="equipment-selection__choice-radio" type="radio" name="choiceTaste">
             <label class="equipment-selection__choice-color" for="choiceTaste">Техническая</label>
           </div>
         </div>
