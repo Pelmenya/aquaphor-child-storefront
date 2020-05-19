@@ -11,6 +11,8 @@
 @import url(./__info/equipment-selection__info.css);
 @import url(./__info-pointer/equipment-selection__info-pointer.css);
 @import url(./__link/equipment-selection__link.css);
+@import url(./__calculate-button/equipment-selection__calculate-button.css);
+@import url(./__point-water/equipment-selection__point-water.css);
 
 .equipment-selection {
   display: flex;

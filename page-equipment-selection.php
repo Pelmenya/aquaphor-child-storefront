@@ -50,7 +50,7 @@ get_header();
         </div>
         <div class="equipment-selection__choice-col">
           <h4 class="description">Точки водоразбора?</h4>
-          <input  class="equipment-selection__choice-color" type="range" value="1" min="1" max="6" step="1" name="choiceRange">
+          <input  class="equipment-selection__point-water" type="range" value="1" min="1" max="6" step="1" name="choiceRange">
           <label class="equipment-selection__choice-color" for="choiceRange">От 1 до 6 точек</label>
         </div>
       </div>
@@ -114,6 +114,7 @@ get_header();
           Введите данные полученные с помощью нашего <a href="<?php echo SITE_URL?>water-analysis" class="equipment-selection__link">анализа воды</a> или из другой лаборатории.
       </p>
     </div>
+    <button class="equipment-selection__calculate-button">Рассчитать</button>
    </form>
   </section>
 </main>

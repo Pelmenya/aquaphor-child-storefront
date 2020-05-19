@@ -1,0 +1,99 @@
+input[type=range].equipment-selection__point-water {
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+input[type=range].equipment-selection__point-water:focus {
+  outline: none;
+}
+
+input[type=range].equipment-selection__point-water::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range].equipment-selection__point-water::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -2px;
+}
+
+input[type=range].equipment-selection__point-water:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+
+input[type=range].equipment-selection__point-water::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range].equipment-selection__point-water::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type=range].equipment-selection__point-water::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+
+input[type=range].equipment-selection__point-water::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range].equipment-selection__point-water::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range].equipment-selection__point-water::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type=range].equipment-selection__point-water:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+
+input[type=range].equipment-selection__point-water:focus::-ms-fill-upper {
+  background: #367ebd;
+}
