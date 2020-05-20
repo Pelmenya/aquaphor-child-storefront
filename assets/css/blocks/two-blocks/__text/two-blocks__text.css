@@ -7,4 +7,6 @@
   line-height: normal;
   letter-spacing: normal;
   color: var(--pale-grey);
+  margin-top: 23px;
+  margin-bottom: 0;
 }

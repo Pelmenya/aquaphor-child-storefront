@@ -1,0 +1,4 @@
+.two-blocks__description {
+  display: flex;
+  flex-direction: column;
+}
