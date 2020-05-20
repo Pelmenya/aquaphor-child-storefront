@@ -431,6 +431,9 @@
               <a href="<?php echo SITE_URL?>" class="header__nav-bottom">
                 ОБСЛУЖИВАНИЕ
               </a>
+              <a href="<?php echo SITE_URL?>" class="header__nav-bottom">
+                РЕМОНТ
+              </a>
             </nav>
       </div>
       <!--  - - - - - - -->

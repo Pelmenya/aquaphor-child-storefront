@@ -15,78 +15,52 @@ get_header(); ?>
 <main class="main">
 <section class="promo">
   <div class="promo__content">
-    <?php $product_id = 531;
-          $product =  wc_get_product( $product_id );
-          $title = $product->get_title();
-    ?>
-    <img class="promo__pic" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($product_id), 'thumbnail' );?>" alt="<?php echo $title;?>">
     <div class="promo__description">
-      <h1 class="promo__title">Система водоочистки для всей семьи</h1>
-      <h2 class="promo__sub-title">
-        Встречайте универсальное решение, которое будет полезно для каждого жителя в вашем доме.
-      </h2>
-      <ul class="promo__records">
-        <li class="promo__record">Экономия воды и ресурсов</li>
-        <li class="promo__record">Простая настройка</li>
-        <li>Компактный дизайн</li>
-      </ul>
+      <h1 class="promo__title">Современное решение традиционных проблем</h1>
+      <p class="promo__records">
+        Встречайте универсальное решение, которое подарит премиальное качество
+        воды для кажджого члена вашей семьи.
+      </p>
+      <button class="promo__button">
+      <svg class="promo__button-pic" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+        <g>
+          <path d="M256,0C114.609,0,0,114.609,0,256c0,141.391,114.609,256,256,256c141.391,0,256-114.609,256-256
+            C512,114.609,397.391,0,256,0z M256,472c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z" fill="white"/>
+          <path d="M353.661,237.879l-154.174-89.594c-16.844-9.969-32.987-1.938-32.987,17.844v179.766c0,19.75,16.143,27.797,32.987,17.812
+            l152.956-89.578C369.348,264.16,370.552,247.848,353.661,237.879z" fill="white"/>
+        </g>
+      </svg>
+      <span>Узнать больше</span>
+      </button>
     </div>
-
-
+    <img class="promo__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/Bitmap.png" alt="Комплексные системы водоочистки">
   </div>
 </section>
 <section class="services">
   <h2 class="services__title">Услуги</h2>
   <div class="services__container">
+
     <div class="services__service">
-      <h3 class="services__title-service">БЕСПЛАТНАЯ&nbsp;ДОСТАВКА</h3>
+      <h3 class="services__title-service">БЫСТРАЯ&nbsp;ДОСТАВКА</h3>
       <p class="services__service-description">
         Текст об условиях бесплатной доставки
       </p>
     </div>
+
     <div class="services__service">
       <h3 class="services__title-service">БЕСПЛАТНАЯ&nbsp;УСТАНОВКА</h3>
       <p class="services__service-description">
         Текст о монтаже и установке
       </p>
     </div>
+
     <div class="services__service">
       <h3 class="services__title-service">ГАРАНТИЯ&nbsp;5&nbsp;ЛЕТ</h3>
       <p class="services__service-description">
         Текст об условиях гарантии на Waterboss
       </p>
     </div>
-  </div>
-</section>
-
-<section class="certificates">
-<h2 class="certificates__title">Сертификаты</h2>
-  <div class="certificates__container">
-
-    <div class="certificate__container">
-      <img class="certificate__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/nsf_logo.png" alt="Сертификат NSF">
-      <div class="certificate__description">
-        <h3 class="certificate__title">Сертификат NSF</h3>
-        <p class="certificate__about">Американский стандарт качества</p>
-      </div>
-    </div>
-
-    <div class="certificate__container">
-      <img class="certificate__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/iso_9001.png" alt="Сертификат ISO">
-      <div class="certificate__description">
-        <h3 class="certificate__title">Сертификат ISO</h3>
-        <p class="certificate__about">Международный стандарт качества (9001:2015)</p>
-      </div>
-    </div>
-
-    <div class="certificate__container">
-      <img class="certificate__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/iso_45001.png" alt="Сертификат ISO">
-      <div class="certificate__description">
-        <h3 class="certificate__title">Сертификат ISO</h3>
-        <p class="certificate__about">Международный стандарт качества (45001:2018)</p>
-      </div>
-    </div>
-
+    
   </div>
 </section>
 <section class="top-products">
@@ -169,6 +143,37 @@ get_header(); ?>
         </div>
       </div>
     </a>
+  </div>
+</section>
+
+<section class="certificates">
+<h2 class="certificates__title">Сертификаты</h2>
+  <div class="certificates__container">
+
+    <div class="certificate__container">
+      <img class="certificate__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/nsf_logo.png" alt="Сертификат NSF">
+      <div class="certificate__description">
+        <h3 class="certificate__title">Сертификат NSF</h3>
+        <p class="certificate__about">Американский стандарт качества</p>
+      </div>
+    </div>
+
+    <div class="certificate__container">
+      <img class="certificate__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/iso_9001.png" alt="Сертификат ISO">
+      <div class="certificate__description">
+        <h3 class="certificate__title">Сертификат ISO</h3>
+        <p class="certificate__about">Международный стандарт качества (9001:2015)</p>
+      </div>
+    </div>
+
+    <div class="certificate__container">
+      <img class="certificate__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/iso_45001.png" alt="Сертификат ISO">
+      <div class="certificate__description">
+        <h3 class="certificate__title">Сертификат ISO</h3>
+        <p class="certificate__about">Международный стандарт качества (45001:2018)</p>
+      </div>
+    </div>
+
   </div>
 </section>
 </main>

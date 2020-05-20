@@ -1,0 +1,7 @@
+.services__service {
+  margin-right: 113px;
+}
+
+.services__service:last-of-type {
+  margin-right: 0px;
+}
