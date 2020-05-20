@@ -1,0 +1,13 @@
+.services__title-service {
+  margin-top: 24px;
+  font-family: Proxima Nova Rg;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.12px;
+  color: var(--blue-blue);
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}

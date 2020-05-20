@@ -4,6 +4,11 @@
 @import url(./__item-icon/promo__item-icon.css);
 @import url(./__item/promo__item.css);
 @import url(./__title/promo__title.css);
+@import url(./__button/promo__button.css);
+@import url(./__description/promo__description.css);
+@import url(./__pic/promo__pic.css);
+@import url(./__records/promo__records.css);
+@import url(./__button-pic/promo__button-pic.css);
 
 .promo {
   background: var(--white);
@@ -14,37 +19,3 @@
   align-items: center;
 }
 
-.promo__pic {
-  height: 380px;
-  width: 500px;
-  margin-right: 40px;
-  background-color: transparent;
-}
-
-.promo__description {
-  color: var(--white);
-}
-
-.promo__sub-title,
-.promo__records {
-  max-width: 436px;
-  font-family: Proxima Nova Rg;
-  font-size: 17px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.41;
-  letter-spacing: -0.1px;
-  color: var(--pale-grey);
-  margin-bottom: 15px;
-}
-
-.promo__records {
-  margin: 0;
-  padding: 0;
-  padding-left: 15px;
-}
-
-.promo__record{
-  margin-bottom: 15px;
-}

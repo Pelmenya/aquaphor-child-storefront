@@ -11,7 +11,6 @@ input[type=range].equipment-selection__point-water::-webkit-slider-runnable-trac
   width: 100%;
   height: 4px;
   cursor: pointer;
-  animate: 0.2s;
   background: var(--blue-blue);
   border-radius: 1.3px;
   margin-bottom: 18px;
@@ -35,7 +34,6 @@ input[type=range].equipment-selection__point-water::-moz-range-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
-  animate: 0.2s;
   background: var(--blue-blue);
   border-radius: 1.3px;
 }
@@ -53,7 +51,6 @@ input[type=range].equipment-selection__point-water::-ms-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
-  animate: 0.2s;
   background: transparent;
   border-color: transparent;
   border-width: 16px 0;

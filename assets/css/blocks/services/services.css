@@ -1,57 +1,15 @@
+@import url(./__container/services__container.css);
+@import url(./__service-description/services__service-description.css);
+@import url(./__service/services__service.css);
+@import url(./__title-service/services__title-service.css);
+@import url(./__title/services__title.css);
+
+
 .services {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 1440px;
-  background-color: var(--pale-grey);
-}
-
-.services__title {
-  display: none;
-}
-
-.services__service-description {
-  font-family: Proxima Nova Rg;
-  font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.63;
-  letter-spacing: normal;
-  color: var(--dark);
-}
-
-.services__title-service {
-  margin-top: 24px;
-  font-family: Proxima Nova Rg;
-  font-size: 18px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.12px;
-  color: var(--blue-blue);
-  text-transform: uppercase;
-  margin-bottom: 3px;
-}
-
-.services__container {
-  width: 80%;
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.services__service {
-  margin-right: 113px;
-}
-
-.services__service:last-of-type {
-  margin-right: 0px;
-}
-
-/* For presentation only, no need to copy the code below*/
-.services__grid-container * {
-  border: 1px solid red;
+  background-color: var(--white);
 }
