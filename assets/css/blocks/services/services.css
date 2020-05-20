@@ -3,7 +3,8 @@
 @import url(./__service/services__service.css);
 @import url(./__title-service/services__title-service.css);
 @import url(./__title/services__title.css);
-
+@import url(./__wrap/services__wrap.css);
+@import url(./__icon/services__icon.css);
 
 .services {
   width: 100%;

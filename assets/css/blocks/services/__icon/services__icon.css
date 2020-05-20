@@ -1,0 +1,9 @@
+.services__icon {
+  width: 48px;
+  height: 48px;
+  background-color: #f7f9fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 12px;
+}
