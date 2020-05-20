@@ -1,10 +1,17 @@
 @import url(./__title/two-blocks__title.css);
 @import url(./__text/two-blocks__text.css);
 @import url(./__text/_advantage/two-blocks__text_advantage.css);
-
+@import url(./__description/two-blocks__description.css);
+@import url(./__description/_water/two-blocks__description_water.css);
+@import url(./__description/_equipment/two-blocks__description_equipment.css);
+@import url(./__description/_advantage/two-blocks__description_advantage.css);
+@import url(./__pic/two-blocks__pic.css);
+@import url(./__pic/_advantage/two-blocks__pic_advantage.css);
+@import url(./__intro/two-blocks__intro.css);
 
 
 .two-blocks {
   width: 100%;
   max-width: 1440px;
+  display: flex;
 }

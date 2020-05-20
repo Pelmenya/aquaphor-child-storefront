@@ -215,17 +215,45 @@ get_header(); ?>
     </div>
   </div>
 </section>
-
-<section class="two-blocks water">
-
-</section>
-
-<section class="two-blocks equipment">
-
-</section>
-
+<a href="<?php echo SITE_URL?>water-analysis">
+  <section class="two-blocks water">
+    <div class="two-blocks__intro">
+      <div class="two-blocks__description two-blocks__description_water">
+        <h3 class="two-blocks__title">Лабораторный анализ воды</h3>
+        <p class="two-blocks__text">
+          Подробный химико-биологический состав воды с помощью которого можно получить
+          точный подбор фильтрующего оборудования для загородного дома или квартиры.
+        </p>
+      </div>
+    </div>
+    <img class="two-blocks__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/water.jpg" alt="Анализ воды по все параметрам">
+  </section>
+</a>
+<a href="<?php echo SITE_URL?>equipment-selection">
+  <section class="two-blocks equipment">
+    <img class="two-blocks__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/equipment.jpg" alt="Подбор оборудования для очистки воды">
+    <div class="two-blocks__intro">
+      <div class="two-blocks__description two-blocks__description_equipment">
+        <h3 class="two-blocks__title">Онлайн подбор оборудования</h3>
+        <p class="two-blocks__text">
+          Бесплатно рассчитайте стоимость системы очистки воды в онлайн калькуляторе
+          или с помощью наших специалистов.
+        </p>
+      </div>
+    </div>
+  </section>
+</a>
 <section class="two-blocks advantage">
-
+  <img class="two-blocks__pic two-blocks__pic_advantage" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/foot.png" alt="Преимущество нашего оборудования">
+  <div class="two-blocks__intro">
+    <div class="two-blocks__description two-blocks__description_advantage">
+      <h3 class="two-blocks__title">Тишина и порядок</h3>
+      <p class="two-blocks__text two-blocks__text_advantage">
+        Управляющий клапан бесшумный и полностью автоматический. Аварийный клапан
+        исключает возможность перелива. WaterBoss предоставляет тотальный контроль над водной стихией.
+      </p>
+    </div>
+  </div>
 </section>
 
 </main>
