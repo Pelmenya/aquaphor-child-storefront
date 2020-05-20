@@ -1,0 +1,10 @@
+@import url(./__title/two-blocks__title.css);
+@import url(./__text/two-blocks__text.css);
+@import url(./__text/_advantage/two-blocks__text_advantage.css);
+
+
+
+.two-blocks {
+  width: 100%;
+  max-width: 1440px;
+}

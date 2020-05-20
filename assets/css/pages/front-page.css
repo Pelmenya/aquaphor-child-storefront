@@ -1,8 +1,12 @@
-@import url(../../css/blocks/main/main.css);
-@import url(../../css/blocks/promo/promo.css);
-@import url(../../css/blocks/services/services.css);
-@import url(../../css/blocks/top-products/top-products.css);
-@import url(../../css/blocks/certificates/certificates.css);
+@import url(../blocks/main/main.css);
+@import url(../blocks/promo/promo.css);
+@import url(../blocks/services/services.css);
+@import url(../blocks/top-products/top-products.css);
+@import url(../blocks/certificates/certificates.css);
+@import url(../blocks/two-blocks/two-blocks.css);
+@import url(../blocks/water/water.css);
+@import url(../blocks/equipment/equipment.css);
+@import url(../blocks/advantage/advantage.css);
 
 
 

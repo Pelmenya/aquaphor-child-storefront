@@ -1,0 +1,10 @@
+.two-blocks__title {
+  font-family: Proxima Nova Rg;
+  font-size: 48px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--pale-grey);
+}

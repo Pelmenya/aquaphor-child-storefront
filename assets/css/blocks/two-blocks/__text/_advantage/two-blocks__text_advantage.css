@@ -1,0 +1,10 @@
+.two-blocks__text_advantage {
+  font-family: Proxima Nova Rg;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.41;
+  letter-spacing: -0.1px;
+  color: var(--pale-grey);
+}
