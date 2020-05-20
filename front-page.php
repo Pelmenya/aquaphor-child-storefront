@@ -186,7 +186,6 @@ get_header(); ?>
     </a>
   </div>
 </section>
-
 <section class="certificates">
 <h2 class="certificates__title">Сертификаты</h2>
   <div class="certificates__container">
@@ -214,9 +213,21 @@ get_header(); ?>
         <p class="certificate__about">Международный стандарт качества (45001:2018)</p>
       </div>
     </div>
-
   </div>
 </section>
+
+<section class="two-blocks water">
+
+</section>
+
+<section class="two-blocks equipment">
+
+</section>
+
+<section class="two-blocks advantage">
+
+</section>
+
 </main>
 <?php
 
