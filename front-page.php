@@ -22,18 +22,14 @@ get_header(); ?>
         воды для кажджого члена вашей семьи.
       </p>
       <button class="promo__button">
-      <svg class="promo__button-pic" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-        <g>
-          <path d="M256,0C114.609,0,0,114.609,0,256c0,141.391,114.609,256,256,256c141.391,0,256-114.609,256-256
-            C512,114.609,397.391,0,256,0z M256,472c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z" fill="white"/>
-          <path d="M353.661,237.879l-154.174-89.594c-16.844-9.969-32.987-1.938-32.987,17.844v179.766c0,19.75,16.143,27.797,32.987,17.812
-            l152.956-89.578C369.348,264.16,370.552,247.848,353.661,237.879z" fill="white"/>
-        </g>
+      <svg class="promo__button-pic" width="16" height="16" viewBox="0 0 16 16">
+        <path fill="#fff" d="M8 1c3.9 0 7 3.1 7 7s-3.1 7-7 7-7-3.1-7-7 3.1-7 7-7zM8 0c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8v0z"></path>
+        <path fill="#fff" d="M6 4v8l6-4z"></path>
       </svg>
       <span>Узнать больше</span>
       </button>
     </div>
-    <img class="promo__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/Bitmap.png" alt="Комплексные системы водоочистки">
+    <img class="promo__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/head.png" alt="Комплексные системы водоочистки">
   </div>
 </section>
 <section class="services">
@@ -118,7 +114,7 @@ get_header(); ?>
         <p class="top-products__product-price"><?php echo $product->get_price_html(); ?></p>
       </div>
     </a>
-    <?php $product_id = 695;
+    <?php $product_id = 908;
           $product =  wc_get_product( $product_id );
           $title = $product->get_title();
     ?>
@@ -189,7 +185,6 @@ get_header(); ?>
 <section class="certificates">
 <h2 class="certificates__title">Сертификаты</h2>
   <div class="certificates__container">
-
     <div class="certificate__container">
       <img class="certificate__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/nsf_logo.png" alt="Сертификат NSF">
       <div class="certificate__description">
@@ -197,7 +192,6 @@ get_header(); ?>
         <p class="certificate__about">Американский стандарт качества</p>
       </div>
     </div>
-
     <div class="certificate__container">
       <img class="certificate__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/iso_9001.png" alt="Сертификат ISO">
       <div class="certificate__description">
@@ -205,7 +199,6 @@ get_header(); ?>
         <p class="certificate__about">Международный стандарт качества (9001:2015)</p>
       </div>
     </div>
-
     <div class="certificate__container">
       <img class="certificate__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/iso_45001.png" alt="Сертификат ISO">
       <div class="certificate__description">
