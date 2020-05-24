@@ -62,8 +62,8 @@ get_header();
               <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="hydrogen">
             </td>
             <td class="equipment-selection__td">
-              <label class="equipment-selection__elem" for="organics">Органика</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="organics">
+              <label class="equipment-selection__elem" for="oxidability">Окисляемость</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="oxidability">
             </td>
           </tr>
           <tr class="equipment-selection__choice-item">
@@ -118,8 +118,43 @@ get_header();
    </form>
   </section>
 </main>
+<!-- Инициализация данных товаров для калькулятора по id -->
+
+<script>
+  <?php
+  // массив ids оборудования для расчета
+  $systems_ids = array( 529, 530, 531 , 532, 727, 534, 536, 537, 535);
+    for($i = 0; $i < count($systems_ids); ++$i) {
+      // товар(product) ячейка [0]
+      $systems[$i][0] = wc_get_product($systems_ids[$i]);
+      // получаем ключи всех атрибутов, что затем получить их таксономию(значения)
+        $attributes_keys = array_keys($systems[$i][0]->attributes);
+        for($j = 0; $j < count($attributes_keys); ++$j) {
+          $systems[$i][1][$j] = wc_get_product_terms( $systems_ids[$i] , $attributes_keys[$j]);
+          // ячейка 2 - название атрибута, 3-4 - мин/макс значения атрибута
+          $systems[$i][1][$j][] = $attributes_keys[$j];
+          // ячейка
+          $systems[$i][1][$j][]=$systems[$i][1][$j][0]->name;
+          $systems[$i][1][$j][]=$systems[$i][1][$j][1]->name;
+        };
+      //  изображение товара ячейка [][3]
+      $systems[$i][2] = wp_get_attachment_url( get_post_thumbnail_id($systems_ids[$i]), 'thumbnail' );
+    }
+
+
+
+ ?>
+
+ const systems = []
+ // собираем массив объектов товаров, их атрибутов и изображений
+
+ waterBoss400.product = <?php echo $systems[0][0];?>;
+ waterBoss400.attribute = <?php echo json_encode($systems[0][1]);?>;
+ waterBoss400.pic = <?php echo json_encode($systems[0][2]);?>;
+
+
+</script>
 
 <?php
 get_footer();
-
 ?>

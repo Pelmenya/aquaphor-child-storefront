@@ -30,6 +30,25 @@
 <!-- /Yandex.Metrika counter -->
 <?php wp_head(); ?>
 </head>
+<?php
+    $systems_ids = array( 529, 530, 531 , 532, 727, 534, 536, 537, 535);
+
+    for($i = 0; $i < count($systems_ids); ++$i) {
+
+      $systems[$i][0] = wc_get_product($systems_ids[$i]);
+      //получаем ключи всех атрибутов, что затем получить их таксономию(значения)
+        $attributes_keys = array_keys($systems[$i][0]->attributes);
+
+        for($j = 0; $j < count($attributes_keys); ++$j) {
+          $systems[$i][1][$j] = wc_get_product_terms( $systems_ids[$i] , $attributes_keys[$j]);
+        }
+
+
+    }
+    echo "<pre>"; print_r($systems[0][0]); echo "</pre>";
+
+?>
+
 
 <body <?php body_class(); ?>>
 

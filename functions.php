@@ -252,6 +252,8 @@ function woocommerce_output_related_products() {
 	woocommerce_related_products( apply_filters( 'woocommerce_output_related_products_args', $args ) );
 }
 
+
+
 function aquaphor_theme_scripts() {
   /* Путь к странице*/
   $url = $_SERVER['REQUEST_URI'];
@@ -290,6 +292,10 @@ is_page( sanitize_title('о-сайте') );  правильно  */
 
   if (is_page( array('delivery', 'payment', 'guarantees', 'about-company', 'water-analysis', 'equipment-selection' ) ) ){
     wp_enqueue_style( 'is-page', AQUAPHOR_THEME_CSS . 'is_page.css', array(), '1.1', 'all');
+  }
+
+  if (is_page( 'equipment-selection' ) ){
+    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'equipment-selection/index.js', true);
   }
 
   if (strcasecmp($url_str, $url_cart) == 0){
