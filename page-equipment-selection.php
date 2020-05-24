@@ -29,12 +29,12 @@ get_header();
         <div class="equipment-selection__choice-col">
           <h4 class="description">Какая сейчас вода?</h4>
           <div class="equipment-selection__choice-item">
-            <input class="equipment-selection__choice-radio" type="radio" name="choiceColor">
-            <label class="equipment-selection__choice-color" for="choiceColor">Прозрачная</label>
+            <input class="equipment-selection__choice-radio" type="radio" name="pa_clear_turbidity">
+            <label class="equipment-selection__choice-color" for="pa_clear_turbidity">Прозрачная</label>
           </div>
           <div class="equipment-selection__choice-item">
-            <input  class="equipment-selection__choice-radio" type="radio" name="choiceColor">
-            <label class="equipment-selection__choice-color" for="choiceColor">Мутная</label>
+            <input  class="equipment-selection__choice-radio" type="radio" name="pa_clear_turbidity">
+            <label class="equipment-selection__choice-color" for="pa_clear_turbidity">Мутная</label>
           </div>
         </div>
         <div class="equipment-selection__choice-col">
@@ -50,8 +50,8 @@ get_header();
         </div>
         <div class="equipment-selection__choice-col">
           <h4 class="description">Точки водоразбора?</h4>
-          <input  class="equipment-selection__point-water" type="range" value="1" min="1" max="6" step="1" name="choiceRange">
-          <label class="equipment-selection__choice-color" for="choiceRange">От 1 до 6 точек</label>
+          <input  class="equipment-selection__point-water" type="range" value="1" min="1" max="6" step="1" name="pa_water_points">
+          <label class="equipment-selection__choice-color equipment-selection__choice-color_water-points" for="pa_water_points">От 1 до 6 точек</label>
         </div>
       </div>
       <table class="equipment-selection__table">
