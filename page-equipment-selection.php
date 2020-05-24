@@ -119,12 +119,29 @@ get_header();
   </section>
 </main>
 <!-- Инициализация данных товаров для калькулятора по id -->
-
 <script>
   <?php
-  // массив ids оборудования для расчета
-  $systems_ids = array( 529, 530, 531 , 532, 727, 534, 536, 537, 535);
-    for($i = 0; $i < count($systems_ids); ++$i) {
+    // корпус пре(пост)фильтра ids
+    $filter_cases_ids = array( 543 );
+    $filter_cases_ids_count = count($filter_cases_ids);
+    // массив фильтров ids
+    $filters_ids = array( 884, 880 );
+    $filters_ids_count = count($filters_ids);
+    // массив ids оборудования для расчета
+    $systems_ids = array( 529, 530, 531 , 532, 727, 534, 536, 537, 535);
+    $systems_ids_count = count($systems_ids);
+
+    // получаем все объекты фильтров и их изображения
+    for($i = 0; $i < $filter_cases_ids_count; ++$i) {
+      $filter_cases[$i][0] = wc_get_product($filter_cases_ids[$i]);
+      $filter_cases[$i][1] = wp_get_attachment_url( get_post_thumbnail_id($filter_cases_ids[$i]), 'thumbnail' );
+    };
+    // получаем все объекты корпусов фильтров и их изображения
+    for($i = 0; $i < $filters_ids_count; ++$i) {
+      $filters[$i][0] = wc_get_product($filters_ids[$i]);
+      $filters[$i][1] = wp_get_attachment_url( get_post_thumbnail_id($filters_ids[$i]), 'thumbnail' );
+    };
+    for($i = 0; $i < $systems_ids_count; ++$i) {
       // товар(product) ячейка [0]
       $systems[$i][0] = wc_get_product($systems_ids[$i]);
       // получаем ключи всех атрибутов, что затем получить их таксономию(значения)
@@ -133,28 +150,45 @@ get_header();
           $systems[$i][1][$j] = wc_get_product_terms( $systems_ids[$i] , $attributes_keys[$j]);
           // ячейка 2 - название атрибута, 3-4 - мин/макс значения атрибута
           $systems[$i][1][$j][] = $attributes_keys[$j];
-          // ячейка
+          // ячейка 3-4 - мин/макс значения атрибута
           $systems[$i][1][$j][]=$systems[$i][1][$j][0]->name;
           $systems[$i][1][$j][]=$systems[$i][1][$j][1]->name;
         };
       //  изображение товара ячейка [][3]
       $systems[$i][2] = wp_get_attachment_url( get_post_thumbnail_id($systems_ids[$i]), 'thumbnail' );
     }
-
-
-
+    //echo "<pre>"; print_r($systems[0][0]); echo "</pre>";
  ?>
+  const filterCases = [];
+  const filterCasesIdsCount = <?php echo $filter_cases_ids_count;?>;
+  const filters = [];
+  const filtersIdsCount = <?php echo $filters_ids_count;?>;
+  const systems = [];
+  const systemsIdsCount = <?php echo $systems_ids_count;?>;
 
- const systems = []
- // собираем массив объектов товаров, их атрибутов и изображений
-
- waterBoss400.product = <?php echo $systems[0][0];?>;
- waterBoss400.attribute = <?php echo json_encode($systems[0][1]);?>;
- waterBoss400.pic = <?php echo json_encode($systems[0][2]);?>;
-
-
+  // собираем массив объектов корпусов фильтров и их изображений
+  for (i=0; i < filterCasesIdsCount; i+=1){
+    obj = {};
+    obj.product = <?php echo $filter_cases[0][0];?>;
+    obj.urlPic = <?php echo json_encode($filter_cases[0][1]);?>;
+    filterCases.push(obj);
+  };
+  // собираем массив объектов фильтров и их изображений
+  for (i=0; i < filtersIdsCount; i+=1){
+    obj = {};
+    obj.product = <?php echo $filters[0][0];?>;
+    obj.urlPic = <?php echo json_encode($filters[0][1]);?>;
+    filters.push(obj);
+  };
+  // собираем массив объектов товаров, их атрибутов и изображений
+  for (i=0; i < systemsIdsCount; i+=1){
+    obj = {};
+    obj.product = <?php echo $systems[0][0];?>;
+    obj.attributes = <?php echo json_encode($systems[0][1]);?>;
+    obj.urlPic = <?php echo json_encode($systems[0][2]);?>;
+    systems.push(obj);
+  };
 </script>
-
 <?php
 get_footer();
 ?>
