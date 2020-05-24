@@ -29,22 +29,22 @@ get_header();
         <div class="equipment-selection__choice-col">
           <h4 class="description">Какая сейчас вода?</h4>
           <div class="equipment-selection__choice-item">
-            <input class="equipment-selection__choice-radio" type="radio" name="pa_clear_turbidity">
+            <input class="equipment-selection__choice-radio" value="1" type="radio" name="pa_clear_turbidity">
             <label class="equipment-selection__choice-color" for="pa_clear_turbidity">Прозрачная</label>
           </div>
           <div class="equipment-selection__choice-item">
-            <input  class="equipment-selection__choice-radio" type="radio" name="pa_clear_turbidity">
+            <input  class="equipment-selection__choice-radio" value="2" type="radio" name="pa_clear_turbidity">
             <label class="equipment-selection__choice-color" for="pa_clear_turbidity">Мутная</label>
           </div>
         </div>
         <div class="equipment-selection__choice-col">
           <h4 class="description">Какая нужна вода?</h4>
           <div class="equipment-selection__choice-item">
-            <input class="equipment-selection__choice-radio" type="radio" name="choiceTaste">
+            <input class="equipment-selection__choice-radio" value="1" type="radio" name="choiceTaste">
             <label class="equipment-selection__choice-color" for="choiceTaste">Питьевая</label>
           </div>
           <div class="equipment-selection__choice-item">
-            <input  class="equipment-selection__choice-radio" type="radio" name="choiceTaste">
+            <input  class="equipment-selection__choice-radio" value="2" type="radio" name="choiceTaste">
             <label class="equipment-selection__choice-color" for="choiceTaste">Техническая</label>
           </div>
         </div>
@@ -114,7 +114,7 @@ get_header();
           Введите данные полученные с помощью нашего <a href="<?php echo SITE_URL?>water-analysis" class="equipment-selection__link">анализа воды</a> или из другой лаборатории.
       </p>
     </div>
-    <button class="equipment-selection__calculate-button">Рассчитать</button>
+    <button class="equipment-selection__calculate-button" disabled>Рассчитать</button>
    </form>
   </section>
 </main>

@@ -30,10 +30,23 @@ function main() {
   const equipmentSelectionForm = document.querySelector('.equipment-selection__form');
   const waterPoints = equipmentSelectionForm.pa_water_points;
   const equipmentSelectionChoiceColorLabel = equipmentSelectionForm.querySelector(
-    'label.equipment-selection__choice-color_water-points',
+    'label.equipment-selection__choice-color_water-points'
   );
-  // бегунок
-  waterPoints.addEventListener('change', () => {
+  const equipmentSelectionCalculateBtn = equipmentSelectionForm.querySelector(
+    '.equipment-selection__calculate-button'
+  );
+  // Radio button
+  const paClearTurbidityRadioBtn = equipmentSelectionForm.pa_clear_turbidity;
+  const choiceTasteRadioBtn = equipmentSelectionForm.choiceTaste;
+  const equipmentSelectionTable = equipmentSelectionForm.querySelector(
+    '.equipment-selection__table'
+  );
+  // Все input в таблице
+  const allTableInputs = equipmentSelectionTable.querySelectorAll(
+    '.equipment-selection__elem-value'
+  );
+
+  function changeWaterPoints() {
     switch (Number(waterPoints.value)) {
       case 1:
         equipmentSelectionChoiceColorLabel.textContent = 'одна';
@@ -56,7 +69,28 @@ function main() {
       default:
         equipmentSelectionChoiceColorLabel.textContent = 'одна';
     }
-  });
+  }
+
+  function inputEquipmentSelectionForm() {
+    equipmentSelectionCalculateBtn.disabled = true;
+    let valid = true;
+    if (paClearTurbidityRadioBtn.value !== '' && choiceTasteRadioBtn.value !== '') {
+      // нет ни одного такого, что пуст или не приобразуется в число
+      valid = !Object.keys(allTableInputs).some(
+        (index) => Number.isNaN(Number(allTableInputs[index].value)) || allTableInputs[index].value === ''
+      );
+    } else valid = false;
+
+    if (valid) {
+      equipmentSelectionCalculateBtn.disabled = false;
+    }
+  }
+
+  // бегунок
+  waterPoints.addEventListener('change', changeWaterPoints);
+  // ввод на форме
+
+  equipmentSelectionForm.addEventListener('input', inputEquipmentSelectionForm);
 }
 
 main();
