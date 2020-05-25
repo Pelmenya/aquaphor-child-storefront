@@ -28,6 +28,28 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/62146852" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<script type='text/javascript'>
+(function () {
+window['yandexChatWidgetCallback'] = function() {
+try {
+window.yandexChatWidget = new Ya.ChatWidget({
+guid: 'e82fee08-dfc6-4c36-9efa-67910d90c463',
+buttonText: 'Помощь',
+title: 'Помощь',
+theme: 'light',
+collapsedDesktop: 'never',
+collapsedTouch: 'always'
+});
+} catch(e) { }
+};
+var n = document.getElementsByTagName('script')[0],
+s = document.createElement('script');
+s.async = true;
+s.charset = 'UTF-8';
+s.src = 'https://yastatic.net/s3/chat/widget.js';
+n.parentNode.insertBefore(s, n);
+})();
+</script>
 <?php wp_head(); ?>
 </head>
 

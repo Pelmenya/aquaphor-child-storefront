@@ -58,64 +58,105 @@ get_header();
         <thead>
           <tr class="equipment-selection__choice-item">
             <td class="equipment-selection__td">
-              <label class="equipment-selection__elem" for="hydrogen">Водород</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="hydrogen">
+              <label class="equipment-selection__elem" for="pa_ph">Водород</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_ph">
             </td>
             <td class="equipment-selection__td">
-              <label class="equipment-selection__elem" for="oxidability">Окисляемость</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="oxidability">
-            </td>
-          </tr>
-          <tr class="equipment-selection__choice-item">
-            <td class="equipment-selection__td">
-              <label class="equipment-selection__elem" for="mineralization">Минерализация</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="mineralization">
-            </td>
-            <td class="equipment-selection__td">
-              <label class="equipment-selection__elem" for="manganese">Марганец</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="manganese">
+              <label class="equipment-selection__elem" for="pa_oxidability">Окисляемость</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_oxidability">
             </td>
           </tr>
           <tr class="equipment-selection__choice-item">
             <td class="equipment-selection__td">
-              <label class="equipment-selection__elem" for="inflexibility">Жесткость</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="inflexibility">
+              <label class="equipment-selection__elem" for="pa_tds">Минерализация</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_tds">
             </td>
             <td class="equipment-selection__td">
-              <label class="equipment-selection__elem" for="fluorides">Фториды</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="fluorides">
-            </td>
-          </tr>
-          <tr class="equipment-selection__choice-item">
-            <td class="equipment-selection__td">
-              <label class="equipment-selection__elem" for="ferrum">Железо</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="ferrum">
-            </td>
-            <td class="equipment-selection__td">
-              <label class="equipment-selection__elem" for="hydrogenSulphide">Сероводород</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="hydrogenSulphide">
+              <label class="equipment-selection__elem" for="pa_mn">Марганец</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_mn">
             </td>
           </tr>
           <tr class="equipment-selection__choice-item">
             <td class="equipment-selection__td">
-              <label class="equipment-selection__elem" for="nitrates">Нитраты</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="nitrates">
+              <label class="equipment-selection__elem" for="pa_tdh">Жесткость</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_tdh">
             </td>
             <td class="equipment-selection__td">
-              <label class="equipment-selection__elem" for="sulfides">Сульфиды</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="sulfides">
+              <label class="equipment-selection__elem" for="pa_ftor">Фториды</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_ftor">
+            </td>
+          </tr>
+          <tr class="equipment-selection__choice-item">
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="pa_ferrum">Железо</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_ferrum">
+            </td>
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="pa_h2s">Сероводород</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_h2s">
+            </td>
+          </tr>
+          <tr class="equipment-selection__choice-item">
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="pa_nitrate">Нитраты</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_nitrate">
+            </td>
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="pa_sulfide">Сульфиды</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_sulfide">
             </td>
           </tr>
         </thead>
       </table>
-    <div class="equipment-selection__info">
-      <div class="equipment-selection__info-pointer"></div>
-      <p class="equipment-selection__description">
-          Введите данные полученные с помощью нашего <a href="<?php echo SITE_URL?>water-analysis" class="equipment-selection__link">анализа воды</a> или из другой лаборатории.
-      </p>
+      <div class="equipment-selection__info">
+        <div class="equipment-selection__info-pointer"></div>
+        <p class="equipment-selection__description">
+            Введите данные полученные с помощью нашего <a href="<?php echo SITE_URL?>water-analysis" class="equipment-selection__link">анализа воды</a> или из другой лаборатории.
+        </p>
+      </div>
+      <button class="equipment-selection__calculate-button" disabled>Рассчитать</button>
+    </form>
+    <p class="equipment-selection__description equipment-selection__description_no-result">
+      Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
+      Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом</a>, чтобы найти другой способ решения.
+    </p>
+  </section>
+  <section class="results">
+    <div class="results__container">
+      <div class="card">
+        <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
+        <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
+        <p class="card__price">5550000 руб.</p>
+      </div>
+      <div class="card">
+        <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
+        <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
+        <p class="card__price">5550000 руб.</p>
+      </div>
+      <div class="card">
+        <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
+        <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
+        <p class="card__price">5550000 руб.</p>
+      </div>
+      <div class="card">
+        <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
+        <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
+        <p class="card__price">5550000 руб.</p>
+      </div>
+      <div class="card">
+        <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
+        <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
+        <p class="card__price">5550000 руб.</p>
+      </div>
+      <div class="card">
+        <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
+        <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
+        <p class="card__price">5550000 руб.</p>
+      </div>
+      <div class="card"></div>
+      <div class="card"></div>
     </div>
-    <button class="equipment-selection__calculate-button" disabled>Рассчитать</button>
-   </form>
+    <button class="equipment-selection__calculate-button equipment-selection__calculate-button_add-to-cart">Добавить все в корзину</button>
   </section>
 </main>
 <!-- Инициализация данных товаров для калькулятора по id -->
@@ -159,11 +200,11 @@ get_header();
     }
     //echo "<pre>"; print_r($systems[0][0]); echo "</pre>";
  ?>
-  const filterCases = [];
+  window.filterCases = [];
   const filterCasesIdsCount = <?php echo $filter_cases_ids_count;?>;
-  const filters = [];
+  window.filters = [];
   const filtersIdsCount = <?php echo $filters_ids_count;?>;
-  const systems = [];
+  window.systems = [];
   const systemsIdsCount = <?php echo $systems_ids_count;?>;
 
   // собираем массив объектов корпусов фильтров и их изображений
