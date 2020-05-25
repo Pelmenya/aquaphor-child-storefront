@@ -8,12 +8,18 @@
 @import url(./__elem/equipment-selection__elem.css);
 @import url(./__elem-value/equipment-selection__elem-value.css);
 @import url(./__description/equipment-selection__description.css);
+@import url(./__description/_no-result/equipment-selection__description_no-result.css);
 @import url(./__info/equipment-selection__info.css);
 @import url(./__info-pointer/equipment-selection__info-pointer.css);
 @import url(./__link/equipment-selection__link.css);
 @import url(./__calculate-button/equipment-selection__calculate-button.css);
+@import url(./__calculate-button/_add-to-cart/equipment-selection__calculate-button_add-to-cart.css);
 @import url(./__point-water/equipment-selection__point-water.css);
 @import url(./__choice-radio/equipment-selection__choice-radio.css);
+@import url(../results/results.css);
+
+@import url(../card/card.css);
+
 
 .equipment-selection {
   display: flex;

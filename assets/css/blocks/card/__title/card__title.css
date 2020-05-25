@@ -1,0 +1,12 @@
+.card__title {
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--blue-blue);
+  max-width: 254px;
+}
