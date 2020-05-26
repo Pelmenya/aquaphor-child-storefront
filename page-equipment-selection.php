@@ -116,52 +116,52 @@ get_header();
       </div>
       <button class="equipment-selection__calculate-button" disabled>Рассчитать</button>
     </form>
-    <p class="equipment-selection__description equipment-selection__description_no-result">
-      Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
-      Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом</a>, чтобы найти другой способ решения.
-    </p>
   </section>
   <section class="results">
-    <div class="results__container">
-      <div class="card">
-        <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
-        <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
-        <p class="card__price">5550000 руб.</p>
-      </div>
-      <div class="card">
-        <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
-        <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
-        <p class="card__price">5550000 руб.</p>
-      </div>
-      <div class="card">
-        <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
-        <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
-        <p class="card__price">5550000 руб.</p>
-      </div>
-      <div class="card">
-        <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
-        <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
-        <p class="card__price">5550000 руб.</p>
-      </div>
-      <div class="card">
-        <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
-        <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
-        <p class="card__price">5550000 руб.</p>
-      </div>
-      <div class="card">
-        <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
-        <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
-        <p class="card__price">5550000 руб.</p>
-      </div>
-      <div class="card"></div>
-      <div class="card"></div>
+  <div class="results__container">
+    <div class="card">
+      <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
+      <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
+      <p class="card__price">5550000 руб.</p>
     </div>
-    <button class="equipment-selection__calculate-button equipment-selection__calculate-button_add-to-cart">Добавить все в корзину</button>
-  </section>
+    <div class="card">
+      <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
+      <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
+      <p class="card__price">5550000 руб.</p>
+    </div>
+    <div class="card">
+      <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
+      <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
+      <p class="card__price">5550000 руб.</p>
+    </div>
+    <div class="card">
+      <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
+      <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
+      <p class="card__price">5550000 руб.</p>
+    </div>
+    <div class="card">
+      <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
+      <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
+      <p class="card__price">5550000 руб.</p>
+    </div>
+    <div class="card">
+      <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
+      <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
+      <p class="card__price">5550000 руб.</p>
+    </div>
+    <div class="card"></div>
+    <div class="card"></div>
+  </div>
+  <button class="equipment-selection__calculate-button equipment-selection__calculate-button_add-to-cart">Добавить все в корзину</button>
+</section>
 </main>
-<!-- Инициализация данных товаров для калькулятора по id -->
+
 <script>
-  <?php
+  window.systems = [];
+  window.obj = {};
+
+</script>
+<?php
     // корпус пре(пост)фильтра ids
     $filter_cases_ids = array( 543 );
     $filter_cases_ids_count = count($filter_cases_ids);
@@ -185,6 +185,7 @@ get_header();
     for($i = 0; $i < $systems_ids_count; ++$i) {
       // товар(product) ячейка [0]
       $systems[$i][0] = wc_get_product($systems_ids[$i]);
+
       // получаем ключи всех атрибутов, что затем получить их таксономию(значения)
         $attributes_keys = array_keys($systems[$i][0]->attributes);
         for($j = 0; $j < count($attributes_keys); ++$j) {
@@ -197,14 +198,25 @@ get_header();
         };
       //  изображение товара ячейка [][3]
       $systems[$i][2] = wp_get_attachment_url( get_post_thumbnail_id($systems_ids[$i]), 'thumbnail' );
+      ?>
+      <script>
+        // Собираем данные для JS
+        window.obj = {};
+        window.obj.product = <?php echo $systems[$i][0];?>;
+        window.obj.attributes = <?php echo json_encode($systems[$i][1]);?>;
+        window.obj.urlPic = <?php echo json_encode($systems[$i][2]);?>;
+        window.systems.push(window.obj);
+      </script>
+      <?php
     }
     //echo "<pre>"; print_r($systems[0][0]); echo "</pre>";
  ?>
+<!-- Инициализация данных товаров для калькулятора по id -->
+<script>
   window.filterCases = [];
   const filterCasesIdsCount = <?php echo $filter_cases_ids_count;?>;
   window.filters = [];
   const filtersIdsCount = <?php echo $filters_ids_count;?>;
-  window.systems = [];
   const systemsIdsCount = <?php echo $systems_ids_count;?>;
 
   // собираем массив объектов корпусов фильтров и их изображений
@@ -220,14 +232,6 @@ get_header();
     obj.product = <?php echo $filters[0][0];?>;
     obj.urlPic = <?php echo json_encode($filters[0][1]);?>;
     filters.push(obj);
-  };
-  // собираем массив объектов товаров, их атрибутов и изображений
-  for (i=0; i < systemsIdsCount; i+=1){
-    obj = {};
-    obj.product = <?php echo $systems[0][0];?>;
-    obj.attributes = <?php echo json_encode($systems[0][1]);?>;
-    obj.urlPic = <?php echo json_encode($systems[0][2]);?>;
-    systems.push(obj);
   };
 </script>
 <?php
