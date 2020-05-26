@@ -32,6 +32,7 @@ function main() {
         console.log(window.systems[i].attributes[j][4]);
 
   */ //  fetch(req).then((res) => res.json(console.log(res)));
+  console.log(window.systems);
 
   const equipmentSelectionForm = document.querySelector('.equipment-selection__form');
   const waterPoints = equipmentSelectionForm.pa_water_points;
@@ -117,8 +118,8 @@ function main() {
         for (let k = 2; k < dataForm.length; k += 1) {
           if (dataForm[k].name === window.systems[i].attributes[j][2]) {
             if (
-              Number(window.systems[i].attributes[j][3] <= Number(dataForm[k].value))
-              && Number(dataForm[k].value) <= Number(window.systems[i].attributes[j][4])
+              Number(window.systems[i].attributes[j][3] <= Number(dataForm[k].value)) &&
+              Number(dataForm[k].value) <= Number(window.systems[i].attributes[j][4])
             ) {
               window.systems[i].attributes[j].push(true);
             } else {
@@ -128,7 +129,13 @@ function main() {
         }
       }
     }
-    console.log(window.systems);
+    const okSystems = [];
+    for (let i = 0; i < window.systems.length; i += 1) {
+      let valid = false;
+      for (let j = 2; j < window.systems[i].attributes.length; j += 1) {
+
+      }
+    }
     event.preventDefault();
   }
   // бегунок
