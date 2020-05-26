@@ -32,7 +32,6 @@ function main() {
         console.log(window.systems[i].attributes[j][4]);
 
   */ //  fetch(req).then((res) => res.json(console.log(res)));
-  console.log(window.systems);
 
   const equipmentSelectionForm = document.querySelector('.equipment-selection__form');
   const waterPoints = equipmentSelectionForm.pa_water_points;
@@ -108,34 +107,52 @@ function main() {
         value: allTableInputs[index].value,
       })
     );
-
     /** проверяем все введеные в форму значения на соответствие диапазона каждого аттрибута
      * каждой системы. Затем берем только те системы, у которых все атрибуты подходят
-     * под введеные значения, далее если есть системы то сортируем или ищем с наименьшей
+     * под введеные значения, далее если есть системы то сортируем и ищем с наименьшей
      * стоимостью, нет выводим сообщение */
     for (let i = 0; i < window.systems.length; i += 1) {
-      for (let j = 2; j < window.systems[i].attributes.length; j += 1) {
-        for (let k = 2; k < dataForm.length; k += 1) {
-          if (dataForm[k].name === window.systems[i].attributes[j][2]) {
-            if (
-              Number(window.systems[i].attributes[j][3] <= Number(dataForm[k].value)) &&
-              Number(dataForm[k].value) <= Number(window.systems[i].attributes[j][4])
-            ) {
-              window.systems[i].attributes[j].push(true);
-            } else {
-              window.systems[i].attributes[j].push(false);
+      for (let j = 0; j < window.systems[i].attributes.length; j += 1) {
+        // Если у атрибута нет мин - макс числовых значений, то пропускаем его
+        if (
+          !Number.isNaN(Number(window.systems[i].attributes[j][3])) &&
+          !Number.isNaN(Number(window.systems[i].attributes[j][4]))
+        ) {
+          for (let k = 2; k < dataForm.length; k += 1) {
+            if (dataForm[k].name === window.systems[i].attributes[j][2]) {
+              if (
+                Number(window.systems[i].attributes[j][3] <= Number(dataForm[k].value)) &&
+                Number(dataForm[k].value) <= Number(window.systems[i].attributes[j][4])
+              ) {
+                if (window.systems[i].attributes[j][5]) {
+                  window.systems[i].attributes[j][5] = true;
+                } else window.systems[i].attributes[j].push(true);
+              } else if (window.systems[i].attributes[j][5]) {
+                window.systems[i].attributes[j][5] = false;
+              } else window.systems[i].attributes[j].push(false);
             }
           }
         }
       }
     }
+
     const okSystems = [];
     for (let i = 0; i < window.systems.length; i += 1) {
-      let valid = false;
-      for (let j = 2; j < window.systems[i].attributes.length; j += 1) {
-
+      let valid = true;
+      for (let j = 0; j < window.systems[i].attributes.length; j += 1) {
+        if (window.systems[i].attributes[j].length > 4) {
+          if (!window.systems[i].attributes[j][5]) {
+            valid = false;
+          }
+        }
+      }
+      if (valid) {
+        window.systems[i].valid = true;
+      } else {
+        window.systems[i].valid = false;
       }
     }
+    console.log(window.systems);
     event.preventDefault();
   }
   // бегунок

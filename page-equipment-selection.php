@@ -58,52 +58,52 @@ get_header();
         <thead>
           <tr class="equipment-selection__choice-item">
             <td class="equipment-selection__td">
-              <label class="equipment-selection__elem" for="pa_ph">Водород</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_ph">
+              <label class="equipment-selection__elem" for="pa_ph">Реакция среды pH</label>
+              <input class="equipment-selection__elem-value" value="6.9" placeholder="Введите значение..." type="text" name="pa_ph">
             </td>
             <td class="equipment-selection__td">
               <label class="equipment-selection__elem" for="pa_oxidability">Окисляемость</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_oxidability">
+              <input class="equipment-selection__elem-value" value="2" placeholder="Введите значение..." type="text" name="pa_oxidability">
             </td>
           </tr>
           <tr class="equipment-selection__choice-item">
             <td class="equipment-selection__td">
               <label class="equipment-selection__elem" for="pa_tds">Минерализация</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_tds">
+              <input class="equipment-selection__elem-value" value="302" placeholder="Введите значение..." type="text" name="pa_tds">
             </td>
             <td class="equipment-selection__td">
               <label class="equipment-selection__elem" for="pa_mn">Марганец</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_mn">
+              <input class="equipment-selection__elem-value" value="0.03" placeholder="Введите значение..." type="text" name="pa_mn">
             </td>
           </tr>
           <tr class="equipment-selection__choice-item">
             <td class="equipment-selection__td">
               <label class="equipment-selection__elem" for="pa_tdh">Жесткость</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_tdh">
+              <input class="equipment-selection__elem-value" value="7.5" placeholder="Введите значение..." type="text" name="pa_tdh">
             </td>
             <td class="equipment-selection__td">
               <label class="equipment-selection__elem" for="pa_ftor">Фториды</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_ftor">
+              <input class="equipment-selection__elem-value" value="0.52" placeholder="Введите значение..." type="text" name="pa_ftor">
             </td>
           </tr>
           <tr class="equipment-selection__choice-item">
             <td class="equipment-selection__td">
               <label class="equipment-selection__elem" for="pa_ferrum">Железо</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_ferrum">
+              <input class="equipment-selection__elem-value" value="0.03" placeholder="Введите значение..." type="text" name="pa_ferrum">
             </td>
             <td class="equipment-selection__td">
               <label class="equipment-selection__elem" for="pa_h2s">Сероводород</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_h2s">
+              <input class="equipment-selection__elem-value" value="0.004" placeholder="Введите значение..." type="text" name="pa_h2s">
             </td>
           </tr>
           <tr class="equipment-selection__choice-item">
             <td class="equipment-selection__td">
               <label class="equipment-selection__elem" for="pa_nitrate">Нитраты</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_nitrate">
+              <input class="equipment-selection__elem-value" value="1.5" placeholder="Введите значение..." type="text" name="pa_nitrate">
             </td>
             <td class="equipment-selection__td">
-              <label class="equipment-selection__elem" for="pa_sulfide">Сульфиды</label>
-              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_sulfide">
+              <label class="equipment-selection__elem" for="pa_sulphide">Сульфиды</label>
+              <input class="equipment-selection__elem-value" value="0.008" placeholder="Введите значение..." type="text" name="pa_sulphide">
             </td>
           </tr>
         </thead>
@@ -155,11 +155,12 @@ get_header();
   <button class="equipment-selection__calculate-button equipment-selection__calculate-button_add-to-cart">Добавить все в корзину</button>
 </section>
 </main>
-
 <script>
-  window.systems = [];
+// Инициализация глобальных переменных для JS
   window.obj = {};
-
+  window.systems = [];
+  window.filterCases = [];
+  window.filters = [];
 </script>
 <?php
     // корпус пре(пост)фильтра ids
@@ -171,21 +172,37 @@ get_header();
     // массив ids оборудования для расчета
     $systems_ids = array( 529, 530, 531 , 532, 727, 534, 536, 537, 535);
     $systems_ids_count = count($systems_ids);
-
     // получаем все объекты фильтров и их изображения
     for($i = 0; $i < $filter_cases_ids_count; ++$i) {
       $filter_cases[$i][0] = wc_get_product($filter_cases_ids[$i]);
       $filter_cases[$i][1] = wp_get_attachment_url( get_post_thumbnail_id($filter_cases_ids[$i]), 'thumbnail' );
+      ?>
+        <script>
+          // Собираем данные для JS
+          window.obj = {};
+          window.obj.product = <?php echo $filter_cases[$i][0];?>;
+          window.obj.urlPic = <?php echo json_encode($filter_cases[$i][1]);?>;
+          window.filterCases.push(window.obj);
+      </script>
+      <?php
     };
     // получаем все объекты корпусов фильтров и их изображения
     for($i = 0; $i < $filters_ids_count; ++$i) {
       $filters[$i][0] = wc_get_product($filters_ids[$i]);
       $filters[$i][1] = wp_get_attachment_url( get_post_thumbnail_id($filters_ids[$i]), 'thumbnail' );
+      ?>
+        <script>
+          // Собираем данные для JS
+          window.obj = {};
+          window.obj.product = <?php echo $filters[$i][0];?>;
+          window.obj.urlPic = <?php echo json_encode($filters[$i][1]);?>;
+          window.filters.push(window.obj);
+        </script>
+      <?php
     };
     for($i = 0; $i < $systems_ids_count; ++$i) {
       // товар(product) ячейка [0]
       $systems[$i][0] = wc_get_product($systems_ids[$i]);
-
       // получаем ключи всех атрибутов, что затем получить их таксономию(значения)
         $attributes_keys = array_keys($systems[$i][0]->attributes);
         for($j = 0; $j < count($attributes_keys); ++$j) {
@@ -196,7 +213,7 @@ get_header();
           $systems[$i][1][$j][]=$systems[$i][1][$j][0]->name;
           $systems[$i][1][$j][]=$systems[$i][1][$j][1]->name;
         };
-      //  изображение товара ячейка [][3]
+      //  изображение товара ячейка [][2]
       $systems[$i][2] = wp_get_attachment_url( get_post_thumbnail_id($systems_ids[$i]), 'thumbnail' );
       ?>
       <script>
@@ -211,29 +228,6 @@ get_header();
     }
     //echo "<pre>"; print_r($systems[0][0]); echo "</pre>";
  ?>
-<!-- Инициализация данных товаров для калькулятора по id -->
-<script>
-  window.filterCases = [];
-  const filterCasesIdsCount = <?php echo $filter_cases_ids_count;?>;
-  window.filters = [];
-  const filtersIdsCount = <?php echo $filters_ids_count;?>;
-  const systemsIdsCount = <?php echo $systems_ids_count;?>;
-
-  // собираем массив объектов корпусов фильтров и их изображений
-  for (i=0; i < filterCasesIdsCount; i+=1){
-    obj = {};
-    obj.product = <?php echo $filter_cases[0][0];?>;
-    obj.urlPic = <?php echo json_encode($filter_cases[0][1]);?>;
-    filterCases.push(obj);
-  };
-  // собираем массив объектов фильтров и их изображений
-  for (i=0; i < filtersIdsCount; i+=1){
-    obj = {};
-    obj.product = <?php echo $filters[0][0];?>;
-    obj.urlPic = <?php echo json_encode($filters[0][1]);?>;
-    filters.push(obj);
-  };
-</script>
 <?php
 get_footer();
 ?>
