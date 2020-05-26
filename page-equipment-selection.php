@@ -116,42 +116,13 @@ get_header();
       </div>
       <button class="equipment-selection__calculate-button" disabled>Рассчитать</button>
     </form>
+    <p class="equipment-selection__description equipment-selection__description_no-result">
+      Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
+      Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом<a>, чтобы найти другой способ решения.
+    </p>
   </section>
   <section class="results">
-  <div class="results__container">
-    <div class="card">
-      <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
-      <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
-      <p class="card__price">5550000 руб.</p>
-    </div>
-    <div class="card">
-      <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
-      <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
-      <p class="card__price">5550000 руб.</p>
-    </div>
-    <div class="card">
-      <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
-      <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
-      <p class="card__price">5550000 руб.</p>
-    </div>
-    <div class="card">
-      <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
-      <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
-      <p class="card__price">5550000 руб.</p>
-    </div>
-    <div class="card">
-      <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
-      <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
-      <p class="card__price">5550000 руб.</p>
-    </div>
-    <div class="card">
-      <img src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_ffffff-33349.png" class="card__pic">
-      <h4 class=card__title>Аквафор&nbsp;Осмо&nbsp;-&nbsp;Кристалл&nbsp;50&nbsp;исп.&nbsp;4М asdasdasdasda sdaf</h4>
-      <p class="card__price">5550000 руб.</p>
-    </div>
-    <div class="card"></div>
-    <div class="card"></div>
-  </div>
+  <div class="results__container"></div>
   <button class="equipment-selection__calculate-button equipment-selection__calculate-button_add-to-cart">Добавить все в корзину</button>
 </section>
 </main>
@@ -163,6 +134,8 @@ get_header();
   window.filters = [];
 </script>
 <?php
+    // Для питьевой Морион
+    $drink_water_filter = array( );
     // корпус пре(пост)фильтра ids
     $filter_cases_ids = array( 543 );
     $filter_cases_ids_count = count($filter_cases_ids);
