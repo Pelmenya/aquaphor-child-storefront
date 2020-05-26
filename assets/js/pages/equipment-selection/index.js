@@ -23,19 +23,12 @@ function main() {
     console.log(err);
   });
  //  fetch(req).then((res) => res.json(console.log(res)));
-  console.log(window.filterCases);
-  console.log(window.filters);
-  console.log(window.systems);
-  console.log(window.filterCases[0].product);
-          console.log(window.systems[i].attributes[j][2]);
-        console.log(window.systems[i].attributes[j][3]);
-        console.log(window.systems[i].attributes[j][4]);
-
   */ //  fetch(req).then((res) => res.json(console.log(res)));
 
+  console.log(window.filters);
   const equipmentSelectionForm = document.querySelector('.equipment-selection__form');
   const waterPoints = equipmentSelectionForm.pa_water_points;
-  const equipmentSelectionChoiceColorLabel = equipmentSelectionForm.querySelector(
+  const equipmentSelectionWaterPointsLabel = equipmentSelectionForm.querySelector(
     'label.equipment-selection__choice-color_water-points'
   );
   const equipmentSelectionCalculateBtn = equipmentSelectionForm.querySelector(
@@ -44,6 +37,7 @@ function main() {
   // Radio button
   const paClearTurbidityRadioBtn = equipmentSelectionForm.pa_clear_turbidity;
   const choiceTasteRadioBtn = equipmentSelectionForm.choiceTaste;
+
   const equipmentSelectionTable = equipmentSelectionForm.querySelector(
     '.equipment-selection__table'
   );
@@ -51,29 +45,57 @@ function main() {
   const allTableInputs = equipmentSelectionTable.querySelectorAll(
     '.equipment-selection__elem-value'
   );
+  // Сообщение о провале операции :=)
+  const equipmentSelectionDescriptionNoResult = document.querySelector(
+    '.equipment-selection__description_no-result'
+  );
+
+  function renderResultSystem(waterSystemFull) {
+    const resultsContainer = document.querySelector('.results__container');
+    for (let i = 0; i < 8; i += 1) {
+      if (waterSystemFull[i]) {
+        resultsContainer.insertAdjacentHTML(
+          'beforeend',
+          `<div class="card">
+          <img src="${waterSystemFull[i].urlPic}" class="card__pic">
+          <h4 class=card__title>${waterSystemFull[i].product.name}</h4>
+          <p class="card__price">${waterSystemFull[i].product.price} руб.</p>
+          </div>
+      `
+        );
+      } else {
+        resultsContainer.insertAdjacentHTML(
+          'beforeend',
+          `<div class="card">
+          </div>
+      `
+        );
+      }
+    }
+  }
 
   function changeWaterPoints() {
     switch (Number(waterPoints.value)) {
       case 1:
-        equipmentSelectionChoiceColorLabel.textContent = 'одна';
+        equipmentSelectionWaterPointsLabel.textContent = 'одна';
         break;
       case 2:
-        equipmentSelectionChoiceColorLabel.textContent = 'две';
+        equipmentSelectionWaterPointsLabel.textContent = 'две';
         break;
       case 3:
-        equipmentSelectionChoiceColorLabel.textContent = 'три';
+        equipmentSelectionWaterPointsLabel.textContent = 'три';
         break;
       case 4:
-        equipmentSelectionChoiceColorLabel.textContent = 'четыре';
+        equipmentSelectionWaterPointsLabel.textContent = 'четыре';
         break;
       case 5:
-        equipmentSelectionChoiceColorLabel.textContent = 'пять';
+        equipmentSelectionWaterPointsLabel.textContent = 'пять';
         break;
       case 6:
-        equipmentSelectionChoiceColorLabel.textContent = 'шесть';
+        equipmentSelectionWaterPointsLabel.textContent = 'шесть';
         break;
       default:
-        equipmentSelectionChoiceColorLabel.textContent = 'одна';
+        equipmentSelectionWaterPointsLabel.textContent = 'одна';
     }
   }
 
@@ -94,7 +116,6 @@ function main() {
 
   function submitEquipmentSelectionForm(event) {
     const dataForm = [];
-    console.log(dataForm);
     dataForm.push({
       name: paClearTurbidityRadioBtn[0].name,
       value: paClearTurbidityRadioBtn.value,
@@ -124,7 +145,7 @@ function main() {
                 Number(window.systems[i].attributes[j][3] <= Number(dataForm[k].value)) &&
                 Number(dataForm[k].value) <= Number(window.systems[i].attributes[j][4])
               ) {
-                if (window.systems[i].attributes[j][5]) {
+                if (window.systems[i].attributes[j].length > 4) {
                   window.systems[i].attributes[j][5] = true;
                 } else window.systems[i].attributes[j].push(true);
               } else if (window.systems[i].attributes[j][5]) {
@@ -135,7 +156,6 @@ function main() {
         }
       }
     }
-
     const okSystems = [];
     for (let i = 0; i < window.systems.length; i += 1) {
       let valid = true;
@@ -147,12 +167,40 @@ function main() {
         }
       }
       if (valid) {
+        okSystems.push(window.systems[i]);
         window.systems[i].valid = true;
-      } else {
-        window.systems[i].valid = false;
-      }
+      } else window.systems[i].valid = false;
     }
-    console.log(window.systems);
+    // 0 система оптимальна
+    okSystems.sort((a, b) => Number(a.product.price) - Number(b.product.price));
+    // рисуем систему в html
+    const waterSystemFull = [];
+    if (okSystems.length > 0) {
+      equipmentSelectionForm.style.display = 'none';
+      waterSystemFull.push(window.filterCases[0]);
+      switch (Number(paClearTurbidityRadioBtn.value)) {
+        case 1:
+          waterSystemFull.push(window.filters[0]);
+          break;
+        case 2:
+          waterSystemFull.push(window.filters[1]);
+          break;
+        default:
+          waterSystemFull.push(window.filters[0]);
+      }
+      waterSystemFull.push(okSystems[0]);
+      waterSystemFull.push(window.filters[0]);
+      waterSystemFull.push(window.filterCases[0]);
+
+      if (choiceTasteRadioBtn.value === '1') {
+        waterSystemFull.push(window.filterCases[0]);
+      }
+      renderResultSystem(waterSystemFull);
+    } else {
+      equipmentSelectionForm.style.display = 'none';
+      equipmentSelectionDescriptionNoResult.style.display = 'block';
+    }
+
     event.preventDefault();
   }
   // бегунок
