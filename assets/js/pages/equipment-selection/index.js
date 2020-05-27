@@ -38,6 +38,7 @@ function main() {
   // Radio button
   const paClearTurbidityRadioBtn = equipmentSelectionForm.pa_clear_turbidity;
   const choiceTasteRadioBtn = equipmentSelectionForm.choiceTaste;
+  const waterSourceRadioBtn = equipmentSelectionForm.water_source;
 
   const equipmentSelectionTable = equipmentSelectionForm.querySelector(
     '.equipment-selection__table'
@@ -181,30 +182,26 @@ function main() {
     if (okSystems.length > 0) {
       equipmentSelectionForm.style.display = 'none';
       waterSystemFull.push(window.filterCases[0]);
-      switch (Number(paClearTurbidityRadioBtn.value)) {
-        case 1:
+      if (Number(paClearTurbidityRadioBtn.value) === 1) {
+        if (Number(waterSourceRadioBtn.value) === 1) {
           waterSystemFull.push(window.filters[0]);
-          break;
-        case 2:
-          waterSystemFull.push(window.filters[1]);
-          break;
-        default:
-          waterSystemFull.push(window.filters[0]);
+        } else waterSystemFull.push(window.filters[1]);
+        waterSystemFull.push(okSystems[0]);
+        waterSystemFull.push(window.filters[0]);
+        waterSystemFull.push(window.filterCases[0]);
+        if (choiceTasteRadioBtn.value === '1') {
+          waterSystemFull.push(window.drinkSystems[0]);
+        }
+        results.style.display = 'block';
+        renderResultSystem(waterSystemFull);
+      } else if (Number(paClearTurbidityRadioBtn.value) === 2) {
+        equipmentSelectionForm.style.display = 'none';
+        equipmentSelectionDescriptionNoResult.style.display = 'block';
       }
-      waterSystemFull.push(okSystems[0]);
-      waterSystemFull.push(window.filters[0]);
-      waterSystemFull.push(window.filterCases[0]);
-
-      if (choiceTasteRadioBtn.value === '1') {
-        waterSystemFull.push(window.drinkSystems[0]);
-      }
-      results.style.display = 'block';
-      renderResultSystem(waterSystemFull);
     } else {
       equipmentSelectionForm.style.display = 'none';
       equipmentSelectionDescriptionNoResult.style.display = 'block';
     }
-
     event.preventDefault();
   }
 
@@ -214,7 +211,7 @@ function main() {
         const xhr = new XMLHttpRequest();
         console.log(waterSystemFull[item].product.id);
         // 1. Конфигурируем его: POST-запрос на URL '?add-to-cart'
-        xhr.open('POST', `?add-to-cart=${waterSystemFull[item].product.id}`, false);// false - cинхронный запрос
+        xhr.open('POST', `?add-to-cart=${waterSystemFull[item].product.id}`, false); // false - cинхронный запрос
         // 2. Отсылаем запрос
         xhr.send();
       });

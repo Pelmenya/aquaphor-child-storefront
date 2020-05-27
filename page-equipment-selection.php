@@ -26,6 +26,21 @@ get_header();
     <h3 class="sub-title">Калькулятор системы водоподготовки</h3>
     <form class="equipment-selection__form" name="equipmentSelection">
       <div class="equipment-selection__choice">
+      <div class="equipment-selection__choice-col">
+          <h4 class="description">Источник воды:</h4>
+          <div class="equipment-selection__choice-item">
+            <input class="equipment-selection__choice-radio" value="1" type="radio" name="water_source">
+            <label class="equipment-selection__choice-color" for="water_source">Водопровод</label>
+          </div>
+          <div class="equipment-selection__choice-item">
+            <input  class="equipment-selection__choice-radio" value="2" type="radio" name="water_source">
+            <label class="equipment-selection__choice-color" for="water_source">Скважина</label>
+          </div>
+          <div class="equipment-selection__choice-item">
+            <input  class="equipment-selection__choice-radio" value="3" type="radio" name="water_source">
+            <label class="equipment-selection__choice-color" for="water_source">Колодец</label>
+          </div>
+        </div>
         <div class="equipment-selection__choice-col">
           <h4 class="description">Какая сейчас вода?</h4>
           <div class="equipment-selection__choice-item">
