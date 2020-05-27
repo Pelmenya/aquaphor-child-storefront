@@ -16,16 +16,17 @@ class System {
 
 function main() {
   // ?add-to-cart=548
-  //  const urlReq = 'aquaphor.store/?add-to-cart=548';
-  // const req = new Request(urlReq, { method: 'POST' });
-  /*
-  fetch(req).then((res) => res.json()).then((res) => console.log(res)).catch((err) => {
-    console.log(err);
-  });
- //  fetch(req).then((res) => res.json(console.log(res)));
-  */ //  fetch(req).then((res) => res.json(console.log(res)));
+  //const urlReq = `${window.location.href}?add-to-cart=548&?add-to-cart=554`;
+  //const req = new Request(urlReq, { method: 'POST' });
 
-  console.log(window.filters);
+  //fetch(req).then((res) => console.log(res));
+
+  //fetch(req).then((res) => res.json(console.log(res)));
+  //  fetch(req).then((res) => res.json(console.log(res)));
+
+  console.log(window.drinkSystems);
+  // результирующий массив оборудования
+  let waterSystemFull = [];
   const equipmentSelectionForm = document.querySelector('.equipment-selection__form');
   const waterPoints = equipmentSelectionForm.pa_water_points;
   const equipmentSelectionWaterPointsLabel = equipmentSelectionForm.querySelector(
@@ -49,6 +50,8 @@ function main() {
   const equipmentSelectionDescriptionNoResult = document.querySelector(
     '.equipment-selection__description_no-result'
   );
+  const results = document.querySelector('.results');
+  const addToCartAllProductsBtn = results.querySelector('.results__add-to-cart-button');
 
   function renderResultSystem(waterSystemFull) {
     const resultsContainer = document.querySelector('.results__container');
@@ -174,7 +177,7 @@ function main() {
     // 0 система оптимальна
     okSystems.sort((a, b) => Number(a.product.price) - Number(b.product.price));
     // рисуем систему в html
-    const waterSystemFull = [];
+    waterSystemFull = [];
     if (okSystems.length > 0) {
       equipmentSelectionForm.style.display = 'none';
       waterSystemFull.push(window.filterCases[0]);
@@ -193,8 +196,9 @@ function main() {
       waterSystemFull.push(window.filterCases[0]);
 
       if (choiceTasteRadioBtn.value === '1') {
-        waterSystemFull.push(window.filterCases[0]);
+        waterSystemFull.push(window.drinkSystems[0]);
       }
+      results.style.display = 'block';
       renderResultSystem(waterSystemFull);
     } else {
       equipmentSelectionForm.style.display = 'none';
@@ -203,12 +207,29 @@ function main() {
 
     event.preventDefault();
   }
+
+  function addToCart() {
+    if (waterSystemFull.length > 0) {
+      Object.keys(waterSystemFull).forEach((item) => {
+        const xhr = new XMLHttpRequest();
+        console.log(waterSystemFull[item].product.id);
+        // 1. Конфигурируем его: POST-запрос на URL '?add-to-cart'
+        xhr.open('POST', `?add-to-cart=${waterSystemFull[item].product.id}`, false);// false - cинхронный запрос
+        // 2. Отсылаем запрос
+        xhr.send();
+      });
+      window.location.href = 'cart';
+    }
+  }
+
   // бегунок
   waterPoints.addEventListener('change', changeWaterPoints);
   // ввод на форме
   equipmentSelectionForm.addEventListener('input', inputEquipmentSelectionForm);
   // submit формы
   equipmentSelectionForm.addEventListener('submit', submitEquipmentSelectionForm);
+  // добавить все товары в корзину
+  addToCartAllProductsBtn.addEventListener('click', addToCart);
 }
 
 main();

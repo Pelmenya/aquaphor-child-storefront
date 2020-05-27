@@ -123,19 +123,21 @@ get_header();
   </section>
   <section class="results">
   <div class="results__container"></div>
-  <button class="equipment-selection__calculate-button equipment-selection__calculate-button_add-to-cart">Добавить все в корзину</button>
+  <button class="equipment-selection__calculate-button results__add-to-cart-button">Добавить все в корзину</button>
 </section>
 </main>
 <script>
 // Инициализация глобальных переменных для JS
   window.obj = {};
+  window.drinkSystems = [];
   window.systems = [];
   window.filterCases = [];
   window.filters = [];
 </script>
 <?php
-    // Для питьевой Морион
-    $drink_water_filter = array( );
+    // системы для питьевой воды
+    $drink_water_filters_ids = array( 554 );
+    $drink_water_filters_count = count($drink_water_filters_ids);
     // корпус пре(пост)фильтра ids
     $filter_cases_ids = array( 543 );
     $filter_cases_ids_count = count($filter_cases_ids);
@@ -145,6 +147,20 @@ get_header();
     // массив ids оборудования для расчета
     $systems_ids = array( 529, 530, 531 , 532, 727, 534, 536, 537, 535);
     $systems_ids_count = count($systems_ids);
+    // получаем все системы питьевых фильтров
+    for($i = 0; $i < $drink_water_filters_count; ++$i) {
+      $drink_water_filters[$i][0] = wc_get_product($drink_water_filters_ids[$i]);
+      $drink_water_filters[$i][1] = wp_get_attachment_url( get_post_thumbnail_id($drink_water_filters_ids[$i]), 'thumbnail' );
+      ?>
+        <script>
+          // Собираем данные для JS
+          window.obj = {};
+          window.obj.product = <?php echo $drink_water_filters[$i][0];?>;
+          window.obj.urlPic = <?php echo json_encode($drink_water_filters[$i][1]);?>;
+          window.drinkSystems.push(window.obj);
+      </script>
+      <?php
+    };
     // получаем все объекты фильтров и их изображения
     for($i = 0; $i < $filter_cases_ids_count; ++$i) {
       $filter_cases[$i][0] = wc_get_product($filter_cases_ids[$i]);
