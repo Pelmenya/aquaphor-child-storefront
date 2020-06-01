@@ -1,39 +1,13 @@
-/*
-class SystemComponent {
-  constructor(props) {}
-
-  create() {}
-}
-
-class System {
-  constructor(props) {}
-
-  create() {}
-
-  clearWater(parametrs) {}
-}
-*/
-
 function main() {
-  // ?add-to-cart=548
-  //const urlReq = `${window.location.href}?add-to-cart=548&?add-to-cart=554`;
-  //const req = new Request(urlReq, { method: 'POST' });
-
-  //fetch(req).then((res) => console.log(res));
-
-  //fetch(req).then((res) => res.json(console.log(res)));
-  //  fetch(req).then((res) => res.json(console.log(res)));
-
-  console.log(window.drinkSystems);
   // результирующий массив оборудования
   let waterSystemFull = [];
   const equipmentSelectionForm = document.querySelector('.equipment-selection__form');
   const waterPoints = equipmentSelectionForm.pa_water_points;
   const equipmentSelectionWaterPointsLabel = equipmentSelectionForm.querySelector(
-    'label.equipment-selection__choice-color_water-points'
+    'label.equipment-selection__choice-color_water-points',
   );
   const equipmentSelectionCalculateBtn = equipmentSelectionForm.querySelector(
-    '.equipment-selection__calculate-button'
+    '.equipment-selection__calculate-button',
   );
   // Radio button
   const paClearTurbidityRadioBtn = equipmentSelectionForm.pa_clear_turbidity;
@@ -41,38 +15,38 @@ function main() {
   const waterSourceRadioBtn = equipmentSelectionForm.water_source;
 
   const equipmentSelectionTable = equipmentSelectionForm.querySelector(
-    '.equipment-selection__table'
+    '.equipment-selection__table',
   );
   // Все input в таблице
   const allTableInputs = equipmentSelectionTable.querySelectorAll(
-    '.equipment-selection__elem-value'
+    '.equipment-selection__elem-value',
   );
   // Сообщение о провале операции :=)
   const equipmentSelectionDescriptionNoResult = document.querySelector(
-    '.equipment-selection__description_no-result'
+    '.equipment-selection__description_no-result',
   );
   const results = document.querySelector('.results');
   const addToCartAllProductsBtn = results.querySelector('.results__add-to-cart-button');
 
-  function renderResultSystem(waterSystemFull) {
+  function renderResultSystem(systemFull) {
     const resultsContainer = document.querySelector('.results__container');
     for (let i = 0; i < 8; i += 1) {
-      if (waterSystemFull[i]) {
+      if (systemFull[i]) {
         resultsContainer.insertAdjacentHTML(
           'beforeend',
-          `<a href="${waterSystemFull[i].product.slug}" class="card">
-          <img src="${waterSystemFull[i].urlPic}" class="card__pic">
-          <h4 class=card__title>${waterSystemFull[i].product.name}</h4>
-          <p class="card__price">${waterSystemFull[i].product.price} руб.</p>
+          `<a href="${systemFull[i].product.slug}" class="card">
+          <img src="${systemFull[i].urlPic}" class="card__pic">
+          <h4 class=card__title>${systemFull[i].product.name}</h4>
+          <p class="card__price">${systemFull[i].product.price} руб.</p>
           </a>
-      `
+      `,
         );
       } else {
         resultsContainer.insertAdjacentHTML(
           'beforeend',
           `<div class="card">
           </div>
-      `
+      `,
         );
       }
     }
@@ -109,8 +83,7 @@ function main() {
     if (paClearTurbidityRadioBtn.value !== '' && choiceTasteRadioBtn.value !== '') {
       // нет ни одного такого, что пуст или не приобразуется в число
       valid = !Object.keys(allTableInputs).some(
-        (index) =>
-          Number.isNaN(Number(allTableInputs[index].value)) || allTableInputs[index].value === ''
+        (index) => Number.isNaN(Number(allTableInputs[index].value)) || allTableInputs[index].value === '',
       );
     } else valid = false;
     if (valid) {
@@ -126,11 +99,11 @@ function main() {
     });
     dataForm.push({ name: choiceTasteRadioBtn[0].name, value: choiceTasteRadioBtn.value });
     dataForm.push({ name: waterPoints.name, value: waterPoints.value });
-    Object.keys(allTableInputs).forEach((index) =>
-      dataForm.push({
+    Object.keys(allTableInputs).forEach(
+      (index) => dataForm.push({
         name: allTableInputs[index].name,
         value: allTableInputs[index].value,
-      })
+      }),
     );
     /** проверяем все введеные в форму значения на соответствие диапазона каждого аттрибута
      * каждой системы. Затем берем только те системы, у которых все атрибуты подходят
@@ -140,14 +113,14 @@ function main() {
       for (let j = 0; j < window.systems[i].attributes.length; j += 1) {
         // Если у атрибута нет мин - макс числовых значений, то пропускаем его
         if (
-          !Number.isNaN(Number(window.systems[i].attributes[j][3])) &&
-          !Number.isNaN(Number(window.systems[i].attributes[j][4]))
+          !Number.isNaN(Number(window.systems[i].attributes[j][3]))
+          && !Number.isNaN(Number(window.systems[i].attributes[j][4]))
         ) {
           for (let k = 2; k < dataForm.length; k += 1) {
             if (dataForm[k].name === window.systems[i].attributes[j][2]) {
               if (
-                Number(window.systems[i].attributes[j][3] <= Number(dataForm[k].value)) &&
-                Number(dataForm[k].value) <= Number(window.systems[i].attributes[j][4])
+                Number(window.systems[i].attributes[j][3] <= Number(dataForm[k].value))
+                && Number(dataForm[k].value) <= Number(window.systems[i].attributes[j][4])
               ) {
                 if (window.systems[i].attributes[j].length > 4) {
                   window.systems[i].attributes[j][5] = true;
@@ -209,7 +182,6 @@ function main() {
     if (waterSystemFull.length > 0) {
       Object.keys(waterSystemFull).forEach((item) => {
         const xhr = new XMLHttpRequest();
-        console.log(waterSystemFull[item].product.id);
         // 1. Конфигурируем его: POST-запрос на URL '?add-to-cart'
         xhr.open('POST', `?add-to-cart=${waterSystemFull[item].product.id}`, false); // false - cинхронный запрос
         // 2. Отсылаем запрос
