@@ -65,7 +65,7 @@ get_header();
         </div>
         <div class="equipment-selection__choice-col">
           <h4 class="description">Точки водоразбора?</h4>
-          <input  class="equipment-selection__point-water" type="range" value="1" min="1" max="6" step="1" name="pa_water_points">
+          <input  class="equipment-selection__point-water" type="range" value="6" min="1" max="6" step="1" name="pa_water_points">
           <label class="equipment-selection__choice-color equipment-selection__choice-color_water-points" for="pa_water_points">От 1 до 6 точек</label>
         </div>
       </div>
