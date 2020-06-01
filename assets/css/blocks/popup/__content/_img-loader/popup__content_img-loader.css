@@ -1,0 +1,7 @@
+.popup__content_img-loader {
+  width: 120px;
+  min-height: 100px;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: no-repeat;
+}

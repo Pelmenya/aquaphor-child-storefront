@@ -1,0 +1,9 @@
+.popup__content_img{
+  max-width: 80vw;
+  max-height: 80vh;
+  width: 1140px;
+  height: 768px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0;
+}

@@ -50,6 +50,7 @@
 @import url(./__item-icon/_search/header__item-icon_search.css);
 @import url(./__help-button/header__help-button.css);
 @import url(./__help-icon/header__help-icon.css);
+@import url(../popup/popup.css);
 
 .header {
   width: 100%;
@@ -59,6 +60,7 @@
   align-items: center;
   background-color: var(--pale-grey);
   font-family: Proxima Nova Rg, sans-serif;
+  position: relative;
 }
 
 /* модернизируем блок search*/

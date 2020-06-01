@@ -248,7 +248,6 @@ get_header(); ?>
     </div>
   </div>
 </section>
-
 </main>
 <?php
 
