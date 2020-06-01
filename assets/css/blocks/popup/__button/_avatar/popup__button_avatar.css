@@ -1,0 +1,11 @@
+.popup__button_avatar {
+  color: #fff; 
+  background-color: #000; 
+  font-size: 18px;
+}
+
+.popup__button_avatar:disabled {
+  color: rgba(0, 0, 0, .2); 
+  background-color: #fff; 
+  font-size: 18px;
+}

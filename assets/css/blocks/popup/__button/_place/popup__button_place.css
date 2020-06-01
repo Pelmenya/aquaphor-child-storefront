@@ -1,0 +1,9 @@
+.popup__button_place {
+  color: #fff;
+  background-color: #000;; 
+}
+
+.popup__button_place:disabled {
+  color: rgba(0, 0, 0, .2); 
+  background-color: #fff; 
+}
