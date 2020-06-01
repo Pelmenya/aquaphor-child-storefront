@@ -29,38 +29,38 @@ get_header();
       <div class="equipment-selection__choice-col">
           <h4 class="description">Источник воды:</h4>
           <div class="equipment-selection__choice-item">
-            <input class="equipment-selection__choice-radio" value="1" type="radio" checked name="water_source">
-            <label class="equipment-selection__choice-color" for="water_source">Водопровод</label>
+            <input class="equipment-selection__choice-radio" value="1" type="radio" checked name="water_source" id="water_source_one">
+            <label class="equipment-selection__choice-color" for="water_source_one">Водопровод</label>
           </div>
           <div class="equipment-selection__choice-item">
-            <input  class="equipment-selection__choice-radio" value="2" type="radio" name="water_source">
-            <label class="equipment-selection__choice-color" for="water_source">Скважина</label>
+            <input  class="equipment-selection__choice-radio" value="2" type="radio" name="water_source" id="water_source_two">
+            <label class="equipment-selection__choice-color" for="water_source_two">Скважина</label>
           </div>
           <div class="equipment-selection__choice-item">
-            <input  class="equipment-selection__choice-radio" value="3" type="radio" name="water_source">
-            <label class="equipment-selection__choice-color" for="water_source">Колодец</label>
+            <input  class="equipment-selection__choice-radio" value="3" type="radio" name="water_source" id="water_source_three">
+            <label class="equipment-selection__choice-color" for="water_source_three">Колодец</label>
           </div>
         </div>
         <div class="equipment-selection__choice-col">
           <h4 class="description">Какая сейчас вода?</h4>
           <div class="equipment-selection__choice-item">
-            <input class="equipment-selection__choice-radio" value="1" type="radio" checked name="pa_clear_turbidity">
-            <label class="equipment-selection__choice-color" for="pa_clear_turbidity">Прозрачная</label>
+            <input class="equipment-selection__choice-radio" value="1" type="radio" checked name="pa_clear_turbidity" id="pa_clear_turbidity_one">
+            <label class="equipment-selection__choice-color" for="pa_clear_turbidity_one">Прозрачная</label>
           </div>
           <div class="equipment-selection__choice-item">
-            <input  class="equipment-selection__choice-radio" value="2" type="radio" name="pa_clear_turbidity">
-            <label class="equipment-selection__choice-color" for="pa_clear_turbidity">Мутная</label>
+            <input  class="equipment-selection__choice-radio" value="2" type="radio" name="pa_clear_turbidity" id="pa_clear_turbidity_two">
+            <label class="equipment-selection__choice-color" for="pa_clear_turbidity_two">Мутная</label>
           </div>
         </div>
         <div class="equipment-selection__choice-col">
           <h4 class="description">Какая нужна вода?</h4>
           <div class="equipment-selection__choice-item">
-            <input class="equipment-selection__choice-radio" value="1" type="radio" checked name="choiceTaste">
-            <label class="equipment-selection__choice-color" for="choiceTaste">Питьевая</label>
+            <input class="equipment-selection__choice-radio" value="1" type="radio" checked name="choiceTaste" id="choiceTaste_one">
+            <label class="equipment-selection__choice-color" for="choiceTaste_one">Питьевая</label>
           </div>
           <div class="equipment-selection__choice-item">
-            <input  class="equipment-selection__choice-radio" value="2" type="radio" name="choiceTaste">
-            <label class="equipment-selection__choice-color" for="choiceTaste">Техническая</label>
+            <input  class="equipment-selection__choice-radio" value="2" type="radio" name="choiceTaste" id="choiceTaste_two">
+            <label class="equipment-selection__choice-color" for="choiceTaste_two">Техническая</label>
           </div>
         </div>
         <div class="equipment-selection__choice-col">

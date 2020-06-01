@@ -7,4 +7,5 @@
   line-height: 1.63;
   letter-spacing: normal;
   color: var(--dark);
+  cursor: pointer;
 }
