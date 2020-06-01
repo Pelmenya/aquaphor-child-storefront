@@ -1,0 +1,13 @@
+@import url(./__form/repair__form.css);
+@import url(./__phone/repair__phone.css);
+@import url(./__filter/repair__filter.css);
+@import url(./__service/repair__service.css);
+@import url(./__button/repair__button.css);
+
+
+.repair {
+  max-width: 768px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

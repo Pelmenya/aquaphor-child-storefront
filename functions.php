@@ -20,6 +20,8 @@ if( ! defined('AQUAPHOR_THEME_ASSETS') )        define('AQUAPHOR_THEME_ASSETS', 
 if( ! defined('SITE_URL') )                     define('SITE_URL', get_site_url() . '/' );
 if( ! defined('AQUAPHOR_THEME_JS') )            define('AQUAPHOR_THEME_JS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/pages/' );
 if( ! defined('AQUAPHOR_THEME_JS_FUNCTIONS') )  define('AQUAPHOR_THEME_JS_FUNCTIONS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/functions/' );
+if( ! defined('AQUAPHOR_THEME_JS_WIDGETS') )  define('AQUAPHOR_THEME_JS_WIDGETS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/widgets/' );
+
 if( ! defined('AQUAPHOR_THEME_CSS') )           define('AQUAPHOR_THEME_CSS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/css/pages/' );
 
 
@@ -252,7 +254,99 @@ function woocommerce_output_related_products() {
 	woocommerce_related_products( apply_filters( 'woocommerce_output_related_products_args', $args ) );
 }
 
+function aquaphor_custom_tracking( $order_id ) {
+  // Получаем информации по заказу
+  $order = wc_get_order( $order_id );
+  $order_data = $order->get_data();
+  // Получаем базовую информация по заказу
+  $order_id = $order_data['id'];
+  $order_currency = $order_data['currency'];
+  $order_payment_method_title = $order_data['payment_method_title'];
+  $order_shipping_totale = $order_data['shipping_total'];
+  $order_total = $order_data['total'];
+  $order_base_info = "<hr><strong>Общая информация по заказу</strong><br>
+  ID заказа: $order_id<br>
+  Валюта заказа: $order_currency<br>
+  Метода оплаты: $order_payment_method_title<br>
+  Стоимость доставки: $order_shipping_totale<br>
+  Итого с доставкой: $order_total<br>";
+  // Получаем информация по клиенту
+  $order_customer_id = $order_data['customer_id'];
+  $order_customer_ip_address = $order_data['customer_ip_address'];
+  $order_billing_first_name = $order_data['billing']['first_name'];
+  $order_billing_last_name = $order_data['billing']['last_name'];
+  $order_billing_email = $order_data['billing']['email'];
+  $order_billing_phone = $order_data['billing']['phone'];
+  $order_client_info = "<hr><strong>Информация по клиенту</strong><br>
+  ID клиента = $order_customer_id<br>
+  IP адрес клиента: $order_customer_ip_address<br>
+  Имя клиента: $order_billing_first_name<br>
+  Фамилия клиента: $order_billing_last_name<br>
+  Email клиента: $order_billing_email<br>
+  Телефон клиента: $order_billing_phone<br>";
+  // Получаем информацию по доставке
+  $order_shipping_address_1 = $order_data['shipping']['address_1'];
+  $order_shipping_address_2 = $order_data['shipping']['address_2'];
+  $order_shipping_city = $order_data['shipping']['city'];
+  $order_shipping_state = $order_data['shipping']['state'];
+  $order_shipping_postcode = $order_data['shipping']['postcode'];
+  $order_shipping_country = $order_data['shipping']['country'];
+  $order_shipping_info = "<hr><strong>Информация по доставке</strong><br>
+  Страна доставки: $order_shipping_state<br>
+  Город доставки: $order_shipping_city<br>
+  Индекс: $order_shipping_postcode<br>
+  Адрес доставки 1: $order_shipping_address_1<br>
+  Адрес доставки 2: $order_shipping_address_2<br>";
+  // Получаем информации по товару
+  $order->get_total();
+  $line_items = $order->get_items();
+  foreach ( $line_items as $item ) {
+    $product = $order->get_product_from_item( $item );
+    $sku = $product->get_sku(); // артикул товара
+    $id = $product->get_id(); // id товара
+    $name = $product->get_name(); // название товара
+    $description = $product->get_description(); // описание товара
+    $stock_quantity = $product->get_stock_quantity(); // кол-во товара на складе
+    $qty = $item['qty']; // количество товара, которое заказали
+    $total = $order->get_line_total( $item, true, true ); // стоимость всех товаров, которые заказали, но без учета доставки
+    $product_info[] = "<hr><strong>Информация о товаре</strong><br>
+    Название товара: $name<br>
+    ID товара: $id<br>
+    Артикул: $sku<br>
+    Описание: $description<br>
+    Заказали (шт.): $qty<br>
+    Наличие (шт.): $stock_quantity<br>
+    Сумма заказа (без учета доставки): $total;";
+  }
+  $product_base_infо = implode('<br>', $product_info);
+  $subject = "Заказ с сайта № $order_id";
+  // Формируем URL в переменной $queryUrl для отправки сообщений в лиды Битрикс24
+  $queryUrl = 'https://workwater.bitrix24.ru/rest/388/334y5i6pljw3303l/crm.lead.add.json';
+  // Формируем параметры для создания лида в переменной $queryData
+  $queryData = http_build_query(array(
+    'fields' => array(
+      'TITLE' => $subject,
+      'COMMENTS' => $order_base_info.' '.$order_client_info.' '.$order_shipping_info.' '.$product_base_infо
+    ),
+    'params' => array("REGISTER_SONET_EVENT" => "Y")
+  ));
+  // Обращаемся к Битрикс24 при помощи функции curl_exec
+  $curl = curl_init();
+  curl_setopt_array($curl, array(
+    CURLOPT_SSL_VERIFYPEER => 0,
+    CURLOPT_POST => 1,
+    CURLOPT_HEADER => 0,
+    CURLOPT_RETURNTRANSFER => 1,
+    CURLOPT_URL => $queryUrl,
+    CURLOPT_POSTFIELDS => $queryData,
+  ));
+  $result = curl_exec($curl);
+  curl_close($curl);
+  $result = json_decode($result, 1);
+  if (array_key_exists('error', $result)) echo "Ошибка при сохранении лида: ".$result['error_description']."<br>";
+}
 
+add_action( 'woocommerce_thankyou', 'aquaphor_custom_tracking' );
 
 function aquaphor_theme_scripts() {
   /* Путь к странице*/
@@ -290,7 +384,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     wp_enqueue_style( 'contacts', AQUAPHOR_THEME_CSS . 'contacts.css', array(), '1.1', 'all');
   }
 
-  if (is_page( array('delivery', 'payment', 'guarantees', 'about-company', 'water-analysis', 'equipment-selection' ) ) ){
+  if (is_page( array('delivery', 'payment', 'guarantees', 'about-company', 'water-analysis', 'equipment-selection', 'repair' ) ) ){
     wp_enqueue_style( 'is-page', AQUAPHOR_THEME_CSS . 'is_page.css', array(), '1.1', 'all');
   }
 
@@ -373,26 +467,10 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     wp_enqueue_style( 'front', AQUAPHOR_THEME_CSS . 'front-page.css', array(), '1.1', 'all');
     wp_enqueue_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmount.js', true);
   }
-
+  wp_enqueue_script( 'ya_chat_widget', AQUAPHOR_THEME_JS_WIDGETS . 'ya-chat-widget.js', true);
   wp_enqueue_script( 'cart', AQUAPHOR_THEME_JS_FUNCTIONS . 'visibleCart.js', true);
 }
 
 add_action( 'wp_footer', 'aquaphor_theme_scripts' );
 
-function iconic_woo_product_price_shortcode( $atts ) {
-	$atts = shortcode_atts( array(
-		'id' => null
-	), $atts, 'iconic_product_price' );
-
-	if ( empty( $atts[ 'id' ] ) ) {
-		return '';
-	}
-
-	$product = wc_get_product( $atts['id'] );
-
-	if ( ! $product ) {
-		return '';
-	}
-
-	return $product->get_price_html();
-}
+add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));

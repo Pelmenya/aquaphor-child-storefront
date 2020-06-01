@@ -22,7 +22,11 @@
 @import url(./assets/css/pages/checkout.css);
 @import url(./assets/css/pages/checkout-order-received.css);
 @import url(./assets/css/pages/equipment-selection.css);
+@import url(./assets/css/pages/repair.css);
 
+div.ya-chat-widget{
+  display: none;
+}
 
 div.col-full{
   width: 100%;

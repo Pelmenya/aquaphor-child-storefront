@@ -29,7 +29,7 @@ get_header();
       <div class="equipment-selection__choice-col">
           <h4 class="description">Источник воды:</h4>
           <div class="equipment-selection__choice-item">
-            <input class="equipment-selection__choice-radio" value="1" type="radio" name="water_source">
+            <input class="equipment-selection__choice-radio" value="1" type="radio" checked name="water_source">
             <label class="equipment-selection__choice-color" for="water_source">Водопровод</label>
           </div>
           <div class="equipment-selection__choice-item">
@@ -44,7 +44,7 @@ get_header();
         <div class="equipment-selection__choice-col">
           <h4 class="description">Какая сейчас вода?</h4>
           <div class="equipment-selection__choice-item">
-            <input class="equipment-selection__choice-radio" value="1" type="radio" name="pa_clear_turbidity">
+            <input class="equipment-selection__choice-radio" value="1" type="radio" checked name="pa_clear_turbidity">
             <label class="equipment-selection__choice-color" for="pa_clear_turbidity">Прозрачная</label>
           </div>
           <div class="equipment-selection__choice-item">
@@ -55,7 +55,7 @@ get_header();
         <div class="equipment-selection__choice-col">
           <h4 class="description">Какая нужна вода?</h4>
           <div class="equipment-selection__choice-item">
-            <input class="equipment-selection__choice-radio" value="1" type="radio" name="choiceTaste">
+            <input class="equipment-selection__choice-radio" value="1" type="radio" checked name="choiceTaste">
             <label class="equipment-selection__choice-color" for="choiceTaste">Питьевая</label>
           </div>
           <div class="equipment-selection__choice-item">

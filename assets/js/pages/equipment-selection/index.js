@@ -60,11 +60,11 @@ function main() {
       if (waterSystemFull[i]) {
         resultsContainer.insertAdjacentHTML(
           'beforeend',
-          `<div class="card">
+          `<a href="${waterSystemFull[i].product.slug}" class="card">
           <img src="${waterSystemFull[i].urlPic}" class="card__pic">
           <h4 class=card__title>${waterSystemFull[i].product.name}</h4>
           <p class="card__price">${waterSystemFull[i].product.price} руб.</p>
-          </div>
+          </a>
       `
         );
       } else {

@@ -1,0 +1,28 @@
+.header__help-button {
+  width: 114px;
+  height: 26px;
+  border-radius: 3px;
+  background-color: var(--dull-orange);
+  font-family: Proxima Nova Rg;
+  text-align: center;
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.13px;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  justify-content: space-between;
+}
+
+.header__help-button:hover {
+  background-color: #ffcc33;
+  color: var(--white);
+}
