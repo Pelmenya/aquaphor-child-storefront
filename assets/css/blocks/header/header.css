@@ -48,6 +48,8 @@
 @import url(./__search-container/header__search-container.css);
 @import url(./__item-icon/_basket/header__item-icon_basket.css);
 @import url(./__item-icon/_search/header__item-icon_search.css);
+@import url(./__help-button/header__help-button.css);
+@import url(./__help-icon/header__help-icon.css);
 
 .header {
   width: 100%;
