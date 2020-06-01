@@ -1,5 +1,5 @@
 function main() {
-  const helpBtn = document.querySelector('.header__help-button');
+  /*const helpBtn = document.querySelector('.header__help-button');
   helpBtn.addEventListener('click', () => {});
   document.addEventListener('DOMContentLoaded', () => {
     const yaChatWidget = document.querySelector('.ya-chat-widget');
@@ -15,6 +15,6 @@ function main() {
 
     yaChatWidget.dispatchEvent(event);
     //
-  });
+  });*/
 }
 main();

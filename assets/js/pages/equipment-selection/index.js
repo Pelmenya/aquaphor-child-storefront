@@ -55,22 +55,22 @@ function main() {
   function changeWaterPoints() {
     switch (Number(waterPoints.value)) {
       case 1:
-        equipmentSelectionWaterPointsLabel.textContent = 'одна';
+        equipmentSelectionWaterPointsLabel.textContent = '1 точка';
         break;
       case 2:
-        equipmentSelectionWaterPointsLabel.textContent = 'две';
+        equipmentSelectionWaterPointsLabel.textContent = 'От 1 до 2 точек';
         break;
       case 3:
-        equipmentSelectionWaterPointsLabel.textContent = 'три';
+        equipmentSelectionWaterPointsLabel.textContent = 'От 1 до 3 точек';
         break;
       case 4:
-        equipmentSelectionWaterPointsLabel.textContent = 'четыре';
+        equipmentSelectionWaterPointsLabel.textContent = 'От 1 до 4 точек';
         break;
       case 5:
-        equipmentSelectionWaterPointsLabel.textContent = 'пять';
+        equipmentSelectionWaterPointsLabel.textContent = 'От 1 до 5 точек';
         break;
       case 6:
-        equipmentSelectionWaterPointsLabel.textContent = 'шесть';
+        equipmentSelectionWaterPointsLabel.textContent = 'От 1 до 6 точек';
         break;
       default:
         equipmentSelectionWaterPointsLabel.textContent = 'одна';

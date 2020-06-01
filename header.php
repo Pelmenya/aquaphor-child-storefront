@@ -43,7 +43,7 @@
       };
         var n = document.getElementsByTagName('script')[0],
         s = document.createElement('script');
-        //s.async = true;
+        s.async = true;
         s.charset = 'UTF-8';
         s.src = 'https://yastatic.net/s3/chat/widget.js';
         n.parentNode.insertBefore(s, n); })();
@@ -489,7 +489,7 @@
     </div>
     <section class="popup popup-image">
       <div class="popup__wrap">
-      <iframe class="popup__content popup__content_img" src="https://www.youtube.com/embed/LbLfrC-pDOc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      <iframe class="popup__content popup__content_img" src="" frameborder="0" allowfullscreen>
       </iframe>
         <svg width="28" height="27" viewBox="0 0 28 27" fill="none" class="popup__close">
             <line x1="1.93934" y1="25.9393" x2="25.9393" y2="1.93934" stroke=" white" stroke-width="3"/>
