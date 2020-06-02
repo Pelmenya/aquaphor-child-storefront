@@ -46,6 +46,7 @@
     s.src = 'https://yastatic.net/s3/chat/widget.js';
     n.parentNode.insertBefore(s, n); })();
 </script>
+
 <?php wp_head(); ?>
 </head>
 
