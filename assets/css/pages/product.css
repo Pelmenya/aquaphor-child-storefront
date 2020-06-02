@@ -155,26 +155,6 @@ div.storefront-breadcrumb .woocommerce-breadcrumb {
   display: none;
 }
 
-#tab-title-description.description_tab {
-  width: 50%;
-}
-
-.woocommerce-tabs ul.tabs li {
-  text-align: center;
-  font-family: Proxima Nova Rg;
-  font-size: 13px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: var(--dark);
-  border-top: solid 1px #f5f7f7;
-  border-right: solid 1px #f5f7f7;
-  border-left: solid 1px #f5f7f7;
-  border-bottom: solid 3px var(--blue-blue);
-}
 .woocommerce-tabs ul.tabs li::after {
   content: '';
 }
@@ -251,10 +231,10 @@ ul.products li.product .price {
   padding: 10px 10px 10px 10px;
 }
 
- button.single_add_to_cart_button.button.alt{
+button.single_add_to_cart_button.button.alt {
   background-color: var(--blue-blue);
 }
 
-button.single_add_to_cart_button.button.alt:hover{
+button.single_add_to_cart_button.button.alt:hover {
   background-color: var(--cornflower-blue);
 }

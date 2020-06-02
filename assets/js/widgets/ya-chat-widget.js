@@ -1,20 +1,26 @@
 function main() {
-  /*const helpBtn = document.querySelector('.header__help-button');
-  helpBtn.addEventListener('click', () => {});
+  const helpBtn = document.querySelector('.header__help-button');
   document.addEventListener('DOMContentLoaded', () => {
     const yaChatWidget = document.querySelector('.ya-chat-widget');
-    const popUpWidget = yaChatWidget.querySelector('.ya-chat-popup');
     const yaChatButton = yaChatWidget.querySelector('.ya-chat-button');
+    const yaChatHeaderClose = yaChatWidget.querySelector('.ya-chat-header__close');
+    const yaChatWidgetMount = yaChatWidget.querySelector('.ya-chat-widget__mount');
+
     yaChatWidget.style.visibility = 'hidden';
     yaChatButton.classList.add('ya-chat-button_hidden');
-    yaChatWidget.addEventListener('mousedown', function(e) {
-      yaChatWidget.classList.add('ya-chat-widget_visible');popUpWidget.classList.add('ya-chat-popup_visible');
+
+    yaChatHeaderClose.addEventListener('click', () => {
+      yaChatWidget.style.visibility = 'hidden';
+      yaChatButton.classList.add('ya-chat-button_hidden');
     });
 
-    const event = new Event('click', { bubbles: true, cancelable: true });
-
-    yaChatWidget.dispatchEvent(event);
-    //
-  });*/
+    function openYaChatWidget() {
+      if (!yaChatWidgetMount.classList.contains('ya-chat-widget__mount_visible')) {
+        const event = new Event('click', { bubbles: true, cancelable: true });
+        yaChatButton.dispatchEvent(event);
+      }
+    }
+    helpBtn.addEventListener('click', openYaChatWidget);
+  });
 }
 main();

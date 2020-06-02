@@ -52,6 +52,14 @@ function main() {
         relatedProductsButtons[i].textContent = 'Добавить в корзину';
       });
     }
+    const tabTitleAdditionalInformation = document.querySelector(
+      '#tab-title-additional_information a',
+    );
+    if (tabTitleAdditionalInformation) {
+      tabTitleAdditionalInformation.textContent = 'Тех. характеристики';
+      const tabAdditionalInformation = document.querySelector('#tab-additional_information');
+      tabAdditionalInformation.querySelector('h2').textContent = 'Тех. характеристики';
+    }
   }
 }
 

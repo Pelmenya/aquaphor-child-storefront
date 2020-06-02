@@ -72,7 +72,7 @@ get_header();
   $filter = trim($filter);
   $service = trim($service);
 
-  if (wp_mail("lyapindm@yandex.ru", "Заявка с сайта aquaphor.store", "Имя:".$user_name.". Телефон:".$phone.". Фильтр: ".$filters[$filter]." Обслуживание: ".$services[$service],"From: lyapindm@yandex.ru \r\n")){
+  if (wp_mail("master@aquaphor.email", "Заявка с сайта aquaphor.store", "Имя:".$user_name.". Телефон:".$phone.". Фильтр: ".$filters[$filter]." Обслуживание: ".$services[$service],"From: master@aquaphor.email \r\n")){
       echo "Сообщение успешно отправлено";
     } else {
       echo "При отправке сообщения возникли ошибки";

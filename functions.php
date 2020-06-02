@@ -389,7 +389,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
   }
 
   if (is_page( 'equipment-selection' ) ){
-    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'equipment-selection/index.js', true);
+    wp_enqueue_script('equipment-selection', AQUAPHOR_THEME_JS . 'equipment-selection/index.js', true);
   }
 
   if (strcasecmp($url_str, $url_cart) == 0){
@@ -441,10 +441,13 @@ is_page( sanitize_title('о-сайте') );  правильно  */
 
   if (is_product()) {
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'product/index.js', true);
+    wp_enqueue_style( 'is-product-attribute', AQUAPHOR_THEME_CSS . 'is-product-attribute.css', array(), '1.1', 'all');
   }
 
   if (is_product_category()) {
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'product-category/index.js', true);
+    wp_enqueue_style( 'is-product', AQUAPHOR_THEME_CSS . 'product.css', array(), '1.1', 'all');
+    wp_enqueue_style( 'is-product-category', AQUAPHOR_THEME_CSS . 'product-category.css', array(), '1.1', 'all');
   }
 
   if (is_shop()) {

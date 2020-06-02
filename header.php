@@ -41,11 +41,12 @@
     catch(e) { } };
     var n = document.getElementsByTagName('script')[0],
     s = document.createElement('script');
-    s.async = true;
+    //s.async = true;
     s.charset = 'UTF-8';
     s.src = 'https://yastatic.net/s3/chat/widget.js';
     n.parentNode.insertBefore(s, n); })();
 </script>
+
 <?php wp_head(); ?>
 </head>
 
