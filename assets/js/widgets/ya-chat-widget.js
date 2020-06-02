@@ -2,9 +2,9 @@ function main() {
   const helpBtn = document.querySelector('.header__help-button');
   document.addEventListener('DOMContentLoaded', () => {
     const yaChatWidget = document.querySelector('.ya-chat-widget');
-    const yaChatButton = yaChatWidget.querySelector('.ya-chat-button');
-    const yaChatHeaderClose = yaChatWidget.querySelector('.ya-chat-header__close');
-    const yaChatWidgetMount = yaChatWidget.querySelector('.ya-chat-widget__mount');
+    const yaChatButton = document.querySelector('.ya-chat-button');
+    const yaChatHeaderClose = document.querySelector('.ya-chat-header__close');
+    const yaChatWidgetMount = document.querySelector('.ya-chat-widget__mount');
 
     yaChatWidget.style.visibility = 'hidden';
     yaChatButton.classList.add('ya-chat-button_hidden');
