@@ -28,25 +28,23 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/62146852" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-<script type='text/javascript'>
-  (function () { window['yandexChatWidgetCallback'] = function() {
-    try {
-      window.yandexChatWidget = new Ya.ChatWidget({
-        guid: 'e82fee08-dfc6-4c36-9efa-67910d90c463',
-        buttonText: 'Помощь',
-        title: 'Помощь',
-        theme: 'light',
-        collapsedDesktop: 'never',
-        collapsedTouch: 'always' });
-        }
-        catch(e) { }
-      };
-        var n = document.getElementsByTagName('script')[0],
-        s = document.createElement('script');
-        s.async = true;
-        s.charset = 'UTF-8';
-        s.src = 'https://yastatic.net/s3/chat/widget.js';
-        n.parentNode.insertBefore(s, n); })();
+<script type='text/javascript'> (function () {
+  window['yandexChatWidgetCallback'] = function() {
+    try { window.yandexChatWidget = new Ya.ChatWidget({
+       guid: 'e82fee08-dfc6-4c36-9efa-67910d90c463',
+       buttonText: 'Помощь',
+       title: 'Помощь',
+       theme: 'light',
+       collapsedDesktop: 'never',
+       collapsedTouch: 'always' });
+       }
+    catch(e) { } };
+    var n = document.getElementsByTagName('script')[0],
+    s = document.createElement('script');
+    s.async = true;
+    s.charset = 'UTF-8';
+    s.src = 'https://yastatic.net/s3/chat/widget.js';
+    n.parentNode.insertBefore(s, n); })();
 </script>
 <?php wp_head(); ?>
 </head>
@@ -489,15 +487,13 @@
     </div>
     <section class="popup popup-image">
       <div class="popup__wrap">
-      <iframe class="popup__content popup__content_img" src="" frameborder="0" allowfullscreen>
-      </iframe>
+      <video controls type="video/mp4" class="popup__content popup__content_img" src=""></video>
         <svg width="28" height="27" viewBox="0 0 28 27" fill="none" class="popup__close">
             <line x1="1.93934" y1="25.9393" x2="25.9393" y2="1.93934" stroke=" white" stroke-width="3"/>
             <line x1="2.06066" y1="1.93934" x2="26.0607" y2="25.9393" stroke="white" stroke-width="3"/>
         </svg>
       </div>
      </section>
-
   </header>
 		<?php
 		/**
