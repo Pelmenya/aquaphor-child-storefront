@@ -80,7 +80,7 @@
       </div>
 
     </div>
-    <p class="footer__copyright">&copy;&nbsp;<?php  echo  absint( date('Y' ) ); ?>, ИП Ефимов А.В., ИНН 504504369609, ОГРН 313504526100015</p>
+    <p class="footer__copyright">&copy;&nbsp;<?php  echo  absint( date('Y' ) ); ?>, ООО «Аквафор Инжиниринг», ИНН 7720460910</p>
   </div>
 	</footer><!-- #colophon -->
 
