@@ -12,6 +12,8 @@
  *
  */
 
+
+
 if( ! defined('AQUAPHOR_THEME_VERSION') )       define('AQUAPHOR_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
 if( ! defined('AQUAPHOR_THEME_PATH') )          define('AQUAPHOR_THEME_PATH', get_template_directory() );
 if( ! defined('AQUAPHOR_THEME_URL') )           define('AQUAPHOR_THEME_URL', get_template_directory_uri() );
@@ -477,3 +479,4 @@ is_page( sanitize_title('о-сайте') );  правильно  */
 add_action( 'wp_footer', 'aquaphor_theme_scripts' );
 
 add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
+

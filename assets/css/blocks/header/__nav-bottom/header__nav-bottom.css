@@ -3,16 +3,14 @@
   align-items: center;
 
   font-family: Proxima Nova Rg;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.13px;
   color: var(--blue-blue);
-
-  padding-top: 8px;
-  padding-bottom: 8px;
+  height: 100%;
 }
 
 .header__nav-bottom:hover .header__nav-bottom-text {

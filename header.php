@@ -20,13 +20,13 @@
    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(62146852, "init", {
+   ym(64647832, "init", {
         clickmap:true,
         trackLinks:true,
         accurateTrackBounce:true
    });
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/62146852" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript><div><img src="https://mc.yandex.ru/watch/64647832" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <script type='text/javascript'> (function () {
   window['yandexChatWidgetCallback'] = function() {
@@ -41,10 +41,36 @@
     catch(e) { } };
     var n = document.getElementsByTagName('script')[0],
     s = document.createElement('script');
-    //s.async = true;
+    s.async = true;
     s.charset = 'UTF-8';
     s.src = 'https://yastatic.net/s3/chat/widget.js';
-    n.parentNode.insertBefore(s, n); })();
+    n.parentNode.insertBefore(s, n);
+    s.onload = ()=>{
+      const helpBtn = document.querySelector('.header__help-button');
+      const yaChatWidget = document.querySelector('.ya-chat-widget');
+      if (yaChatWidget){
+      const yaChatButton = yaChatWidget.querySelector('.ya-chat-button');
+      const yaChatHeaderClose = yaChatWidget.querySelector('.ya-chat-header__close');
+      const yaChatWidgetMount = yaChatWidget.querySelector('.ya-chat-widget__mount');
+
+      yaChatWidget.style.visibility = 'hidden';
+      yaChatButton.classList.add('ya-chat-button_hidden');
+
+      yaChatHeaderClose.addEventListener('click', () => {
+        yaChatWidget.style.visibility = 'hidden';
+        yaChatButton.classList.add('ya-chat-button_hidden');
+      });
+
+      function openYaChatWidget() {
+        if (!yaChatWidgetMount.classList.contains('ya-chat-widget__mount_visible')) {
+          const event = new Event('click', { bubbles: true, cancelable: true });
+          yaChatButton.dispatchEvent(event);
+        }
+      }
+      helpBtn.addEventListener('click', openYaChatWidget);
+     }
+    }
+    })();
 </script>
 
 <?php wp_head(); ?>
@@ -65,7 +91,7 @@
     <div class="header">
       <div class="header__wrap">
         <div class="header__container-flex">
-          <div class="header__top-item">
+          <a href="https://yandex.ru/maps/1/moscow-and-moscow-oblast/search/Московская%20область/?ll=37.643241%2C55.287456&z=6.94" class="header__top-item">
             <svg class="header__item-icon" width="14px" height="18px" viewBox="0 0 14 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g id="81-mini-icons" class="header__item-icon-fill" transform="translate(-498.000000, -455.000000)">
@@ -76,8 +102,8 @@
               </g>
             </svg>
             <p class="header__top-item-text">Московская&nbsp;область</p>
-          </div>
-          <div class="header__top-item">
+          </a>
+          <a href="tel:8-800-555-30-35" class="header__top-item">
             <svg class="header__item-icon" width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g id="81-mini-icons" class="header__item-icon-fill" transform="translate(-554.000000, -281.000000)">
@@ -88,8 +114,8 @@
               </g>
             </svg>
             <p class="header__top-item-text">8&nbsp;800&nbsp;555&#150;30&#150;35</p>
-          </div>
-          <div class="header__top-item">
+          </a>
+          <a href="https://yandex.ru/maps/10756/stupino/?ll=38.073319%2C54.901220&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Forg%3Foid%3D152679979252&z=18" class="header__top-item">
             <svg class="header__item-icon" width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g id="81-mini-icons" class="header__item-icon-fill" transform="translate(-264.000000, -513.000000)" fill-rule="nonzero">
@@ -101,7 +127,7 @@
             </svg>
             <time datetime="1w 5d 8h" class="header__top-item-text">Пн&nbsp;&#150;&nbsp;Вс&#58;&nbsp;08&#58;30&nbsp;&#150;&nbsp;17&#58;30</time>
           </div>
-        </div>
+        </a>
         <div class="header__container-flex">
           <a href="<?php echo SITE_URL?>guarantees" class="header__top-item">
             <svg class="header__item-icon" width="15px" height="19px" viewBox="0 0 15 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -167,7 +193,6 @@
       </div>
       <div class="header__container-flex header__container-flex_blue">
         <div class="header__wrap">
-
               <a class="header__logo-link" href="<?php echo SITE_URL?>">
                 <svg  class="header__logo" xmlns="http://www.w3.org/2000/svg" width="366" height="68" viewBox="0 0 366 68">
                   <metadata id="metadata8">image/svg+xml</metadata>
@@ -318,7 +343,7 @@
       <!--  - - - - - - -->
       <!-- Нижнее меню -->
       <div class="header__container-flex header__container-flex_blue header__container-flex_grey">
-            <nav class="header__wrap">
+            <nav class="header__wrap header__wrap_grey">
               <div class="header__nav-bottom header__nav-bottom_systems">
                 <div class="header__menu header__menu_systems">
                   <div class="header__menu-col">

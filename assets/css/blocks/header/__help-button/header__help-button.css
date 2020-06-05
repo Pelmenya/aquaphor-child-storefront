@@ -1,12 +1,12 @@
 .header__help-button {
   width: 114px;
-  height: 26px;
+  height: 31px;
   border-radius: 3px;
   background-color: var(--dull-orange);
   font-family: Proxima Nova Rg;
   text-align: center;
   color: var(--white);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
@@ -19,7 +19,7 @@
   padding-right: 10px;
   padding-top: 0;
   padding-bottom: 0;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .header__help-button:hover {
