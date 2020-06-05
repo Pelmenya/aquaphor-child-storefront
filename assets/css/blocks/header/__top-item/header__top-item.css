@@ -8,4 +8,7 @@
   fill: var(--dark-70);
 }
 
+.header__top-item:last-of-type {
+  margin-right: 0px;
+}
 

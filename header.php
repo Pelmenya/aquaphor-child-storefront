@@ -91,7 +91,7 @@
     <div class="header">
       <div class="header__wrap">
         <div class="header__container-flex">
-          <div class="header__top-item">
+          <a href="https://yandex.ru/maps/1/moscow-and-moscow-oblast/search/Московская%20область/?ll=37.643241%2C55.287456&z=6.94" class="header__top-item">
             <svg class="header__item-icon" width="14px" height="18px" viewBox="0 0 14 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g id="81-mini-icons" class="header__item-icon-fill" transform="translate(-498.000000, -455.000000)">
@@ -102,8 +102,8 @@
               </g>
             </svg>
             <p class="header__top-item-text">Московская&nbsp;область</p>
-          </div>
-          <a  href="tel:8-800-555-30-35" class="header__top-item">
+          </a>
+          <a href="tel:8-800-555-30-35" class="header__top-item">
             <svg class="header__item-icon" width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g id="81-mini-icons" class="header__item-icon-fill" transform="translate(-554.000000, -281.000000)">
@@ -343,7 +343,7 @@
       <!--  - - - - - - -->
       <!-- Нижнее меню -->
       <div class="header__container-flex header__container-flex_blue header__container-flex_grey">
-            <nav class="header__wrap">
+            <nav class="header__wrap header__wrap_grey">
               <div class="header__nav-bottom header__nav-bottom_systems">
                 <div class="header__menu header__menu_systems">
                   <div class="header__menu-col">

@@ -51,6 +51,7 @@
 @import url(./__help-button/header__help-button.css);
 @import url(./__help-icon/header__help-icon.css);
 @import url(../popup/popup.css);
+@import url(../header/__wrap/_grey/header__wrap_grey.css);
 
 .header {
   width: 100%;
@@ -87,7 +88,7 @@
   top: 8px;
   left: 12px;
   line-height: 1;
-  color: rgba(26, 26, 26, 1);
+  color: rgba(40, 41, 60, 40);
 }
 
 .widget_product_search form input[type="search"] {
@@ -96,11 +97,11 @@
   padding-right: 8px;
   padding-left: 40px;
   padding-right: 40px;
-  height: 32px;
+  height: 34px;
   background-color: #f7f7f7;
   outline-style: none;
   font-family: Proxima Nova Rg;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -109,14 +110,17 @@
   border-radius: 3px;
   box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.1);
   background-color: rgb(171, 187, 252);
-  opacity: .6;
+  color: #28293c;
 }
 
 .widget_product_search form input[type="search"]:focus {
-  background-color:#f1f6ff;
-  color: rgba(26, 26, 26, 1);
+  background-color: #f1f6ff;
+  color: #28293c;
 }
 
+.widget_product_search form input[type="search"]:focus .widget_product_search form::before:focus {
+  color: #28293c;
+}
 
 /*{
 
