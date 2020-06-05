@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-right: 36px;
+  padding-right: 48px;
 }
 
 .header__menu-col:last-of-type {

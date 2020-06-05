@@ -113,8 +113,7 @@
 }
 
 .widget_product_search form input[type="search"]:focus {
-  background-color: rgb(171, 187, 252);
-  opacity: 1;
+  background-color:#f1f6ff;
   color: rgba(26, 26, 26, 1);
 }
 

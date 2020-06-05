@@ -113,14 +113,6 @@ img.top-products__pic-small {
   transition: transform .5s;
 }
 
-img.top-products__pic-big:hover {
-  transform: scale(1.2);
-}
-
-img.top-products__pic-small:hover {
-  transform: scale(1.2);
-}
-
 .top-products__title {
   right: -200px;
   position: absolute;

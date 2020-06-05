@@ -22,7 +22,7 @@ get_header();
   if(!isset($_POST['phone']) and !isset($_POST['filter']) and !isset($_POST['service'])){
   ?>
       <form class="repair__form" name="repair" method="post">
-        <input class="repair__name" required type="text" name="user_name" placeholder="Ваше имя">
+        <input class="repair__name" required type="text" name="user_name" placeholder="Имя">
         <input class="repair__phone" required type="tel" name="phone" placeholder="Телефон" pattern="^(\+7|8)\s?(\(\d{3}\)|\d{3})\s?[\-]?\d{3}[\-]?\d{2}[\-]?\d{2}$">
         <select class="repair__filter" required name="filter" onchange="this.style.color='var(--black-70)'; this.style.fontFamily='Proxima Nova Rg;'">
           <option value="" style="display:none">Тип фильтра</option>
