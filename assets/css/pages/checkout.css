@@ -192,9 +192,14 @@ tr.woocommerce-shipping-totals.shipping {
   text-align: center;
   color: var(--white);
 }
+
+
 #payment .payment_methods li input[type="radio"]:first-child:checked + label::before {
+  font-size: 20px;
   color: var(--blue-blue);
+  content: "\f110";
 }
+
 
 #payment .payment_methods > .wc_payment_method > label::before {
   -webkit-font-smoothing: antialiased;
@@ -205,15 +210,17 @@ tr.woocommerce-shipping-totals.shipping {
   font-weight: normal;
   line-height: 1;
   font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
+  font-weight: 100;
   line-height: inherit;
   vertical-align: baseline;
   content: "\f111";
-  color: var(--dark);
+  color: var(--blue-blue);
+  font-size: 20px;
   margin-right: 0.5407911001em;
   -webkit-transition: color, ease, 0.2s;
   transition: color, ease, 0.2s;
 }
+
 
 .payment_box.payment_method_cod p {
   font-family: Proxima Nova Rg;
