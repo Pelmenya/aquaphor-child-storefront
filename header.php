@@ -45,7 +45,7 @@
     s.charset = 'UTF-8';
     s.src = 'https://yastatic.net/s3/chat/widget.js';
     n.parentNode.insertBefore(s, n);
-    s.onload = ()=>{
+    /**s.onload = ()=>{
       const helpBtn = document.querySelector('.header__help-button');
       const yaChatWidget = document.querySelector('.ya-chat-widget');
       if (yaChatWidget){
@@ -69,7 +69,7 @@
       }
       helpBtn.addEventListener('click', openYaChatWidget);
      }
-    }
+    }*/
     })();
 </script>
 
@@ -519,7 +519,60 @@
             <line x1="2.06066" y1="1.93934" x2="26.0607" y2="25.9393" stroke="white" stroke-width="3"/>
         </svg>
       </div>
-     </section>
+    </section>
+    <section class="popup popup-oneclick">
+      <div class="popup__content">
+        <svg width="28" height="27" viewBox="0 0 28 27" fill="none" class="popup__close">
+          <line x1="1.93934" y1="25.9393" x2="25.9393" y2="1.93934" stroke=" white" stroke-width="3"/>
+          <line x1="2.06066" y1="1.93934" x2="26.0607" y2="25.9393" stroke="white" stroke-width="3"/>
+        </svg>
+      <?php
+      //проверяем, существуют ли переменные в массиве POST
+        if(!isset($_POST['phone']) and !isset($_POST['user_name']) and !isset($_POST['email'])){
+      ?>
+        <form class="popup-oneclick__form" name="popup_oneclick" method="post">
+          <h1 class="popup-oneclick__title">Быстрая покупка</h1>
+          <p class="popup-oneclick__info">Менеджер перезвонит Вам и поможет оформить заказ.
+          <?php
+            if (is_product()){
+              $product = wc_get_product( get_the_ID() );
+              echo $product->get_title();
+            }
+          ?>
+          </p>
+          <input class="popup-oneclick__name" required type="text" name="user_name" placeholder="Имя">
+          <input class="popup-oneclick__phone" required type="tel" name="phone" placeholder="Телефон" pattern="^(\+7|8)\s?(\(\d{3}\)|\d{3})\s?[\-]?\d{3}[\-]?\d{2}[\-]?\d{2}$">
+          <input class="popup-oneclick__email" required type="email" name="email" placeholder="Эл. адрес" pattern="^[A-Za-z]((\.|-)?[A-Za-z0-9]+)+@[A-Za-z0-9](-?[A-Za-z0-9]+)+(\.[A-Za-z]{2,})+$">
+          <button type="submit" class="popup-oneclick__button">Отправить</button>
+        </form>
+      <?php
+    } else {
+        //показываем форму
+        $user_name = $_POST['user_name'];
+        $phone = $_POST['phone'];
+        $email = $_POST['email'];
+
+        $user_name = htmlspecialchars($user_name);
+        $phone = htmlspecialchars($phone);
+        $email = htmlspecialchars($email);
+
+        $user_name = urldecode($user_name);
+        $phone = urldecode($phone);
+        $$email = urldecode($$email);
+
+        $user_name = trim($user_name);
+        $phone = trim($phone);
+        $email = trim($email);
+
+        if (wp_mail("lyapindm@yandex.ru", "Заявка с сайта aquaphor.store", "Имя:".$user_name.". Телефон:".$phone." Email:".$email."From: master@aquaphor.email \r\n")){
+            echo "Сообщение успешно отправлено";
+          } else {
+            echo "При отправке сообщения возникли ошибки";
+          }
+        }
+      ?>
+       </div>
+    </section>
   </header>
 		<?php
 		/**
