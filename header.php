@@ -532,14 +532,27 @@
       ?>
         <form class="popup-oneclick__form" name="popup_oneclick" method="post">
           <h1 class="popup-oneclick__title">Быстрая покупка</h1>
-          <p class="popup-oneclick__info">Менеджер перезвонит Вам и поможет оформить заказ.
+          <p class="popup-oneclick__info">Менеджер перезвонит Вам и поможет оформить заказ.</p>
           <?php
             if (is_product()){
+              ?>
+              <p class="popup-oneclick__info">
+              <?php
               $product = wc_get_product( get_the_ID() );
-              echo $product->get_title();
+              $product_name = $product->get_title();
+              echo $product_name;
+              ?>
+              </p>
+              <p class="popup-oneclick__info"> По цене:
+              <?php
+                $product_price = $product->get_price();
+              echo $product_price;
+              ?>
+                руб.
+              </p>
+              <?php
             }
           ?>
-          </p>
           <input class="popup-oneclick__name" required type="text" name="user_name" placeholder="Имя">
           <input class="popup-oneclick__phone" required type="tel" name="phone" placeholder="Телефон" pattern="^(\+7|8)\s?(\(\d{3}\)|\d{3})\s?[\-]?\d{3}[\-]?\d{2}[\-]?\d{2}$">
           <input class="popup-oneclick__email" required type="email" name="email" placeholder="Эл. адрес" pattern="^[A-Za-z]((\.|-)?[A-Za-z0-9]+)+@[A-Za-z0-9](-?[A-Za-z0-9]+)+(\.[A-Za-z]{2,})+$">
@@ -551,20 +564,38 @@
         $user_name = $_POST['user_name'];
         $phone = $_POST['phone'];
         $email = $_POST['email'];
+        $product = wc_get_product( get_the_ID() );
+        $product_name = $product->get_title();
+        $product_price = $product->get_price();
+
 
         $user_name = htmlspecialchars($user_name);
         $phone = htmlspecialchars($phone);
         $email = htmlspecialchars($email);
+        $product_name = htmlspecialchars($product_name);
+        $product_price = htmlspecialchars($product_price);
+
 
         $user_name = urldecode($user_name);
         $phone = urldecode($phone);
-        $$email = urldecode($$email);
+        $email = urldecode($email);
+        $product_name = urldecode($product_name);
+        $product_price = urldecode($product_price);
 
         $user_name = trim($user_name);
         $phone = trim($phone);
         $email = trim($email);
+        $product_name = trim($product_name);
+        $product_price = trim($product_price);
 
-        if (wp_mail("lyapindm@yandex.ru", "Заявка с сайта aquaphor.store", "Имя:".$user_name.". Телефон:".$phone." Email:".$email."From: master@aquaphor.email \r\n")){
+        if (wp_mail("lyapindm@yandex.ru",
+        "Заявка с сайта aquaphor.store",
+        "Имя:<br>".$user_name.
+        ".<br>Телефон:<br> ".$phone.
+        ".<br>Email:<br>".$email.
+        ".<br>Название продукта:<br>".$product_name.
+        ".<br>Цена:<br>".$product_price.
+        "<br>Заявку на покупку с сайта aquaphor.store\r\n")){
             echo "Сообщение успешно отправлено";
           } else {
             echo "При отправке сообщения возникли ошибки";

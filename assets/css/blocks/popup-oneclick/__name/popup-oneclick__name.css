@@ -1,6 +1,7 @@
 input[type="text"].popup-oneclick__name {
+  height: 50px;
   padding-top: 14px;
   padding-bottom: 14px;
-  margin-bottom: 15px;
-  margin-top: 45px;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
