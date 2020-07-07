@@ -1,0 +1,11 @@
+.popup-oneclick__title {
+  font-family: Proxima Nova Rg;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+  margin-bottom: 42px;
+}

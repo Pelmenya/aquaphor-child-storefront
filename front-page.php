@@ -16,7 +16,7 @@ get_header(); ?>
 <section class="promo">
   <div class="promo__content">
     <div class="promo__description">
-      <h1 class="promo__title">Современное решение традиционных проблем</h1>
+      <h1 class="promo__title">Системы очистки воды для коттеджей и квартир</h1>
       <p class="promo__records">
         Встречайте универсальное решение, которое подарит премиальное качество
         воды для кажджого члена вашей семьи.
@@ -51,9 +51,7 @@ get_header(); ?>
       </div>
       <div class="services__service">
         <h3 class="services__title-service">БЫСТРАЯ&nbsp;ДОСТАВКА</h3>
-        <p class="services__service-description">
-          Текст об условиях бесплатной доставки
-        </p>
+        <p class="services__service-description"></p>
       </div>
     </div>
     <div class="services__wrap">
@@ -72,9 +70,7 @@ get_header(); ?>
       </div>
       <div class="services__service">
         <h3 class="services__title-service">БЕСПЛАТНАЯ&nbsp;УСТАНОВКА</h3>
-        <p class="services__service-description">
-          Текст о монтаже и установке
-        </p>
+        <p class="services__service-description"></p>
       </div>
     </div>
     <div class="services__wrap">
@@ -93,16 +89,14 @@ get_header(); ?>
       </div>
       <div class="services__service">
         <h3 class="services__title-service">ГАРАНТИЯ&nbsp;5&nbsp;ЛЕТ</h3>
-        <p class="services__service-description">
-          Текст об условиях гарантии на Waterboss
-        </p>
+        <p class="services__service-description"></p>
       </div>
     </div>
   </div>
 </section>
 <section class="top-products">
   <div class="top-products__grid-container">
-    <?php $product_id = 531;
+    <?php $product_id = 529;
           $product =  wc_get_product( $product_id );
           $title = $product->get_title();
     ?>
@@ -127,7 +121,7 @@ get_header(); ?>
         <p class="top-products__product-price top-products__product-price_black_small"><?php echo $product->get_price_html(); ?></p>
       </div>
     </a>
-    <?php $product_id = 543;
+    <?php $product_id = 727;
           $product =  wc_get_product( $product_id );
           $title = $product->get_title();
     ?>
@@ -140,7 +134,7 @@ get_header(); ?>
         </div>
       </div>
     </a>
-    <?php $product_id = 545;
+    <?php $product_id = 559;
           $product =  wc_get_product( $product_id );
           $title = $product->get_title();
     ?>
@@ -154,7 +148,7 @@ get_header(); ?>
         </div>
       </div>
     </a>
-    <?php $product_id = 543;
+    <?php $product_id = 761;
           $product =  wc_get_product( $product_id );
           $title = $product->get_title();
     ?>

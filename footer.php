@@ -42,27 +42,27 @@
             <a class="footer__col-link" href="<?php echo SITE_URL?>product/аквафор-dwm-101s-морион/">DWM-101S&nbsp;«Морион»</a>
             <a class="footer__col-link" href="<?php echo SITE_URL?>product/аквафор-dwm-201/">DWM-201</a>
             <a class="footer__col-link" href="<?php echo SITE_URL?>product/аквафор-осмо-50-исп-5/">Осмо-50</a>
-            <a class="footer__col-link" href="<?php echo SITE_URL?>">Осмо&nbsp;Классика</a>
-            <a class="footer__col-link" href="<?php echo SITE_URL?>">Осмо-Кристалл</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>product/комплект-модулей-для-аквафор-осмо-кла-2/">Осмо&nbsp;Классика</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>product/аквафор-осмо-кристалл-50-исп-4м/">Осмо-Кристалл</a>
          </div>
       </div>
       <div class="footer__columns">
         <div class="footer__col">
             <h4 class="footer__col-title">Услуги</h4>
-            <a class="footer__col-link" href="<?php echo SITE_URL?>">Анализ&nbsp;воды</a>
-            <a class="footer__col-link" href="<?php echo SITE_URL?>">Подбор&nbsp;оборудивания</a>
-            <a class="footer__col-link" href="<?php echo SITE_URL?>">Сервис&nbsp;и&nbsp;ремонт</a>
-            <a class="footer__col-link" href="<?php echo SITE_URL?>">Регистрация&nbsp;фильтра</a>
-            <a class="footer__col-link" href="<?php echo SITE_URL?>">Оплата&nbsp;и&nbsp;доставка</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>water-analysis">Анализ&nbsp;воды</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>equipment-selection">Подбор&nbsp;оборудивания</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>repair">Сервис&nbsp;и&nbsp;ремонт</a>
+            <!--a class="footer__col-link" href="<?php echo SITE_URL?>">Регистрация&nbsp;фильтра</a-->
+            <a class="footer__col-link" href="<?php echo SITE_URL?>payment">Оплата&nbsp;и&nbsp;доставка</a>
          </div>
       </div>
       <div class="footer__columns">
         <div class="footer__col">
             <h4 class="footer__col-title">Информация</h4>
-            <a class="footer__col-link" href="<?php echo SITE_URL?>">Договор&nbsp;оферты</a>
-            <a class="footer__col-link" href="<?php echo SITE_URL?>">Политика&nbsp;конфиденциальности</a>
-            <a class="footer__col-link" href="<?php echo SITE_URL?>">Пользовательское&nbsp;соглашение</a>
-            <a class="footer__col-link" href="<?php echo SITE_URL?>">Процесс&nbsp;передачи&nbsp;данных</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>договор-оферта">Договор&nbsp;оферты</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>политика-конфиденциальности">Политика&nbsp;конфиденциальности</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>пользовательское-соглашение">Пользовательское&nbsp;соглашение</a>
+            <a class="footer__col-link" href="<?php echo SITE_URL?>процесс-передачи-данных">Процесс&nbsp;передачи&nbsp;данных</a>
          </div>
       </div>
       <div class="footer__info">

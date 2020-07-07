@@ -1,0 +1,16 @@
+.popup-oneclick__content {
+  width: 665px;
+  background-color: #fff;
+  position: relative;
+  box-sizing: border-box;
+  padding-right: 70px;
+  padding-left: 70px;
+  padding-top: 45px;
+  padding-bottom: 53px;
+}
+
+@media screen and (max-width: 540px) {
+  .popup-oneclick__content {
+    width: calc(100% - 60px);
+  }
+}

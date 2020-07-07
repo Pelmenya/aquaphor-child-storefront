@@ -1,3 +1,6 @@
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup-oneclick/popup-oneclick.css);
+
 /*рисунок*/
 .woocommerce-product-gallery__wrapper {
   background-color: #f7f8f9;
