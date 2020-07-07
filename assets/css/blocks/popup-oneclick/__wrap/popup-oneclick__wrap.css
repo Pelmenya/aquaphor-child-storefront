@@ -1,0 +1,10 @@
+.popup-oneclick__wrap {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  margin-left: 40px;
+}
+
+.popup-oneclick__wrap:first-of-type {
+  margin-left: 0px;
+}

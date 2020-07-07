@@ -1,6 +1,6 @@
 .popup-oneclick__button {
-  width: 156px;
-  height: 50px;
+  width: 101px;
+  height: 31px;
   border-radius: 3px;
   background-color: var(--blue-blue);
   font-family: Proxima Nova Rg;
@@ -12,6 +12,7 @@
   letter-spacing: normal;
   text-align: center;
   color: var(--white);
+  padding: 0;
 }
 
 .popup-oneclick__button:hover {

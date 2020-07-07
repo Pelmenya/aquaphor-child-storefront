@@ -472,7 +472,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     wp_enqueue_style( 'front', AQUAPHOR_THEME_CSS . 'front-page.css', array(), '1.1', 'all');
     wp_enqueue_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmount.js', true);
   }
-  // wp_enqueue_script( 'ya_chat_widget', AQUAPHOR_THEME_JS_WIDGETS . 'ya-chat-widget.js', true);
+  wp_enqueue_script( 'ya_chat_widget', AQUAPHOR_THEME_JS_WIDGETS . 'ya-chat-widget.js', true);
   wp_enqueue_script( 'cart', AQUAPHOR_THEME_JS_FUNCTIONS . 'visibleCart.js', true);
 }
 
