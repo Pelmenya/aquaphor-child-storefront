@@ -17,9 +17,8 @@ get_header();
   <h1 class="title title_about-company">Подбор оборудования</h1>
   <p class="description">
     <span class="description__insert">
-      Текст-«рыба» — это заготовленный, скопированный или собственноручно написанный текст
-      для экономии времени, который вставляется в макет страницы для демонстрации его условного
-      внешнего наполнения в процессе разработки или для тестирования шрифта.
+      Если вы уже сделали анализ воды, можете ввести данные и калькулятор
+      подберет вам индивидуально оборудование под ваши требования.
     </span>
   </p>
   <section class="equipment-selection">
@@ -65,8 +64,8 @@ get_header();
         </div>
         <div class="equipment-selection__choice-col">
           <h4 class="description">Точки водоразбора?</h4>
-          <input  class="equipment-selection__point-water" type="range" value="6" min="1" max="6" step="1" name="pa_water_points">
-          <label class="equipment-selection__choice-color equipment-selection__choice-color_water-points" for="pa_water_points">От 1 до 6 точек</label>
+          <input  class="equipment-selection__point-water" type="range" value="7" min="1" max="7" step="1" name="pa_water_points">
+          <label class="equipment-selection__choice-color equipment-selection__choice-color_water-points" for="pa_water_points">От 1 до 7 точек</label>
         </div>
       </div>
       <table class="equipment-selection__table">

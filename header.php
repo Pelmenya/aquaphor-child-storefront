@@ -101,9 +101,9 @@
                   </g>
               </g>
             </svg>
-            <p class="header__top-item-text">Московская&nbsp;область</p>
+            <p class="header__top-item-text">Москва&nbsp;и&nbsp;МО</p>
           </a>
-          <a href="tel:8-800-555-30-35" class="header__top-item">
+          <a href="tel:+7-499-577-03-79" class="header__top-item">
             <svg class="header__item-icon" width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g id="81-mini-icons" class="header__item-icon-fill" transform="translate(-554.000000, -281.000000)">
@@ -113,7 +113,7 @@
                   </g>
               </g>
             </svg>
-            <p class="header__top-item-text">8&nbsp;800&nbsp;555&#150;30&#150;35</p>
+            <p class="header__top-item-text">+7&nbsp;(499)&nbsp;577&#150;03&#150;79</p>
           </a>
           <a href="https://yandex.ru/maps/10756/stupino/?ll=38.073319%2C54.901220&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Forg%3Foid%3D152679979252&z=18" class="header__top-item">
             <svg class="header__item-icon" width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -125,7 +125,7 @@
                   </g>
               </g>
             </svg>
-            <time datetime="1w 5d 8h" class="header__top-item-text">Пн&nbsp;&#150;&nbsp;Вс&#58;&nbsp;08&#58;30&nbsp;&#150;&nbsp;17&#58;30</time>
+            <time datetime="1w 5d 8h" class="header__top-item-text">Пн&nbsp;&#150;&nbsp;Вс&#58;&nbsp;9&#58;00&nbsp;&#150;&nbsp;21&#58;00</time>
           </div>
         </a>
         <div class="header__container-flex">
@@ -291,7 +291,7 @@
                   </g>
                 </svg>
                 <!--span class="header__goods-count">
-                  <php storefront_cart_link(); ?>
+                  <php storefront_cart_link();?>
                 </span-->
                 <div class="header__basket-popup">
                   <?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
@@ -486,7 +486,7 @@
                   </g>
                 </svg-->
               </a>
-              <a href="<?php echo SITE_URL?>" class="header__nav-bottom">
+              <a href="<?php echo SITE_URL?>discounts" class="header__nav-bottom">
                 <strong class="header__nav-bottom-text header__nav-bottom-text_orange">СКИДКИ</strong>
                 <svg class="header__item-icon-sale" width="12px" height="18px" viewBox="0 0 12 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -581,7 +581,6 @@
           <button type="submit" class="popup-oneclick__button">Отправить</button>
           <div>
         </form>
-
       <?php
     } else {
         //показываем форму

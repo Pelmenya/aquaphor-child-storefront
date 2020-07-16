@@ -181,18 +181,18 @@ add_filter( 'woocommerce_my_account_get_addresses', 'aquaphor_remove_billing_adr
 
 
 function custom_override_checkout_fields( $fields ) {
-  // unset($fields['billing']['billing_last_name']);
+  //unset($fields['billing']['billing_last_name']);
   // unset($fields['billing']['billing_company']);
   // unset($fields['billing']['billing_address_1']);
-  // unset($fields['billing']['billing_address_2']);
+  unset($fields['billing']['billing_address_2']);
   // unset($fields['billing']['billing_city']);
-  // unset($fields['billing']['billing_postcode']);
+  unset($fields['billing']['billing_postcode']);
   unset($fields['billing']['billing_country']);
   // unset($fields['billing']['billing_state']);
   // unset($fields['billing']['billing_phone']);
   // unset($fields['order']['order_comments']);
   // unset($fields['billing']['billing_email']);
-  // unset($fields['account']['account_username']);
+  //unset($fields['account']['account_username']);
   // unset($fields['account']['account_password']);
   // unset($fields['account']['account_password-2']);
 
@@ -362,7 +362,7 @@ function aquaphor_theme_scripts() {
 
   $url_query = $url[1];
 
-
+  $url_discounts = '/discounts';
   $url_my_account = '/my-account';
   $url_my_account_lost_password = '/my-account/lost-password';
 	$url_my_account_edit_address = '/my-account/edit-address';
@@ -384,6 +384,10 @@ is_page('о-сайте');  неправильно
 is_page( sanitize_title('о-сайте') );  правильно  */
   if (is_page( 'contacts' ) ){
     wp_enqueue_style( 'contacts', AQUAPHOR_THEME_CSS . 'contacts.css', array(), '1.1', 'all');
+  }
+
+  if (strcasecmp($url_str, $url_discounts) == 0){
+    wp_enqueue_script('discounts-script', AQUAPHOR_THEME_JS . 'discounts/index.js', true);
   }
 
   if (is_page( array('delivery', 'payment', 'guarantees', 'about-company', 'water-analysis', 'equipment-selection', 'repair' ) ) ){
@@ -474,6 +478,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
   }
   wp_enqueue_script( 'ya_chat_widget', AQUAPHOR_THEME_JS_WIDGETS . 'ya-chat-widget.js', true);
   wp_enqueue_script( 'cart', AQUAPHOR_THEME_JS_FUNCTIONS . 'visibleCart.js', true);
+  wp_enqueue_script( 'all-discounts', AQUAPHOR_THEME_JS . 'discounts/all-index.js', true);
 }
 
 add_action( 'wp_footer', 'aquaphor_theme_scripts' );

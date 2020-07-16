@@ -3,7 +3,7 @@ function createElementDOM(
   classElement,
   textContent = '',
   styleElement = '',
-  datetime = '',
+  datetime = ''
 ) {
   const newElement = document.createElement(element);
   newElement.className = classElement;
@@ -36,11 +36,26 @@ function main() {
     const orderCommentsPlaceholder = document.querySelector('#order_comments');
     orderCommentsPlaceholder.attributes.placeholder.nodeValue = 'Напишите комментарий к заказу';
 
-
     const h3 = woocommerceBilling.querySelector('.woocommerce-billing-fields h3');
     h3.textContent = 'Адрес доставки';
 
     const orderCommentsField = document.querySelector('#order_comments_field');
+
+    // город и улица
+    const adressBlock = createElementDOM('div', 'checkout-inputs');
+    const billingCity = document.querySelector('#billing_city_field');
+    const billingAdress = document.querySelector('#billing_address_1_field');
+    adressBlock.appendChild(billingCity);
+    adressBlock.appendChild(billingAdress);
+    woocommerceBilling.appendChild(adressBlock);
+
+    // город и улица
+    const telEmailBlock = createElementDOM('div', 'checkout-inputs');
+    const telephone = document.querySelector('#billing_phone_field');
+    const email = document.querySelector('#billing_email_field');
+    telEmailBlock.appendChild(telephone);
+    telEmailBlock.appendChild(email);
+    orderCommentsField.prepend(telEmailBlock);
     const header = createElementDOM('h3', '', 'Дополнительная информация');
     orderCommentsField.prepend(header);
 
@@ -77,7 +92,8 @@ function main() {
           woocommerceBillingLabels[item].textContent = '';
         }
         if (woocommerceBillingLabels[item].attributes.for.nodeValue === 'order_comments') {
-          woocommerceBillingLabels[item].textContent = 'Добавьте комментарий к заказу (при необходимости)';
+          woocommerceBillingLabels[item].textContent =
+            'Добавьте комментарий к заказу (при необходимости)';
         }
       }
     });

@@ -130,7 +130,7 @@ get_header(); ?>
         <img  src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($product_id), 'thumbnail' );?>" class="top-products__pic-small" alt="<?php echo $title;?>">
         <div class="top-products__about-product">
           <h4 class="top-products__product-title top-products__product-title_black_small"><?php echo $title;?></h4>
-          <p class="top-products__product-price top-products__product-price_black_small"><?php echo $product->get_price_html(); ?></p>
+          <p class="top-products__product-price top-products__product-price_black_small"><?php echo $product->get_price_html();?></p>
         </div>
       </div>
     </a>
