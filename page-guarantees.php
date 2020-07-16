@@ -26,7 +26,7 @@ get_header();
     <span class="description__insert">На комплексные системы водоочистки WaterBoss и WaterMax гарантия</span>
       5 лет.
       <span class="description__insert">С подробными правилами покупки вы можете ознакомиться</span>
-      <a class="description__link" href="#">здесь</a>.
+      <a class="description__link" href="<?php echo SITE_URL?>договор-оферта/">здесь</a>.
   </p>
   <h3 class="sub-title">Возврат</h3>
   <p class="description">

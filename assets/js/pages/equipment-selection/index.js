@@ -72,6 +72,9 @@ function main() {
       case 6:
         equipmentSelectionWaterPointsLabel.textContent = 'От 1 до 6 точек';
         break;
+      case 7:
+        equipmentSelectionWaterPointsLabel.textContent = 'От 1 до 7 точек';
+        break;
       default:
         equipmentSelectionWaterPointsLabel.textContent = 'одна';
     }
@@ -99,12 +102,10 @@ function main() {
     });
     dataForm.push({ name: choiceTasteRadioBtn[0].name, value: choiceTasteRadioBtn.value });
     dataForm.push({ name: waterPoints.name, value: waterPoints.value });
-    Object.keys(allTableInputs).forEach(
-      (index) => dataForm.push({
-        name: allTableInputs[index].name,
-        value: allTableInputs[index].value,
-      }),
-    );
+    Object.keys(allTableInputs).forEach((index) => dataForm.push({
+      name: allTableInputs[index].name,
+      value: allTableInputs[index].value,
+    }));
     /** проверяем все введеные в форму значения на соответствие диапазона каждого аттрибута
      * каждой системы. Затем берем только те системы, у которых все атрибуты подходят
      * под введеные значения, далее если есть системы то сортируем и ищем с наименьшей

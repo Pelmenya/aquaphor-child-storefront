@@ -193,13 +193,11 @@ tr.woocommerce-shipping-totals.shipping {
   color: var(--white);
 }
 
-
 #payment .payment_methods li input[type="radio"]:first-child:checked + label::before {
   font-size: 20px;
   color: var(--blue-blue);
   content: "\f110";
 }
-
 
 #payment .payment_methods > .wc_payment_method > label::before {
   -webkit-font-smoothing: antialiased;
@@ -221,7 +219,6 @@ tr.woocommerce-shipping-totals.shipping {
   transition: color, ease, 0.2s;
 }
 
-
 .payment_box.payment_method_cod p {
   font-family: Proxima Nova Rg;
   font-size: 14px;
@@ -231,4 +228,33 @@ tr.woocommerce-shipping-totals.shipping {
   line-height: normal;
   letter-spacing: normal;
   color: var(--dark);
+}
+
+#billing_city_field {
+  width: 45.4545454545%;
+  float: left;
+  margin-right: 9.0909090909%;
+}
+
+#billing_address_1_field {
+  width: 45.4545454545%;
+}
+
+#billing_phone_field {
+  width: 45.4545454545%;
+  float: left;
+  margin-right: 9.0909090909%;
+}
+
+#billing_email_field {
+  width: 45.4545454545%;
+}
+
+.checkout-inputs {
+  width: 100%;
+  display: flex;
+}
+
+#order_comments{
+  height: 163px;
 }
