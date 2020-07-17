@@ -84,6 +84,10 @@ function main() {
     equipmentSelectionCalculateBtn.disabled = true;
     let valid = true;
     if (paClearTurbidityRadioBtn.value !== '' && choiceTasteRadioBtn.value !== '') {
+      // Заменяем все запятые на точки
+      Object.keys(allTableInputs).forEach((index) => {
+        allTableInputs[index].value = allTableInputs[index].value.replace(',', '.');
+      });
       // нет ни одного такого, что пуст или не приобразуется в число
       valid = !Object.keys(allTableInputs).some(
         (index) => Number.isNaN(Number(allTableInputs[index].value)) || allTableInputs[index].value === '',
