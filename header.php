@@ -280,6 +280,9 @@
                 <?php the_widget( 'WC_Widget_Product_Search', 'title=' ); ?>
               </div>
             <div class="header__item-icons">
+              <div class="header__goods-count">
+                <?php storefront_cart_link();?>
+              </div>
               <a href="<?php echo SITE_URL?>cart" class="header__basket-container">
                 <svg class="header__item-icon header__item-icon_19px" viewBox="0 1 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -290,9 +293,6 @@
                       </g>
                   </g>
                 </svg>
-                <!--span class="header__goods-count">
-                  <php storefront_cart_link();?>
-                </span-->
                 <div class="header__basket-popup">
                   <?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
                 </div>
@@ -418,8 +418,6 @@
                   </g>
                 </svg>
               </div>
-
-
               <div class="header__nav-bottom header__nav-bottom_drinking">
               <div class="header__menu header__menu_drinking">
                 <div class="header__menu-col">

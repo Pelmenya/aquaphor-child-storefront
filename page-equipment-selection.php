@@ -72,7 +72,7 @@ get_header();
         <thead>
           <tr class="equipment-selection__choice-item">
             <td class="equipment-selection__td">
-              <label class="equipment-selection__elem" for="pa_ph">Реакция среды pH</label>
+              <label class="equipment-selection__elem"  for="pa_ph">Реакция среды pH</label>
               <input class="equipment-selection__elem-value" value="6.9" placeholder="Введите значение..." type="text" name="pa_ph">
             </td>
             <td class="equipment-selection__td">
