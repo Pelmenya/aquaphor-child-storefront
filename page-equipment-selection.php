@@ -73,51 +73,51 @@ get_header();
           <tr class="equipment-selection__choice-item">
             <td class="equipment-selection__td">
               <label class="equipment-selection__elem"  for="pa_ph">Реакция среды pH</label>
-              <input class="equipment-selection__elem-value" value="6.9" placeholder="Введите значение..." type="text" name="pa_ph">
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_ph">
             </td>
             <td class="equipment-selection__td">
               <label class="equipment-selection__elem" for="pa_oxidability">Окисляемость</label>
-              <input class="equipment-selection__elem-value" value="2" placeholder="Введите значение..." type="text" name="pa_oxidability">
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_oxidability">
             </td>
           </tr>
           <tr class="equipment-selection__choice-item">
             <td class="equipment-selection__td">
               <label class="equipment-selection__elem" for="pa_tds">Минерализация</label>
-              <input class="equipment-selection__elem-value" value="302" placeholder="Введите значение..." type="text" name="pa_tds">
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_tds">
             </td>
             <td class="equipment-selection__td">
               <label class="equipment-selection__elem" for="pa_mn">Марганец</label>
-              <input class="equipment-selection__elem-value" value="0.03" placeholder="Введите значение..." type="text" name="pa_mn">
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_mn">
             </td>
           </tr>
           <tr class="equipment-selection__choice-item">
             <td class="equipment-selection__td">
               <label class="equipment-selection__elem" for="pa_tdh">Жесткость</label>
-              <input class="equipment-selection__elem-value" value="7.5" placeholder="Введите значение..." type="text" name="pa_tdh">
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_tdh">
             </td>
             <td class="equipment-selection__td">
               <label class="equipment-selection__elem" for="pa_ftor">Фториды</label>
-              <input class="equipment-selection__elem-value" value="0.52" placeholder="Введите значение..." type="text" name="pa_ftor">
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_ftor">
             </td>
           </tr>
           <tr class="equipment-selection__choice-item">
             <td class="equipment-selection__td">
               <label class="equipment-selection__elem" for="pa_ferrum">Железо</label>
-              <input class="equipment-selection__elem-value" value="0.03" placeholder="Введите значение..." type="text" name="pa_ferrum">
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_ferrum">
             </td>
             <td class="equipment-selection__td">
               <label class="equipment-selection__elem" for="pa_h2s">Сероводород</label>
-              <input class="equipment-selection__elem-value" value="0.004" placeholder="Введите значение..." type="text" name="pa_h2s">
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_h2s">
             </td>
           </tr>
           <tr class="equipment-selection__choice-item">
             <td class="equipment-selection__td">
               <label class="equipment-selection__elem" for="pa_nitrate">Нитраты</label>
-              <input class="equipment-selection__elem-value" value="1.5" placeholder="Введите значение..." type="text" name="pa_nitrate">
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_nitrate">
             </td>
             <td class="equipment-selection__td">
               <label class="equipment-selection__elem" for="pa_sulphide">Сульфиды</label>
-              <input class="equipment-selection__elem-value" value="0.008" placeholder="Введите значение..." type="text" name="pa_sulphide">
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_sulphide">
             </td>
           </tr>
         </thead>
