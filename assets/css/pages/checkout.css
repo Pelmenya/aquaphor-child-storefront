@@ -158,11 +158,9 @@ tr.woocommerce-shipping-totals.shipping th {
   letter-spacing: normal;
   color: var(--dark);
   background-color: #fff;
-  display: none;
 }
 
 tr.woocommerce-shipping-totals.shipping {
-  display: none;
 }
 
 #payment .payment_methods > li:not(.woocommerce-notice) {

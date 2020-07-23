@@ -24,6 +24,13 @@
   grid-area: sales-leader;
   background-color: var(--blue-blue);
   position: relative;
+  transition: transform .5s;
+}
+
+.top-products__sales-leader:hover {
+  transform: scale(0.98);
+  z-index: 999;
+  box-shadow: 3px 3px 5px rgba(1,2,3,0.4);
 }
 
 .top-products__about-product {
@@ -139,6 +146,7 @@ img.top-products__pic-small {
   display: flex;
   align-items: center;
   position: relative;
+  transition: transform .5s;
 }
 
 .top-products__top-product1 {
@@ -171,3 +179,13 @@ img.top-products__pic-small {
   border: 1px solid red;
 }
 */
+
+.top-products__top-product1:hover,
+.top-products__top-product2:hover,
+.top-products__top-product3:hover,
+.top-products__top-product4:hover,
+.top-products__top-product5:hover {
+  transform: scale(0.98);
+  z-index: 999;
+  box-shadow: 3px 3px 5px rgba(1,2,3,0.4);
+}
