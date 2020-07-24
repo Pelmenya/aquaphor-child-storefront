@@ -160,9 +160,6 @@ tr.woocommerce-shipping-totals.shipping th {
   background-color: #fff;
 }
 
-tr.woocommerce-shipping-totals.shipping {
-}
-
 #payment .payment_methods > li:not(.woocommerce-notice) {
   background-color: #fff;
 }
@@ -232,10 +229,12 @@ tr.woocommerce-shipping-totals.shipping {
   width: 45.4545454545%;
   float: left;
   margin-right: 9.0909090909%;
+  display: none;
 }
 
 #billing_address_1_field {
   width: 45.4545454545%;
+  width: 100%;
 }
 
 #billing_phone_field {
@@ -253,6 +252,92 @@ tr.woocommerce-shipping-totals.shipping {
   display: flex;
 }
 
-#order_comments{
+.checkout-inputs_adress {
+  display: none;
+}
+
+#order_comments {
   height: 163px;
 }
+
+.woocommerce-form-coupon-toggle {
+  display: none;
+}
+
+#order_comments {
+  display: none;
+}
+
+table.shop_table.woocommerce-checkout-review-order-table tfoot {
+  display: none;
+}
+
+#order_review_heading {
+  display: none;
+}
+
+#pickup-items-field-for-0 {
+  display: none;
+}
+
+.pickup-location-address {
+  display: none;
+}
+
+input[type='radio'].shipping_method {
+  cursor: pointer;
+}
+
+input[type='radio'].shipping_method {
+  position: relative;
+  height: 14px;
+  width: 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+input[type='radio'].shipping_method::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid var(--blue-blue);
+}
+
+input[type='radio'].shipping_method:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  background-color: var(--blue-blue);
+  transform: translate(-50%, -50%);
+  visibility: visible;
+}
+
+ul#shipping_method li {
+  display: flex;
+  align-items: center;
+}
+
+ul#shipping_method li:last-of-type {
+  margin-top: 30px;
+}
+
+.shiping-head{
+  margin-bottom: 6px;
+}
+
+.woocommerce-billing-fields__field-wrapper p {
+  margin-bottom: 18px;
+}
+
