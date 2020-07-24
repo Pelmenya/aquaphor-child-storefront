@@ -53,12 +53,12 @@
       const yaChatHeaderClose = yaChatWidget.querySelector('.ya-chat-header__close');
       const yaChatWidgetMount = yaChatWidget.querySelector('.ya-chat-widget__mount');
 
-     // yaChatWidget.style.visibility = 'hidden';
-     // yaChatButton.classList.add('ya-chat-button_hidden');
+      yaChatWidget.style.visibility = 'hidden';
+      yaChatButton.classList.add('ya-chat-button_hidden');
 
       yaChatHeaderClose.addEventListener('click', () => {
-      //  yaChatWidget.style.visibility = 'hidden';
-      //  yaChatButton.classList.add('ya-chat-button_hidden');
+      yaChatWidget.style.visibility = 'hidden';
+      yaChatButton.classList.add('ya-chat-button_hidden');
       });
 
       function openYaChatWidget() {

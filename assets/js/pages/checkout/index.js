@@ -23,6 +23,7 @@ function main() {
   // Заголовок
   const h1 = document.querySelector('.entry-title');
   h1.textContent = 'Оформление';
+  const entryContent = document.querySelector('.entry-content');
 
   /**
    *  Ссылка на меню активная
@@ -32,6 +33,9 @@ function main() {
 
   if (woocommerceBilling) {
     const woocommerceBillingLabels = document.querySelectorAll('label');
+    const shopTable = document.querySelector('.shop_table.woocommerce-checkout-review-order-table');
+    entryContent.prepend(shopTable);
+    entryContent.prepend(h1);
 
     const orderCommentsPlaceholder = document.querySelector('#order_comments');
     orderCommentsPlaceholder.attributes.placeholder.nodeValue = 'Напишите комментарий к заказу';
@@ -42,22 +46,43 @@ function main() {
     const orderCommentsField = document.querySelector('#order_comments_field');
 
     // город и улица
+    /*
     const adressBlock = createElementDOM('div', 'checkout-inputs');
     const billingCity = document.querySelector('#billing_city_field');
     const billingAdress = document.querySelector('#billing_address_1_field');
     adressBlock.appendChild(billingCity);
     adressBlock.appendChild(billingAdress);
     woocommerceBilling.appendChild(adressBlock);
+    // adressBlock.classList.add('checkout-inputs_adress');
+    */
 
-    // город и улица
+    // тел и email
     const telEmailBlock = createElementDOM('div', 'checkout-inputs');
     const telephone = document.querySelector('#billing_phone_field');
     const email = document.querySelector('#billing_email_field');
     telEmailBlock.appendChild(telephone);
     telEmailBlock.appendChild(email);
-    orderCommentsField.prepend(telEmailBlock);
-    const header = createElementDOM('h3', '', 'Дополнительная информация');
-    orderCommentsField.prepend(header);
+
+    woocommerceBilling.appendChild(telEmailBlock);
+
+    // Достаем метод доставки
+    const shipingWrapper = entryContent.querySelector('ul#shipping_method');
+    orderCommentsField.appendChild(shipingWrapper);
+    // Доставки
+    const shipings = shipingWrapper.querySelectorAll('li');
+    if (shipings) {
+      const header = createElementDOM('h3', 'shiping-head', 'Доставка');
+      const billingWooccm12 = entryContent.querySelector('#billing_wooccm12');
+      const adressShipping = entryContent.querySelector('#billing_address_1');
+      shipingWrapper.prepend(billingWooccm12);
+      shipingWrapper.prepend(shipings[1]);
+      shipingWrapper.prepend(adressShipping);
+      shipingWrapper.prepend(shipings[0]);
+      shipingWrapper.prepend(header);
+    }
+
+    const orderSumma = shopTable.querySelector('tfoot').querySelector('.order-total');
+    entryContent.querySelector('#order_review').prepend(orderSumma);
 
     Object.keys(woocommerceBillingLabels).forEach((item) => {
       if (woocommerceBillingLabels[item].attributes.for) {
@@ -71,13 +96,13 @@ function main() {
           woocommerceBillingLabels[item].textContent = 'Отчество';
         }
         if (woocommerceBillingLabels[item].attributes.for.nodeValue === 'billing_wooccm12') {
-          woocommerceBillingLabels[item].textContent = 'Район';
+          woocommerceBillingLabels[item].textContent = '';
         }
         if (woocommerceBillingLabels[item].attributes.for.nodeValue === 'billing_city') {
           woocommerceBillingLabels[item].textContent = 'Город';
         }
         if (woocommerceBillingLabels[item].attributes.for.nodeValue === 'billing_address_1') {
-          woocommerceBillingLabels[item].textContent = 'Улица';
+          woocommerceBillingLabels[item].textContent = '';
         }
         if (woocommerceBillingLabels[item].attributes.for.nodeValue === 'billing_postcode') {
           woocommerceBillingLabels[item].textContent = 'Индекс';
@@ -92,8 +117,12 @@ function main() {
           woocommerceBillingLabels[item].textContent = '';
         }
         if (woocommerceBillingLabels[item].attributes.for.nodeValue === 'order_comments') {
-          woocommerceBillingLabels[item].textContent =
-            'Добавьте комментарий к заказу (при необходимости)';
+          woocommerceBillingLabels[item].textContent = '';
+        }
+        if (
+          woocommerceBillingLabels[item].attributes.for.nodeValue === 'shipping_method_0_flat_rate4'
+        ) {
+          woocommerceBillingLabels[item].textContent = 'Доставка курьером - 400 руб.';
         }
       }
     });

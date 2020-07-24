@@ -1,3 +1,12 @@
+@keyframes sos {
+  0% {
+    background: #ffcc33 radial-gradient(circle, transparent 1%, #ffcc33 1%) center/15000%;
+  }
+  100% {
+    background-color: var(--dull-orange);
+  }
+}
+
 .header__help-button {
   width: 114px;
   height: 31px;
@@ -20,9 +29,21 @@
   padding-top: 0;
   padding-bottom: 0;
   justify-content: space-around;
+  animation: sos ease;
+  transition: background 0.5s;
+  animation: sos;
+  animation-iteration-count:infinite
 }
 
 .header__help-button:hover {
-  background-color: #ffcc33;
+  background: #ffcc33 radial-gradient(circle, transparent 1%, #ffcc33 1%) center/15000%;
   color: var(--white);
 }
+
+.header__help-button:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+/*   setTimeOut   */
