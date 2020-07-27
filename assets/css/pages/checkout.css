@@ -272,6 +272,10 @@ table.shop_table.woocommerce-checkout-review-order-table tfoot {
   display: none;
 }
 
+table.shop_table.woocommerce-checkout-review-order-table {
+  margin-top: 1.618em;
+}
+
 #order_review_heading {
   display: none;
 }
@@ -333,7 +337,7 @@ ul#shipping_method li:last-of-type {
   margin-top: 30px;
 }
 
-.shiping-head{
+.shiping-head {
   margin-bottom: 6px;
 }
 
@@ -341,3 +345,43 @@ ul#shipping_method li:last-of-type {
   margin-bottom: 18px;
 }
 
+.summa-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: var(--blue-blue);
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.total,
+.total-order-summa {
+  width: 50%;
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--white);
+  padding-left: 21px;
+}
+
+th.product-total,
+th.product-name {
+  width: 50%;
+}
+
+td.product-total,
+th.product-total {
+  padding-left: 50px;
+}
+
+#customer_details {
+  margin-top: 1.618em;
+}
+
+#billing_address_1_field{
+  display: none;
+}

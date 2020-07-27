@@ -1,9 +1,18 @@
+function amountNormalize(str) {
+  if (!str.match('руб.')) {
+    const arr = str.split('.');
+    arr.splice(arr.length - 1, 1);
+    return `${arr.join(' ')} руб.`;
+  }
+  return str;
+}
+
 function createElementDOM(
   element,
   classElement,
   textContent = '',
   styleElement = '',
-  datetime = ''
+  datetime = '',
 ) {
   const newElement = document.createElement(element);
   newElement.className = classElement;
@@ -41,20 +50,9 @@ function main() {
     orderCommentsPlaceholder.attributes.placeholder.nodeValue = 'Напишите комментарий к заказу';
 
     const h3 = woocommerceBilling.querySelector('.woocommerce-billing-fields h3');
-    h3.textContent = 'Адрес доставки';
+    h3.textContent = 'Контакты';
 
     const orderCommentsField = document.querySelector('#order_comments_field');
-
-    // город и улица
-    /*
-    const adressBlock = createElementDOM('div', 'checkout-inputs');
-    const billingCity = document.querySelector('#billing_city_field');
-    const billingAdress = document.querySelector('#billing_address_1_field');
-    adressBlock.appendChild(billingCity);
-    adressBlock.appendChild(billingAdress);
-    woocommerceBilling.appendChild(adressBlock);
-    // adressBlock.classList.add('checkout-inputs_adress');
-    */
 
     // тел и email
     const telEmailBlock = createElementDOM('div', 'checkout-inputs');
@@ -81,8 +79,16 @@ function main() {
       shipingWrapper.prepend(header);
     }
 
-    const orderSumma = shopTable.querySelector('tfoot').querySelector('.order-total');
-    entryContent.querySelector('#order_review').prepend(orderSumma);
+    const orderSumma = document
+      .querySelector('tr.order-total')
+      .querySelector('span.woocommerce-Price-amount.amount').textContent;
+    entryContent.querySelector('#order_review').insertAdjacentHTML(
+      'beforeBegin',
+      `<div class="summa-container">
+        <div class="total">Итого:</div>
+        <div class="total-order-summa">${amountNormalize(orderSumma)}</div>
+      </div>`,
+    );
 
     Object.keys(woocommerceBillingLabels).forEach((item) => {
       if (woocommerceBillingLabels[item].attributes.for) {
