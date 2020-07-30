@@ -623,7 +623,7 @@
         $product_name = trim($product_name);
         $product_price = trim($product_price);
 
-        if (wp_mail("lyapindm@yandex.ru",
+        if (wp_mail("store@aquaphor.store",
         "Заявка с сайта aquaphor.store",
         "Имя:<br>".$user_name.
         ".<br>Телефон:<br> ".$phone.
