@@ -286,6 +286,7 @@ function aquaphor_custom_tracking( $order_id ) {
   Фамилия клиента: $order_billing_last_name<br>
   Email клиента: $order_billing_email<br>
   Телефон клиента: $order_billing_phone<br>";
+  echo $order_client_info;
   // Получаем информацию по доставке
   $order_shipping_address_1 = $order_data['shipping']['address_1'];
   $order_shipping_address_2 = $order_data['shipping']['address_2'];
@@ -323,7 +324,8 @@ function aquaphor_custom_tracking( $order_id ) {
   $product_base_infо = implode('<br>', $product_info);
   $subject = "Заказ с сайта № $order_id";
   // Формируем URL в переменной $queryUrl для отправки сообщений в лиды Битрикс24
-  $queryUrl = 'https://workwater.bitrix24.ru/rest/112/334y5i6pljw3303l/crm.lead.add.json';
+  $queryUrl = 'https://workwater.bitrix24.ru/rest/350/df6z0ht7a2kcveee/crm.lead.add.json';
+  //$queryUrl = 'https://workwater.bitrix24.ru/rest/596/am0ypoebtnyl0gxj/crm.lead.add.json';
   // Формируем параметры для создания лида в переменной $queryData
   $queryData = http_build_query(array(
     'fields' => array(

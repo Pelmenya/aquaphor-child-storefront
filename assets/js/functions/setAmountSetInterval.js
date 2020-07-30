@@ -12,6 +12,15 @@ function main() {
   Object.keys(amounts).forEach((i) => {
     amounts[i].textContent = amountNormalize(amounts[i].textContent);
   });
+  const orderSumma = document
+    .querySelector('tr.order-total')
+    .querySelector('span.woocommerce-Price-amount.amount').textContent;
+
+    const totalOrderSumma = document.querySelector('.total-order-summa');
+
+  if (totalOrderSumma) {
+    totalOrderSumma.textContent = amountNormalize(orderSumma);
+  }
 }
 
 /**
@@ -19,4 +28,4 @@ function main() {
  * Без этого аякс срабатывает позже и перерисовывает наш контент
  * */
 
-setInterval(main, 2000);
+setInterval(main, 500);
