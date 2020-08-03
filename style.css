@@ -20,22 +20,21 @@
 @import url(./assets/css/pages/product.css);
 @import url(./assets/css/blocks/discounts/discounts.css);
 
-
 @import url(./assets/css/pages/orders.css);
 @import url(./assets/css/pages/view-order.css);
 @import url(./assets/css/pages/checkout.css);
 @import url(./assets/css/pages/checkout-order-received.css);
 @import url(./assets/css/pages/equipment-selection.css);
 
-div.ya-chat-widget{
+div.ya-chat-widget {
   display: none;
 }
 /*Скидки*/
-figure.woocommerce-product-gallery__wrapper{
+figure.woocommerce-product-gallery__wrapper {
   position: relative;
 }
 
-li.product.type-product{
+li.product.type-product {
   position: relative;
 }
 
@@ -44,16 +43,15 @@ span.onsale {
 }
 /*Скидки*/
 
-div.col-full{
+div.col-full {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
   padding: 0;
 }
 
-
 /* Текст для статичных страниц */
-p.content{
+p.content {
   font-family: Proxima Nova Rg;
   font-size: 16px;
   font-stretch: normal;
@@ -64,8 +62,7 @@ p.content{
   color: var(--dark);
 }
 
-
-.wp-block-group__inner-container h4{
+.wp-block-group__inner-container h4 {
   font-family: Proxima Nova Rg;
   font-size: 19px;
   font-stretch: normal;
@@ -76,7 +73,7 @@ p.content{
   font-weight: 600;
 }
 
-.wp-block-group__inner-container p{
+.wp-block-group__inner-container p {
   font-family: Proxima Nova Rg;
   font-size: 16px;
   font-stretch: normal;
@@ -89,7 +86,7 @@ p.content{
 }
 
 /*************/
-.woocommerce-info{
+.woocommerce-info {
   box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px inset;
   background-color: #f7f8f9;
   font-family: Proxima Nova Rg;
@@ -102,11 +99,11 @@ p.content{
   font-weight: normal;
 }
 
-.woocommerce-info a{
+.woocommerce-info a {
   color: var(--dark-70);
 }
 
-.woocommerce-info a:hover{
+.woocommerce-info a:hover {
   color: var(--dark-40);
 }
 
@@ -524,6 +521,10 @@ input[type="submit"],
 img {
   background-color: #f7f8f9;
   border-radius: 0px;
+}
+
+img.zoomImg {
+  display: none;
 }
 
 ul.products li.product .woocommerce-loop-product__title {

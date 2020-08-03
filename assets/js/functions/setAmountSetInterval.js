@@ -16,7 +16,7 @@ function main() {
     .querySelector('tr.order-total')
     .querySelector('span.woocommerce-Price-amount.amount').textContent;
 
-    const totalOrderSumma = document.querySelector('.total-order-summa');
+  const totalOrderSumma = document.querySelector('.total-order-summa');
 
   if (totalOrderSumma) {
     totalOrderSumma.textContent = amountNormalize(orderSumma);

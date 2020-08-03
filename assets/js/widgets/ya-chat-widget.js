@@ -1,5 +1,6 @@
 function main() {
   const helpBtn = document.querySelector('.header__help-button');
+
   document.addEventListener('DOMContentLoaded', () => {
     const yaChatWidget = document.querySelector('.ya-chat-widget');
     if (yaChatWidget) {
