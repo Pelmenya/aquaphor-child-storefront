@@ -48,14 +48,20 @@
   padding-top: 0;
   padding-bottom: 0;
   justify-content: space-around;
-  display: block;
   cursor: pointer;
-  box-shadow: 0 0 0  #ffcc33;
+  transition: background 0.5s;
+  box-shadow: 0 0 0 #ec8928;
   animation: pulse 1.2s infinite;
 }
 
 .header__help-button:hover {
   animation: none;
-  background-color: #ffcc33;
+  background: #ec8928 radial-gradient(circle, transparent 1%, #ec8928 1%) center/15000%;
   color: var(--white);
+}
+
+.header__help-button:active {
+  background-color: var(--white);
+  background-size: 100%;
+  transition: background 0s;
 }
