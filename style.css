@@ -316,6 +316,27 @@ table th {
   border-bottom: none;
 }
 
+@media screen and (max-width: 1240px) {
+  .site-content {
+    padding-right: 75px;
+    padding-left: 75px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .site-content {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .site-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .site-footer {
   display: flex;
   flex-direction: column;
@@ -521,10 +542,6 @@ input[type="submit"],
 img {
   background-color: #f7f8f9;
   border-radius: 0px;
-}
-
-img.zoomImg {
-  display: none;
 }
 
 ul.products li.product .woocommerce-loop-product__title {

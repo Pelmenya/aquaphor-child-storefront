@@ -7,3 +7,12 @@
 .header__logo-link:hover {
   opacity: .7;
 }
+
+@media screen and (max-width: 415px) {
+  .header__logo-link {
+    position: absolute;
+    top: 0;
+    left: 20;
+    margin-right: 0;
+  }
+}

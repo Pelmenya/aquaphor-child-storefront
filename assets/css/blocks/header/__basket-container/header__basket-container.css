@@ -18,3 +18,10 @@
   display: block;
 }
 */
+
+@media screen and (max-width: 415px) {
+  .header__basket-container {
+    margin-right: 0;
+    margin-top: 22px;
+  }
+}

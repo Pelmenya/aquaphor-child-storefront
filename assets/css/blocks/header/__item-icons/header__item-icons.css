@@ -4,3 +4,13 @@
    margin-left: 20px;
    position: relative;
 }
+
+@media screen and (max-width: 415px) {
+  .header__item-icons {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin-top: 3px;
+  }
+}

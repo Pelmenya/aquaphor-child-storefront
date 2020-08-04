@@ -20,3 +20,9 @@
 .header__goods-count .cart-contents:hover {
   color: #fff;
 }
+
+@media screen and (max-width: 415px) {
+  .header__goods-count{
+    top: 56px;
+  }
+}
