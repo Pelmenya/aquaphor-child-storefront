@@ -161,6 +161,7 @@
         </div>
       </div>
     </div>
+    <p class="footer__copyright footer__copyright_mobil">&copy;&nbsp;<?php  echo  absint( date('Y' ) ); ?>, ООО «Аквафор Инжиниринг», ИНН 7720460910</p>
 	</footer><!-- #colophon -->
 
 
