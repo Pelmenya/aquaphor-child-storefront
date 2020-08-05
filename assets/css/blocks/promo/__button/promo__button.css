@@ -20,3 +20,10 @@
   background-color: var(--cornflower-blue);
   color: var(--white);
 }
+
+@media screen and (max-width: 1045px) {
+  .promo__button {
+    width: 156px;
+    height: 30px;
+    }
+}

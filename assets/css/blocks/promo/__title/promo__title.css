@@ -7,3 +7,18 @@
   letter-spacing: 1px;
   color: var(--blue-blue);
 }
+
+@media screen and (max-width: 1350px) {
+  .promo__title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .promo__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}
+

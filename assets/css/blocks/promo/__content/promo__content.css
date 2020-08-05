@@ -8,16 +8,26 @@
   background-color: var(--pale-grey);
 }
 
-/*
-  background-image: url(../../../../images/background_pattern.png);
-  background-blend-mode: multiply;
-  background-size: contain;
-  transition: background-color .5s linear;
-  */
-
-/*
-.promo__content:hover {
-  background-color: rgba(0, 0, 0, 0.4);
-  transition: background-color .5s linear;
+@media screen and (max-width: 1240px) {
+  .promo__content {
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 35px;
+    }
 }
-*/
+
+@media screen and (max-width: 950px) {
+  .promo__content {
+    padding-top: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+  .promo__content {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+}
