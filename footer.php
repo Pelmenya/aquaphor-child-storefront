@@ -96,7 +96,7 @@
             </g>
           </svg>
         </div>
-        <div class="footer__category-wrap">
+        <div class="footer__category-wrap footer__category-wrap_is-close">
           <a href="<?php echo SITE_URL?>product-category/systems/waterboss/" class="footer__sub-category">WaterBoss</a>
           <a href="<?php echo SITE_URL?>product-category/systems/watermax/" class="footer__sub-category">WaterMax</a>
           <a href="<?php echo SITE_URL?>product-category/systems/aquaphor-pro/" class="footer__sub-category">Aquaphor&nbsp;Pro</a>
@@ -116,12 +116,11 @@
               </g>
             </svg>
         </div>
-        <div class="footer__category-wrap">
+        <div class="footer__category-wrap footer__category-wrap_is-close">
           <a href="<?php echo SITE_URL?>product-category/trunk/горячая/" class="footer__sub-category">Горячая вода</a>
           <a href="<?php echo SITE_URL?>product-category/trunk/холодная/" class="footer__sub-category">Холодная вода</a>
         </div>
       </div>
-
       <div class="footer__category">
         <div class="footer__category-wrap footer__category-wrap_row">
           <div class="footer__category-link">Питьевые установки</div>
@@ -135,29 +134,29 @@
             </g>
           </svg>
         </div>
-        <div class="footer__category-wrap">
+        <div class="footer__category-wrap footer__category-wrap_is-close">
           <a href="<?php echo SITE_URL?>product-category/drinking/обратный-осмос/" class="footer__sub-category">Обратный осмос</a>
           <a href="<?php echo SITE_URL?>product-category/drinking/проточный/" class="footer__sub-category">Проточный</a>
         </div>
       </div>
       <div class="footer__category">
         <div class="footer__category-wrap">
-          <a href="" class="footer__category-link">Расходники</a>
+          <a href="<?php echo SITE_URL?>product-category/trunk/" class="footer__category-link">Расходники</a>
         </div>
       </div>
       <div class="footer__category">
         <div class="footer__category-wrap">
-          <a href="" class="footer__category-link">Анализ воды</a>
+          <a href="<?php echo SITE_URL?>water-analysis/" class="footer__category-link">Анализ воды</a>
         </div>
       </div>
       <div class="footer__category">
         <div class="footer__category-wrap">
-          <a href="" class="footer__category-link">Подбор оборудования</a>
+          <a href="<?php echo SITE_URL?>equipment-selection/" class="footer__category-link">Подбор оборудования</a>
         </div>
       </div>
       <div class="footer__category">
         <div class="footer__category-wrap">
-          <a href="" class="footer__category-link">Ремонт и обслуживание</a>
+          <a href="<?php echo SITE_URL?>repair/" class="footer__category-link">Ремонт и обслуживание</a>
         </div>
       </div>
     </div>

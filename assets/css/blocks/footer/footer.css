@@ -29,6 +29,8 @@
 @import url(./__icon-white/footer__icon-white.css);
 @import url(./__item-icon/_rotating/footer__item-icon_rotating.css);
 @import url(./__copyright/_mobil/footer__copyright_mobil.css);
+@import url(./__category-wrap/_is-close/footer__category-wrap_is-close.css);
+@import url(./__category-wrap/_is-opened/footer__category-wrap_is-opened.css);
 
 
 .footer {
