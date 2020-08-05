@@ -8,3 +8,9 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+@media screen and (max-width: 500px) {
+  .footer__container {
+    display: none;
+  }
+}

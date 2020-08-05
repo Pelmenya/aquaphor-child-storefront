@@ -1,9 +1,3 @@
-function amountNormalize(str) {
-  const arr = str.split('.');
-  arr.splice(arr.length - 1, 1);
-  return `${arr.join(' ')} руб.`;
-}
-
 function dataToStrRus(str) {
   const strObj = str.split('.');
   /* const date = new Date(str.split('-'))
@@ -108,11 +102,6 @@ function main() {
     );
     Object.keys(ordersNumbers).forEach((i) => {
       ordersNumbers[i].textContent = ordersNumbers[i].textContent.replace('№', '#');
-    });
-
-    const ordersAmounts = accountOrdersTable.querySelectorAll('.amount');
-    Object.keys(ordersAmounts).forEach((i) => {
-      ordersAmounts[i].textContent = amountNormalize(ordersAmounts[i].textContent);
     });
   }
 }

@@ -1,0 +1,12 @@
+.footer__category-link {
+  font-family: Proxima Nova Rg;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: -0.12px;
+  color: var(--white);
+  display: block;
+}
+

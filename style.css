@@ -519,6 +519,11 @@ input[type="submit"],
   color: #ffffff;
 }
 
+body{
+  color: var(--dark);
+}
+
+
 :root {
   --blue-blue: #164cb5;
   --cornflower-blue: #4b7dd7;
@@ -556,3 +561,4 @@ ul.products li.product .woocommerce-loop-product__title {
   text-align: center;
   color: var(--blue-blue);
 }
+

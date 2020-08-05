@@ -422,8 +422,6 @@ is_page( sanitize_title('о-сайте') );  правильно  */
   */
   if (preg_match("/$url_my_account_view_order/i", $url_str)) {
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/view-order/index.js', true);
-    wp_enqueue_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmount.js', true);
-
   }
 
   if ((strcasecmp($url_str, $url_my_account_edit_address) == 0)&&(strcasecmp($url_query, '') == 0)) {
@@ -468,7 +466,6 @@ is_page( sanitize_title('о-сайте') );  правильно  */
 
     if (preg_match("/$url_checkout_order_received/i", $url_str)){
       wp_deregister_script('amount');
-      wp_enqueue_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmount.js', true);
       wp_enqueue_script( 'new_index', AQUAPHOR_THEME_JS . 'checkout/checkout-order-received/index.js', true);
     }
   }
@@ -476,7 +473,6 @@ is_page( sanitize_title('о-сайте') );  правильно  */
   if (is_front_page()){
     wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'front-page/index.js', true);
     wp_enqueue_style( 'front', AQUAPHOR_THEME_CSS . 'front-page.css', array(), '1.1', 'all');
-    wp_enqueue_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmount.js', true);
   }
   wp_enqueue_script( 'ya_chat_widget', AQUAPHOR_THEME_JS_WIDGETS . 'ya-chat-widget.js', true);
   wp_enqueue_script( 'cart', AQUAPHOR_THEME_JS_FUNCTIONS . 'visibleCart.js', true);

@@ -90,7 +90,7 @@
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 370px) {
   .woocommerce-product-search {
     width: 220px;
   }

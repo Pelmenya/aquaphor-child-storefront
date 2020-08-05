@@ -1,0 +1,8 @@
+.footer__item-icon {
+  height: 13px;
+  width: 13px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: block;
+}
