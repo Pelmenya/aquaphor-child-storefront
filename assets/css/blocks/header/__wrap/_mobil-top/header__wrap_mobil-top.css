@@ -1,0 +1,17 @@
+@media screen and (max-width: 680px) {
+  .header__wrap_mobil-top {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .header__wrap_mobil-top {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+}

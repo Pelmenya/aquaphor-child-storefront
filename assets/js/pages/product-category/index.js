@@ -1,16 +1,3 @@
-function amountNormalize(str) {
-  const arr = str.split('.');
-  arr.splice(arr.length - 1, 1);
-  return `${arr.join(' ')} руб.`;
-}
-
-function refreshCart() {
-  const amounts = document.querySelectorAll('.amount');
-  Object.keys(amounts).forEach((i) => {
-    amounts[i].textContent = amountNormalize(amounts[i].textContent);
-  });
-}
-
 function createElementDOM(
   element,
   classElement,
@@ -41,7 +28,6 @@ function main() {
 
   if (siteMain) {
     contentArea.style.marginTop = '52px';
-    refreshCart();
 
     const headerSort = createElementDOM('div', 'header-sort');
     siteMain.prepend(headerSort);

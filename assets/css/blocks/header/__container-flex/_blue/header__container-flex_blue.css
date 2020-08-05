@@ -6,3 +6,11 @@
   padding-top: 19px;
   padding-bottom: 19px;
 }
+
+
+@media screen and (max-width: 415px) {
+  .header__container-flex_blue {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+}

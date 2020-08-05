@@ -10,3 +10,15 @@
   color: var(--blue-blue);
   text-transform: uppercase;
 }
+
+@media screen and (max-width: 1150px) {
+  .header__nav-bottom-text {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header__nav-bottom-text {
+    font-size: 10px;
+  }
+}

@@ -1,12 +1,3 @@
-function amountNormalize(str) {
-  if (!str.match('руб.')) {
-    const arr = str.split('.');
-    arr.splice(arr.length - 1, 1);
-    return `${arr.join(' ')} руб.`;
-  }
-  return str;
-}
-
 function createElementDOM(
   element,
   classElement,
@@ -86,7 +77,7 @@ function main() {
       'beforeBegin',
       `<div class="summa-container">
         <div class="total">Итого:</div>
-        <div class="total-order-summa">${amountNormalize(orderSumma)}</div>
+        <div class="total-order-summa">${orderSumma}</div>
       </div>`,
     );
 

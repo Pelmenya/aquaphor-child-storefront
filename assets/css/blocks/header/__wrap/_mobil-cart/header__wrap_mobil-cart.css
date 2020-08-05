@@ -1,0 +1,11 @@
+
+
+@media screen and (max-width: 415px) {
+  .header__wrap_mobil-cart {
+    align-items: flex-end;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 100%;
+  }
+}
+

@@ -1,5 +1,6 @@
 function main() {
   const helpBtn = document.querySelector('.header__help-button');
+  const helpBtnMobil = document.querySelector('.header__top-item-chat');
 
   document.addEventListener('DOMContentLoaded', () => {
     const yaChatWidget = document.querySelector('.ya-chat-widget');
@@ -15,13 +16,22 @@ function main() {
         yaChatWidget.style.visibility = 'hidden';
         yaChatButton.classList.add('ya-chat-button_hidden');
       });
-
-      helpBtn.addEventListener('click', () => {
-        if (!yaChatWidgetMount.classList.contains('ya-chat-widget__mount_visible')) {
-          const event = new Event('click', { bubbles: true, cancelable: true });
-          yaChatButton.dispatchEvent(event);
-        }
-      });
+      if (helpBtn) {
+        helpBtn.addEventListener('click', () => {
+          if (!yaChatWidgetMount.classList.contains('ya-chat-widget__mount_visible')) {
+            const event = new Event('click', { bubbles: true, cancelable: true });
+            yaChatButton.dispatchEvent(event);
+          }
+        });
+      }
+      if (helpBtnMobil) {
+        helpBtnMobil.addEventListener('click', () => {
+          if (!yaChatWidgetMount.classList.contains('ya-chat-widget__mount_visible')) {
+            const event = new Event('click', { bubbles: true, cancelable: true });
+            yaChatButton.dispatchEvent(event);
+          }
+        });
+      }
     }
   });
 }

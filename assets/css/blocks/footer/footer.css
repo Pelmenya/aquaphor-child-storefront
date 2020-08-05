@@ -18,6 +18,18 @@
 @import url(./__cocial-link/_visacard/footer__cocial-link_visacard.css);
 @import url(./__cocial-link/_creditcard/footer__cocial-link_creditcard.css);
 @import url(./__columns/footer__columns.css);
+@import url(./__container-mobil/footer__container-mobil.css);
+@import url(./__category/footer__category.css);
+@import url(./__sub-category/footer__sub-category.css);
+@import url(./__category-link/footer__category-link.css);
+@import url(./__category-wrap/footer__category-wrap.css);
+@import url(./__category-wrap/_row/footer__category-wrap_row.css);
+@import url(./__category-open/footer__category-open.css);
+@import url(./__item-icon/footer__item-icon.css);
+@import url(./__icon-white/footer__icon-white.css);
+@import url(./__item-icon/_rotating/footer__item-icon_rotating.css);
+
+
 
 .footer {
   display: flex;
@@ -31,7 +43,6 @@
   letter-spacing: -0.1px;
   font-family: Proxima Nova Rg, sans-serif;
   color: var(--white);
-  min-width: 1440px;
   width: 100%;
   background-color: var(--dark);
- }
+}

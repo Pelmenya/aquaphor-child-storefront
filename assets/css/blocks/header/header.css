@@ -1,13 +1,19 @@
 @import url(./__wrap/header__wrap.css);
+@import url(./__wrap/_mobil-top/header__wrap_mobil-top.css);
+@import url(./__wrap/_mobil-cart/header__wrap_mobil-cart.css);
+
 @import url(./__top-item/header__top-item.css);
+@import url(./__top-item/_mobil/header__top-item_mobil.css);
 @import url(./__top-item-text/header__top-item-text.css);
 @import url(./__item-icon/header__item-icon.css);
 @import url(./__item-icon/_19px/header__item-icon_19px.css);
+@import url(./__item-icon/_17px/header__item-icon_17px.css);
 @import url(./__my-account-link/header__my-account-link.css);
 @import url(./__item-icon-fill/header__item-icon-fill.css);
 @import url(./__container-flex/header__container-flex.css);
 @import url(./__container-flex/_blue/header__container-flex_blue.css);
 @import url(./__container-flex/_grey/header__container-flex_grey.css);
+@import url(./__container-flex/_mobil/header__container-flex_mobil.css);
 @import url(./__logo-link/header__logo-link.css);
 @import url(./__nav-bottom/header__nav-bottom.css);
 @import url(./__nav-bottom-text/header__nav-bottom-text.css);
@@ -52,6 +58,7 @@
 @import url(./__help-icon/header__help-icon.css);
 @import url(../popup/popup.css);
 @import url(../header/__wrap/_grey/header__wrap_grey.css);
+@import url(../header/__close-item/header__close-item.css);
 
 .header {
   width: 100%;
@@ -69,6 +76,24 @@
 .woocommerce-product-search {
   width: 700px;
   margin-bottom: 0px;
+}
+
+@media screen and (max-width: 1380px) {
+  .woocommerce-product-search {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .woocommerce-product-search {
+    width: 277px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .woocommerce-product-search {
+    width: 220px;
+  }
 }
 
 .widget_product_search form::before {

@@ -1,0 +1,9 @@
+.header__top-item_mobil {
+  display: none;
+}
+
+@media screen and (max-width: 680px) {
+  .header__top-item_mobil {
+    display: flex;
+  }
+}

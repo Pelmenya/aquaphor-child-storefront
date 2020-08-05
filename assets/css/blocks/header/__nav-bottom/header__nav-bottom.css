@@ -41,3 +41,16 @@
   fill: var(--dull-orange);
   opacity: .7;
 }
+
+@media screen and (max-width: 1150px) {
+  .header__nav-bottom {
+    font-size: 12px;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .header__nav-bottom {
+    font-size: 10px;
+  }
+}

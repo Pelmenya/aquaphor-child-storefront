@@ -1,0 +1,9 @@
+.footer__category-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+

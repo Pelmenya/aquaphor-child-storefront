@@ -12,3 +12,8 @@
   margin-right: 0px;
 }
 
+@media screen and (max-width: 680px) {
+  .header__top-item {
+    margin-right: 0;
+  }
+}

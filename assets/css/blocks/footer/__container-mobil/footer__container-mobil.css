@@ -1,0 +1,12 @@
+.footer__container-mobil {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .footer__container-mobil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}

@@ -3,7 +3,7 @@ function createElementDOM(
   classElement,
   textContent = '',
   styleElement = '',
-  datetime = ''
+  datetime = '',
 ) {
   const newElement = document.createElement(element);
   newElement.className = classElement;
@@ -17,19 +17,6 @@ function createElementDOM(
     newElement.dateTime = datetime;
   }
   return newElement;
-}
-
-function amountNormalize(str) {
-  const arr = str.split('.');
-  arr.splice(arr.length - 1, 1);
-  return `${arr.join(' ')} руб.`;
-}
-
-function refreshCart() {
-  const amounts = document.querySelectorAll('.amount');
-  Object.keys(amounts).forEach((i) => {
-    amounts[i].textContent = amountNormalize(amounts[i].textContent);
-  });
 }
 
 function main() {
@@ -55,19 +42,23 @@ function main() {
 
   if (contentArea) {
     contentArea.style.marginTop = '84px';
-    refreshCart();
+    // popUp с картинкой
+    const pswp = document.querySelector('.pswp');
+    if (pswp) {
+      pswp.style.display = 'none';
+    }
     const imgWrapper = document.querySelector('.woocommerce-product-gallery__wrapper');
     if (imgWrapper) {
       imgWrapper.addEventListener('mouseover', () => {
         const img = imgWrapper.querySelector('img.zoomImg');
-        img.style.display = 'none';
+        img.style.visibility = 'hidden';
       });
     }
 
     const entrySummary = contentArea.querySelector('.entry-summary');
     entrySummary.querySelector('.woocommerce-Price-amount').style.fontFamily = 'Proxima Nova Rg';
     const shortDescription = entrySummary.querySelector(
-      '.woocommerce-product-details__short-description'
+      '.woocommerce-product-details__short-description',
     );
 
     if (shortDescription) {
@@ -110,14 +101,14 @@ function main() {
     const relatedProducts = document.querySelector('.related.products');
     if (relatedProducts) {
       const relatedProductsButtons = relatedProducts.querySelectorAll(
-        '.button.product_type_simple.add_to_cart_button.ajax_add_to_cart'
+        '.button.product_type_simple.add_to_cart_button.ajax_add_to_cart',
       );
       Object.keys(relatedProductsButtons).forEach((i) => {
         relatedProductsButtons[i].textContent = 'Добавить в корзину';
       });
     }
     const tabTitleAdditionalInformation = document.querySelector(
-      '#tab-title-additional_information a'
+      '#tab-title-additional_information a',
     );
     if (tabTitleAdditionalInformation) {
       tabTitleAdditionalInformation.textContent = 'Тех. характеристики';
