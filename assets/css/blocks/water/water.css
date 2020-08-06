@@ -1,3 +1,9 @@
 .water {
   background-color: var(--blue-blue);
 }
+
+@media screen and (max-width: 620px) {
+  .water {
+    display: none;
+  }
+}

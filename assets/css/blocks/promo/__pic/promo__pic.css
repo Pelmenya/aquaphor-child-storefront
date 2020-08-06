@@ -3,3 +3,10 @@
   max-width: 518px;
   background-color: transparent;
 }
+
+@media screen and (max-width: 950px) {
+  .promo__pic {
+    max-height: 314px;
+    max-width: 400px;
+  }
+}

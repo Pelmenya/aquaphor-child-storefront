@@ -11,3 +11,10 @@
   text-transform: uppercase;
   margin-bottom: 3px;
 }
+
+
+@media screen and (max-width: 830px) {
+  .services__title-service {
+    font-size: 12px;
+  }
+}

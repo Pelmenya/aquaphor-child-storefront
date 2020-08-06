@@ -21,6 +21,7 @@ if( ! defined('AQUAPHOR_THEME_ASSETS') )        define('AQUAPHOR_THEME_ASSETS', 
 
 if( ! defined('SITE_URL') )                     define('SITE_URL', get_site_url() . '/' );
 if( ! defined('AQUAPHOR_THEME_JS') )            define('AQUAPHOR_THEME_JS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/pages/' );
+if( ! defined('AQUAPHOR_THEME_JS_BLOCKS') )            define('AQUAPHOR_THEME_JS_BLOCKS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/blocks/' );
 if( ! defined('AQUAPHOR_THEME_JS_FUNCTIONS') )  define('AQUAPHOR_THEME_JS_FUNCTIONS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/functions/' );
 if( ! defined('AQUAPHOR_THEME_JS_WIDGETS') )  define('AQUAPHOR_THEME_JS_WIDGETS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/widgets/' );
 
@@ -467,6 +468,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     if (preg_match("/$url_checkout_order_received/i", $url_str)){
       wp_deregister_script('amount');
       wp_enqueue_script( 'new_index', AQUAPHOR_THEME_JS . 'checkout/checkout-order-received/index.js', true);
+      wp_enqueue_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmountSetInterval.js', true);
     }
   }
 
@@ -476,7 +478,9 @@ is_page( sanitize_title('о-сайте') );  правильно  */
   }
   wp_enqueue_script( 'ya_chat_widget', AQUAPHOR_THEME_JS_WIDGETS . 'ya-chat-widget.js', true);
   wp_enqueue_script( 'cart', AQUAPHOR_THEME_JS_FUNCTIONS . 'visibleCart.js', true);
+  wp_enqueue_script( 'currency_symbol', AQUAPHOR_THEME_JS_FUNCTIONS . 'setCurrencySymbol.js', true);
   wp_enqueue_script( 'all-discounts', AQUAPHOR_THEME_JS . 'discounts/all-index.js', true);
+  wp_enqueue_script( 'footer', AQUAPHOR_THEME_JS_BLOCKS . 'footer/index.js', true);
 }
 
 add_action( 'wp_footer', 'aquaphor_theme_scripts' );

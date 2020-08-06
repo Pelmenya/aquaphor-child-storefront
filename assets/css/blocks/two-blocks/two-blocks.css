@@ -9,9 +9,14 @@
 @import url(./__pic/_advantage/two-blocks__pic_advantage.css);
 @import url(./__intro/two-blocks__intro.css);
 
-
 .two-blocks {
   width: 100%;
   max-width: 1440px;
   display: flex;
+}
+
+@media screen and (max-width: 620px) {
+  .two-blocks__text {
+    display: none;
+  }
 }

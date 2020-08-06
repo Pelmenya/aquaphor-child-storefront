@@ -105,20 +105,10 @@ table.cart .actions .button {
   padding-top: 1em;
 }
 
-.woocommerce-Price-currencySymbol,
-th.product-name,
-th.product-subtotal {
-  color: transparent;
-}
 
 .product-thumbnail {
   width: 85px;
   margin-left: 0em;
-}
-
-.woocommerce-Price-currencySymbol::after {
-  content: 'руб.';
-  color: var(--dark);
 }
 
 a.remove::before {

@@ -9,3 +9,21 @@
   color: var(--pale-grey);
   margin-bottom: 0;
 }
+
+@media screen and (max-width: 1030px) {
+  .two-blocks__title {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .two-blocks__title {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .two-blocks__title {
+    font-size: 20px;
+  }
+}

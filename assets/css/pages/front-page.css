@@ -9,6 +9,10 @@
 @import url(../blocks/advantage/advantage.css);
 @import url(../blocks/popup/popup.css);
 
+@import url(../blocks/mobil-version/mobil-version.css);
+@import url(../blocks/categories-mobil/categories-mobil.css);
+@import url(../blocks/analysis-mobil/analysis-mobil.css);
+@import url(../blocks/equipment-selection-mobil/equipment-selection-mobil.css);
 
 
 

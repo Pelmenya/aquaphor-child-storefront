@@ -4,3 +4,21 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 1240px) {
+  .services__container {
+    width: calc(100% - 150px);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .services__container {
+    width: calc(100% - 70px);
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .services__container {
+    width: calc(100% - 40px);
+  }
+}

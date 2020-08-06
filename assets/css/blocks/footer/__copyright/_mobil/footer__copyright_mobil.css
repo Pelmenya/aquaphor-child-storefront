@@ -1,0 +1,23 @@
+.footer__copyright_mobil {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .footer__copyright_mobil {
+    display: block;
+    width: 100%;
+    background-color: var(--blue-blue);
+    margin-top: 0px;
+    font-family: Proxima Nova Rg;
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.2;
+    letter-spacing: -0.12px;
+    text-align: center;
+    color: var(--white);
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

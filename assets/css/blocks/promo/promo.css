@@ -19,3 +19,8 @@
   align-items: center;
 }
 
+@media screen and (max-width: 620px) {
+  .promo {
+    display: none;
+  }
+}

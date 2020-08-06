@@ -10,3 +10,15 @@
   margin-top: 23px;
   margin-bottom: 0;
 }
+
+@media screen and (max-width: 950px) {
+  .two-blocks__text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .two-blocks__text {
+    font-size: 14px;
+  }
+}
