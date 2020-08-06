@@ -3,3 +3,22 @@
   margin-left: 150px;
   max-width: 485px;
 }
+
+@media screen and (max-width: 1240px) {
+  .two-blocks__description_water {
+    margin-left: 75px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .two-blocks__description_water {
+    margin-left: 35px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .two-blocks__description_water {
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,12 @@
+.categories-mobil__card-title {
+  font-family: Proxima Nova Rg;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: -0.1px;
+  color: var(--dark);
+  width: 100%;
+  margin-bottom: 6px;
+}

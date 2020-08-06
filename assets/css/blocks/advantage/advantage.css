@@ -1,3 +1,9 @@
 .advantage {
   background-color: var(--blue-blue);
 }
+
+@media screen and (max-width: 880px) {
+  .advantage {
+    display: none;
+  }
+}
