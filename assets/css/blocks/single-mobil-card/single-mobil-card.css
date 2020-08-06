@@ -1,0 +1,16 @@
+@import url(./__description/single-mobil-card__description.css);
+@import url(./__pic/single-mobil-card__pic.css);
+@import url(./__price/single-mobil-card__price.css);
+@import url(./__text/single-mobil-card__text.css);
+@import url(./__title/single-mobil-card__title.css);
+
+.single-mobil-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 3px;
+  box-shadow: 6px 6px 16px 0 rgba(40, 41, 60, 0.16);
+}

@@ -5,6 +5,7 @@
 @import url(./__card-price/categories-mobil__card-price.css);
 
 
+
 .categories-mobil {
   display: grid;
   width: 100%;
@@ -38,8 +39,8 @@
   border-radius: 3px;
   box-shadow: 6px 6px 16px 0 rgba(40, 41, 60, 0.16), -6px -6px 16px 0 var(--white);
   background-color: #fefefe;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 6px;
+  padding-right: 6px;
   padding-top: 18px;
   padding-bottom: 18px;
   display: flex;
