@@ -271,12 +271,29 @@ get_header(); ?>
       <p class="categories-mobil__card-price">от 105 руб.</p>
     </a>
   </section>
-  <section class="analysis-mobil">
-
-  </section>
-  <section class="equipment-selection-mobil">
-
-  </section>
+  <a class="single-mobil-card analysis-mobil " href="<?php echo SITE_URL?>water-analysis/">
+    <div class="single-mobil-card__description">
+      <h2 class="single-mobil-card__title">Лабораторный анализ</h2>
+      <p class="single-mobil-card__text">
+        Подробный химико-биологический состав воды с помощью которого можно получить точный
+        подбор фильтрующего оборудования для загородного дома или квартиры.
+        Результат в течение недели придет на эл. почту.
+      </p>
+      <p class="single-mobil-card__price">13 показателей за 1 500 руб.</p>
+    </div>
+    <img class="single-mobil-card__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/08/icons8-пробирка-100.png" alt="Лабораторный анализ воды">
+  </a>
+  <a class="single-mobil-card equipment-selection-mobil" href="<?php echo SITE_URL?>equipment-selection/">
+    <img class="single-mobil-card__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/08/equipment-selection.png" alt="Подбор оборудования">
+    <div class="single-mobil-card__description">
+      <h2 class="single-mobil-card__title">Подбор оборудования</h2>
+      <p class="single-mobil-card__text">
+        Рассчитайте стоимость системы очистки воды в онлайн калькуляторе или с помощью
+        наших специалистов. Для точного подбора нужны результаты анализа воды из любой лаборатории.
+      </p>
+      <p class="single-mobil-card__price">Бесплатно</p>
+    </div>
+  </a>
 </main>
 
 <?php

@@ -1,0 +1,8 @@
+.single-mobil-card__description {
+  display: flex;
+  flex-direction: column;
+  max-width:  204px;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

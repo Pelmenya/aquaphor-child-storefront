@@ -1,0 +1,12 @@
+.single-mobil-card__text {
+  font-family: Proxima Nova Rg;
+  font-size: 10px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}

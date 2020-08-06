@@ -10,3 +10,10 @@
   width: 100%;
   margin-bottom: 6px;
 }
+
+@media screen and (max-width: 330px) {
+  .categories-mobil__card-title {
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+}
