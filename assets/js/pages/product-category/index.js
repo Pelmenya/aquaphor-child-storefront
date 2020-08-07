@@ -3,7 +3,7 @@ function createElementDOM(
   classElement,
   textContent = '',
   styleElement = '',
-  datetime = '',
+  datetime = ''
 ) {
   const newElement = document.createElement(element);
   newElement.className = classElement;
@@ -24,8 +24,11 @@ function main() {
   const siteMain = document.querySelector('.site-main');
 
   // выключил нижнюю сортировку
-  document.querySelectorAll('.storefront-sorting')[1].style.display = 'none';
-
+  if (Number(window.screen.width) < 620) {
+    document.querySelectorAll('.storefront-sorting')[0].style.display = 'none';
+  } else {
+    document.querySelectorAll('.storefront-sorting')[1].style.display = 'none';
+  }
   if (siteMain) {
     contentArea.style.marginTop = '52px';
 
@@ -44,7 +47,7 @@ function main() {
     headerH1.style.color = '#223c52';
 
     const addToCartBtns = document.querySelectorAll(
-      '.button.product_type_simple.add_to_cart_button.ajax_add_to_cart',
+      '.button.product_type_simple.add_to_cart_button.ajax_add_to_cart'
     );
     if (addToCartBtns) {
       Object.keys(addToCartBtns).forEach((i) => {

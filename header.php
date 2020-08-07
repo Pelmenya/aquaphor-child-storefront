@@ -74,7 +74,7 @@
     s.charset = 'UTF-8';
     s.src = 'https://yastatic.net/s3/chat/widget.js';
     n.parentNode.insertBefore(s, n);
-    s.onload = ()=>{
+     s.onload = ()=>{
       const helpBtn = document.querySelector('.header__help-button');
       const helpBtnMobil = document.querySelector('.header__top-item-chat');
       const yaChatWidget = document.querySelector('.ya-chat-widget');
@@ -84,7 +84,7 @@
       const yaChatWidgetMount = yaChatWidget.querySelector('.ya-chat-widget__mount');
 
       yaChatWidget.style.visibility = 'hidden';
-      yaChatButton.classList.add('ya-chat-button_hidden');
+      aChatButton.classList.add('ya-chat-button_hidden');
 
       yaChatHeaderClose.addEventListener('click', () => {
       yaChatWidget.style.visibility = 'hidden';
@@ -94,6 +94,7 @@
       function openYaChatWidget() {
         if (!yaChatWidgetMount.classList.contains('ya-chat-widget__mount_visible')) {
           const event = new Event('click', { bubbles: true, cancelable: true });
+          yaChatWidget.style.visibility = 'visible';
           yaChatButton.dispatchEvent(event);
         }
       }
