@@ -141,7 +141,7 @@
       </div>
       <div class="footer__category">
         <div class="footer__category-wrap">
-          <a href="<?php echo SITE_URL?>product-category/trunk/" class="footer__category-link">Расходники</a>
+          <a href="<?php echo SITE_URL?>product-category/расходники/" class="footer__category-link">Расходники</a>
         </div>
       </div>
       <div class="footer__category">

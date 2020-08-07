@@ -6,6 +6,8 @@
   margin-bottom: 25px;
 }
 
+
+
 header.woocommerce-products-header__title.page-title {
   text-align: left;
   font-family: Proxima Nova Rg;
@@ -52,7 +54,16 @@ select.orderby {
   background-size: .65em auto, 100%;
 }
 
-
 .added_to_cart.wc-forward {
   display: none;
 }
+
+@media screen and (max-width: 620px) {
+  .header-sort {
+    display: initial;
+  }
+  select.orderby {
+    height: 30px;
+  }
+}
+

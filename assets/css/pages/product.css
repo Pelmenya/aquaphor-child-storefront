@@ -241,3 +241,13 @@ button.single_add_to_cart_button.button.alt {
 button.single_add_to_cart_button.button.alt:hover {
   background-color: var(--cornflower-blue);
 }
+
+@media screen and (max-width: 620px) {
+  div.storefront-breadcrumb {
+    margin-top: 0px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
