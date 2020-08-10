@@ -13,9 +13,16 @@ function main() {
   activeLinkMenu.firstElementChild.style.color = '#fff';
 
   const entryWoocommerce = document.querySelector('.entry-content .woocommerce');
-  entryWoocommerce.style.display = 'flex';
-  entryWoocommerce.style.width = '100%';
-
+  if (Number(window.screen.width) > 1150) {
+    entryWoocommerce.style.display = 'flex';
+    entryWoocommerce.style.width = '100%';
+  } else {
+    entryWoocommerce.style.display = 'flex';
+    entryWoocommerce.style.flexDirection = 'column';
+    const nav = entryWoocommerce.querySelector('nav.woocommerce-MyAccount-navigation');
+    nav.style.flexBasis = ' initial';
+    nav.style.marginRight = '0px';
+  }
   /**
    *  Форма логина
    */

@@ -304,7 +304,7 @@ table th {
 .storefront-full-width-content.woocommerce-account .entry-header,
 .storefront-full-width-content .woocommerce-products-header {
   text-align: center;
-  padding: 0 0 3em;
+  padding: 0;
 }
 
 .site-header {
@@ -320,6 +320,12 @@ table th {
   .site-content {
     padding-right: 75px;
     padding-left: 75px;
+  }
+  .entry-title {
+    margin-top: 35px;
+  }
+  .entry-header {
+    padding: 0;
   }
 }
 
@@ -519,10 +525,9 @@ input[type="submit"],
   color: #ffffff;
 }
 
-body{
+body {
   color: var(--dark);
 }
-
 
 :root {
   --blue-blue: #164cb5;
@@ -560,4 +565,14 @@ ul.products li.product .woocommerce-loop-product__title {
   letter-spacing: normal;
   text-align: center;
   color: var(--blue-blue);
+}
+
+table.cart td.actions .coupon {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  table.cart td.actions .coupon {
+    display: none;
+  }
 }

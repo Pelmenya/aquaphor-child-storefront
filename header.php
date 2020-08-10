@@ -84,7 +84,7 @@
       const yaChatWidgetMount = yaChatWidget.querySelector('.ya-chat-widget__mount');
 
       yaChatWidget.style.visibility = 'hidden';
-      aChatButton.classList.add('ya-chat-button_hidden');
+      yaChatButton.classList.add('ya-chat-button_hidden');
 
       yaChatHeaderClose.addEventListener('click', () => {
       yaChatWidget.style.visibility = 'hidden';
@@ -124,7 +124,6 @@
 
 <header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
     <div class="header">
-
       <div class="header__wrap header__wrap_mobil-top">
           <a href="<?php echo SITE_URL?>cart/shop" class="header__top-item header__top-item_mobil">
             <svg class="header__item-icon header__item-icon_17px" width="17" height="16" viewBox="0 0 17 16">
