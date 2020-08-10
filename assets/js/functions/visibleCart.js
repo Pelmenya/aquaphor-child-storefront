@@ -4,9 +4,11 @@ function main() {
 
   cart.addEventListener('mouseover', () => {
     if (cartPopup.firstElementChild) {
-      cartPopup.style.display = 'block';
-      if (cartPopup.querySelector('p.woocommerce-mini-cart__empty-message')) {
-        cartPopup.style.display = 'none';
+      if (Number(window.screen.width) > 680) {
+        cartPopup.style.display = 'block';
+        if (cartPopup.querySelector('p.woocommerce-mini-cart__empty-message')) {
+          cartPopup.style.display = 'none';
+        }
       }
     }
   });

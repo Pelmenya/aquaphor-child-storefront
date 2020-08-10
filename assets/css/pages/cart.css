@@ -105,7 +105,6 @@ table.cart .actions .button {
   padding-top: 1em;
 }
 
-
 .product-thumbnail {
   width: 85px;
   margin-left: 0em;
@@ -255,4 +254,24 @@ table.cart td.actions {
   background-color: var(--cornflower-blue);
   margin-left: 50%;
 }
+
+.product-subtotal::before{
+  content: '';
+}
 /***********************/
+
+@media screen and (max-width: 768px) {
+  .cart_totals table:not(.has-background) tbody tr:nth-child(2n) td,
+  .cart_totals table:not(.has-background) tbody tr:nth-child(2n-1) td {
+    width: initial;
+  }
+
+  .wc-proceed-to-checkout .button.checkout-button {
+    font-size: 12px;
+  }
+
+  table.cart td.actions .coupon {
+    display: none;
+  }
+}
+

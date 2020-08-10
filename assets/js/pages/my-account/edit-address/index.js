@@ -26,9 +26,16 @@ function main() {
    *  Ссылка на меню активная
    */
   const entryWoocommerce = document.querySelector('.entry-content .woocommerce');
-  entryWoocommerce.style.display = 'flex';
-  entryWoocommerce.style.width = '100%';
-
+  if (Number(window.screen.width) > 1150) {
+    entryWoocommerce.style.display = 'flex';
+    entryWoocommerce.style.width = '100%';
+  } else {
+    entryWoocommerce.style.display = 'flex';
+    entryWoocommerce.style.flexDirection = 'column';
+    const nav = entryWoocommerce.querySelector('nav.woocommerce-MyAccount-navigation');
+    nav.style.flexBasis = ' initial';
+    nav.style.marginRight = '0px';
+  }
   const activeLinkMenu = document.querySelector('.is-active');
   activeLinkMenu.style.backgroundColor = 'var(--blue-blue)';
 
