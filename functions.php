@@ -228,6 +228,33 @@ function aquaphor_widgets_init(){
 add_action( 'widgets_init', 'aquaphor_widgets_init');
 
 /**
+ * Enqueues stylesheet with WordPress and adds version number that is a timestamp of the file modified date.
+ *
+ * @param string      $handle Name of the stylesheet. Should be unique.
+ * @param string|bool $src    Path to the stylesheet from the theme directory of WordPress. Example: '/css/mystyle.css'.
+ * @param array       $deps   Optional. An array of registered stylesheet handles this stylesheet depends on. Default empty array.
+ * @param string      $media  Optional. The media for which this stylesheet has been defined.
+ *                            Default 'all'. Accepts media types like 'all', 'print' and 'screen', or media queries like
+ *                            '(orientation: portrait)' and '(max-width: 640px)'.
+ */
+function enqueue_versioned_style( $handle, $src = false, $deps = array(), $media = 'all' ) {
+  wp_enqueue_style( $handle, $src, $deps = array(), time(), $media );
+}
+/**
+ * Enqueues script with WordPress and adds version number that is a timestamp of the file modified date.
+ *
+ * @param string      $handle    Name of the script. Should be unique.
+ * @param string|bool $src       Path to the script from the theme directory of WordPress. Example: '/js/myscript.js'.
+ * @param array       $deps      Optional. An array of registered script handles this script depends on. Default empty array.
+ * @param bool        $in_footer Optional. Whether to enqueue the script before </body> instead of in the <head>.
+ *                               Default 'false'.
+ */
+
+function enqueue_versioned_script( $handle, $src = false, $deps = array(), $in_footer = false ) {
+	wp_enqueue_script( $handle, $src, $deps, time(), $in_footer );
+}
+
+/**
  *  Грузим наши стили
  */
 
@@ -238,8 +265,8 @@ function aquaphor_enqueue_styles() {
 
 	$parent_style = 'parent-style'; // This is 'StoreFront - style' for the StoreFront theme.
 
- wp_enqueue_style( $parent_style, AQUAPHOR_THEME_URL . '/style.css' );
-	wp_enqueue_style( 'child-style',
+  enqueue_versioned_style( $parent_style, AQUAPHOR_THEME_URL . '/style.css' );
+	enqueue_versioned_style( 'child-style',
 			get_stylesheet_directory_uri() . '/style.css',
 			array( $parent_style ),
 			wp_get_theme()->get('Version')
@@ -385,102 +412,103 @@ function aquaphor_theme_scripts() {
 Т.е. если проверяется не заголовок, а ярлык (post_name), то делайте так:
 is_page('о-сайте');  неправильно
 is_page( sanitize_title('о-сайте') );  правильно  */
+
   if (is_page( 'contacts' ) ){
-    wp_enqueue_style( 'contacts', AQUAPHOR_THEME_CSS . 'contacts.css', array(), '1.1', 'all');
+    enqueue_versioned_style( 'contacts', AQUAPHOR_THEME_CSS . 'contacts.css', array());
   }
 
   if (strcasecmp($url_str, $url_discounts) == 0){
-    wp_enqueue_script('discounts-script', AQUAPHOR_THEME_JS . 'discounts/index.js', true);
+    enqueue_versioned_script('discounts-script', AQUAPHOR_THEME_JS . 'discounts/index.js', true);
   }
 
   if (is_page( array('delivery', 'payment', 'guarantees', 'about-company', 'water-analysis', 'equipment-selection', 'repair' ) ) ){
-    wp_enqueue_style( 'is-page', AQUAPHOR_THEME_CSS . 'is_page.css', array(), '1.1', 'all');
+    enqueue_versioned_style( 'is-page', AQUAPHOR_THEME_CSS . 'is_page.css', array());
   }
 
   if (is_page( 'equipment-selection' ) ){
-    wp_enqueue_script('equipment-selection', AQUAPHOR_THEME_JS . 'equipment-selection/index.js', true);
+    enqueue_versioned_script('equipment-selection', AQUAPHOR_THEME_JS . 'equipment-selection/index.js', true);
   }
 
   if (strcasecmp($url_str, $url_cart) == 0){
-    wp_enqueue_script( 'custom', AQUAPHOR_THEME_JS . 'cart/index.js', array('jquery') );
+    enqueue_versioned_script( 'custom', AQUAPHOR_THEME_JS . 'cart/index.js', array('jquery') );
   }
 
   if (strcasecmp($url_str, $url_my_account) == 0){
-    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/index.js', true);
+    enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'my-account/index.js', true);
   }
 
   if ((strcasecmp($url_str, $url_my_account_edit_account) == 0)&&(strcasecmp($url_query, '') == 0)) {
-    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . '/my-account/edit-account/index.js', true);
+    enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . '/my-account/edit-account/index.js', true);
   }
 
   if ((preg_match("/$url_my_account_orders/i", $url_str))&&(strcasecmp($url_query, '') == 0)) {
     if (is_user_logged_in()){
-      wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/orders/index.js', true);
-    } else wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/index.js', true);
+      enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'my-account/orders/index.js', true);
+    } else enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'my-account/index.js', true);
   }
   /** Регулярное выражение на вхождение строки в адрес $url_my_account_view_order = '\/my-account\/view-order'
    * Экранирование слешей
   */
   if (preg_match("/$url_my_account_view_order/i", $url_str)) {
-    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/view-order/index.js', true);
+    enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'my-account/view-order/index.js', true);
   }
 
   if ((strcasecmp($url_str, $url_my_account_edit_address) == 0)&&(strcasecmp($url_query, '') == 0)) {
-    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/edit-address/index.js', true);
+    enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'my-account/edit-address/index.js', true);
   }
 
   if ((strcasecmp($url_str, $url_my_account_edit_address_shiping) == 0)&&(strcasecmp($url_query, '') == 0)) {
-    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/edit-address/shipping/index.js', true);
+    enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'my-account/edit-address/shipping/index.js', true);
   }
 
   if ((strcasecmp($url_str, $url_my_account_edit_address_billing) == 0)&&(strcasecmp($url_query, '') == 0)) {
-    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/edit-address/billing/index.js', true);
+    enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'my-account/edit-address/billing/index.js', true);
   }
 
 
 	if ((strcasecmp($url_str, $url_my_account_lost_password) == 0)&&(strcasecmp($url_query, '') == 0)) {
-    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/lost-password/index.js', true);
+    enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'my-account/lost-password/index.js', true);
   }
 
   if ((strcasecmp($url_str, $url_my_account_lost_password) == 0)&&(strcasecmp($url_query, 'show-reset-form=true') == 0)) {
-    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'my-account/lost-password/show-reset-form/index.js', true);
+    enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'my-account/lost-password/show-reset-form/index.js', true);
   }
 
   if (is_product()) {
-    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'product/index.js', true);
-    wp_enqueue_style( 'is-product-attribute', AQUAPHOR_THEME_CSS . 'is-product-attribute.css', array(), '1.1', 'all');
+    enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'product/index.js', true);
+    enqueue_versioned_style( 'is-product-attribute', AQUAPHOR_THEME_CSS . 'is-product-attribute.css', array());
   }
 
   if (is_product_category()) {
-    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'product-category/index.js', true);
-    wp_enqueue_style( 'is-product', AQUAPHOR_THEME_CSS . 'product.css', array(), '1.1', 'all');
-    wp_enqueue_style( 'is-product-category', AQUAPHOR_THEME_CSS . 'product-category.css', array(), '1.1', 'all');
+    enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'product-category/index.js', true);
+    enqueue_versioned_style( 'is-product', AQUAPHOR_THEME_CSS . 'product.css', array());
+    enqueue_versioned_style( 'is-product-category', AQUAPHOR_THEME_CSS . 'product-category.css', array());
   }
 
   if (is_shop()) {
-    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'product-category/index.js', true);
+    enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'product-category/index.js', true);
   }
 
   if (is_checkout()){
-    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'checkout/index.js', true);
-    wp_enqueue_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmountSetInterval.js', true);
+    enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'checkout/index.js', true);
+    enqueue_versioned_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmountSetInterval.js', true);
 
     if (preg_match("/$url_checkout_order_received/i", $url_str)){
       wp_deregister_script('amount');
-      wp_enqueue_script( 'new_index', AQUAPHOR_THEME_JS . 'checkout/checkout-order-received/index.js', true);
-      wp_enqueue_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmountSetInterval.js', true);
+      enqueue_versioned_script( 'new_index', AQUAPHOR_THEME_JS . 'checkout/checkout-order-received/index.js', true);
+      enqueue_versioned_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmountSetInterval.js', true);
     }
   }
 
   if (is_front_page()){
-    wp_enqueue_script( 'index', AQUAPHOR_THEME_JS . 'front-page/index.js', true);
-    wp_enqueue_style( 'front', AQUAPHOR_THEME_CSS . 'front-page.css', array(), '1.1', 'all');
+    enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'front-page/index.js', true);
+    enqueue_versioned_style( 'front', AQUAPHOR_THEME_CSS . 'front-page.css', array());
   }
-  wp_enqueue_script( 'ya_chat_widget', AQUAPHOR_THEME_JS_WIDGETS . 'ya-chat-widget.js', true);
-  wp_enqueue_script( 'cart', AQUAPHOR_THEME_JS_FUNCTIONS . 'visibleCart.js', true);
-  wp_enqueue_script( 'currency_symbol', AQUAPHOR_THEME_JS_FUNCTIONS . 'setCurrencySymbol.js', true);
-  wp_enqueue_script( 'all-discounts', AQUAPHOR_THEME_JS . 'discounts/all-index.js', true);
-  wp_enqueue_script( 'footer', AQUAPHOR_THEME_JS_BLOCKS . 'footer/index.js', true);
+  enqueue_versioned_script( 'ya_chat_widget', AQUAPHOR_THEME_JS_WIDGETS . 'ya-chat-widget.js', true);
+  enqueue_versioned_script( 'cart', AQUAPHOR_THEME_JS_FUNCTIONS . 'visibleCart.js', true);
+  enqueue_versioned_script( 'currency_symbol', AQUAPHOR_THEME_JS_FUNCTIONS . 'setCurrencySymbol.js', true);
+  enqueue_versioned_script( 'all-discounts', AQUAPHOR_THEME_JS . 'discounts/all-index.js', true);
+  enqueue_versioned_script( 'footer', AQUAPHOR_THEME_JS_BLOCKS . 'footer/index.js', true);
 }
 
 add_action( 'wp_footer', 'aquaphor_theme_scripts' );
