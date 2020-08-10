@@ -6,6 +6,11 @@ function main() {
     if (cartPopup.firstElementChild) {
       if (Number(window.screen.width) > 680) {
         cartPopup.style.display = 'block';
+        const currencySymbolS = cartPopup.querySelectorAll('span.woocommerce-Price-currencySymbol');
+        Object.keys(currencySymbolS).forEach((item) => {
+          currencySymbolS[item].textContent = currencySymbolS[item].textContent.replace(/₽/g, ' руб.');
+        });
+
         if (cartPopup.querySelector('p.woocommerce-mini-cart__empty-message')) {
           cartPopup.style.display = 'none';
         }
