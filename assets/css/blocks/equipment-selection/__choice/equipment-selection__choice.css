@@ -2,4 +2,11 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 700px) {
+  .equipment-selection__choice {
+    margin-bottom: 20px;
+  }
 }

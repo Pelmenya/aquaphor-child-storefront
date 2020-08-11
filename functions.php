@@ -504,6 +504,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'front-page/index.js', true);
     enqueue_versioned_style( 'front', AQUAPHOR_THEME_CSS . 'front-page.css', array());
   }
+  
   enqueue_versioned_script( 'ya_chat_widget', AQUAPHOR_THEME_JS_WIDGETS . 'ya-chat-widget.js', true);
   enqueue_versioned_script( 'cart', AQUAPHOR_THEME_JS_FUNCTIONS . 'visibleCart.js', true);
   enqueue_versioned_script( 'currency_symbol', AQUAPHOR_THEME_JS_FUNCTIONS . 'setCurrencySymbol.js', true);

@@ -2,3 +2,13 @@
   display: flex;
   flex-direction: column;
 }
+
+@media screen and (max-width: 700px) {
+  .equipment-selection__choice-col:nth-of-type(3){
+    margin-top: 20px;
+  }
+  .equipment-selection__choice-col:nth-of-type(4){
+    margin-top: 20px;
+  }
+
+}

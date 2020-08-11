@@ -2,6 +2,3 @@
   transition: transform .5s;
 }
 
-.footer__item-icon_rotating:hover {
-  transform: rotate(180deg);
-}

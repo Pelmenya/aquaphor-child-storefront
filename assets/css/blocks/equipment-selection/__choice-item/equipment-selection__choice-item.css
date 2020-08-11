@@ -2,3 +2,10 @@
   display: flex;
   align-items: center;
 }
+
+@media screen and (max-width: 700px) {
+  tr.equipment-selection__choice-item {
+    flex-direction: column;
+
+  }
+}
