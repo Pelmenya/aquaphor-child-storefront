@@ -116,3 +116,18 @@
   letter-spacing: normal;
   color: var(--dark);
 }
+
+@media screen and (max-width: 750px) {
+  .delivery-adress {
+    max-width: 700px;
+  }
+
+  table.delivery-adress tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .repair__form {
+    width: 100%;
+  }
+}

@@ -10,3 +10,9 @@ input[type="text"].equipment-selection__elem-value:focus {
   box-shadow: var(--blue-blue);
   background-color: rgba(34, 60, 82, 0.04);
 }
+
+@media screen and (max-width: 350px) {
+  input[type="text"].equipment-selection__elem-value {
+    width: 60%;
+  }
+}

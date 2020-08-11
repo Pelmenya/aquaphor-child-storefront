@@ -3,3 +3,9 @@
    flex-direction: column;
    width: 47%;
 }
+
+@media screen and (max-width: 620px) {
+  .repair__form {
+    width: 100%;
+  }
+}
