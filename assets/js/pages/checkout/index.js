@@ -63,11 +63,46 @@ function main() {
       const header = createElementDOM('h3', 'shiping-head', 'Доставка');
       const billingWooccm12 = entryContent.querySelector('#billing_wooccm12');
       const adressShipping = entryContent.querySelector('#billing_address_1');
+
       shipingWrapper.prepend(billingWooccm12);
       shipingWrapper.prepend(shipings[1]);
       shipingWrapper.prepend(adressShipping);
       shipingWrapper.prepend(shipings[0]);
       shipingWrapper.prepend(header);
+
+      const delivery = shipingWrapper.querySelectorAll('.shipping_method');
+      if (delivery[1].checked) {
+        adressShipping.style.visibility = 'hidden';
+      }
+      delivery[0].addEventListener('change', () => {
+        billingWooccm12.disabled = true;
+        adressShipping.value = '';
+        adressShipping.style.visibility = 'visible';
+      });
+
+      delivery[1].addEventListener('change', () => {
+        billingWooccm12.disabled = false;
+        adressShipping.style.visibility = 'hidden';
+        adressShipping.value = 'Самовывоз';
+      });
+
+      adressShipping.addEventListener('input', () => {
+        if (delivery[1].checked) {
+          adressShipping.value = 'Самовывоз';
+        }
+      });
+
+      shipings[0].addEventListener('click', () => {
+        const event = new Event('change', { bubbles: true, cancelable: true });
+        delivery[0].dispatchEvent(event);
+        delivery[0].checked = 'true';
+      });
+
+      shipings[1].addEventListener('click', () => {
+        const event = new Event('change', { bubbles: true, cancelable: true });
+        delivery[1].dispatchEvent(event);
+        delivery[1].checked = 'true';
+      });
     }
 
     const orderSumma = document

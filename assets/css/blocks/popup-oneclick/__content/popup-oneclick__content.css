@@ -9,10 +9,9 @@
   padding-bottom: 53px;
 }
 
-
 @media screen and (max-width: 755px) {
   .popup-oneclick__content {
-    width:100%
+    width: 100%;
   }
 }
 
@@ -22,5 +21,6 @@
     padding-left: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
-    }
+    margin-top: 50px;
+  }
 }
