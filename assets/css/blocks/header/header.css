@@ -59,6 +59,8 @@
 @import url(../popup/popup.css);
 @import url(../header/__wrap/_grey/header__wrap_grey.css);
 @import url(../header/__close-item/header__close-item.css);
+@import url(./_smart-phone/header_smart-phone.css);
+@import url(./_desktop-tablet/header_desktop-tablet.css);
 
 .header {
   width: 100%;

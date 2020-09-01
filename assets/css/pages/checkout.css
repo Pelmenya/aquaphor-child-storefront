@@ -333,6 +333,11 @@ ul#shipping_method li {
   align-items: center;
 }
 
+input[type="radio"] + label {
+  cursor: pointer;
+}
+
+
 ul#shipping_method li:last-of-type {
   margin-top: 30px;
 }

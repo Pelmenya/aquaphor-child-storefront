@@ -8,3 +8,9 @@
 .popup-oneclick__wrap:first-of-type {
   margin-left: 0px;
 }
+
+@media screen and (max-width: 750px) {
+  .popup-oneclick__wrap {
+    width: 100%;
+  }
+}

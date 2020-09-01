@@ -4,3 +4,9 @@
   align-items: center;
   margin-bottom: 0;
 }
+
+@media screen and (max-width: 750px) {
+  .popup-oneclick__form {
+    flex-direction: column;
+  }
+}
