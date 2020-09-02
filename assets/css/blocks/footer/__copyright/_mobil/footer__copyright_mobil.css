@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .footer__copyright_mobil {
     display: block;
     width: 100%;
@@ -19,5 +19,11 @@
     color: var(--white);
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer__copyright_mobil {
+    display: none;
   }
 }

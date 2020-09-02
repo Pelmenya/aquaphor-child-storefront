@@ -141,7 +141,6 @@
       }
     ?>
 
-</header>
 		<?php
 		/**
 		 * Functions hooked into storefront_header action
