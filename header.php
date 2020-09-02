@@ -134,6 +134,7 @@
 
     <?php
       get_template_part('template-parts/header/header-desktop-tablet');
+      get_template_part('template-parts/header/header-smart-phone');
       get_template_part('template-parts/popups/popup-image');
       if (is_product()){
         get_template_part('template-parts/popups/popup-oneclick');

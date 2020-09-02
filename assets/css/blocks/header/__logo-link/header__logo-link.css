@@ -8,11 +8,8 @@
   opacity: .7;
 }
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 450px) {
   .header__logo-link {
-    position: absolute;
-    top: 0;
-    left: 20;
     margin-right: 0;
   }
 }
