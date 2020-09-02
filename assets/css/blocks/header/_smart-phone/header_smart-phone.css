@@ -1,8 +1,30 @@
 .header.header_smart-phone {
   display: none;
 }
+
+.buffer-for-sticky {
+  display: none;
+}
+
 @media screen and (max-width: 450px) {
   .header.header_smart-phone {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    background-color: var(--white);
+    overflow: hidden;
   }
+  /* буфер для липкого меню */
+  .buffer-for-sticky {
+    display: block;
+    height: 0;
+    width: 100%;
+  }
+
+
+
 }

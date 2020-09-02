@@ -61,6 +61,8 @@
 @import url(../header/__close-item/header__close-item.css);
 @import url(./_smart-phone/header_smart-phone.css);
 @import url(./_desktop-tablet/header_desktop-tablet.css);
+@import url(./__logo/_smart-phone/header__logo_smart-phone.css);
+@import url(./_smart-phone/header_smart-phone_fixed.css);
 
 .header {
   width: 100%;
@@ -70,7 +72,6 @@
   align-items: center;
   background-color: var(--pale-grey);
   font-family: Proxima Nova Rg, sans-serif;
-  position: relative;
 }
 
 /* модернизируем блок search*/
