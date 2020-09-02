@@ -2,11 +2,17 @@
   display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .footer__container-mobil {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer__container-mobil {
+    display: none;
   }
 }
