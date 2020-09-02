@@ -48,3 +48,9 @@
   width: 100%;
   background-color: var(--dark);
 }
+
+@media screen and (max-width: 450px) {
+  .footer {
+    display: none;
+ }
+}
