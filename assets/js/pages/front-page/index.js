@@ -4,13 +4,16 @@ function main() {
   const popUpCloseBtn = document.querySelector('.popup__close');
   const popupContentImg = popUp.querySelector('.popup__content_img');
   const popupPreload = document.querySelector('.popup.popup-preload');
+  const popupIntro = document.querySelector('.popup.popup-intro');
 
   document.addEventListener('DOMContentLoaded', () => {
     if (popupPreload) {
       popupPreload.style.display = 'none';
+      if (popupIntro) {
+        popupIntro.style.display = 'flex';
+      }
     }
   });
-
 
   if (promoBtn) {
     popUpCloseBtn.addEventListener('click', () => {

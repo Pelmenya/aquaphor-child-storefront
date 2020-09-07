@@ -5,11 +5,14 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script type="module">
   import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js';
-  const introSwiper = new Swiper('.intro__swiper', {
+  const introSwiper = new Swiper('.intro', {
     pagination: {
       el: '.intro__swiper-pagination',
       dynamicBullets: true,
     },
+    navigation: {
+    nextEl: '.intro__swiper-next',
+  },
   });
 </script>
 
@@ -99,16 +102,29 @@
       </svg>
     </div>
 </div>
-
-<div class="swiper-container intro__swiper">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper ">
-        <!-- Slides -->
-        <div class="swiper-slide intro__swiper-slide">Slide 1</div>
-        <div class="swiper-slide intro__swiper-slide">Slide 2</div>
-        <div class="swiper-slide intro__swiper-slide">Slide 3</div>
+<div class="popup popup-intro">
+  <div class="swiper-container intro">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide intro__swiper-slide">
+        <img class="intro__swiper-slide-bg-pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/09/guarantee.jpg" alt="ТОВАР ОТ ПРОИЗВОДИТЕЛЯ">
+        <h1 class="intro__swiper-slide-title">ТОВАР ОТ ПРОИЗВОДИТЕЛЯ</h1>
+        <p class="intro__swiper-slide-info"> </p>
+      </div>
+      <div class="swiper-slide intro__swiper-slide">
+        <img class="intro__swiper-slide-bg-pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/09/guarantee.jpg" alt="ТОВАР ОТ ПРОИЗВОДИТЕЛЯ">
+        <h1 class="intro__swiper-slide-title">ТОВАР ОТ ПРОИЗВОДИТЕЛЯ</h1>
+        <p class="intro__swiper-slide-info"> </p>
+      </div>
+      <div class="swiper-slide intro__swiper-slide">
+        <img class="intro__swiper-slide-bg-pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/09/guarantee.jpg" alt="ТОВАР ОТ ПРОИЗВОДИТЕЛЯ">
+        <h1 class="intro__swiper-slide-title">ТОВАР ОТ ПРОИЗВОДИТЕЛЯ</h1>
+        <p class="intro__swiper-slide-info"> </p>
+      </div>
     </div>
+    <div class="swiper-button-next intro__swiper-next"></div>
     <div class="swiper-pagination intro__swiper-pagination"></div>
+  </div>
 
 </div>
+
 </main>

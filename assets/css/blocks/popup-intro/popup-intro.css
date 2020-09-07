@@ -1,0 +1,9 @@
+
+.popup-intro {
+  background-color: var(--white);
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+  display: flex;
+  align-items: flex-start;
+}
