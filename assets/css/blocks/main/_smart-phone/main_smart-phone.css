@@ -1,0 +1,9 @@
+.main.main_smart-phone {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .main.main_smart-phone {
+    display: flex;
+  }
+}

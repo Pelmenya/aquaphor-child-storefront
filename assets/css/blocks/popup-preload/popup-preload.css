@@ -1,0 +1,11 @@
+@import url(./__logo-svg/popup-preload__logo-svg.css);
+
+
+.popup-preload {
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  flex-direction: column;
+}
