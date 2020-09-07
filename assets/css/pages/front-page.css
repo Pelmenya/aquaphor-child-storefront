@@ -15,6 +15,13 @@
 @import url(../blocks/equipment-selection-mobil/equipment-selection-mobil.css);
 @import url(../blocks/single-mobil-card/single-mobil-card.css);
 
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup-preload/popup-preload.css);
+
+@import url(../blocks/swiper-container/swiper-container.css);
+@import url(../blocks/swiper-wrapper/swiper-wrapper.css);
+@import url(../blocks/swiper-slide/swiper-slide.css);
+
 
 
 .home.page:not(.page-template-template-homepage) .site-header,
