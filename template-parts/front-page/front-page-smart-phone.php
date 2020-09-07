@@ -108,16 +108,22 @@
       <div class="swiper-slide intro__swiper-slide">
         <img class="intro__swiper-slide-bg-pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/09/guarantee.jpg" alt="ТОВАР ОТ ПРОИЗВОДИТЕЛЯ">
         <h1 class="intro__swiper-slide-title">ТОВАР ОТ ПРОИЗВОДИТЕЛЯ</h1>
+        <p class="intro__swiper-slide-info"> </p>
       </div>
-      <div class="swiper-slide">
-        <h1 class="intro__swiper-slide-title">Мини-завод питьевой воды</h1>
+      <div class="swiper-slide intro__swiper-slide">
+        <img class="intro__swiper-slide-bg-pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/09/guarantee.jpg" alt="ТОВАР ОТ ПРОИЗВОДИТЕЛЯ">
+        <h1 class="intro__swiper-slide-title">ТОВАР ОТ ПРОИЗВОДИТЕЛЯ</h1>
+        <p class="intro__swiper-slide-info"> </p>
       </div>
-      <div class="swiper-slide">
-        <h1 class="intro__swiper-slide-title">Традиционные системы</h1>
+      <div class="swiper-slide intro__swiper-slide">
+        <img class="intro__swiper-slide-bg-pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/09/guarantee.jpg" alt="ТОВАР ОТ ПРОИЗВОДИТЕЛЯ">
+        <h1 class="intro__swiper-slide-title">ТОВАР ОТ ПРОИЗВОДИТЕЛЯ</h1>
+        <p class="intro__swiper-slide-info"> </p>
       </div>
+    </div>
+    <div class="swiper-button-next intro__swiper-next"></div>
+    <div class="swiper-pagination intro__swiper-pagination"></div>
   </div>
-  <div class="swiper-button-next intro__swiper-next"></div>
-  <div class="swiper-pagination intro__swiper-pagination"></div>
 
 </div>
 
