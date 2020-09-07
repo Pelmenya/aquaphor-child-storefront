@@ -6,7 +6,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -14,5 +13,8 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
