@@ -19,7 +19,7 @@
 @import url(../blocks/popup-preload/popup-preload.css);
 @import url(../blocks/popup-intro/popup-intro.css);
 @import url(../blocks/intro/intro.css);
-
+@import url(../blocks/categories-slider/categories-slider.css);
 
 .home.page:not(.page-template-template-homepage) .site-header,
 .home.post-type-archive-product .site-header {

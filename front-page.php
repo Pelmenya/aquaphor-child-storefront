@@ -12,7 +12,6 @@
  */
 
 get_header();
-  get_template_part('template-parts/front-page/front-page-desktop-tablet');
-  get_template_part('template-parts/front-page/front-page-smart-phone');
+  get_template_part('template-parts/front-page/front-page');
 get_footer();
 ?>

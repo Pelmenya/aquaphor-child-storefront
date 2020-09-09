@@ -48,3 +48,10 @@
   align-items: center;
   justify-content: space-between;
 }
+
+
+@media screen and (max-width: 450px) {
+  .categories-mobil {
+    display: none;
+  }
+}

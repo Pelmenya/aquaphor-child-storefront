@@ -1,0 +1,5 @@
+.categories-slider__slide-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 155px;
+}

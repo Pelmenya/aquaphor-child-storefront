@@ -110,6 +110,11 @@ get_header();
         <td class="delivery-adress__td"><span class="delivery-adress__td-insert">ТЦ&nbsp;&laquo;Лето&raquo;&nbsp;&bull;</span>&nbsp;<a href="tel:8-499-577-03-79">8&nbsp;(499)&nbsp;577-03-79&nbsp;</a></td>
         <td class="delivery-adress__td">Пн&nbsp;-&nbsp;Вс,&nbsp;10&#58;00&nbsp;-&nbsp;21&#58;00</td>
       </tr>
+      <tr>
+        <td class="delivery-adress__td">г.&nbsp;Одинцово, Можайское ш., 14Б</td>
+        <td class="delivery-adress__td"><span class="delivery-adress__td-insert">Торговый павильон&nbsp;&bull;</span>&nbsp;<a href="tel:8-499-577-03-79">8&nbsp;(499)&nbsp;577-03-79&nbsp;</a></td>
+        <td class="delivery-adress__td">Пн&nbsp;-&nbsp;Вс,&nbsp;10&#58;00&nbsp;-&nbsp;20&#58;00</td>
+      </tr>
     </thead>
   </table>
 </main>

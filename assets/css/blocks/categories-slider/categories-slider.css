@@ -1,0 +1,15 @@
+@import url(./__title/categories-slider__title.css);
+@import url(./__container/categories-slider__container.css);
+@import url(./__pic/categories-slider__pic.css);
+@import url(./__price/categories-slider__price.css);
+@import url(./__slide/categories-slider__slide.css);
+@import url(./__sub-title/categories-slider__sub-title.css);
+@import url(./__text/categories-slider__text.css);
+@import url(./__slide-wrapper/categories-slider__slide-wrapper.css);
+
+.categories-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}

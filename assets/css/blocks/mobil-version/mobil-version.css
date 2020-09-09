@@ -15,9 +15,3 @@
     background-color: #ecedf6;
   }
 }
-
-@media screen and (max-width: 450px) {
-  .mobil-version {
-    display: none;
-  }
-}
