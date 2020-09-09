@@ -57,12 +57,16 @@
 @import url(./__help-button/header__help-button.css);
 @import url(./__help-icon/header__help-icon.css);
 @import url(../popup/popup.css);
+@import url(../popup-preload/popup-preload.css);
 @import url(../header/__wrap/_grey/header__wrap_grey.css);
 @import url(../header/__close-item/header__close-item.css);
 @import url(./_smart-phone/header_smart-phone.css);
 @import url(./_desktop-tablet/header_desktop-tablet.css);
 @import url(./__logo/_smart-phone/header__logo_smart-phone.css);
 @import url(./_smart-phone/header_smart-phone_fixed.css);
+@import url(./__search-button/header__search-button.css);
+@import url(./__cart-button/header__cart-button.css);
+@import url(./__cross/header__cross.css);
 
 .header {
   width: 100%;

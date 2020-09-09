@@ -512,6 +512,8 @@ is_page( sanitize_title('о-сайте') );  правильно  */
   enqueue_versioned_script( 'currency_symbol', AQUAPHOR_THEME_JS_FUNCTIONS . 'setCurrencySymbol.js', true);
   enqueue_versioned_script( 'all-discounts', AQUAPHOR_THEME_JS . 'discounts/all-index.js', true);
   enqueue_versioned_script( 'footer', AQUAPHOR_THEME_JS_BLOCKS . 'footer/index.js', true);
+  enqueue_versioned_script( 'header_smart_phone', AQUAPHOR_THEME_JS_BLOCKS . 'header/header-smart-phone/index.js', true);
+
 }
 
 add_action( 'wp_footer', 'aquaphor_theme_scripts' );

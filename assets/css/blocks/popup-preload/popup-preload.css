@@ -8,4 +8,6 @@
   padding-left: 25px;
   padding-right: 25px;
   flex-direction: column;
+  z-index: 99;
+  display: none;
 }

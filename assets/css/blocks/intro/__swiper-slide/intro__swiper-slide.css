@@ -1,7 +1,6 @@
 .intro__swiper-slide {
   /* Center slide text vertically */
   position: relative;
-  height: 100%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;

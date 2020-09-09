@@ -1,3 +1,20 @@
 .intro__swiper-next {
-    
+  right: initial;
+  left: initial;
+  top: initial;
+  margin: 0;
+  bottom: 10px;
+}
+
+.intro__swiper-next::after {
+  content: 'ДАЛЕЕ';
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--dark-40);
 }

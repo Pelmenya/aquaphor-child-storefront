@@ -6,12 +6,31 @@ function main() {
   const popupPreload = document.querySelector('.popup.popup-preload');
   const popupIntro = document.querySelector('.popup.popup-intro');
 
+  // eslint-disable-next-line no-undef
+  const introSwiper = new Swiper('.intro', {
+    pagination: {
+      el: '.intro__swiper-pagination',
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: '.intro__swiper-next',
+      disabledClass: '.none',
+    },
+    on: {
+      click: () => {
+        if (introSwiper.isEnd) {
+          popupIntro.style.display = 'none';
+          document.querySelector('.header.header_smart-phone').style.display = 'flex';
+        }
+      },
+    },
+  });
+
   document.addEventListener('DOMContentLoaded', () => {
     if (popupPreload) {
-      popupPreload.style.display = 'none';
-      if (popupIntro) {
-        popupIntro.style.display = 'flex';
-      }
+      setTimeout(() => {
+        popupPreload.style.display = 'none';
+      }, 1000);
     }
   });
 
