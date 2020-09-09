@@ -1,5 +1,5 @@
 function headerSmartPhoneScript() {
-  const headerSmartPhone = document.querySelector('.header.header_smart-phone')
+  const headerSmartPhone = document.querySelector('.header.header_smart-phone');
   const searchBtn = headerSmartPhone.querySelector('.header__search-button');
   const headerLogoSmartPhone = headerSmartPhone.querySelector('.header__logo_smart-phone');
   const headerCartBtn = headerSmartPhone.querySelector('.header__cart-button');
@@ -15,27 +15,20 @@ function headerSmartPhoneScript() {
     searchInput.focus();
     headerCross.style.display = 'block';
   }
-
+  // при потери фокуса с input search возвращаемся в исходно состояние
   searchInput.onblur = () => {
     headerLogoSmartPhone.style.display = 'block';
     headerCartBtn.style.display = 'block';
     headerSearchContainer.style.display = 'none';
     searchInput.value = '';
     headerCross.style.display = 'none';
-  }
-
-
-  function closeSearch() {}
+  };
 
   searchBtn.addEventListener('click', openSearch);
-
-  console.log(searchBtn);
-  console.log(headerCartBtn);
-  console.log(headerLogoSmartPhone);
 }
 
 function main() {
-
   headerSmartPhoneScript();
 }
+
 main();

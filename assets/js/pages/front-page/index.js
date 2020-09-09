@@ -26,6 +26,8 @@ function main() {
     },
   });
 
+const categoriesSwiper = new Swiper('.categories-slider__container');
+
   document.addEventListener('DOMContentLoaded', () => {
     if (popupPreload) {
       setTimeout(() => {

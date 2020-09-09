@@ -1,5 +1,6 @@
 .header__cross {
   height: 17px;
   width: 17px;
+  cursor: pointer;
   display: none;
 }

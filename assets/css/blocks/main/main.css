@@ -1,6 +1,7 @@
 
 @import url(./_desktop-tablet/main_desktop-tablet.css);
 @import url(./_smart-phone/main_smart-phone.css);
+@import url(./__title/main__title.css);
 
 .main {
   width: 100%;

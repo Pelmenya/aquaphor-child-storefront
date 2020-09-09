@@ -116,6 +116,15 @@
   })();
 </script>
 
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="module">
+  import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js';
+</script>
+
 <?php wp_head(); ?>
 </head>
 
