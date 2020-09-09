@@ -1,5 +1,6 @@
 .intro__swiper-slide-bg-pic {
   background-position: center;
   background-repeat: no-repeat;
-
+  padding: 2px;
+  background-color: transparent;
 }

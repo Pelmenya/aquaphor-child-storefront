@@ -583,3 +583,38 @@ table.cart td.actions .coupon {
     display: none;
   }
 }
+
+@media screen and (max-width: 450px) {
+  input[type="search"].search-field {
+    font-size: 14px;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 0px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+  }
+
+  input[type="search"].search-field:focus {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    display: none;
+  }
+
+  form.woocommerce-product-search {
+    width: 100%
+  }
+
+  .header__search-container {
+    display: none;
+  }
+}
+
+

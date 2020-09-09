@@ -1,4 +1,3 @@
-@import url(./__swiper/intro__swiper.css);
 @import url(./__swiper-slide/intro__swiper-slide.css);
 @import url(./__swiper-slide-bg-pic/intro__swiper-slide-bg-pic.css);
 @import url(./__swiper-slide-info/intro__swiper-slide-info.css);
@@ -12,6 +11,5 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%;
 }
 
