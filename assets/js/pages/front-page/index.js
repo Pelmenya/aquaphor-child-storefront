@@ -7,6 +7,12 @@ function main() {
   const popupIntro = document.querySelector('.popup.popup-intro');
   // для мобильного слайдера
   const marginLeft = window.screen.width - 340;
+  if (window.screen.width < 450) {
+    // - высота хедера - высота футера
+    if (document.querySelector('.site-content').offsetHeight < window.screen.height - 58 - 65) {
+      document.querySelector('.site-content').style.height = `${window.screen.height - 58 - 65}px`;
+    }
+  }
 
   // eslint-disable-next-line no-undef
   const introSwiper = new Swiper('.intro', {
@@ -28,6 +34,7 @@ function main() {
     },
   });
 
+  // eslint-disable-next-line no-undef
   const categoriesSwiper = new Swiper('.categories-slider__container', {
     speed: 400,
     spaceBetween: 10,

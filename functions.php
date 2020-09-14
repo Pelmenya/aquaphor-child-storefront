@@ -426,6 +426,11 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     enqueue_versioned_style( 'is-page', AQUAPHOR_THEME_CSS . 'is_page.css', array());
   }
 
+  if (is_page( array('sub-categories') ) ){
+    enqueue_versioned_style( 'sub-categories', AQUAPHOR_THEME_CSS . 'sub-categories.css', array());
+    enqueue_versioned_script( 'sub-index', AQUAPHOR_THEME_JS . 'sub-categories/index.js', true);
+  }
+
   if (is_page( 'equipment-selection' ) ){
     enqueue_versioned_script('equipment-selection', AQUAPHOR_THEME_JS . 'equipment-selection/index.js', true);
   }
