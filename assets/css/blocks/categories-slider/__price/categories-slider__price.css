@@ -1,3 +1,11 @@
 .categories-slider__price {
-    
+  margin: 0;
+    font-family: Proxima Nova Rg;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: var(--blue-blue);
 }

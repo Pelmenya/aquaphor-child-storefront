@@ -1,7 +1,7 @@
 .categories-slider__slide {
   height: 165px;
   flex-basis: 290px;
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: 0 2px 19px 0 rgba(222, 224, 226, 0.2);
   background-color: var(--white);
   display: flex;

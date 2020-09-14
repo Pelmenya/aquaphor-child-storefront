@@ -6,6 +6,7 @@
 @import url(./__sub-title/categories-slider__sub-title.css);
 @import url(./__text/categories-slider__text.css);
 @import url(./__slide-wrapper/categories-slider__slide-wrapper.css);
+@import url(./__sub-title/categories-slider__sub-title.css);
 
 .categories-slider {
   display: flex;

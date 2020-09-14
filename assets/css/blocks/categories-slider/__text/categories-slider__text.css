@@ -1,3 +1,12 @@
 .categories-slider__text {
-    
+  opacity: 0.5;
+  font-family: Proxima Nova Rg;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.83;
+  letter-spacing: normal;
+  color: #414b5a;
+  margin: 0;
 }
