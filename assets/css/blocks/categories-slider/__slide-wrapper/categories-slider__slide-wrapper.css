@@ -1,5 +1,8 @@
 .categories-slider__slide-wrapper {
   display: flex;
+  padding-right: 20px;
   flex-direction: column;
-  flex-basis: 155px;
+  justify-content: space-between;
+  padding-top: 31px;
+  padding-bottom: 23px;
 }

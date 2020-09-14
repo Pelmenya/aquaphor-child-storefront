@@ -5,6 +5,8 @@ function main() {
   const popupContentImg = popUp.querySelector('.popup__content_img');
   const popupPreload = document.querySelector('.popup.popup-preload');
   const popupIntro = document.querySelector('.popup.popup-intro');
+  // для мобильного слайдера
+  const marginLeft = window.screen.width - 340;
 
   // eslint-disable-next-line no-undef
   const introSwiper = new Swiper('.intro', {
@@ -26,7 +28,32 @@ function main() {
     },
   });
 
-const categoriesSwiper = new Swiper('.categories-slider__container');
+  const categoriesSwiper = new Swiper('.categories-slider__container', {
+    speed: 400,
+    spaceBetween: 10,
+    on: {
+      slideChange: () => {
+        switch (categoriesSwiper.activeIndex) {
+          case 0:
+            categoriesSwiper.slides[1].style.marginLeft = '0px';
+            break;
+          case 1:
+            categoriesSwiper.slides[1].style.marginLeft = `${marginLeft + 10}px`;
+            categoriesSwiper.slides[2].style.marginLeft = '0px';
+            break;
+          case 2:
+            categoriesSwiper.slides[2].style.marginLeft = `${marginLeft + 10}px`;
+            categoriesSwiper.slides[3].style.marginLeft = '0px';
+            break;
+          case 3:
+            categoriesSwiper.slides[3].style.marginLeft = `${marginLeft + 10}px`;
+            break;
+          default:
+            break;
+        }
+      },
+    },
+  });
 
   document.addEventListener('DOMContentLoaded', () => {
     if (popupPreload) {
