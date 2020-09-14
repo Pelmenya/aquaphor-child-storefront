@@ -3,7 +3,7 @@
   <div class="swiper-container categories-slider__container">
     <div class="swiper-pagination categories-slider__pagination"></div>
     <div class="swiper-wrapper">
-      <a href="<?php echo SITE_URL?>sub-categories-systems" class="swiper-slide categories-slider__slide">
+      <a href="<?php echo SITE_URL?>sub-categories" class="swiper-slide categories-slider__slide">
         <img class="categories-slider__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/03/ru_front_racurs_image_E4E5EB-84f5d.png" alt="Коплексные системы очистки воды">
          <div class="categories-slider__slide-wrapper">
           <h4 class="categories-slider__sub-title">Комплексные системы</h4>

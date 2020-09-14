@@ -27,6 +27,12 @@
 }
 
 
+div#page{
+  background-color: #ecedf6;
+  height: 100%;
+}
+
+
 div.col-full{
   width: 100%;
   max-width: 1440px;

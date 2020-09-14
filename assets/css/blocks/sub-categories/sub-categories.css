@@ -1,0 +1,13 @@
+@import url(./__card/sub-categories__card.css);
+@import url(./__pic/sub-categories__pic.css);
+@import url(./__price/sub-categories__price.css);
+@import url(./__sub-title/sub-categories__sub-title.css);
+@import url(./__text/sub-categories__text.css);
+@import url(./__title/sub-categories__title.css);
+
+
+.sub-categories{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
