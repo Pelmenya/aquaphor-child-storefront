@@ -18,6 +18,8 @@ if( ! defined('AQUAPHOR_THEME_VERSION') )       define('AQUAPHOR_THEME_VERSION',
 if( ! defined('AQUAPHOR_THEME_PATH') )          define('AQUAPHOR_THEME_PATH', get_template_directory() );
 if( ! defined('AQUAPHOR_THEME_URL') )           define('AQUAPHOR_THEME_URL', get_template_directory_uri() );
 if( ! defined('AQUAPHOR_THEME_ASSETS') )        define('AQUAPHOR_THEME_ASSETS', get_template_directory() . '/assets' );
+if( ! defined('AQUAPHOR_THEME_INC') )        define('AQUAPHOR_THEME_INC', get_theme_root_uri() . '/aquaphor-child-storefront/inc/' );
+
 
 if( ! defined('SITE_URL') )                     define('SITE_URL', get_site_url() . '/' );
 if( ! defined('AQUAPHOR_THEME_JS') )            define('AQUAPHOR_THEME_JS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/pages/' );
@@ -27,6 +29,7 @@ if( ! defined('AQUAPHOR_THEME_JS_WIDGETS') )  define('AQUAPHOR_THEME_JS_WIDGETS'
 
 if( ! defined('AQUAPHOR_THEME_CSS') )           define('AQUAPHOR_THEME_CSS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/css/pages/' );
 if( ! defined('AQUAPHOR_THEME_TEMPLATE_PARTS') ) define('AQUAPHOR_THEME_TEMPLATE_PARTS', get_theme_root_uri() . '/aquaphor-child-storefront/template-parts/' );
+
 
 
 /**
@@ -426,7 +429,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     enqueue_versioned_style( 'is-page', AQUAPHOR_THEME_CSS . 'is_page.css', array());
   }
 
-  if (is_page( array('sub-categories') ) ){
+  if (is_page( array('sub-categories-trunk', 'sub-categories-systems', 'sub-categories-drinking', 'sub-categories-active-storage') ) ){
     enqueue_versioned_style( 'sub-categories', AQUAPHOR_THEME_CSS . 'sub-categories.css', array());
     enqueue_versioned_script( 'sub-index', AQUAPHOR_THEME_JS . 'sub-categories/index.js', true);
   }
