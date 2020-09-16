@@ -5,7 +5,7 @@
 <main class="mobil-version">
     <section class="sub-categories">
     <h1 class="sub-categories__title">Комплексные системы водоочистки</h1>
-    <div class="sub-categories__card">
+    <a href="<?php echo SITE_URL?>waterboss" class="sub-categories__card">
       <?php $product = get_min_price_product('waterboss');?>
       <img class="sub-categories__pic" src="<?php echo $product["img_url"]?>" alt="<?php echo $product["title"]?>">
       <div class="sub-categories__wrapper">
@@ -13,8 +13,8 @@
         <p class="sub-categories__text">Очистка жёсткой воды с повышенным содержанием железа.</p>
         <p class="sub-categories__price">от <?php echo $product["price"]?> руб.</p>
       </div>
-    </div>
-    <div class="sub-categories__card">
+    </a>
+    <a href="<?php echo SITE_URL?>watermax" class="sub-categories__card">
       <?php $product = get_min_price_product('watermax'); ?>
       <img class="sub-categories__pic" src="<?php echo $product["img_url"]?>" alt="<?php echo $product["title"]?>">
       <div class="sub-categories__wrapper">
@@ -22,8 +22,8 @@
         <p class="sub-categories__text">Очистка, умягчение и обезжелезивание воды.</p>
         <p class="sub-categories__price">от <?php echo $product["price"]?> руб.</p>
       </div>
-    </div>
-    <div class="sub-categories__card">
+    </a>
+    <a href="<?php echo SITE_URL?>aquaphor-pro" class="sub-categories__card">
       <?php $product = get_min_price_product('aquaphor-pro'); ?>
       <img class="sub-categories__pic" src="<?php echo $product["img_url"]?>" alt="<?php echo $product["title"]?>">
       <div class="sub-categories__wrapper">
@@ -31,6 +31,6 @@
         <p class="sub-categories__text">Умягчение воды, удаление железа и марганца высокой концентрации.</p>
         <p class="sub-categories__price">от <?php echo $product["price"]?> руб.</p>
       </div>
-    </div>
+    </a>
   </section>
 </main>

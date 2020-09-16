@@ -1,0 +1,56 @@
+@import url(../mobil-version/mobil-version.css);
+@import url(./__button/products-smart-phone__button.css);
+@import url(./__container/products-smart-phone__container.css);
+@import url(./__title/products-smart-phone__title.css);
+@import url(./__wrapper/products-smart-phone__wrapper.css);
+@import url(./__card/products-smart-phone__card.css);
+@import url(./__card-pic/products-smart-phone__card-pic.css);
+@import url(./__card-price/products-smart-phone__card-price.css);
+@import url(./__card-price/_sale/products-smart-phone__card-price_sale.css);
+@import url(./__card-title/products-smart-phone__card-title.css);
+
+.products-smart-phone {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .products-smart-phone {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+div#page{
+  background-color: #ecedf6;
+}
+
+.site-content {
+  padding: 0;
+}
+
+
+div.col-full{
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+#primary.content-area {
+  padding: 0;
+  margin: 0;
+}
+
+.woocommerce {
+  padding: 0;
+  margin: 0;
+}
+
+#main.site-main {
+  padding: 0;
+  margin: 0;
+  display: none;
+}

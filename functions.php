@@ -18,7 +18,8 @@ if( ! defined('AQUAPHOR_THEME_VERSION') )       define('AQUAPHOR_THEME_VERSION',
 if( ! defined('AQUAPHOR_THEME_PATH') )          define('AQUAPHOR_THEME_PATH', get_template_directory() );
 if( ! defined('AQUAPHOR_THEME_URL') )           define('AQUAPHOR_THEME_URL', get_template_directory_uri() );
 if( ! defined('AQUAPHOR_THEME_ASSETS') )        define('AQUAPHOR_THEME_ASSETS', get_template_directory() . '/assets' );
-if( ! defined('AQUAPHOR_THEME_INC') )        define('AQUAPHOR_THEME_INC', get_theme_root_uri() . '/aquaphor-child-storefront/inc/' );
+if( ! defined('AQUAPHOR_THEME_BLOCKS_CSS') )    define('AQUAPHOR_THEME_BLOCKS_CSS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/css/blocks/' );
+
 
 
 if( ! defined('SITE_URL') )                     define('SITE_URL', get_site_url() . '/' );
@@ -436,6 +437,21 @@ is_page( sanitize_title('о-сайте') );  правильно  */
 
   if (is_page( 'equipment-selection' ) ){
     enqueue_versioned_script('equipment-selection', AQUAPHOR_THEME_JS . 'equipment-selection/index.js', true);
+  }
+
+  if (is_page( array(
+    sanitize_title('горячая'),
+    sanitize_title('холодная'),
+    'waterboss',
+    'watermax',
+    'aquaphor-pro',
+    sanitize_title('магистральные-расходники'),
+    sanitize_title('модули-для-питьевых'),
+    sanitize_title('обратный-осмос'),
+    sanitize_title('проточный'),
+    sanitize_title('соль-для-waterboss')) ) ){
+    enqueue_versioned_style( 'products-', AQUAPHOR_THEME_BLOCKS_CSS . 'products-smart-phone/products-smart-phone.css', array());
+    enqueue_versioned_script( 'sub-index', AQUAPHOR_THEME_JS . 'sub-categories/index.js', true);
   }
 
   if (strcasecmp($url_str, $url_cart) == 0){
