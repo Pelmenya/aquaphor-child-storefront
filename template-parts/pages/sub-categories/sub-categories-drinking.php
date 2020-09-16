@@ -5,7 +5,7 @@
 <main class="mobil-version">
   <section class="sub-categories">
     <h1 class="sub-categories__title">Питьевые фильтры</h1>
-    <div class="sub-categories__card обратный-осмос">
+    <a href="<?php echo SITE_URL?>обратный-осмос" class="sub-categories__card">
       <?php $product = get_min_price_product('обратный-осмос'); ?>
       <img class="sub-categories__pic" src="<?php echo $product["img_url"]?>" alt="<?php echo $product["title"]?>">
       <div class="sub-categories__wrapper">
@@ -15,8 +15,8 @@
         </p>
         <p class="sub-categories__price">от <?php echo $product["price"]?> руб.</p>
       </div>
-    </div>
-    <div class="sub-categories__card проточный">
+    </a>
+    <a href="<?php echo SITE_URL?>проточный" class="sub-categories__card">
       <?php $product = get_min_price_product('проточный'); ?>
       <img class="sub-categories__pic" src="<?php echo $product["img_url"]?>" alt="<?php echo $product["title"]?>">
       <div class="sub-categories__wrapper">
@@ -24,10 +24,6 @@
         <p class="sub-categories__text">Ультрафильтрация надежно защищает от бактерий без химических бактерицидов.</p>
         <p class="sub-categories__price">от <?php echo $product["price"]?> руб.</p>
       </div>
-    </div>
+    </a>
   </section>
 </main>
-
-<script>
- console.log(document.querySelector('.sub-categories__card.обратный-осмос'))
-</script>

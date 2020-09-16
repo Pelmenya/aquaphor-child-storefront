@@ -1,0 +1,7 @@
+.products-smart-phone__container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

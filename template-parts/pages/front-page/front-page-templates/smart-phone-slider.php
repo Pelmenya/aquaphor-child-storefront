@@ -28,7 +28,7 @@
          </div>
       </a>
       <a href="<?php echo SITE_URL?>sub-categories-active-storage" class="swiper-slide categories-slider__slide">
-        <img class="categories-slider__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/ru_v150_plus_cartridge_page_image-772a3-1.png">
+        <img class="categories-slider__pic" src="<?php echo SITE_URL?>wp-content/uploads/2020/05/ru_v150_plus_cartridge_page_image-772a3-1.png"  alt="Расходные материалы">
          <div class="categories-slider__slide-wrapper">
           <h4 class="categories-slider__sub-title">Расходные материалы</h4>
           <p class="categories-slider__text">Сменные модули, картриджи, смола и соль для засыпки.</p>

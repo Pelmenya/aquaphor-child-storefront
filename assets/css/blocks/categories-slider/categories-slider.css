@@ -9,8 +9,14 @@
 @import url(./__sub-title/categories-slider__sub-title.css);
 
 .categories-slider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .categories-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 }
