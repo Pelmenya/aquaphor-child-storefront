@@ -12,6 +12,6 @@
  */
 
 get_header();
-  get_template_part('template-parts/pages/sub-categories/sub-categories');
+  get_template_part('template-parts/pages/sub-categories/sub-categories-trunk');
 get_footer();
 ?>
