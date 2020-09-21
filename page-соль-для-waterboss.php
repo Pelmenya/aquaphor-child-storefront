@@ -12,6 +12,6 @@
  */
 
 get_header();
-  get_template_part('inc/get_products');
+  get_template_part('template-parts/products-smart-phone/products-smart-phone');
 get_footer();
 ?>
