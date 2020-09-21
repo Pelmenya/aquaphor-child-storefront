@@ -23,7 +23,12 @@ function get_products( $category_slug ) {
     <a class="products-smart-phone__card" href="<?php echo get_page_link($product->ID)?>">
       <img class="products-smart-phone__card-pic" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($product->ID), 'thumbnail' );?>" alt="<?php echo $title;?>">
       <h4 class="products-smart-phone__card-title"><?php the_title(); ?></h4>
-      <p class="products-smart-phone__card-price"><?php echo $product->get_price_html();?></p>
+      <p class="products-smart-phone__card-price
+        <?php if ($product->get_sale_price() != ""){
+            echo "products-smart-phone__card-price_sale";
+          }?>">
+        <?php echo $product->get_price(); ?> руб.
+      </p>
     </a>
     <?php endwhile; ?>
     <?php wp_reset_query();
