@@ -251,3 +251,15 @@ button.single_add_to_cart_button.button.alt:hover {
     padding-right: 20px;
   }
 }
+
+@media screen and (max-width: 450px) {
+  div.storefront-breadcrumb {
+    display: none;
+  }
+  div.woocommerce {
+    display: none;
+  }
+  div.content-area {
+    display: none;
+  }
+}

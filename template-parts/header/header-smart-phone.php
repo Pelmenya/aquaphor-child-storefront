@@ -1,7 +1,12 @@
 <div class="header header_smart-phone">
-  <svg class="header__search-button" width="17" height="17" viewBox="0 0 17 17">
-      <path fill="#28293C" d="M5.778 9.315L.453 14.628c-.634.633-.55 1.511-.074 1.99.476.478 1.355.564 1.99-.072l5.306-5.305c.348-.335-.177-.838-.5-.502l-5.306 5.305c-.41.411-.758.305-.989.074-.23-.232-.333-.585.073-.99l5.325-5.314c.297-.298-.179-.823-.5-.5zm4.989-7.858c-1.023.137-1.996.645-2.701 1.491-.303.363.23.831.545.453 1.178-1.416 3.237-1.693 4.749-.639.388.271.793-.31.406-.58-.904-.63-1.976-.863-3-.725zM11.333 0C8.208 0 5.667 2.541 5.667 5.667c0 3.125 2.541 5.666 5.666 5.666 3.125 0 5.667-2.541 5.667-5.666C17 2.54 14.458 0 11.333 0zm0 .708c2.743 0 4.959 2.216 4.959 4.959 0 2.742-2.216 4.958-4.959 4.958-2.742 0-4.958-2.216-4.958-4.958 0-2.743 2.216-4.959 4.958-4.959z"/>
-  </svg>
+  <?php
+    if (is_product()) {
+      get_template_part('template-parts/header/header-smart-phone-templates/header__prev-page-button');
+    }
+    else {
+      get_template_part('template-parts/header/header-smart-phone-templates/header__search-button');
+    };
+  ?>
   <div class="header__search-container">
      <?php get_product_search_form() ?>
   </div>
