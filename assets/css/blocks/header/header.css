@@ -67,6 +67,7 @@
 @import url(./__search-button/header__search-button.css);
 @import url(./__cart-button/header__cart-button.css);
 @import url(./__cross/header__cross.css);
+@import url(./__prev-page-button/header__prev-page-button.css);
 
 .header {
   width: 100%;

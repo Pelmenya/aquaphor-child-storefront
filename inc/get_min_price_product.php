@@ -14,7 +14,8 @@ function get_min_price_product($category_slug) {
 		 'field' => 'slug',
 		 'terms' => $category_slug,
 		),
-	),
+  ),
+  'posts_per_page' => 100000,
 	'post_type' => 'product', // тип товара
 );
 
@@ -23,6 +24,7 @@ $loop = new WP_Query( $args );
   global $product_title;
   global $products;
   $product_price = 1000000000;
+  $i =0;
   while ( $loop->have_posts() ) : $loop->the_post();
     global $product;
     woocommerce_show_product_sale_flash( $post, $product );

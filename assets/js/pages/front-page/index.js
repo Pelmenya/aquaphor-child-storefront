@@ -6,7 +6,7 @@ function main() {
   const popupPreload = document.querySelector('.popup.popup-preload');
   const popupIntro = document.querySelector('.popup.popup-intro');
   // для мобильного слайдера
-  const marginLeft = window.screen.width - 340;
+  const marginLeft = window.screen.width - 325;
   if (window.screen.width < 450) {
     // - высота хедера - высота футера
     if (document.querySelector('.site-content').offsetHeight < window.screen.height - 58 - 65) {

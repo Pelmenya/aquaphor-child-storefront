@@ -452,6 +452,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     sanitize_title('соль-для-waterboss')) ) ){
     enqueue_versioned_style( 'products-', AQUAPHOR_THEME_BLOCKS_CSS . 'products-smart-phone/products-smart-phone.css', array());
     enqueue_versioned_script( 'sub-index', AQUAPHOR_THEME_JS . 'sub-categories/index.js', true);
+    enqueue_versioned_script( 'products-smart-phone', AQUAPHOR_THEME_JS . 'products-smart-phone/index.js', true);
   }
 
   if (strcasecmp($url_str, $url_cart) == 0){

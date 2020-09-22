@@ -107,10 +107,20 @@ global $product;
 			<div class="text-center">
 				<?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
 			</div>
-		</figcaption>
-	</figure>
-
 	<?php endwhile; ?>
 	<!-- Сброс данных запроса -->
 	<?php wp_reset_query(); ?>
 </div>
+
+?>
+      <a class="products-smart-phone__card" href="<?php echo get_page_link($products[i]->id)?>">
+        <img class="products-smart-phone__card-pic" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($products[i]->id), 'thumbnail' );?>" alt="<?php echo $products[i]->get_title();?>">
+        <h4 class="products-smart-phone__card-title"><?php echo $products[i]->get_title(); ?></h4>
+        <p class="products-smart-phone__card-price
+          <?php if ($products[i]->get_sale_price() != ""){
+              echo "products-smart-phone__card-price_sale";
+            }?>">
+          <?php echo $products[i]->get_price(); ?> руб.
+        </p>
+      </a>
+    <?php
