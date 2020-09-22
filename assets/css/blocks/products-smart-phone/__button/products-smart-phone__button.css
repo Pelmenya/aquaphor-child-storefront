@@ -1,4 +1,19 @@
 .products-smart-phone__button {
   height: 24px;
   width: 24px;
+  fill: #28293c;
+  fill-opacity: 0.4;
+  cursor: pointer;
+  transition: box-shadow 1s;
 }
+
+.products-smart-phone__button:hover {
+  fill-opacity: 1;
+  fill: var(--blue-blue);
+}
+
+.products-smart-phone__button:active {
+  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+}
+
+

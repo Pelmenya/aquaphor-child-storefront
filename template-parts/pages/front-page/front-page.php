@@ -229,13 +229,15 @@
   </div>
 </section>
 </main>
+
+<?php get_template_part('template-parts/pages/front-page/front-page-templates/smart-phone-slider'); ?>
+
 <main class="mobil-version">
 
   <?php get_template_part('template-parts/pages/front-page/front-page-templates/tablet-grid'); ?>
 
   <?php get_template_part('template-parts/pages/front-page/front-page-templates/smart-phone-popups'); ?>
 
-  <?php get_template_part('template-parts/pages/front-page/front-page-templates/smart-phone-slider'); ?>
 
 
   <a class="single-mobil-card analysis-mobil " href="<?php echo SITE_URL?>water-analysis/">

@@ -6,7 +6,7 @@
   <section class="sub-categories trunk">
     <h1 class="sub-categories__title">Магистральные</h1>
     <a href="<?php echo SITE_URL?>горячая" class="sub-categories__card">
-      <?php $product = get_min_price_product('горячая'); ?>
+      <?php $product = get_min_price_product('холодная'); ?>
       <img class="sub-categories__pic" src="<?php echo $product["img_url"]?>" alt="<?php echo $product["title"]?>">
       <div class="sub-categories__wrapper">
         <h3 class="sub-categories__sub-title">Для холодной воды</h3>
@@ -15,7 +15,7 @@
       </div>
     </a>
     <a href="<?php echo SITE_URL?>холодная" class="sub-categories__card">
-      <?php $product = get_min_price_product('холодная'); ?>
+      <?php $product = get_min_price_product('горячая'); ?>
       <img class="sub-categories__pic" src="<?php echo $product["img_url"]?>" alt="<?php echo $product["title"]?>">
       <div class="sub-categories__wrapper">
         <h3 class="sub-categories__sub-title">Для горячей воды</h3>
