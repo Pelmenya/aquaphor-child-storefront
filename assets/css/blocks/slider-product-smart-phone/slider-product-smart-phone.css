@@ -1,3 +1,14 @@
+@import url(./__container/slider-product-smart-phone__container.css);
+@import url(./__pagination/slider-product-smart-phone__pagination.css);
+@import url(./__pic/slider-product-smart-phone__pic.css);
+@import url(./__slide/slider-product-smart-phone__slide.css);
+@import url(./__title/slider-product-smart-phone__title.css);
+@import url(./__wrapper/slider-product-smart-phone__wrapper.css);
+@import url(./__slide/slider-product-smart-phone__slide.css);
+
 .slider-product-smart-phone {
-    
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 20px;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable no-new */
 function createElementDOM(
   element,
   classElement,
@@ -17,6 +18,21 @@ function createElementDOM(
     newElement.dateTime = datetime;
   }
   return newElement;
+}
+
+function setSmartPhoneScript() {
+  const mainProductSmartPhone = document.querySelector('.main-product-smart-phone');
+  if (mainProductSmartPhone) {
+    // eslint-disable-next-line no-undef
+    new Swiper('.slider-product-smart-phone__container', {
+      speed: 400,
+      spaceBetween: 15,
+    });
+    const addToCartBtn = mainProductSmartPhone.querySelector('.add_to_cart_button');
+    if (addToCartBtn) {
+      addToCartBtn.textContent = 'Добавить в корзину';
+    }
+  }
 }
 
 function main() {
@@ -115,6 +131,9 @@ function main() {
       const tabAdditionalInformation = document.querySelector('#tab-additional_information');
       tabAdditionalInformation.querySelector('h2').textContent = 'Тех. характеристики';
     }
+  }
+  if (window.screen.width < 450) {
+    setSmartPhoneScript();
   }
 }
 
