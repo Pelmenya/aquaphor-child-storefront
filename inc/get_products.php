@@ -1,8 +1,9 @@
 <?php
 /**
  *  Функция отрисовывает товары в зависимости от slug страницы ктегории товара в контейнер
+ *  или
  */
-function get_products( $category_slug ) {
+function get_products( $category_slug, $context = 'view' ) {
     $args = array(
       'tax_query' => array(
       'relation' => 'AND',
@@ -24,6 +25,7 @@ function get_products( $category_slug ) {
   endwhile;
   wp_reset_query();
     usort( $products, 'wc_products_array_orderby_price');
+  if ($context == 'view') {
     for($i = 0; $i < count($products); ++$i) { ?>
       <a class="products-smart-phone__card" href="<?php echo get_page_link($products[$i]->id)?>">
         <img class="products-smart-phone__card-pic" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($products[$i]->id), 'thumbnail' );?>" alt="<?php echo $products[$i]->get_title();?>">
@@ -36,6 +38,9 @@ function get_products( $category_slug ) {
         </p>
       </a>
     <?php
-    }
-  }?>
+    };
+  };
+  return $products;
+};
+?>
 

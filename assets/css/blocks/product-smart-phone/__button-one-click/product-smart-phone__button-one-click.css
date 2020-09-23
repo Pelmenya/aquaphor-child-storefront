@@ -1,0 +1,23 @@
+.product-smart-phone__button-one-click {
+  font-family: Proxima Nova Rg;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--dark);
+  padding: 0;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.product-smart-phone__button-one-click:hover {
+  background-color: transparent;
+  color: var(--blue-blue);
+}
+
+.product-smart-phone__button-one-click:active {
+  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+}

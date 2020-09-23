@@ -1,5 +1,7 @@
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup-oneclick/popup-oneclick.css);
+@import url(../blocks/main-product-smart-phone/main-product-smart-phone.css);
+@import url(../blocks/product-smart-phone/product-smart-phone.css);
 
 /*рисунок*/
 .woocommerce-product-gallery__wrapper {
@@ -252,13 +254,23 @@ button.single_add_to_cart_button.button.alt:hover {
   }
 }
 
+.main-product-smart-phone {
+  display: none;
+}
+
 @media screen and (max-width: 450px) {
+  .main-product-smart-phone {
+    display: flex;
+  }
+
   div.storefront-breadcrumb {
     display: none;
   }
+
   div.woocommerce {
     display: none;
   }
+
   div.content-area {
     display: none;
   }

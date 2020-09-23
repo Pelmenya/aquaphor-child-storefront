@@ -348,6 +348,7 @@ table th {
 @media screen and (max-width: 450px) {
   .site-content {
     margin-bottom: 58px;
+    padding: 0;
   }
 }
 

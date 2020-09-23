@@ -1,0 +1,10 @@
+.product-smart-phone__pic-wrapper {
+  width: 100%;
+  height: 202px;
+  border-radius: 5px;
+  background-color: var(--dark-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}

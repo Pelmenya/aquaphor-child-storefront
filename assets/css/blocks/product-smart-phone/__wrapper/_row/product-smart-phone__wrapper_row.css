@@ -1,0 +1,10 @@
+.product-smart-phone__wrapper_row {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+  box-shadow: 0 -1px 3px 0 rgba(40, 41, 60, 0.2);
+  flex-direction: row;
+  align-items: center;
+}
