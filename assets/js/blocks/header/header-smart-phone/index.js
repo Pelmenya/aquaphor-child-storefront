@@ -15,16 +15,17 @@ function headerSmartPhoneScript() {
     searchInput.focus();
     headerCross.style.display = 'block';
   }
-  // при потери фокуса с input search возвращаемся в исходно состояние
-  searchInput.onblur = () => {
-    headerLogoSmartPhone.style.display = 'block';
-    headerCartBtn.style.display = 'block';
-    headerSearchContainer.style.display = 'none';
-    searchInput.value = '';
-    headerCross.style.display = 'none';
-  };
-
-  searchBtn.addEventListener('click', openSearch);
+  if (searchBtn) {
+    // при потери фокуса с input search возвращаемся в исходно состояние
+    searchInput.onblur = () => {
+      headerLogoSmartPhone.style.display = 'block';
+      headerCartBtn.style.display = 'block';
+      headerSearchContainer.style.display = 'none';
+      searchInput.value = '';
+      headerCross.style.display = 'none';
+    };
+    searchBtn.addEventListener('click', openSearch);
+  }
 }
 
 function main() {

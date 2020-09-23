@@ -7,6 +7,10 @@
   $product_price = $product->get_price_html();
   $product_description = $product->get_description();
   $product_attributes_keys = array_keys($product->attributes);
+
+  $category = get_the_terms( $product_id , 'product_cat' );
+  $related_products = get_products($category[0]->slug, 'no-view');
+
   for($j = 0; $j < count($product_attributes_keys); ++$j) {
     //$product_attributes[$j] = wc_get_product_terms( $product_id , $product_attributes_keys[$j]);
     $product_attributes[$j]["title"] =  wc_attribute_label($product_attributes_keys[$j]);
@@ -36,20 +40,37 @@
         </button>
       </div>
       <div class="product-smart-phone__wrapper product-smart-phone__wrapper_row">
-        <button class="product-smart-phone__button-add-to-card">Добавить в корзину</button>
+        <?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
+        <!--button class="product-smart-phone__button-add-to-card">Добавить в корзину</button-->
         <button class="product-smart-phone__button-one-click">Купить сейчас</button>
       </div>
     </div>
     <div class="slider-product-smart-phone">
-
+      <h2 class="slider-product-smart-phone__title">ПОХОЖИЕ ТОВАРЫ</h2>
+      <div class="swiper-container slider-product-smart-phone__container">
+        <div class="swiper-pagination slider-product-smart-phone__pagination"></div>
+        <div class="swiper-wrapper slider-product-smart-phone__wrapper">
+          <?php
+             for ($i = 0; $i < count($related_products); ++$i) {
+              if ( $related_products[$i]->id != $product_id ) {
+                $img_url = wp_get_attachment_url( get_post_thumbnail_id($related_products[$i]->id), 'thumbnail' );
+                $img_alt = $related_products[$i]->get_title();
+                $product_page_link = get_page_link($related_products[$i]->id)
+          ?>
+          <a href="<?php echo $product_page_link ?>" class="swiper-slide  slider-product-smart-phone__slide">
+            <img class="slider-product-smart-phone__pic" src="<?php echo $img_url ?>" alt="<?php echo $img_alt ?>">
+          </a>
+          <?php
+              }
+            }
+          ?>
+        </div>
+      </div>
     </div>
     <div class= "popup-product-smart-phone">
 
     </div>
   </main>
-
 <?php
 // echo "<pre>"; print_r(   $product_attributes ); echo "</pre>";
-//$category = get_the_terms( $product_id , 'product_cat' );
-//$products = get_products($categories[0]->slug, 'view');
-//echo "<pre>"; print_r($products); echo "</pre>";?>
+//echo "<pre>"; print_r($products); echo "</pre>";
