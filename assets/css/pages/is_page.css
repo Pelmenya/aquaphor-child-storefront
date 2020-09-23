@@ -131,3 +131,13 @@
     width: 100%;
   }
 }
+
+
+@media screen and (max-width: 450px) {
+  .main {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}

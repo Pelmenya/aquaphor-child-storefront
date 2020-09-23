@@ -27,9 +27,11 @@
 }
 
 
-div#page{
-  background-color: #ecedf6;
-  height: 100%;
+@media screen and (max-width: 450px) {
+  div#page{
+    background-color: #ecedf6;
+    height: 100%;
+  }
 }
 
 

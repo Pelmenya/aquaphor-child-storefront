@@ -1,0 +1,13 @@
+.main-product-smart-phone {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .main-product-smart-phone {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
