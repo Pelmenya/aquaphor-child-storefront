@@ -67,10 +67,28 @@
         </div>
       </div>
     </div>
-    <div class= "popup-product-smart-phone">
+    <div class= "product-smart-phone-description is-close">
+      <div class="product-smart-phone-description__text"><?php echo $product_description ?>
+      </div>
+      <?php
+      for($j = 0; $j < count($product_attributes_keys); ++$j) {
+        //$product_attributes[$j] = wc_get_product_terms( $product_id , $product_attributes_keys[$j]);
+        ?>
+        <div class="product-smart-phone-description__attributes">
+          <div class="product-smart-phone-description__attribute">
+            <?php echo $product_attributes[$j]["title"] ?>
+          </div>
+          <div class="product-smart-phone-description__attribute-value">
+            <?php echo str_replace(",", " до ", $product_attributes[$j]["value"])?>
+          </div>
+        </div>
+        <?php
+      }; ?>
 
-    </div>
+  </div>
   </main>
+
+
 <?php
 // echo "<pre>"; print_r(   $product_attributes ); echo "</pre>";
 //echo "<pre>"; print_r($products); echo "</pre>";

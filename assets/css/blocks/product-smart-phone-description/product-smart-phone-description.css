@@ -1,0 +1,16 @@
+@import url(./__attributes/product-smart-phone-description__attributes.css);
+@import url(./__attribute/product-smart-phone-description__attribute.css);
+@import url(./__text/product-smart-phone-description__text.css);
+
+.product-smart-phone-description {
+  font-family: Proxima Nova Rg;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  color: rgba(40, 41, 60, 0.5);
+  padding: 30px;
+  
+}
