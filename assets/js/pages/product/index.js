@@ -54,6 +54,7 @@ function setSmartPhoneScript() {
   headerPrevPageButtonDescription.addEventListener('click', () => {
     toggleDescriptionProduct();
   });
+
   if (mainProductSmartPhone) {
     // eslint-disable-next-line no-undef
     new Swiper('.slider-product-smart-phone__container', {

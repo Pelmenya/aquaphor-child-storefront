@@ -238,8 +238,6 @@
 
   <?php get_template_part('template-parts/pages/front-page/front-page-templates/smart-phone-popups'); ?>
 
-
-
   <a class="single-mobil-card analysis-mobil " href="<?php echo SITE_URL?>water-analysis/">
     <div class="single-mobil-card__description">
       <h2 class="single-mobil-card__title">Лабораторный анализ</h2>

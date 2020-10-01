@@ -386,6 +386,7 @@ function aquaphor_custom_tracking( $order_id ) {
 add_action( 'woocommerce_thankyou', 'aquaphor_custom_tracking' );
 
 function aquaphor_theme_scripts() {
+
   /* Путь к странице*/
   $url = $_SERVER['REQUEST_URI'];
   $url = explode('?', $url);
@@ -430,7 +431,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     enqueue_versioned_style( 'is-page', AQUAPHOR_THEME_CSS . 'is_page.css', array());
   }
 
-  if (is_page( array('sub-categories-trunk', 'sub-categories-systems', 'sub-categories-drinking', 'sub-categories-active-storage') ) ){
+  if (is_page( array('catalog', 'sub-categories', 'sub-categories-trunk', 'sub-categories-systems', 'sub-categories-drinking', 'sub-categories-active-storage') ) ){
     enqueue_versioned_style( 'sub-categories', AQUAPHOR_THEME_CSS . 'sub-categories.css', array());
     enqueue_versioned_script( 'sub-index', AQUAPHOR_THEME_JS . 'sub-categories/index.js', true);
   }
@@ -439,7 +440,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     enqueue_versioned_script('equipment-selection', AQUAPHOR_THEME_JS . 'equipment-selection/index.js', true);
   }
 
-  if (is_page( array(
+  if (is_page(array(
     sanitize_title('горячая'),
     sanitize_title('холодная'),
     'waterboss',
@@ -449,11 +450,14 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     sanitize_title('модули-для-питьевых'),
     sanitize_title('обратный-осмос'),
     sanitize_title('проточный'),
-    sanitize_title('соль-для-waterboss')) ) ){
-    enqueue_versioned_style( 'products-', AQUAPHOR_THEME_BLOCKS_CSS . 'products-smart-phone/products-smart-phone.css', array());
-    enqueue_versioned_script( 'sub-index', AQUAPHOR_THEME_JS . 'sub-categories/index.js', true);
-    enqueue_versioned_script( 'products-smart-phone', AQUAPHOR_THEME_JS . 'products-smart-phone/index.js', true);
-  }
+    sanitize_title('соль-для-waterboss')
+    )
+      )
+      ){
+        enqueue_versioned_style( 'products', AQUAPHOR_THEME_BLOCKS_CSS . 'products-smart-phone/products-smart-phone.css', array());
+        enqueue_versioned_script( 'sub-index', AQUAPHOR_THEME_JS . 'sub-categories/index.js', true);
+        enqueue_versioned_script( 'products-smart-phone', AQUAPHOR_THEME_JS . 'products-smart-phone/index.js', true);
+      }
 
   if (strcasecmp($url_str, $url_cart) == 0){
     enqueue_versioned_script( 'custom', AQUAPHOR_THEME_JS . 'cart/index.js', array('jquery') );
@@ -545,3 +549,6 @@ add_action( 'wp_footer', 'aquaphor_theme_scripts' );
 
 add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
 
+/* Количество товаров на странице */
+
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 100;' ), 20 );
