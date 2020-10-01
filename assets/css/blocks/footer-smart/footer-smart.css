@@ -1,6 +1,8 @@
 @import url(./__icon/footer-smart__icon.css);
+@import url(./__icon/_active/footer-smart__icon_active.css);
 @import url(./__item/footer-smart__item.css);
 @import url(./__text/footer-smart__text.css);
+@import url(./__text/_active/footer-smart__text_active.css);
 
 .footer-smart {
   display: none;

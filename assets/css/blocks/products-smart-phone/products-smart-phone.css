@@ -20,37 +20,38 @@
     width: 100%;
     height: 100%;
   }
-}
 
-div#page{
-  background-color: #ecedf6;
-}
+  div#page{
+    background-color: #ecedf6;
+  }
 
-.site-content {
-  padding: 0;
-}
-
-
-div.col-full{
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0;
-}
+  .site-content {
+    padding: 0;
+  }
 
 
-#primary.content-area {
-  padding: 0;
-  margin: 0;
-}
+  div.col-full{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+  }
 
-.woocommerce {
-  padding: 0;
-  margin: 0;
-}
 
-#main.site-main {
-  padding: 0;
-  margin: 0;
-  display: none;
+  #primary.content-area {
+    padding: 0;
+    margin: 0;
+  }
+
+  .woocommerce {
+    padding: 0;
+    margin: 0;
+  }
+
+  #main.site-main {
+    padding: 0;
+    margin: 0;
+    display: none;
+  }
+
 }

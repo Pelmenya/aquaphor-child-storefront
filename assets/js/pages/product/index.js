@@ -21,16 +21,53 @@ function createElementDOM(
 }
 
 function setSmartPhoneScript() {
+  const headerDescriptionTitle = document.querySelector('.header__smart-phone-description-title');
   const mainProductSmartPhone = document.querySelector('.main-product-smart-phone');
+  const headerSmartPhone = document.querySelector('.header_smart-phone');
+  const footerSmartPhone = document.querySelector('.footer-smart');
+  const addToCartBtn = mainProductSmartPhone.querySelector('.add_to_cart_button');
+  const productSmartPhoneDescriptionBtn = mainProductSmartPhone.querySelector('.product-smart-phone__button-description');
+  const headerPrevPageButton = headerSmartPhone.querySelector('.header__prev-page-button');
+  const headerPrevPageButtonDescription = headerSmartPhone.querySelector('.header__prev-page-button_description');
+  const productSmartPhone = mainProductSmartPhone.querySelector('.product-smart-phone');
+  const sliderSmartPhone = mainProductSmartPhone.querySelector('.slider-product-smart-phone');
+  const headerLogo = headerSmartPhone.querySelector('.header__logo');
+  const headerCartButton = headerSmartPhone.querySelector('.header__cart-button');
+  const productSmartPhoneDescription = mainProductSmartPhone.querySelector('.product-smart-phone-description');
+
+  function toggleDescriptionProduct() {
+    productSmartPhoneDescription.classList.toggle('is-close');
+    headerPrevPageButton.classList.toggle('is-close');
+    headerPrevPageButtonDescription.classList.toggle('is-close');
+    headerDescriptionTitle.classList.toggle('is-close');
+    productSmartPhone.classList.toggle('is-close');
+    sliderSmartPhone.classList.toggle('is-close');
+    headerLogo.classList.toggle('is-close');
+    headerCartButton.classList.toggle('is-close');
+    footerSmartPhone.classList.toggle('is-close');
+  }
+
+  headerPrevPageButton.addEventListener('click', () => {
+    window.history.back();
+  });
+
+  headerPrevPageButtonDescription.addEventListener('click', () => {
+    toggleDescriptionProduct();
+  });
+
   if (mainProductSmartPhone) {
     // eslint-disable-next-line no-undef
     new Swiper('.slider-product-smart-phone__container', {
       speed: 400,
       spaceBetween: 15,
     });
-    const addToCartBtn = mainProductSmartPhone.querySelector('.add_to_cart_button');
     if (addToCartBtn) {
       addToCartBtn.textContent = 'Добавить в корзину';
+    }
+    if (productSmartPhoneDescriptionBtn) {
+      productSmartPhoneDescriptionBtn.addEventListener('click', () => {
+        toggleDescriptionProduct();
+      });
     }
   }
 }

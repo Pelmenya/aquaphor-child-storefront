@@ -4,6 +4,7 @@
 @import url(../blocks/product-smart-phone/product-smart-phone.css);
 @import url(../blocks/slider-product-smart-phone/slider-product-smart-phone.css);
 @import url(../blocks/popup-product-smart-phone/popup-product-smart-phone.css);
+@import url(../blocks/product-smart-phone-description/product-smart-phone-description.css);
 
 /*рисунок*/
 .woocommerce-product-gallery__wrapper {
@@ -306,4 +307,8 @@ button.single_add_to_cart_button.button.alt:hover {
   .product-smart-phone__button-add-to-card:active {
     box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
   }
+}
+
+.is-close{
+  display: none;
 }

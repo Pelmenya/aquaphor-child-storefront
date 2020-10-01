@@ -12,6 +12,8 @@
 
 @import url(./assets/css/blocks/header/header.css);
 
+@import url(./assets/css/blocks/products-smart-phone/products-smart-phone.css);
+
 @import url(./assets/css/blocks/footer/footer.css);
 @import url(./assets/css/blocks/footer-smart/footer-smart.css);
 
@@ -618,5 +620,4 @@ table.cart td.actions .coupon {
     display: none;
   }
 }
-
 
