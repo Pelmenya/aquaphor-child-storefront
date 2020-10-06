@@ -4,7 +4,6 @@
 
 <?php
   // общаемся между страницами
-
   $categories_products = get_terms("product_cat", [
     "orderby" => "name", // Тип сортировки
     "order" => "ASC", // Направление сортировки

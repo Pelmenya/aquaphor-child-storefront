@@ -146,6 +146,7 @@
     <?php
       get_template_part('template-parts/header/header-desktop-tablet');
       get_template_part('template-parts/header/header-smart-phone');
+      get_template_part('template-parts/popups/popup-more-smart-phone');
       get_template_part('template-parts/popups/popup-image');
       if (is_product()){
         get_template_part('template-parts/popups/popup-oneclick');
@@ -185,6 +186,7 @@
 
 	<div id="content" class="site-content" tabindex="-1">
 		<div class="col-full">
+
 
 		<?php
 		do_action( 'storefront_content_top' );
