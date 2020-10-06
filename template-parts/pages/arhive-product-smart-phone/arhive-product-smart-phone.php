@@ -6,9 +6,13 @@
  <main class="mobil-version">
   <section class="products-smart-phone">
     <div class="products-smart-phone__wrapper">
-      <h1 class="products-smart-phone__title"><?php if (get_search_query() != ""){
-        echo "Поиск по:  " . get_search_query();
-      } else echo "Скидки"; ?></h1>
+      <h1 class="products-smart-phone__title">
+        <?php
+        if (get_search_query() != "") echo "Поиск по:  " . get_search_query();
+        else if ($_GET["slug"] == "discounts") echo "Скидки";
+        else echo "";
+
+      ?></h1>
     </div>
     <div class="products-smart-phone__container">
       <?php

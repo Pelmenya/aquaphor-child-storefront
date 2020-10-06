@@ -1,0 +1,20 @@
+@import url(./__content/popup-more-smart-phone__content.css);
+@import url(./__close/popup-more-smart-phone__close.css);
+
+.popup-more-smart-phone {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .popup-more-smart-phone {
+    height: calc(100% - 58px);
+    width: 100%;
+    padding-top: 57%;
+    cursor: pointer;
+    top: 0;
+    bottom: 58px;
+    box-shadow: 0 1px 2px 0 rgba(40, 41, 60, 0.2);
+    overflow-y: hidden;
+
+  }
+}

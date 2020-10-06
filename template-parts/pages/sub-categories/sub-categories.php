@@ -30,7 +30,7 @@
       if ($_GET['category'] == $categories_item->parent) {
 
       ?>
-     <a href="<?php echo SITE_URL?> " class="sub-categories__card">
+     <a href="<?php echo SITE_URL?>products?sub-category=<?php echo $categories_item->slug;?>&title=<?php echo $categories_item->name;?>" class="sub-categories__card">
       <?php $product = get_min_price_product($categories_item->slug);?>
       <img class="sub-categories__pic" src="<?php echo wp_get_attachment_url(get_woocommerce_term_meta( $categories_item->term_id, 'thumbnail_id', true ));?>" alt="<?php echo $categories_item->name;?>">
       <div class="sub-categories__wrapper">

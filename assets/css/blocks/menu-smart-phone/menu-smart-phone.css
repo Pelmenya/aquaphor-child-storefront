@@ -1,0 +1,26 @@
+@import url(./__close/menu-smart-phone__close.css);
+@import url(./__icon/menu-smart-phone__icon.css);
+@import url(./__item/menu-smart-phone__item.css);
+@import url(./__link/menu-smart-phone__link.css);
+@import url(./__working/menu-smart-phone__working.css);
+@import url(./__text/menu-smart-phone__text.css);
+@import url(./__links-wrapper/menu-smart-phone__links-wrapper.css);
+@import url(./__link-text/menu-smart-phone__link-text.css);
+@import url(./__item/_initilal-width/menu-smart-phone__item_initilal-width.css);
+
+.menu-smart-phone {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .menu-smart-phone {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+
+

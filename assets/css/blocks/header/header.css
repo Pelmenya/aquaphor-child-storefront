@@ -56,8 +56,12 @@
 @import url(./__item-icon/_search/header__item-icon_search.css);
 @import url(./__help-button/header__help-button.css);
 @import url(./__help-icon/header__help-icon.css);
+
 @import url(../popup/popup.css);
+@import url(../popup-more-smart-phone/popup-more-smart-phone.css);
 @import url(../popup-preload/popup-preload.css);
+@import url(../menu-smart-phone/menu-smart-phone.css);
+
 @import url(../header/__wrap/_grey/header__wrap_grey.css);
 @import url(../header/__close-item/header__close-item.css);
 @import url(./_smart-phone/header_smart-phone.css);
