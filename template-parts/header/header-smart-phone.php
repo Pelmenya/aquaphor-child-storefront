@@ -6,6 +6,7 @@
     else {
       get_template_part('template-parts/header/header-smart-phone-templates/header__search-button');
     };
+
   ?>
   <div class="header__search-container">
      <?php get_product_search_form(); ?>

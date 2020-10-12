@@ -1,4 +1,8 @@
-function main() {
+function setSmartPhoneScript() {
+
+}
+
+function setDesctopScript() {
   /**
    *  Форма логина
    */
@@ -77,6 +81,12 @@ function main() {
     arrayOfElementP[2].style.color = 'var(--dark)';
     arrayOfElementP[2].style.marginBottom = '22px';
   }
+}
+
+function main() {
+  if (window.screen.width < 450) {
+    setSmartPhoneScript();
+  } else setDesctopScript();
 }
 
 main();

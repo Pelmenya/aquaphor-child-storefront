@@ -13,28 +13,25 @@ function setFooterSmartScript(footer) {
     item.querySelector('.footer-smart__text').classList.remove('footer-smart__text_active');
   }
 
-  let flagOpen = false;
 
-  function openPopup(event) {
-    flagOpen = !flagOpen;
-    if (flagOpen && event.target.parentElement.classList.contains('footer-smart__item_more')) {
-      popupMore.classList.add('popup_is-opened');
-      setTimeout(() => {
-        popupMoreContent.classList.remove('popup-more-smart-phone__content_is-closed');
-      }, 0);
-    }
+  function openPopup() {
+    popupMore.classList.add('popup_is-opened');
+    setTimeout(() => {
+      popupMoreContent.classList.remove('popup-more-smart-phone__content_is-closed');
+    }, 0);
   }
 
   function closePopup(event) {
-    if ((!popupMoreContent.classList.contains('popup-more-smart-phone__content_is-closed'))
-      && (!event.target.classList.contains('popup-more-smart-phone__content'))
-      && (!event.target.parentElement.classList.contains('menu-smart-phone__item'))
-      && (!event.target.parentElement.classList.contains('menu-smart-phone__links-wrapper'))
-      && (!event.target.classList.contains('menu-smart-phone__links-wrapper'))) {
+    if (event.target.classList.contains('popup')
+      || event.target.classList.contains('popup-more-smart-phone__close')) {
       popupMoreContent.classList.add('popup-more-smart-phone__content_is-closed');
+      Object.keys(buttons).forEach((btn) => {
+        removeColorActiveItem(buttons[btn]);
+      });
+
       setTimeout(() => {
         popupMore.classList.remove('popup_is-opened');
-      }, 500);
+      }, 350);
     }
   }
 
@@ -44,12 +41,11 @@ function setFooterSmartScript(footer) {
       Object.keys(buttons).forEach((btn) => {
         if (item !== btn) removeColorActiveItem(buttons[btn]);
       });
+      if (buttons[item].classList.contains('footer-smart__item_more')) openPopup();
     });
   });
 
-  // Кнопка ЕЩЁ
-  window.addEventListener('click', openPopup);
-  window.addEventListener('click', closePopup);
+  window.addEventListener('mousedown', closePopup);
 }
 
 function main() {

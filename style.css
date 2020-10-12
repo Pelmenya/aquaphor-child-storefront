@@ -12,7 +12,6 @@
 
 @import url(./assets/css/blocks/header/header.css);
 
-@import url(./assets/css/blocks/products-smart-phone/products-smart-phone.css);
 
 @import url(./assets/css/blocks/footer/footer.css);
 @import url(./assets/css/blocks/footer-smart/footer-smart.css);
@@ -21,8 +20,8 @@
 
 @import url(./assets/css/pages/cart.css);
 @import url(./assets/css/pages/product-category.css);
-@import url(./assets/css/pages/product.css);
-@import url(./assets/css/blocks/discounts/discounts.css);
+
+
 
 @import url(./assets/css/pages/orders.css);
 @import url(./assets/css/pages/view-order.css);
@@ -606,10 +605,6 @@ table.cart td.actions .coupon {
 
   input[type="search"].search-field:focus {
     width: 100%;
-  }
-
-  button[type="submit"] {
-    display: none;
   }
 
   form.woocommerce-product-search {
