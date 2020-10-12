@@ -12,6 +12,7 @@
  */
 
 get_header();
+
 ?>
 <main class="main">
   <h1 class="title">Доставка</h1>

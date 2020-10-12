@@ -424,7 +424,11 @@ is_page( sanitize_title('о-сайте') );  правильно  */
   }
 
   if (strcasecmp($url_str, $url_discounts) == 0){
-    enqueue_versioned_script('discounts-script', AQUAPHOR_THEME_JS . 'discounts/index.js', true);
+    enqueue_versioned_style( 'is-product', AQUAPHOR_THEME_CSS . 'product.css', array());
+    enqueue_versioned_style( 'products', AQUAPHOR_THEME_BLOCKS_CSS . 'products-smart-phone/products-smart-phone.css', array());
+    enqueue_versioned_style( 'discounts', AQUAPHOR_THEME_BLOCKS_CSS . 'discounts/discounts.css', array());
+    enqueue_versioned_style( 'is-product-category', AQUAPHOR_THEME_CSS . 'product-category.css', array());
+    enqueue_versioned_script( 'product-category', AQUAPHOR_THEME_JS . 'product-category/index.js', true);
   }
 
   if (is_page( array('delivery', 'payment', 'guarantees', 'about-company', 'water-analysis', 'equipment-selection', 'repair' ) ) ){
@@ -439,6 +443,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
   if (is_page( 'equipment-selection' ) ){
     enqueue_versioned_script('equipment-selection', AQUAPHOR_THEME_JS . 'equipment-selection/index.js', true);
   }
+
 
   if (is_page(array('products') ) ){
         enqueue_versioned_style( 'products', AQUAPHOR_THEME_BLOCKS_CSS . 'products-smart-phone/products-smart-phone.css', array());
@@ -493,6 +498,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
 
   if (is_product()) {
     enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'product/index.js', true);
+    enqueue_versioned_style( 'is-product', AQUAPHOR_THEME_CSS . 'product.css', array());
     enqueue_versioned_style( 'is-product-attribute', AQUAPHOR_THEME_CSS . 'is-product-attribute.css', array());
   }
 
@@ -522,6 +528,10 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     enqueue_versioned_style( 'front', AQUAPHOR_THEME_CSS . 'front-page.css', array());
   }
 
+  if (is_account_page()) {
+    enqueue_versioned_style( 'my-account', AQUAPHOR_THEME_CSS . 'my-account.css', array());
+  }
+
   enqueue_versioned_script( 'ya_chat_widget', AQUAPHOR_THEME_JS_WIDGETS . 'ya-chat-widget.js', true);
   enqueue_versioned_script( 'sticky_menu', AQUAPHOR_THEME_JS_WIDGETS . 'sticky-menu.js', true);
   enqueue_versioned_script( 'cart', AQUAPHOR_THEME_JS_FUNCTIONS . 'visibleCart.js', true);
@@ -531,6 +541,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
   enqueue_versioned_script( 'header_smart_phone', AQUAPHOR_THEME_JS_BLOCKS . 'header/header-smart-phone/index.js', true);
 
 }
+add_action('woocommerce_register_post', 'text_domain_woo_validate_reg_form_fields', 10, 3);
 
 add_action( 'wp_footer', 'aquaphor_theme_scripts' );
 
