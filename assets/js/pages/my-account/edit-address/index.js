@@ -43,35 +43,40 @@ function main() {
   activeLinkMenu.firstElementChild.style.color = '#fff';
 
   const contentConainer = document.querySelector('.woocommerce-MyAccount-content');
-  const contentAddressTitle = document.querySelector('.woocommerce-Address-title');
-  const h3 = contentAddressTitle.querySelector('h3');
-  const address = contentConainer.querySelector('address');
-  const pAll = contentConainer.querySelectorAll('p');
 
-  contentConainer.style.fontSize = '16px';
-  contentConainer.style.fontFamily = 'Proxima Nova Rg';
-  contentConainer.style.color = 'var(--dark)';
+  if (window.screen.width < 450) {
+    contentConainer.style.display = 'none';
+  } else {
+    const contentAddressTitle = document.querySelector('.woocommerce-Address-title');
+    const h3 = contentAddressTitle.querySelector('h3');
+    const address = contentConainer.querySelector('address');
+    const pAll = contentConainer.querySelectorAll('p');
 
-  pAll[0].textContent = 'Этот адрес будет использоваться для доставки';
-  pAll[0].style.marginBottom = '46px';
+    contentConainer.style.fontSize = '16px';
+    contentConainer.style.fontFamily = 'Proxima Nova Rg';
+    contentConainer.style.color = 'var(--dark)';
 
-  contentAddressTitle.style.display = 'flex';
+    pAll[0].textContent = 'Этот адрес будет использоваться для доставки';
+    pAll[0].style.marginBottom = '46px';
 
-  h3.style.color = 'var(--blue-blue)';
-  h3.textContent = '';
-  h3.style.marginBottom = '0px';
+    contentAddressTitle.style.display = 'flex';
 
-  const span = createElementDOM('span', 'span-icon');
+    h3.style.color = 'var(--blue-blue)';
+    h3.textContent = '';
+    h3.style.marginBottom = '0px';
 
-  contentAddressTitle.appendChild(span);
+    const span = createElementDOM('span', 'span-icon');
+
+    contentAddressTitle.appendChild(span);
 
 
-  if (address.textContent.trim() === 'Вы пока не указали этот тип адреса.') {
-    address.textContent = 'Информация отсуствует';
+    if (address.textContent.trim() === 'Вы пока не указали этот тип адреса.') {
+      address.textContent = 'Информация отсуствует';
+    }
+
+    address.style.marginTop = '19px';
+    h1.textContent = 'Адрес';
   }
-
-  address.style.marginTop = '19px';
-  h1.textContent = 'Адрес';
 }
 
 main();

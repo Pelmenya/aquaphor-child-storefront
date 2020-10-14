@@ -12,7 +12,6 @@
 
 @import url(./assets/css/blocks/header/header.css);
 
-
 @import url(./assets/css/blocks/footer/footer.css);
 @import url(./assets/css/blocks/footer-smart/footer-smart.css);
 
@@ -20,8 +19,6 @@
 
 @import url(./assets/css/pages/cart.css);
 @import url(./assets/css/pages/product-category.css);
-
-
 
 @import url(./assets/css/pages/orders.css);
 @import url(./assets/css/pages/view-order.css);
@@ -497,6 +494,11 @@ textarea,
 
 /* кнопки корзина*/
 
+.woocommerce-message,
+p {
+  font-family: Proxima Nova Rg, sans-serif;
+}
+
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
@@ -537,6 +539,11 @@ input[type="submit"],
 
 body {
   color: var(--dark);
+}
+
+.addresses header.title a {
+  float: right;
+  overflow: initial;
 }
 
 :root {
@@ -608,7 +615,7 @@ table.cart td.actions .coupon {
   }
 
   form.woocommerce-product-search {
-    width: 100%
+    width: 100%;
   }
 
   .header__search-container {
@@ -616,3 +623,6 @@ table.cart td.actions .coupon {
   }
 }
 
+* {
+  font-family: Proxima Nova Rg, sans-serif;
+}

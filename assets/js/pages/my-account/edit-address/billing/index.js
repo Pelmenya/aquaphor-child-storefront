@@ -47,6 +47,19 @@ function main() {
   form.save_address.style.fontSize = '13px';
   form.save_address.style.height = '50px';
 
+  if (window.screen.width < 450) {
+    form.save_address.style.marginTop = '30px';
+    form.save_address.style.width = '100%';
+    form.save_address.style.fontSize = '16px';
+    form.save_address.style.height = '55px';
+    form.querySelector('h3').style.display = 'none';
+  } else {
+    form.save_address.style.width = '160px';
+    form.save_address.style.fontSize = '13px';
+    form.save_address.style.height = '50px';
+  }
+
+
   const formLabels = form.querySelectorAll('label');
 
   Object.keys(formLabels).forEach((item) => {

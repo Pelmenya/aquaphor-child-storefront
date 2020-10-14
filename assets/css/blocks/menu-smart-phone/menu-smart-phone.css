@@ -7,6 +7,7 @@
 @import url(./__links-wrapper/menu-smart-phone__links-wrapper.css);
 @import url(./__link-text/menu-smart-phone__link-text.css);
 @import url(./__item/_initilal-width/menu-smart-phone__item_initilal-width.css);
+@import url(./__icon-rect/menu-smart-phone__icon-rect.css);
 
 .menu-smart-phone {
   display: none;
