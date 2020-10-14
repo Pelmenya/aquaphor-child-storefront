@@ -1,0 +1,8 @@
+@media screen and (max-width: 450px) {
+  .popup-more-smart-phone.popup-more-smart-phone_my-account {
+    display: flex;
+    flex-direction: column;
+    padding-top: 90%;
+    background-color: #f9f9f9;
+  }
+}

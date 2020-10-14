@@ -21,11 +21,20 @@ function main() {
     formLostResetPasswordBtn.style.backgroundColor = 'var(--blue-blue)';
     formLostResetPasswordBtn.style.marginTop = '10px';
     formLostResetPasswordBtn.style.color = '#fff';
-    formLostResetPasswordBtn.style.width = '160px';
-    formLostResetPasswordBtn.style.fontSize = '13px';
-    formLostResetPasswordBtn.style.height = '50px';
-    formLostResetPasswordBtn.value = 'Сохранить пароль';
-    formLostResetPasswordBtn.textContent = 'Сохранить пароль';
+
+    if (window.screen.width < 450) {
+      formLostResetPasswordBtn.style.width = '100%';
+      formLostResetPasswordBtn.style.fontSize = '16px';
+      formLostResetPasswordBtn.style.height = '55px';
+      formLostResetPasswordBtn.value = 'Сохранить';
+      formLostResetPasswordBtn.textContent = 'Сохранить';
+    } else {
+      formLostResetPasswordBtn.style.width = '160px';
+      formLostResetPasswordBtn.style.fontSize = '13px';
+      formLostResetPasswordBtn.style.height = '50px';
+      formLostResetPasswordBtn.value = 'Сохранить пароль';
+      formLostResetPasswordBtn.textContent = 'Сохранить пароль';
+    }
   }
 }
 

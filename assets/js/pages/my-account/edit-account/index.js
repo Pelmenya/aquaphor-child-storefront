@@ -77,9 +77,16 @@ function main() {
     formEditAccount.save_account_details.style.backgroundColor = 'var(--blue-blue)';
     formEditAccount.save_account_details.style.marginTop = '10px';
     formEditAccount.save_account_details.style.color = '#fff';
-    formEditAccount.save_account_details.style.width = '180px';
-    formEditAccount.save_account_details.style.fontSize = '13px';
-    formEditAccount.save_account_details.style.height = '50px';
+    if (window.screen.width < 450) {
+      formEditAccount.save_account_details.style.width = '100%';
+      formEditAccount.save_account_details.style.fontSize = '16px';
+      formEditAccount.save_account_details.style.height = '55px';
+      formEditAccount.save_account_details.style.marginTop = '0px';
+    } else {
+      formEditAccount.save_account_details.style.width = '180px';
+      formEditAccount.save_account_details.style.fontSize = '13px';
+      formEditAccount.save_account_details.style.height = '50px';
+    }
   }
 }
 

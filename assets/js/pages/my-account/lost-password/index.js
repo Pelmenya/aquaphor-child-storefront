@@ -1,4 +1,5 @@
-function main() {
+
+function setDesctopScript() {
   /**
    *  Форма восстановлениея пароля
   */
@@ -9,8 +10,8 @@ function main() {
     const formLostResetPasswordLabels = formLostResetPassword.querySelectorAll('label');
     const formLostResetPasswordP = formLostResetPassword.querySelectorAll('p');
     const formLostResetPasswordBtn = formLostResetPassword.querySelector('.button');
-    formLostResetPasswordP[0]
-      .textContent = 'Если не удается вспомнить пароль, пожалуйста введите ниже свой Email. Мы отправим на него ссылку для создания нового пароля от вашей учетной записи.';
+    const h1 = document.querySelector('h1');
+    formLostResetPasswordP[0].textContent = 'Если не удается вспомнить пароль, пожалуйста введите ниже свой Email. Мы отправим на него ссылку для создания нового пароля от вашей учетной записи.';
 
     formLostResetPasswordP[0].style.fontSize = '15px';
     formLostResetPasswordP[0].style.color = 'var(--dark)';
@@ -32,14 +33,30 @@ function main() {
     formLostResetPasswordBtn.style.backgroundColor = 'var(--blue-blue)';
     formLostResetPasswordBtn.style.marginTop = '10px';
     formLostResetPasswordBtn.style.color = '#fff';
-    formLostResetPasswordBtn.style.width = '160px';
+
+
     formLostResetPasswordBtn.style.fontSize = '13px';
     formLostResetPasswordBtn.style.height = '50px';
     formLostResetPasswordBtn.value = 'Сбросить пароль';
     formLostResetPasswordBtn.textContent = 'Сбросить пароль';
 
-    document.querySelector('h1').textContent = 'Восстановление ';
+    h1.textContent = 'Восстановление ';
+
+    if (window.screen.width < 450) {
+      formLostResetPasswordP[0].textContent = 'Введите вашу эл. почту и мы вышлем вам инструкции по смене пароля';
+      formLostResetPasswordLabels[0].textContent = 'Эл.почта';
+      formLostResetPasswordBtn.style.width = '100%';
+      h1.textContent = 'Восстановить пароль';
+      formLostResetPasswordBtn.style.fontSize = '16px';
+      formLostResetPasswordBtn.style.height = '55px';
+      formLostResetPasswordBtn.value = 'Сбросить';
+      formLostResetPasswordBtn.textContent = 'Сбросить';
+    }
   }
+}
+
+function main() {
+  setDesctopScript();
 }
 
 main();

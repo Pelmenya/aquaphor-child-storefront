@@ -30,16 +30,16 @@ $allowed_html = array(
 
 <p>
 	<?php
-	printf(
+/*	printf(
 		/* translators: 1: user display name 2: logout url */
-		wp_kses( __( 'Hello %1$s (not %1$s? <a href="%2$s">Log out</a>)', 'woocommerce' ), $allowed_html ),
+	/*	wp_kses( __( 'Hello %1$s (not %1$s? <a href="%2$s">Log out</a>)', 'woocommerce' ), $allowed_html ),
 		'<strong>' . esc_html( $current_user->display_name ) . '</strong>',
 		esc_url( wc_logout_url() )
-	);
+  );*/
 	?>
 </p>
 
-<p>
+<p class="display-none-smart-phone">
 	<?php
 	/* translators: 1: Orders URL 2: Address URL 3: Account URL. */
 	$dashboard_desc = __( 'From your account dashboard you can view your <a href="%1$s">recent orders</a>, manage your <a href="%2$s">billing address</a>, and <a href="%3$s">edit your password and account details</a>.', 'woocommerce' );
@@ -55,6 +55,58 @@ $allowed_html = array(
 	);
 	?>
 </p>
+
+<?php
+  /**
+   * SmartPhone menu bar
+   *
+   */
+?>
+<div class="popup popup-more-smart-phone popup-more-smart-phone_my-account">
+  <div class="popup-more-smart-phone__content">
+    <?php echo '<h1 class="entry-title">'. 'Добро пожаловать, ' . esc_html( $current_user->display_name ) . '!</h1>'; ?>
+    <div class="menu-smart-phone">
+      <div class="menu-smart-phone__links-wrapper">
+        <a href="<?php echo esc_url( wc_get_account_endpoint_url( 'edit-account' ) ); ?>" class="menu-smart-phone__item">
+          <div class="menu-smart-phone__item menu-smart-phone__item_initilal-width">
+            <div class="menu-smart-phone__icon menu-smart-phone__icon-rect"></div>
+            <p class="menu-smart-phone__link-text">Редактировать профиль</p>
+          </div>
+          <svg width="6" height="11" viewBox="0 0 6 11">
+            <path fill="#28293C" d="M4.19 5.5L.22 9.659c-.293.307-.293.804 0 1.11.293.308.767.308 1.06 0l4.5-4.713c.293-.307.293-.805 0-1.112L1.28.23C.987-.077.513-.077.22.23c-.293.307-.293.804 0 1.111L4.19 5.5z"/>
+          </svg>
+        </a>
+        <a href="<?php echo esc_url( wc_get_account_endpoint_url( 'orders' ) ); ?>" class="menu-smart-phone__item">
+          <div class="menu-smart-phone__item menu-smart-phone__item_initilal-width">
+            <div class="menu-smart-phone__icon menu-smart-phone__icon-rect"></div>
+            <p class="menu-smart-phone__link-text">История заказов</p>
+          </div>
+          <svg width="6" height="11" viewBox="0 0 6 11">
+            <path fill="#28293C" d="M4.19 5.5L.22 9.659c-.293.307-.293.804 0 1.11.293.308.767.308 1.06 0l4.5-4.713c.293-.307.293-.805 0-1.112L1.28.23C.987-.077.513-.077.22.23c-.293.307-.293.804 0 1.111L4.19 5.5z"/>
+          </svg>
+        </a>
+        <a href="<?php echo esc_url( wc_get_account_endpoint_url( 'edit-address/billing' ) ); ?>" class="menu-smart-phone__item">
+          <div class="menu-smart-phone__item menu-smart-phone__item_initilal-width">
+            <div class="menu-smart-phone__icon menu-smart-phone__icon-rect"></div>
+            <p class="menu-smart-phone__link-text">Адрес доставки</p>
+          </div>
+          <svg width="6" height="11" viewBox="0 0 6 11">
+            <path fill="#28293C" d="M4.19 5.5L.22 9.659c-.293.307-.293.804 0 1.11.293.308.767.308 1.06 0l4.5-4.713c.293-.307.293-.805 0-1.112L1.28.23C.987-.077.513-.077.22.23c-.293.307-.293.804 0 1.111L4.19 5.5z"/>
+          </svg>
+        </a>
+        <a href="<?php echo esc_url( wc_logout_url() )?>" class="menu-smart-phone__item">
+          <div class="menu-smart-phone__item menu-smart-phone__item_initilal-width">
+            <div class="menu-smart-phone__icon menu-smart-phone__icon-rect"></div>
+            <p class="menu-smart-phone__link-text">Выйти</p>
+          </div>
+          <svg width="6" height="11" viewBox="0 0 6 11">
+            <path fill="#28293C" d="M4.19 5.5L.22 9.659c-.293.307-.293.804 0 1.11.293.308.767.308 1.06 0l4.5-4.713c.293-.307.293-.805 0-1.112L1.28.23C.987-.077.513-.077.22.23c-.293.307-.293.804 0 1.111L4.19 5.5z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <?php
 	/**

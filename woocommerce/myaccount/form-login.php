@@ -25,11 +25,12 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <div class="u-columns col2-set" id="customer_login">
 
-	<div class="u-column1 col-1">
+	<div class="u-column1 col-1 display-none-smart-phone">
 
 <?php endif; ?>
 
-		<h2><?php esc_html_e( 'Login', 'woocommerce' ); ?></h2>
+    <h2>Добро пожаловать!</h2>
+    <p class="form-description">Пожалуйста введите адрес эл. почты и пароль чтобы войти в ваш профиль</p>
 
 		<form class="woocommerce-form woocommerce-form-login login" method="post">
 
@@ -67,7 +68,9 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 	<div class="u-column2 col-2">
 
-		<h2><?php esc_html_e( 'Register', 'woocommerce' ); ?></h2>
+		<h2>Регистрация покупателя</h2>
+
+    <p class="form-description">Уже зарегистрированы?&nbsp;<span class="form-description form-description_link-button">Войти</span></p>
 
 		<form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
 

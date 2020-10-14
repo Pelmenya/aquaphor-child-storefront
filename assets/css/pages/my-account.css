@@ -1,9 +1,23 @@
 /*смартфон*/
 
+.display-none {
+  display: initial;
+}
+
+
+.form-description {
+  display: none;
+}
+
+.form-description_link-button {
+  display: none;
+}
+
 @media screen and (max-width: 450px) {
   .site-content {
     padding-left: 30px;
     padding-right: 30px;
+    padding-top: 30px;
   }
   input[type="text"],
   input[type="number"],
@@ -109,9 +123,74 @@
     border: solid 1px var(--blue-blue);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
     font-size: 20px;
+    font-weight: 900;
     color: var(--white);
     line-height: 20px;
     background-color: var(--blue-blue);
     box-sizing: border-box;
   }
+
+  h1.entry-title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: rgba(40, 41, 60, 0.87);
+
+    position: absolute;
+    top: -150px;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: rgba(40, 41, 60, 0.87);
+  }
+
+  .form-description {
+    display: inline-block;
+    font-size: 14px;
+    color: rgb(34, 60, 82);
+    margin-bottom: 25px;
+  }
+
+  .form-description_link-button {
+    display: inline-block;
+    color: #1856bd;
+    cursor: pointer;
+    margin-bottom: 0px;
+  }
+
+
+  .display-none-smart-phone {
+    display: none;
+  }
+
+  .display-flex-smart-phone {
+    display: flex;
+  }
+
+  .hentry .entry-content a {
+    text-decoration: none;
+  }
+
+  #billing_phone_field{
+    width: 100%;
+    margin-right: 0;
+  }
+
+  #billing_email_field{
+    width: 100%;
+    margin-right: 0;
+  }
+
 }
