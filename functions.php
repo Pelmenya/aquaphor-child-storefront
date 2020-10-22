@@ -510,6 +510,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'product-category/index.js', true);
     enqueue_versioned_style( 'is-product', AQUAPHOR_THEME_CSS . 'product.css', array());
     enqueue_versioned_style( 'is-product-category', AQUAPHOR_THEME_CSS . 'product-category.css', array());
+    enqueue_versioned_style( 'products', AQUAPHOR_THEME_BLOCKS_CSS . 'products-smart-phone/products-smart-phone.css', array());
   }
 
   if (is_shop()) {
@@ -547,22 +548,6 @@ is_page( sanitize_title('о-сайте') );  правильно  */
   enqueue_versioned_script( 'header_smart_phone', AQUAPHOR_THEME_JS_BLOCKS . 'header/header-smart-phone/index.js', true);
 
 }
-
-function aquaphor_smart_phone_endpoint_title( $title, $id ) {
-
-  if ( is_wc_endpoint_url( 'my-account' ) ) {
-    $title = "Добро пожаловать";
-  }
-  elseif ( is_wc_endpoint_url( 'orders' ) ) {
-      $title = "Заказы";
-  }
-  elseif ( is_wc_endpoint_url( 'edit-account' ) ) {
-      $title = "";
-  }
-  return $title;
-}
-
-add_filter( 'the_title', 'aquaphor_smart_phone_endpoint_title', 10, 2 );
 
 add_action('woocommerce_register_post', 'text_domain_woo_validate_reg_form_fields', 10, 3);
 
