@@ -36,15 +36,15 @@
   color: var(--dark);
 }
 
-table.account-orders-table th, td {
+table.account-orders-table th,
+td {
   padding-left: 1em;
   padding-right: 1em;
 }
 
-table.account-orders-table{
+table.account-orders-table {
   border: 1px solid #e9e9eb;
 }
-
 
 .my_account_orders .button:hover:hover {
   background-color: transparent;
@@ -55,5 +55,12 @@ table.account-orders-table{
   button[type="submit"] {
     display: block;
   }
-}
 
+  .site-content {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    height: 100%;
+    background-color: var(--dark-4);
+  }
+}

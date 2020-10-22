@@ -23,7 +23,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 
 <?php if ( $has_orders ) : ?>
 
-	<table class="woocommerce-orders-table woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table">
+	<table class="woocommerce-orders-table woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table display-none-smart-phone">
 		<thead>
 			<tr>
 				<?php foreach ( wc_get_account_orders_columns() as $column_id => $column_name ) : ?>
@@ -102,4 +102,57 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 	</div>
 <?php endif; ?>
 
-<?php do_action( 'woocommerce_after_account_orders', $has_orders ); ?>
+<?php
+/**
+ * Версия для смартфонов
+*/
+?>
+
+<?php if ( $has_orders ) : ?>
+  <?php
+    $orders = array();
+    $i = 0;
+    foreach ( $customer_orders->orders as $customer_order ) {
+      $order      = wc_get_order( $customer_order ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+      $item_count = $order->get_item_count() - $order->get_item_count_refunded();
+      $orders[$i]["order_number"] = $order->get_order_number();
+      $orders[$i]["item_count"] = $order->get_item_count() - $order->get_item_count_refunded();
+      $orders[$i]["status"] = esc_html( wc_get_order_status_name( $order->get_status() ) );
+      $orders[$i]["url"] = $order->get_view_order_url();
+      $keys = explode(".", esc_html( wc_format_datetime( $order->get_date_created() ) ));
+      switch ($keys[1]){
+        case "01": $month = " января, ";
+          break;
+        case "02": $month = " февраля, ";
+          break;
+        case "03": $month = " марта, ";
+          break;
+        case "04": $month = " апреля, ";
+          break;
+        case "05": $month = " мая, ";
+          break;
+        case "06": $month = " июня, ";
+          break;
+        case "07": $month = " июля, ";
+          break;
+        case "08": $month = " августа, ";
+          break;
+        case "09": $month = " сентября , ";
+          break;
+        case "10": $month = " октября, ";
+          break;
+        case "11": $month = " ноября, ";
+          break;
+        case "12": $month = " декабря, ";
+          break;
+      };
+      $orders[$i]["data"] = $keys[0] . $month . $keys[2];
+      $orders[$i]["order_total"] = $order->get_formatted_order_total();
+      $i++;
+    }
+    ?>
+<?php endif; ?>
+
+
+
+<?php echo "<pre>"; print_r($orders);  echo "</pre>";?>
