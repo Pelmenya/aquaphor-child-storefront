@@ -470,6 +470,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
   if ((preg_match("/$url_my_account_orders/i", $url_str))&&(strcasecmp($url_query, '') == 0)) {
     if (is_user_logged_in()){
       enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'my-account/orders/index.js', true);
+      enqueue_versioned_style( 'orders', AQUAPHOR_THEME_CSS . 'orders.css', array());
     } else enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'my-account/index.js', true);
   }
   /** Регулярное выражение на вхождение строки в адрес $url_my_account_view_order = '\/my-account\/view-order'
@@ -537,6 +538,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
 
   if (is_account_page()) {
     enqueue_versioned_style( 'my-account', AQUAPHOR_THEME_CSS . 'my-account.css', array());
+    enqueue_versioned_style( 'orders-smart', AQUAPHOR_THEME_BLOCKS_CSS . 'orders-smart-phone/orders-smart-phone.css', array());
   }
 
   enqueue_versioned_script( 'ya_chat_widget', AQUAPHOR_THEME_JS_WIDGETS . 'ya-chat-widget.js', true);
