@@ -116,8 +116,9 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
       $order      = wc_get_order( $customer_order ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
       $item_count = $order->get_item_count() - $order->get_item_count_refunded();
       $orders[$i]["order_number"] = $order->get_order_number();
-      $orders[$i]["item_count"] = $order->get_item_count() - $order->get_item_count_refunded();
-      $orders[$i]["status"] = esc_html( wc_get_order_status_name( $order->get_status() ) );
+			$orders[$i]["item_count"] = $order->get_item_count() - $order->get_item_count_refunded();
+			$orders[$i]["status_slug"] = $order->get_status();
+      $orders[$i]["status_label_display"] = esc_html( wc_get_order_status_name( $order->get_status() ) );
       $orders[$i]["url"] = $order->get_view_order_url();
       $keys = explode(".", esc_html( wc_format_datetime( $order->get_date_created() ) ));
       switch ($keys[1]){
@@ -147,12 +148,43 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
           break;
       };
       $orders[$i]["data"] = $keys[0] . $month . $keys[2];
+      $orders[$i]["datatime"] = esc_attr( $order->get_date_created()->date( 'c' ) );
       $orders[$i]["order_total"] = $order->get_formatted_order_total();
       $i++;
     }
     ?>
 <?php endif; ?>
+<?php
+/**
+ *  Вывод заказов
+ *  Если дата одна и тажа - не выводим ее
+ *
+ * */
+?>
+  <section class="orders-smart-phone">
+  <h1 class="orders-smart-phone__title">Заказы</h1>
 
-
-
-<?php echo "<pre>"; print_r($orders);  echo "</pre>";?>
+  <?php for($i = 0; $i < count($orders); ++$i) { ?>
+    <time class="orders-smart-phone__data <?php
+      if ($i!=0) {
+        if (strcasecmp($orders[$i-1]["data"], $orders[$i]["data"]) == 0)
+         echo "orders-smart-phone__data_is-closed";
+      };
+      ?>" datetime="<?php echo $orders[$i]["datatime"];?>"><?php echo $orders[$i]["data"];?></time>
+    <a href="<?php echo $orders[$i]["url"];?>" class="orders-smart-phone__card">
+      <div class="orders-smart-phone__wrap-col">
+        <h6 class="orders-smart-phone__order">Заказ #<?php echo $orders[$i]["order_number"]?></h6>
+        <p class="orders-smart-phone__total-price"><?php echo $orders[$i]["order_total"]?></p>
+      </div>
+      <button class="orders-smart-phone__status
+        <?php
+          if (strcasecmp($orders[$i]["status_label_display"], "ГОТОВО") == 0) echo "orders-smart-phone__status_blue";
+          if (strcasecmp($orders[$i]["status_label_display"], "ОТМЕНЕН") == 0) echo "orders-smart-phone__status_red";
+        ?>">
+        <?php echo $orders[$i]["status_label_display"];?>
+      </button>
+    </a>
+    <?php
+    };
+  ?>
+  </section>

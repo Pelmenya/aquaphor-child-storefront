@@ -1,0 +1,17 @@
+.orders-smart-phone__status {
+  font-family: Proxima Nova Rg;
+  font-size: 12px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--white-70);
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: var(--dull-orange);
+  padding: 0;
+  width: 82px;
+  height: 25px;
+}

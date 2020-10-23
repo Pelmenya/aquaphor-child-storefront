@@ -27,17 +27,15 @@ function main() {
 
     const fieldset = formEditAccount.querySelector('fieldset');
     const legend = formEditAccount.querySelector('legend');
-
     fieldset.style.backgroundColor = '#fff';
+    legend.style.backgroundColor = '#fff';
     fieldset.style.padding = '0';
 
     legend.textContent = 'Изменение пароля';
-    legend.style.backgroundColor = 'fff';
     legend.style.fontFamily = 'Proxima Nova Rg';
     legend.style.fontSize = '18px';
     legend.style.fontWeight = 'bold';
     legend.style.color = 'var(--dark)';
-    legend.style.backgroundColor = '#fff';
 
     /* все подписи к инпутам */
 

@@ -1,0 +1,6 @@
+.orders-smart-phone__wrap-col {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
