@@ -1,0 +1,7 @@
+.cart-smart-phone__pic {
+  width: 75px;
+  height: 75px;
+  border-radius: 10px;
+  background-color: var(--dark-4);
+  display: block;
+}

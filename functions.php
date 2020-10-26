@@ -457,6 +457,8 @@ is_page( sanitize_title('о-сайте') );  правильно  */
 
   if (strcasecmp($url_str, $url_cart) == 0){
     enqueue_versioned_script( 'custom', AQUAPHOR_THEME_JS . 'cart/index.js', array('jquery') );
+    enqueue_versioned_style( 'cart', AQUAPHOR_THEME_CSS . 'cart.css', array());
+    enqueue_versioned_style( 'cart-smart', AQUAPHOR_THEME_BLOCKS_CSS . 'cart-smart-phone/cart-smart-phone.css', array());
   }
 
   if (strcasecmp($url_str, $url_my_account) == 0){

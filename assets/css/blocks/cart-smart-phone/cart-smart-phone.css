@@ -1,0 +1,26 @@
+@import url(./__title/cart-smart-phone__title.css);
+@import url(./__button/cart-smart-phone__button.css);
+@import url(./__card/cart-smart-phone__card.css);
+@import url(./__checkout-btn/cart-smart-phone__checkout-btn.css);
+@import url(./__counter/cart-smart-phone__counter.css);
+@import url(./__pic/cart-smart-phone__pic.css);
+@import url(./__price/cart-smart-phone__price.css);
+@import url(./__total-price/cart-smart-phone__total-price.css);
+@import url(./__total-title/cart-smart-phone__total-title.css);
+@import url(./__cross/cart-smart-phone__cross.css);
+@import url(./__wrap/cart-smart-phone__wrap.css);
+
+
+.cart-smart-phone {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .cart-smart-phone {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    position: relative;
+  }
+}

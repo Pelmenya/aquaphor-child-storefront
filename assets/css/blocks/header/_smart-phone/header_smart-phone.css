@@ -23,6 +23,8 @@
   .header.header_smart-phone.header_smart-phone_align {
     justify-content: initial;
   }
+
+  
   /* буфер для липкого меню */
   .buffer-for-sticky {
     display: block;

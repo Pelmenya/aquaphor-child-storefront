@@ -1,0 +1,6 @@
+.cart-smart-phone__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 18px;
+}
