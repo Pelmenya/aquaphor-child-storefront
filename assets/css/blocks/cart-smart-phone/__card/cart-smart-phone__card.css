@@ -1,0 +1,10 @@
+.cart-smart-phone__card {
+  width: 100%;
+  box-shadow: 0 2px 19px 0 rgba(222, 224, 226, 0.2);
+  background-color: var(--white);
+  padding-left: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  margin-bottom: 10px;
+}

@@ -255,7 +255,7 @@ table.cart td.actions {
   margin-left: 50%;
 }
 
-.product-subtotal::before{
+.product-subtotal::before {
   content: '';
 }
 /***********************/
@@ -275,3 +275,16 @@ table.cart td.actions {
   }
 }
 
+.display-none {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .site-content {
+    background-color: var(--dark-4);
+  }
+
+    header.entry-header {
+    display: none;
+  }
+}

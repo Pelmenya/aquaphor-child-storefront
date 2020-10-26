@@ -1,0 +1,7 @@
+.cart-smart-phone__checkout-btn {
+  width: 155px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: var(--blue-blue);
+  color: var(--white);
+}
