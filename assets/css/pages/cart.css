@@ -277,6 +277,7 @@ table.cart td.actions {
 
 
 @media screen and (max-width: 450px) {
+
   .site-content {
     background-color: var(--dark-4);
   }

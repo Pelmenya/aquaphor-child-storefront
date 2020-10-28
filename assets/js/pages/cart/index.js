@@ -44,11 +44,15 @@ class ProductCounter {
 }
 
 function setSmartPhoneScript() {
-// удаляем темплейт для desktop версии)
+  // удаляем темплейт для desktop версии)
 
   const desktop = document.querySelector('.cart-desktop');
   desktop.parentNode.removeChild(desktop);
 
+  // - высота хедера - высота футера
+  if (document.querySelector('.site-content').offsetHeight < window.screen.height - 58 - 65) {
+    document.querySelector('.site-content').style.height = `${window.screen.height - 58 - 65}px`;
+  }
 
   const updateBtn = document.querySelector('button.button');
   const inputsWrap = document.querySelectorAll('.cart-smart-phone__counter-wrap');
@@ -65,8 +69,23 @@ function setSmartPhoneScript() {
   });
 }
 
+function setDeskTopScript() {
+  const smart = document.querySelector('.cart-smart-phone');
+  smart.parentNode.removeChild(smart);
+  const updateCart = document.querySelector('button.button');
+  updateCart.addEventListener('click', () => {
+    window.location.href = 'cart';
+  });
+  const inputs = document.querySelectorAll('input.qty');
+  Object.keys(inputs).forEach((item) => {
+    inputs[item].type = 'number';
+    inputs[item].readOnly = false;
+  });
+}
+
 function main() {
   if (window.screen.width < 450) setSmartPhoneScript();
+  else setDeskTopScript();
 }
 
 main();
