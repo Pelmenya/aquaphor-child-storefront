@@ -32,6 +32,7 @@ if ( $max_value && $min_value === $max_value ) {
 		<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php echo esc_attr( $label ); ?></label>
 		<input
 			type="text"
+      readonly
 			id="<?php echo esc_attr( $input_id ); ?>"
 			class="<?php echo esc_attr( join( ' ', (array) $classes ) ); ?>"
 			step="<?php echo esc_attr( $step ); ?>"

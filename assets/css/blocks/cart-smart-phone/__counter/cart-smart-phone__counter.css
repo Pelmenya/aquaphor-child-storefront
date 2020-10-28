@@ -1,4 +1,4 @@
-.cart-smart-phone__counter {
+input[type="text"].cart-smart-phone__counter {
   font-family: Proxima Nova Rg;
   font-size: 12px;
   font-weight: 600;
@@ -8,4 +8,10 @@
   letter-spacing: normal;
   text-align: center;
   color: rgba(40, 41, 60, 0.7);
+  border: none;
+  padding: 0;
+  background-color: var(--white);
+  box-shadow: none;
+  margin-left: 10px;
+  margin-right: 10px;
 }

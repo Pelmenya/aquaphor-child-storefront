@@ -5,10 +5,10 @@
 @import url(./__counter/cart-smart-phone__counter.css);
 @import url(./__pic/cart-smart-phone__pic.css);
 @import url(./__price/cart-smart-phone__price.css);
-@import url(./__total-price/cart-smart-phone__total-price.css);
-@import url(./__total-title/cart-smart-phone__total-title.css);
 @import url(./__cross/cart-smart-phone__cross.css);
 @import url(./__wrap/cart-smart-phone__wrap.css);
+@import url(./__counter-wrap/cart-smart-phone__counter-wrap.css);
+@import url(./__update-btn/cart-smart-phone__update-btn.css);
 
 
 .cart-smart-phone {
