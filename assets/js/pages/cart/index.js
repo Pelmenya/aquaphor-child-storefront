@@ -1,9 +1,20 @@
+const productsCounters = [];
+
+function disabledButtons() {
+  productsCounters.forEach((item) => {
+    const productCounter = item;
+    productCounter.plus.disabled = true;
+    productCounter.minus.disabled = true;
+  });
+}
+
 class ProductCounter {
   constructor(props) {
     this.input = props.input;
     this.plus = props.plus;
     this.minus = props.minus;
     this.update = props.update;
+    this.disabledButtons = props.disabled;
     this.create = this.create.bind(this);
     this.increment = this.increment.bind(this);
     this.decrement = this.decrement.bind(this);
@@ -17,11 +28,13 @@ class ProductCounter {
 
   increment() {
     this.input.value = String(Number(this.input.value) + 1);
+    this.disabledButtons();
     this.updateCart();
   }
 
   decrement() {
     this.input.value = String(Number(this.input.value) - 1);
+    this.disabledButtons();
     this.updateCart();
   }
 
@@ -31,20 +44,24 @@ class ProductCounter {
 }
 
 function setSmartPhoneScript() {
+// удаляем темплейт для desktop версии)
+
+  const desktop = document.querySelector('.cart-desktop');
+  desktop.parentNode.removeChild(desktop);
+
 
   const updateBtn = document.querySelector('button.button');
-  updateBtn.addEventListener('click', (e) => console.log(e));
   const inputsWrap = document.querySelectorAll('.cart-smart-phone__counter-wrap');
-  const wraps = [];
   inputsWrap.forEach((item) => {
     const productCounter = new ProductCounter({
       plus: item.querySelector('.plus'),
       input: item.querySelector('input.cart-smart-phone__counter'),
       minus: item.querySelector('.minus'),
       update: updateBtn,
+      disabled: disabledButtons,
     });
     productCounter.create();
-    wraps.push(productCounter);
+    productsCounters.push(productCounter);
   });
 }
 

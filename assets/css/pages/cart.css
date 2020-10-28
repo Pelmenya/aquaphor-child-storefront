@@ -275,9 +275,6 @@ table.cart td.actions {
   }
 }
 
-.display-none {
-  display: none;
-}
 
 @media screen and (max-width: 450px) {
   .site-content {
@@ -287,4 +284,13 @@ table.cart td.actions {
     header.entry-header {
     display: none;
   }
+
+  div.woocommerce-message {
+    display: none;
+  }
+
+  .cart-desktop {
+    display: none;
+  }
+
 }

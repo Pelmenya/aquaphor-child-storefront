@@ -1,8 +1,13 @@
 @import url(./__icon/footer-smart__icon.css);
 @import url(./__icon/_active/footer-smart__icon_active.css);
 @import url(./__item/footer-smart__item.css);
+@import url(./__item/_left/footer-smart__item_left.css);
 @import url(./__text/footer-smart__text.css);
 @import url(./__text/_active/footer-smart__text_active.css);
+@import url(./_cart/footer-smart_cart.css);
+@import url(./__cart-checkout-btn/footer-smart__cart-checkout-btn.css);
+@import url(./__cart-total-title/footer-smart__cart-total-title.css);
+@import url(./__cart-total-price/footer-smart__cart-total-price.css);
 
 .footer-smart {
   display: none;
