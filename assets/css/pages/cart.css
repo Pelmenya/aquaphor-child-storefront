@@ -1,3 +1,5 @@
+@import url(../blocks/empty-cart-smart-phone/empty-cart-smart-phone.css);
+
 /*Корзина*/
 
 table.cart th,
@@ -291,6 +293,10 @@ table.cart td.actions {
   }
 
   .cart-desktop {
+    display: none;
+  }
+
+  .cart-empty.woocommerce-info{
     display: none;
   }
 

@@ -1,0 +1,18 @@
+@import url(./__button/empty-cart-smart-phone__button.css);
+@import url(./__pic/empty-cart-smart-phone__pic.css);
+@import url(./__text/empty-cart-smart-phone__text.css);
+@import url(./__title/empty-cart-smart-phone__title.css);
+
+.empty-cart-smart-phone {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .empty-cart-smart-phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -54,6 +54,12 @@ function setSmartPhoneScript() {
     document.querySelector('.site-content').style.height = `${window.screen.height - 58 - 65}px`;
   }
 
+  const emptyCart = document.querySelector('.empty-cart-smart-phone');
+  if (emptyCart) {
+    document.querySelector('.site-content').style.marginBottom = '0px';
+    document.querySelector('.site-content').style.height = `${window.screen.height}px`;
+  }
+
   const updateBtn = document.querySelector('button.button');
   const inputsWrap = document.querySelectorAll('.cart-smart-phone__counter-wrap');
   inputsWrap.forEach((item) => {

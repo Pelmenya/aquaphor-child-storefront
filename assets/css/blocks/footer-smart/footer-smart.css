@@ -30,4 +30,8 @@
     padding-top: 10px;
     z-index: 10;
   }
+
+  .footer-smart-display-none {
+    display: none;
+  }
 }
