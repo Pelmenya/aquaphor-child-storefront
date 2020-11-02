@@ -1,0 +1,23 @@
+a.empty-cart-smart-phone__button {
+  width: calc(100% - 40px);
+  padding-top: 16px;
+  padding-bottom: 14px;
+  border-radius: 5px;
+  background-color: var(--blue-blue);
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 70px;
+  margin-top: 80px;
+  text-decoration: none;
+}
+
+.hentry .entry-content a{
+  text-decoration: none;
+}

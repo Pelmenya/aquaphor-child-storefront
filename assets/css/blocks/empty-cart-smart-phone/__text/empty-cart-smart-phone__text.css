@@ -1,0 +1,12 @@
+.empty-cart-smart-phone__text {
+  opacity: 0.7;
+  font-family: Proxima Nova Rg;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgba(40, 41, 60, 0.7);
+}
