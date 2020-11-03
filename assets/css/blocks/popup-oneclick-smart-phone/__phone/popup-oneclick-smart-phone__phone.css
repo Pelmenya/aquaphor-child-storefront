@@ -1,0 +1,6 @@
+input[type="tel"].popup-oneclick-smart-phone__phone {
+  border-radius: 3px;
+  border: solid 1px #dcdcdc;
+  background-color: var(--white);
+  box-shadow: none;
+}

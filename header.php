@@ -150,6 +150,7 @@
       get_template_part('template-parts/popups/popup-image');
       if (is_product()){
         get_template_part('template-parts/popups/popup-oneclick');
+        get_template_part('template-parts/popups/popup-oneclick-smart-phone');
       }
     ?>
 

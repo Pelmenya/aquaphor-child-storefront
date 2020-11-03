@@ -507,6 +507,8 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'product/index.js', true);
     enqueue_versioned_style( 'is-product', AQUAPHOR_THEME_CSS . 'product.css', array());
     enqueue_versioned_style( 'is-product-attribute', AQUAPHOR_THEME_CSS . 'is-product-attribute.css', array());
+    enqueue_versioned_style( 'cart-smart', AQUAPHOR_THEME_BLOCKS_CSS . 'cart-smart-phone/cart-smart-phone.css', array());
+    enqueue_versioned_style( 'popup-oneclick-smart-phone', AQUAPHOR_THEME_BLOCKS_CSS . 'popup-oneclick-smart-phone/popup-oneclick-smart-phone.css', array());
   }
 
   if (is_product_category()) {
