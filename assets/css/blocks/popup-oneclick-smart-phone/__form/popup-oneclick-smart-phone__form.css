@@ -1,0 +1,9 @@
+.popup-oneclick-smart-phone__form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  justify-content: space-between;
+}

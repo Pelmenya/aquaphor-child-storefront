@@ -15,3 +15,7 @@ input[type="text"].cart-smart-phone__counter {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+input[type="text"].cart-smart-phone__counter.cart-smart-phone__counter_one-click {
+  width: 15px;
+}

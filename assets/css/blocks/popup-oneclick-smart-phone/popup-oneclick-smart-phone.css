@@ -1,0 +1,12 @@
+@import url(./__form/popup-oneclick-smart-phone__form.css);
+@import url(./__button/popup-oneclick-smart-phone__button.css);
+@import url(./__email/popup-oneclick-smart-phone__email.css);
+@import url(./__name/popup-oneclick-smart-phone__name.css);
+@import url(./__phone/popup-oneclick-smart-phone__phone.css);
+@import url(./__text/popup-oneclick-smart-phone__text.css);
+
+@media screen and (max-width: 450px) {
+  .popup-oneclick-smart-phone {
+    padding-top: 48%;
+  }
+}

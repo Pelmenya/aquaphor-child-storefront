@@ -1,7 +1,70 @@
 function setFooterSmartScript(footer) {
   const buttons = footer.querySelectorAll('.footer-smart__item');
+
   const popupMore = document.querySelector('.popup-more-smart-phone');
   const popupMoreContent = popupMore.querySelector('.popup-more-smart-phone__content');
+
+  const popupOneClickSmartPhone = document.querySelector('.popup-oneclick-smart-phone');
+
+  if (popupOneClickSmartPhone) {
+    const popupOneClickContent = popupOneClickSmartPhone.querySelector(
+      '.popup-more-smart-phone__content',
+    );
+    const oneCLickButtonSmartPhone = document.querySelector(
+      '.product-smart-phone__button-one-click',
+    );
+    const minusBtn = popupOneClickSmartPhone.querySelector('button.minus');
+    const plusBtn = popupOneClickSmartPhone.querySelector('button.plus');
+
+    const counterInput = popupOneClickSmartPhone.querySelector(
+      '.cart-smart-phone__counter_one-click',
+    );
+
+    const priceLabel = popupOneClickSmartPhone.querySelector('.cart-smart-phone__price');
+    if (priceLabel) {
+      const priceOneProduct = Number(priceLabel.textContent.replace('руб.', '').trim());
+
+      const minusBtnClick = () => {
+        if (Number(counterInput.value > 1)) {
+          counterInput.value = String(Number(counterInput.value) - 1);
+          priceLabel.textContent = `${priceOneProduct * Number(counterInput.value)}  руб.`;
+        } else counterInput.value = 1;
+      };
+
+      const plusBtnClick = () => {
+        counterInput.value = String(Number(counterInput.value) + 1);
+        priceLabel.textContent = `${priceOneProduct * Number(counterInput.value)}  руб.`;
+      };
+
+      const openPopupOneClick = () => {
+        popupOneClickSmartPhone.classList.add('popup_is-opened');
+        setTimeout(() => {
+          popupOneClickContent.classList.remove('popup-more-smart-phone__content_is-closed');
+        }, 0);
+
+        minusBtn.addEventListener('click', minusBtnClick);
+        plusBtn.addEventListener('click', plusBtnClick);
+      };
+
+      const closePopupOneClick = (event) => {
+        if (
+          event.target.classList.contains('popup') || event.target.classList.contains('popup-more-smart-phone__close')
+        ) {
+          minusBtn.addEventListener('click', minusBtnClick);
+          plusBtn.addEventListener('click', plusBtnClick);
+
+          popupOneClickContent.classList.add('popup-more-smart-phone__content_is-closed');
+
+          setTimeout(() => {
+            popupOneClickSmartPhone.classList.remove('popup_is-opened');
+          }, 350);
+        }
+      };
+
+      oneCLickButtonSmartPhone.addEventListener('click', openPopupOneClick);
+      window.addEventListener('mousedown', closePopupOneClick);
+    }
+  }
 
   function setColorActiveItem(item) {
     item.querySelector('.footer-smart__icon').classList.add('footer-smart__icon_active');
@@ -13,18 +76,20 @@ function setFooterSmartScript(footer) {
     item.querySelector('.footer-smart__text').classList.remove('footer-smart__text_active');
   }
 
-
-  function openPopup() {
+  function openPopupMore() {
     popupMore.classList.add('popup_is-opened');
     setTimeout(() => {
       popupMoreContent.classList.remove('popup-more-smart-phone__content_is-closed');
     }, 0);
   }
 
-  function closePopup(event) {
-    if (event.target.classList.contains('popup')
-      || event.target.classList.contains('popup-more-smart-phone__close')) {
+  function closePopupMore(event) {
+    if (
+      event.target.classList.contains('popup')
+      || event.target.classList.contains('popup-more-smart-phone__close')
+    ) {
       popupMoreContent.classList.add('popup-more-smart-phone__content_is-closed');
+
       Object.keys(buttons).forEach((btn) => {
         removeColorActiveItem(buttons[btn]);
       });
@@ -41,11 +106,11 @@ function setFooterSmartScript(footer) {
       Object.keys(buttons).forEach((btn) => {
         if (item !== btn) removeColorActiveItem(buttons[btn]);
       });
-      if (buttons[item].classList.contains('footer-smart__item_more')) openPopup();
+      if (buttons[item].classList.contains('footer-smart__item_more')) openPopupMore();
     });
   });
 
-  window.addEventListener('mousedown', closePopup);
+  window.addEventListener('mousedown', closePopupMore);
 }
 
 function main() {

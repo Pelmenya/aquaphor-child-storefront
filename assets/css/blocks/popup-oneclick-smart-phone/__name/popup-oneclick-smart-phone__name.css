@@ -1,0 +1,6 @@
+input[type="text"].popup-oneclick-smart-phone__name {
+  border-radius: 3px;
+  border: solid 1px #dcdcdc;
+  background-color: var(--white);
+  box-shadow: none;
+}
