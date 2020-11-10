@@ -1,0 +1,10 @@
+.checkout-smart-phone__line {
+  position: absolute;
+  background-color: #ddd;
+  height: 2px;
+  left: 10px;
+  width: 50%;
+  z-index: 9;
+  margin: 0;
+  top: 18px;
+}

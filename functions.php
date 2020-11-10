@@ -527,11 +527,16 @@ is_page( sanitize_title('о-сайте') );  правильно  */
   if (is_checkout()){
     enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'checkout/index.js', true);
     enqueue_versioned_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmountSetInterval.js', true);
+    enqueue_versioned_style( 'checkout', AQUAPHOR_THEME_CSS . 'checkout.css', array());
+    enqueue_versioned_style( 'checkout-smart-phone', AQUAPHOR_THEME_BLOCKS_CSS . 'checkout-smart-phone/checkout-smart-phone.css', array());
+    enqueue_versioned_style( 'footer-checkout-smart-phone', AQUAPHOR_THEME_BLOCKS_CSS . 'footer-checkout-smart-phone/footer-checkout-smart-phone.css', array());
+
 
     if (preg_match("/$url_checkout_order_received/i", $url_str)){
       wp_deregister_script('amount');
       enqueue_versioned_script( 'new_index', AQUAPHOR_THEME_JS . 'checkout/checkout-order-received/index.js', true);
-      enqueue_versioned_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmountSetInterval.js', true);
+      //enqueue_versioned_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmountSetInterval.js', true);
+      enqueue_versioned_style( 'checkout-order-received', AQUAPHOR_THEME_CSS . 'checkout-order-received.css', array());
     }
   }
 

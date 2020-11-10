@@ -1,0 +1,14 @@
+@import url(./__button/footer-checkout-smart-phone__button.css);
+
+
+@media screen and (max-width: 450px) {
+  .footer-checkout-smart-phone {
+    height: initial;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0 0 4px 0 rgba(40, 41, 60, 0.2);
+  }
+}

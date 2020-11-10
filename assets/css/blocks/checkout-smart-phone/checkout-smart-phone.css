@@ -1,0 +1,28 @@
+@import url(./__card/checkout-smart-phone__card.css);
+@import url(./__card-description/checkout-smart-phone__card-description.css);
+@import url(./__radio-btn/checkout-smart-phone__radio-btn.css);
+@import url(./__stage/checkout-smart-phone__stage.css);
+@import url(./__stage/_is-closed/checkout-smart-phone__stage_is-closed.css);
+@import url(./__wrap/checkout-smart-phone__wrap.css);
+@import url(./__line/checkout-smart-phone__line.css);
+@import url(./__line/_right/checkout-smart-phone__line_right.css);
+@import url(./__line/_blue/checkout-smart-phone__line_blue.css);
+@import url(./__wrap-col/checkout-smart-phone__wrap-col.css);
+@import url(./__wrap-col/_align-start/checkout-smart-phone__wrap-col_align-start.css);
+@import url(./__text/checkout-smart-phone__text.css);
+@import url(./__text/_card/checkout-smart-phone__text_card.css);
+
+
+.checkout-smart-phone {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .checkout-smart-phone {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

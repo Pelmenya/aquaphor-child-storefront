@@ -24,7 +24,6 @@
     justify-content: initial;
   }
 
-  
   /* буфер для липкого меню */
   .buffer-for-sticky {
     display: block;

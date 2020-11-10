@@ -337,7 +337,6 @@ input[type="radio"] + label {
   cursor: pointer;
 }
 
-
 ul#shipping_method li:last-of-type {
   margin-top: 30px;
 }
@@ -418,5 +417,294 @@ th.product-total {
 @media screen and (max-width: 768px) {
   table.shop_table_responsive tr td {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h1.entry-title {
+    display: none;
+  }
+
+  table.shop_table.woocommerce-checkout-review-order-table {
+    display: none;
+  }
+
+  div.site-content {
+    background-color: #f9f9f9;
+    margin-bottom: 0;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  form.checkout.woocommerce-checkout {
+    margin: 0;
+  }
+
+  form.checkout.woocommerce-checkout.desktop-display-none {
+    display: none;
+  }
+
+  h3 {
+    display: none;
+  }
+
+  ul#shipping_method input {
+    margin: 0;
+  }
+
+  ul#shipping_method li {
+    margin: 0;
+  }
+
+  ul#shipping_method li:last-of-type {
+    margin: 0px;
+  }
+
+  input[type="text"]#billing_address_1 {
+    width: 100%;
+    border-radius: 3px;
+    border: solid 1px #dcdcdc;
+    background-color: var(--white);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 12px;
+    box-shadow: none;
+    font-size: 12px;
+  }
+
+  select#billing_wooccm12 {
+    height: 40px;
+    width: 100%;
+    border-radius: 3px;
+    border: solid 1px #dcdcdc;
+    background-color: var(--white);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    box-shadow: none;
+  }
+
+  /**
+    стилизация инпутов, отключение элементов списка li
+  */
+  #payment .payment_methods li.wc_payment_method > input[type="radio"]:first-child {
+    border: 0;
+    clip: initial;
+    -webkit-clip-path: initial;
+    clip-path: initial;
+    height: initial;
+    margin: initial;
+    overflow: initial;
+    padding: 0;
+    position: initial;
+    width: initial;
+    word-wrap: initial;
+  }
+
+  #payment
+    .payment_methods
+    li.wc_payment_method
+    > input[type="radio"]:first-child:checked
+    + label::before {
+    content: "";
+  }
+
+  #payment .payment_methods > .wc_payment_method > label::before {
+    content: "";
+  }
+
+  input[type='radio'].shipping_method {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+  }
+
+  input[type='radio'].shipping_method::before {
+    content: "";
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid var(--blue-blue);
+  }
+
+  input[type='radio'].shipping_method:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0px;
+    height: 0px;
+    border-radius: 3px;
+    background-color: var(--blue-blue);
+    transform: translate(-50%, -50%);
+    visibility: visible;
+  }
+
+  input[type="checkbox"] + label,
+  input[type="radio"] + label {
+    margin: 0;
+  }
+
+  input[type="radio"]:before {
+    font-family: Proxima Nova Rg;
+    font-size: 14px;
+    text-align: center;
+    content: "\2713";
+    color: var(--white);
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+    box-sizing: border-box;
+  }
+
+  input[type=radio]:checked:before {
+    content: "\2713";
+    border-radius: 3px;
+    border: solid 1px var(--blue-blue);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--white);
+    line-height: 20px;
+    background-color: var(--blue-blue);
+    box-sizing: border-box;
+  }
+
+  input.input-radio {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+  }
+
+  input.input-radio::before {
+    content: "";
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid var(--blue-blue);
+  }
+
+  input.input-radio:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0px;
+    height: 0px;
+    border-radius: 3px;
+    background-color: var(--blue-blue);
+    transform: translate(-50%, -50%);
+    visibility: visible;
+  }
+
+  input.input-radio:before {
+    font-family: Proxima Nova Rg;
+    font-size: 14px;
+    text-align: center;
+    content: "";
+    color: var(--white);
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+    box-sizing: border-box;
+  }
+
+  input.input-radio:checked:before {
+    content: "\2713";
+    border-radius: 3px;
+    border: solid 1px var(--blue-blue);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--white);
+    line-height: 20px;
+    background-color: var(--blue-blue);
+    box-sizing: border-box;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .is-hidden {
+    visibility: hidden;
+  }
+
+  div.col-1,
+  div.woocommerce-billing-fields,
+  div.woocommerce-billing-fields__field-wrapper {
+    width: 100%;
+  }
+
+  p#billing_last_name_field {
+    display: none;
+  }
+
+  p#billing_phone_field {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+
+  p#billing_email_field {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  #billing_first_name,
+  #billing_phone,
+  #billing_email {
+    width: 100%;
+    border-radius: 3px;
+    border: solid 1px rgba(40, 41, 60, 0.2);
+    background-color: var(--white);
+    padding-left: 16px;
+    padding-right: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    box-shadow: none;
+    font-size: 12px;
+  }
+
+  .woocommerce-billing-fields__field-wrapper p {
+    margin-bottom: 20px;
   }
 }

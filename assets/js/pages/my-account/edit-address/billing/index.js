@@ -33,7 +33,6 @@ function main() {
 
   const form = woocommerceMyAccountContent.querySelector('form');
 
-
   form.querySelector('h3').textContent = 'Адрес доставки';
 
   /** без страны не сохраняет, по умолчанию Россия */
