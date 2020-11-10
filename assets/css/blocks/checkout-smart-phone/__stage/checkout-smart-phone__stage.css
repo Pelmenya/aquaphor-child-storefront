@@ -1,0 +1,7 @@
+.checkout-smart-phone__stage {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}

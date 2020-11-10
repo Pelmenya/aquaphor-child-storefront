@@ -1,0 +1,41 @@
+input[type='radio'].checkout-smart-phone__radio-btn {
+  cursor: pointer;
+  z-index: 11;
+}
+
+input[type='radio'].checkout-smart-phone__radio-btn {
+  position: relative;
+  height: 36px;
+  width: 36px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+input[type='radio'].checkout-smart-phone__radio-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid var(--blue-blue);
+}
+
+input[type='radio'].checkout-smart-phone__radio-btn:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  background-color: var(--blue-blue);
+  transform: translate(-50%, -50%);
+  visibility: visible;
+}
+

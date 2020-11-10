@@ -1,13 +1,13 @@
-.header__smart-phone-description-title {
+.checkout-smart-phone__card-description {
+  opacity: 0.5;
   font-family: Proxima Nova Rg;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
+  line-height: 1.5;
   letter-spacing: normal;
   color: var(--dark);
   margin: 0;
-  display: block;
-  margin-left: 18px;
+  margin-top: 6px;
 }

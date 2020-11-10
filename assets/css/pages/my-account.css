@@ -4,12 +4,15 @@
   display: initial;
 }
 
-
 .form-description {
   display: none;
 }
 
 .form-description_link-button {
+  display: none;
+}
+
+p#billing_wooccm12_field {
   display: none;
 }
 
@@ -170,7 +173,6 @@
     margin-bottom: 0px;
   }
 
-
   .display-none-smart-phone {
     display: none;
   }
@@ -183,14 +185,13 @@
     text-decoration: none;
   }
 
-  #billing_phone_field{
+  #billing_phone_field {
     width: 100%;
     margin-right: 0;
   }
 
-  #billing_email_field{
+  #billing_email_field {
     width: 100%;
     margin-right: 0;
   }
-
 }

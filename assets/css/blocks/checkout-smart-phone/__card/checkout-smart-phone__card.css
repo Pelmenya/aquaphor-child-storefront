@@ -1,0 +1,17 @@
+.checkout-smart-phone__card {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 var(--dark-10);
+  background-color: var(--white);
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.checkout-smart-phone__card:last-of-type {
+  margin-bottom: 0px;
+}

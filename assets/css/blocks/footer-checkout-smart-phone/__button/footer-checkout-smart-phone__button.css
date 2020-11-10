@@ -1,0 +1,22 @@
+.footer-checkout-smart-phone__button {
+  height: 44px;
+  border-radius: 5px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: var(--white);
+  width: 100%;
+  font-family: Proxima Nova Rg;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  background-color: var(--blue-blue);
+}
+
+button.footer-checkout-smart-phone__button:hover {
+  background-color: var(--cornflower-blue);
+  color: var(--white);
+}
