@@ -68,6 +68,11 @@ function main() {
       const billingWooccm12 = entryContent.querySelector('#billing_wooccm12');
       const adressShipping = entryContent.querySelector('#billing_address_1');
 
+      adressShipping.value = '';
+
+      const cardDelivery = document.querySelector('.checkout-smart-phone__card_delivery');
+      const cardPickup = document.querySelector('.checkout-smart-phone__card_pickup');
+      const totalDelivery = document.querySelector('.checkout-smart-phone__price_delivery');
       if (window.screen.width < 450) {
         document.querySelector('div.site-content').style.height = `${window.screen.height - 58 - 65}px`;
         address.placeholder = 'Введите ФИО';
@@ -88,9 +93,14 @@ function main() {
           '.checkout-smart-phone__stage_payment',
         );
         const footerForwardBtn = document.querySelector('.footer-checkout-smart-phone__button');
+
         const triggersStageButtons = checkoutContainer.querySelectorAll(
           '.checkout-smart-phone__radio-btn',
         );
+
+        const lineTriggersButtonsLeft = checkoutContainer.querySelector('.checkout-smart-phone__line_left');
+        const lineTriggersButtonsRightt = checkoutContainer.querySelector('.checkout-smart-phone__line_right');
+
 
         containerContactsFields.appendChild(contactsFields);
 
@@ -117,16 +127,19 @@ function main() {
 
         placeOrderBtn.style.display = 'none';
         checkoutContainer.append(placeOrderBtn);
-
         orderReview.style.display = 'none';
+
         triggersStageButtons[0].addEventListener('click', () => {
           triggersStageButtons[0].checked = true;
           triggersStageButtons[1].checked = false;
           triggersStageButtons[2].checked = false;
+          adressShipping.value = '';
           containerDeliveryFields.classList.remove('checkout-smart-phone__stage_is-closed');
           containerContactsFields.classList.add('checkout-smart-phone__stage_is-closed');
           containerPaymentFields.classList.add('checkout-smart-phone__stage_is-closed');
           footerForwardBtn.textContent = 'Далее';
+          lineTriggersButtonsLeft.classList.remove('checkout-smart-phone__line_blue');
+          lineTriggersButtonsRightt.classList.remove('checkout-smart-phone__line_blue');
         });
 
         triggersStageButtons[1].addEventListener('click', () => {
@@ -137,6 +150,8 @@ function main() {
           containerContactsFields.classList.remove('checkout-smart-phone__stage_is-closed');
           containerPaymentFields.classList.add('checkout-smart-phone__stage_is-closed');
           footerForwardBtn.textContent = 'Далее';
+          lineTriggersButtonsLeft.classList.add('checkout-smart-phone__line_blue');
+          lineTriggersButtonsRightt.classList.remove('checkout-smart-phone__line_blue');
         });
 
         triggersStageButtons[2].addEventListener('click', () => {
@@ -147,6 +162,8 @@ function main() {
           containerContactsFields.classList.add('checkout-smart-phone__stage_is-closed');
           containerPaymentFields.classList.remove('checkout-smart-phone__stage_is-closed');
           footerForwardBtn.textContent = 'Оформить';
+          lineTriggersButtonsLeft.classList.add('checkout-smart-phone__line_blue');
+          lineTriggersButtonsRightt.classList.add('checkout-smart-phone__line_blue');
         });
 
         footerForwardBtn.addEventListener('click', () => {
@@ -158,6 +175,8 @@ function main() {
             triggersStageButtons[1].checked = true;
             containerDeliveryFields.classList.add('checkout-smart-phone__stage_is-closed');
             containerContactsFields.classList.remove('checkout-smart-phone__stage_is-closed');
+            lineTriggersButtonsLeft.classList.add('checkout-smart-phone__line_blue');
+            lineTriggersButtonsRightt.classList.remove('checkout-smart-phone__line_blue');
           } else if (
             triggersStageButtons[0].checked
             && triggersStageButtons[1].checked
@@ -165,6 +184,8 @@ function main() {
           ) {
             triggersStageButtons[1].checked = true;
             triggersStageButtons[2].checked = true;
+            lineTriggersButtonsLeft.classList.add('checkout-smart-phone__line_blue');
+            lineTriggersButtonsRightt.classList.add('checkout-smart-phone__line_blue');
             containerContactsFields.classList.add('checkout-smart-phone__stage_is-closed');
             containerPaymentFields.classList.remove('checkout-smart-phone__stage_is-closed');
             footerForwardBtn.textContent = 'Оформить';
@@ -173,12 +194,12 @@ function main() {
             && triggersStageButtons[1].checked
             && triggersStageButtons[2].checked
           ) {
+            const deliveryRadioBtn = cardDelivery.querySelector('input.shipping_method');
+            if (!deliveryRadioBtn.checked) adressShipping.value = 'Самовывоз';
             jQuery(placeOrderBtn).trigger('click');
           }
         });
       }
-      const cardDelivery = document.querySelector('.checkout-smart-phone__card_delivery');
-      const cardPickup = document.querySelector('.checkout-smart-phone__card_pickup');
 
       if (window.screen.width > 450) {
         shipingWrapper.prepend(billingWooccm12);
@@ -299,7 +320,6 @@ function main() {
               cardDelivery.prepend(cardWrap);
               cardWrap.prepend(shipings[0].querySelector('input'));
               cardWrap.prepend(woocommerceBillingLabels[item]);
-
               cardDelivery.addEventListener('click', () => {
                 const deliveryRadioBtn = cardDelivery.querySelector('input.shipping_method');
                 const pickupRadioBtn = cardPickup.querySelector('input.shipping_method');
@@ -308,6 +328,7 @@ function main() {
                 deliveryRadioBtn.checked = 'true';
                 adressShipping.readOnly = false;
                 billingWooccm12.readOnly = true;
+                totalDelivery.textContent = '400 руб.';
               });
             }
           }
@@ -330,6 +351,7 @@ function main() {
               cardPickup.addEventListener('click', () => {
                 const deliveryRadioBtn = cardDelivery.querySelector('input.shipping_method');
                 const pickupRadioBtn = cardPickup.querySelector('input.shipping_method');
+                totalDelivery.textContent = '0 руб.';
                 deliveryRadioBtn.classList.add('is-hidden');
                 pickupRadioBtn.classList.remove('is-hidden');
                 pickupRadioBtn.checked = 'true';

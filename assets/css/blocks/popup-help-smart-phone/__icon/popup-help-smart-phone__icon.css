@@ -1,0 +1,12 @@
+.popup-help-smart-phone__icon {
+  display: flex;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.popup-help-smart-phone__icon:last-of-type {
+  margin-right: 0;
+}

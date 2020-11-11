@@ -11,6 +11,8 @@
 @import url(./__wrap-col/_align-start/checkout-smart-phone__wrap-col_align-start.css);
 @import url(./__text/checkout-smart-phone__text.css);
 @import url(./__text/_card/checkout-smart-phone__text_card.css);
+@import url(./__points/checkout-smart-phone__points.css);
+@import url(./__price/checkout-smart-phone__price.css);
 
 
 .checkout-smart-phone {

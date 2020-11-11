@@ -1,6 +1,7 @@
 @import url(./__content/popup-more-smart-phone__content.css);
 @import url(./_oneclick/popup-more-smart-phone_oneclick.css);
 @import url(./__close/popup-more-smart-phone__close.css);
+@import url(./__close/_help/popup-more-smart-phone__close_help.css);
 @import url(./_my-account/popup-more-smart-phone_my-account.css);
 
 .popup-more-smart-phone {

@@ -1,0 +1,12 @@
+.checkout-smart-phone__price {
+  font-family: Proxima Nova Rg;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.11;
+  letter-spacing: normal;
+  text-align: right;
+  color: var(--dark);
+  white-space: nowrap;
+}

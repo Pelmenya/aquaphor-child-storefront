@@ -4,6 +4,9 @@ function setFooterSmartScript(footer) {
   const popupMore = document.querySelector('.popup-more-smart-phone');
   const popupMoreContent = popupMore.querySelector('.popup-more-smart-phone__content');
 
+  const popupHelp = document.querySelector('.popup-help-smart-phone');
+  const popupHelpContent = popupHelp.querySelector('.popup-more-smart-phone__content');
+
   const popupOneClickSmartPhone = document.querySelector('.popup-oneclick-smart-phone');
 
   if (popupOneClickSmartPhone) {
@@ -76,10 +79,10 @@ function setFooterSmartScript(footer) {
     item.querySelector('.footer-smart__text').classList.remove('footer-smart__text_active');
   }
 
-  function openPopupMore() {
-    popupMore.classList.add('popup_is-opened');
+  function openPopupMore(popup, content) {
+    popup.classList.add('popup_is-opened');
     setTimeout(() => {
-      popupMoreContent.classList.remove('popup-more-smart-phone__content_is-closed');
+      content.classList.remove('popup-more-smart-phone__content_is-closed');
     }, 0);
   }
 
@@ -89,13 +92,14 @@ function setFooterSmartScript(footer) {
       || event.target.classList.contains('popup-more-smart-phone__close')
     ) {
       popupMoreContent.classList.add('popup-more-smart-phone__content_is-closed');
-
+      popupHelpContent.classList.add('popup-more-smart-phone__content_is-closed');
       Object.keys(buttons).forEach((btn) => {
         removeColorActiveItem(buttons[btn]);
       });
 
       setTimeout(() => {
         popupMore.classList.remove('popup_is-opened');
+        popupHelp.classList.remove('popup_is-opened');
       }, 350);
     }
   }
@@ -106,7 +110,9 @@ function setFooterSmartScript(footer) {
       Object.keys(buttons).forEach((btn) => {
         if (item !== btn) removeColorActiveItem(buttons[btn]);
       });
-      if (buttons[item].classList.contains('footer-smart__item_more')) openPopupMore();
+      if (buttons[item].classList.contains('footer-smart__item_more')) openPopupMore(popupMore, popupMoreContent);
+      if (buttons[item].classList.contains('footer-smart__item_help')) openPopupMore(popupHelp, popupHelpContent);
+
     });
   });
 

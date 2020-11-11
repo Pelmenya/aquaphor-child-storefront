@@ -1,7 +1,6 @@
-.checkout-smart-phone__stage {
-  margin-top: 24px;
+.popup-help-smart-phone__wrap-col {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 }
