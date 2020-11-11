@@ -1,0 +1,5 @@
+.popup-help-smart-phone__wrap-col_content {
+  width: calc(100% - 48px);
+  margin-top: 12px;
+  justify-content: space-between;
+}

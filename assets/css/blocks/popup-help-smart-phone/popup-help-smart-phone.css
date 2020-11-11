@@ -1,0 +1,19 @@
+@import url(./__button/popup-help-smart-phone__button.css);
+@import url(./__content/popup-help-smart-phone__content.css);
+
+@import url(./__icon/popup-help-smart-phone__icon.css);
+@import url(./__icon/_blue/popup-help-smart-phone__icon_blue.css);
+@import url(./__icon/_green/popup-help-smart-phone__icon_green.css);
+@import url(./__icon/_purple/popup-help-smart-phone__icon_purple.css);
+
+@import url(./__tel/popup-help-smart-phone__tel.css);
+@import url(./__time-job/popup-help-smart-phone__time-job.css);
+@import url(./__wrap/popup-help-smart-phone__wrap.css);
+
+@import url(./__wrap-col/popup-help-smart-phone__wrap-col.css);
+@import url(./__wrap-col/_content/popup-help-smart-phone__wrap-col_content.css);
+@import url(./__pic/popup-help-smart-phone__pic.css);
+
+.popup-help-smart-phone {
+
+}

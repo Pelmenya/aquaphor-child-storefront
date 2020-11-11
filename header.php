@@ -148,6 +148,7 @@
       get_template_part('template-parts/header/header-smart-phone');
       get_template_part('template-parts/popups/popup-more-smart-phone');
       get_template_part('template-parts/popups/popup-image');
+      get_template_part('template-parts/popups/popup-help-smart-phone');
       if (is_product()){
         get_template_part('template-parts/popups/popup-oneclick');
         get_template_part('template-parts/popups/popup-oneclick-smart-phone');

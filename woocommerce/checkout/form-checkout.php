@@ -52,7 +52,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
         <input readonly class="checkout-smart-phone__radio-btn checkout-smart-phone__radio-btn_payment" type="radio">
         <p class="checkout-smart-phone__text">Оплата</p>
       </div>
-      <div class="checkout-smart-phone__line"></div>
+      <div class="checkout-smart-phone__line checkout-smart-phone__line_left"></div>
       <div class="checkout-smart-phone__line checkout-smart-phone__line_right"></div>
     </div>
 
@@ -83,10 +83,21 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
           <p class="checkout-smart-phone__card-description">Картой Visa, MasterCard или МИР</p>
         </div>
       </div>
-
+      <div class="checkout-smart-phone__wrap">
+        <p class="checkout-smart-phone__card-description">Товары</p>
+        <div class="checkout-smart-phone__points"></div>
+        <div class="checkout-smart-phone__price">
+          <?php
+            wc_cart_totals_subtotal_html();
+          ?>
+        </div>
+      </div>
+      <div class="checkout-smart-phone__wrap">
+      <p class="checkout-smart-phone__card-description">Доставка</p>
+        <div class="checkout-smart-phone__points"></div>
+        <div class="checkout-smart-phone__price checkout-smart-phone__price_delivery">400 руб.</div>
+      </div>
     </div>
-
-
   </div>
 
 

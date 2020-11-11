@@ -43,19 +43,7 @@ add_filter( 'the_title', 'aquaphor_smart_phone_endpoint_title', 10, 2 );
         get_template_part('template-parts/header/header-smart-phone-templates/header__search-and-logo');
       }
     };
-/*
-    if ( is_account_page() ) {
-      echo 'Это my-account';
-    }
-    else {
-      echo 'NO!!!';
-    }?>
-    <?php
-    if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly.
-    }
 
-*/
   ?>
 </div>
 <div class="buffer-for-sticky"></div>
