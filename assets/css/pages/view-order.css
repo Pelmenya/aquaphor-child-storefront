@@ -174,3 +174,13 @@ p.order-again {
   padding-right: 5px;
   color: var(--blue-blue);
 }
+
+@media screen and (max-width: 450px) {
+  .site-content {
+    padding: 0;
+  }
+  div.woocommerce-MyAccount-content{
+    width: 100%;
+    height: 100%;
+  }
+}

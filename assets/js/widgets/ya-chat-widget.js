@@ -2,8 +2,11 @@ function main() {
   const helpBtn = document.querySelector('.header__help-button');
   const helpBtnMobil = document.querySelector('.header__top-item-chat');
 
+
   document.addEventListener('DOMContentLoaded', () => {
     const yaChatWidget = document.querySelector('.ya-chat-widget');
+    const helpBtnSmartPhone = document.querySelector('.popup-help-smart-phone__button');
+
     if (yaChatWidget) {
       const yaChatButton = yaChatWidget.querySelector('.ya-chat-button');
       const yaChatHeaderClose = yaChatWidget.querySelector('.ya-chat-header__close');
@@ -28,6 +31,16 @@ function main() {
       }
       if (helpBtnMobil) {
         helpBtnMobil.addEventListener('click', () => {
+          if (!yaChatWidgetMount.classList.contains('ya-chat-widget__mount_visible')) {
+            const event = new Event('click', { bubbles: true, cancelable: true });
+            yaChatWidget.style.visibility = 'visible';
+            yaChatButton.dispatchEvent(event);
+          }
+        });
+      }
+
+      if (helpBtnSmartPhone) {
+        helpBtnSmartPhone.addEventListener('click', () => {
           if (!yaChatWidgetMount.classList.contains('ya-chat-widget__mount_visible')) {
             const event = new Event('click', { bubbles: true, cancelable: true });
             yaChatWidget.style.visibility = 'visible';

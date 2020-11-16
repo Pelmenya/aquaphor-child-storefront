@@ -52,17 +52,20 @@ function main() {
     const pS = woocommerceMyAccountContent.querySelectorAll('p');
 
     if (pS[0]) {
-      pS[0].style.fontFamily = 'Proxima Nova Rg';
-      pS[0].style.fontSize = '16px';
-      pS[0].style.color = 'var(--dark)';
-      pS[0].style.marginBottom = '42px';
-      pS[0].firstChild.textContent = pS[0].firstChild.textContent.replace('№', '#');
-      pS[0].childNodes[4].textContent = ' и сейчас имеет статус ';
-      const orderDate = pS[0].querySelector('.order-date');
-      orderDate.textContent = dataToStrRus(orderDate.textContent);
+      if (window.screen.width < 450) {
+        pS[0].style.display = 'none';
+      } else {
+        pS[0].style.fontFamily = 'Proxima Nova Rg';
+        pS[0].style.fontSize = '16px';
+        pS[0].style.color = 'var(--dark)';
+        pS[0].style.marginBottom = '42px';
+        pS[0].firstChild.textContent = pS[0].firstChild.textContent.replace('№', '#');
+        pS[0].childNodes[4].textContent = ' и сейчас имеет статус ';
+        const orderDate = pS[0].querySelector('.order-date');
+        orderDate.textContent = dataToStrRus(orderDate.textContent);
+      }
     }
   }
-
   const woocommerceOrderDetails = woocommerceMyAccountContent.querySelector(
     '.woocommerce-order-details',
   );

@@ -84,7 +84,8 @@
     n.parentNode.insertBefore(s, n);
      s.onload = ()=>{
       const helpBtn = document.querySelector('.header__help-button');
-      const helpBtnMobil = document.querySelector('.header__top-item-chat');
+      const helpBtnTablet = document.querySelector('.header__top-item-chat');
+      const helpBtnSmartPhone = document.querySelector('.popup-help-smart-phone__button');
       const yaChatWidget = document.querySelector('.ya-chat-widget');
       if (yaChatWidget){
       const yaChatButton = yaChatWidget.querySelector('.ya-chat-button');
@@ -109,8 +110,12 @@
       if (helpBtn){
         helpBtn.addEventListener('click', openYaChatWidget);
       }
-      if (helpBtnMobil){
-        helpBtnMobil.addEventListener('click', openYaChatWidget);}
+      if (helpBtnTablet){
+        helpBtnTablet.addEventListener('click', openYaChatWidget);
+      }
+      if (helpBtnSmartPhone){
+        helpBtnSmartPhone.addEventListener('click', openYaChatWidget);
+      }
       }
     }
   })();
@@ -147,8 +152,8 @@
       get_template_part('template-parts/header/header-desktop-tablet');
       get_template_part('template-parts/header/header-smart-phone');
       get_template_part('template-parts/popups/popup-more-smart-phone');
-      get_template_part('template-parts/popups/popup-image');
       get_template_part('template-parts/popups/popup-help-smart-phone');
+      get_template_part('template-parts/popups/popup-image');
       if (is_product()){
         get_template_part('template-parts/popups/popup-oneclick');
         get_template_part('template-parts/popups/popup-oneclick-smart-phone');

@@ -1,0 +1,10 @@
+@import url(./__text/order-smart-phone__text.css);
+@import url(./__container/order-smart-phone__container.css);
+@import url(./__wrap/order-smart-phone__wrap.css);
+@import url(./__price/order-smart-phone__price.css);
+@import url(./__card-description/order-smart-phone__card-description.css);
+
+.order-smart-phone {
+  width: 100%;
+  height: 100%;
+}

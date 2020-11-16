@@ -112,7 +112,6 @@ function setFooterSmartScript(footer) {
       });
       if (buttons[item].classList.contains('footer-smart__item_more')) openPopupMore(popupMore, popupMoreContent);
       if (buttons[item].classList.contains('footer-smart__item_help')) openPopupMore(popupHelp, popupHelpContent);
-
     });
   });
 
