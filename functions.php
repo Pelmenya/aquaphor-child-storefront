@@ -475,12 +475,6 @@ is_page( sanitize_title('о-сайте') );  правильно  */
       enqueue_versioned_style( 'orders', AQUAPHOR_THEME_CSS . 'orders.css', array());
     } else enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'my-account/index.js', true);
   }
-  /** Регулярное выражение на вхождение строки в адрес $url_my_account_view_order = '\/my-account\/view-order'
-   * Экранирование слешей
-  */
-  if (preg_match("/$url_my_account_view_order/i", $url_str)) {
-    enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'my-account/view-order/index.js', true);
-  }
 
   if ((strcasecmp($url_str, $url_my_account_edit_address) == 0)&&(strcasecmp($url_query, '') == 0)) {
     enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'my-account/edit-address/index.js', true);
@@ -549,6 +543,16 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     enqueue_versioned_style( 'my-account', AQUAPHOR_THEME_CSS . 'my-account.css', array());
     enqueue_versioned_style( 'orders-smart', AQUAPHOR_THEME_BLOCKS_CSS . 'orders-smart-phone/orders-smart-phone.css', array());
   }
+
+
+  if ( is_view_order_page() ) {
+    enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'my-account/view-order/index.js', true);
+    enqueue_versioned_style( 'cart-smart', AQUAPHOR_THEME_BLOCKS_CSS . 'cart-smart-phone/cart-smart-phone.css', array());
+    enqueue_versioned_style( 'checkout-smart-phone', AQUAPHOR_THEME_BLOCKS_CSS . 'checkout-smart-phone/checkout-smart-phone.css', array());
+    enqueue_versioned_style( 'order-smart-phone', AQUAPHOR_THEME_BLOCKS_CSS . 'order-smart-phone/order-smart-phone.css', array());
+    enqueue_versioned_style( 'view-order', AQUAPHOR_THEME_CSS . 'view-order.css', array());
+  }
+
 
   enqueue_versioned_script( 'ya_chat_widget', AQUAPHOR_THEME_JS_WIDGETS . 'ya-chat-widget.js', true);
   enqueue_versioned_script( 'sticky_menu', AQUAPHOR_THEME_JS_WIDGETS . 'sticky-menu.js', true);

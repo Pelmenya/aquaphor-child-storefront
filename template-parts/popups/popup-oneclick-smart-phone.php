@@ -1,7 +1,18 @@
 <div class="popup popup-more-smart-phone popup-oneclick-smart-phone">
   <div class="popup-more-smart-phone__content popup-more-smart-phone_oneclick popup-more-smart-phone__content_is-closed">
-    <svg class="popup-more-smart-phone__close" width="18" height="18" viewBox="0 0 18 18">
-      <path fill="#EC8928" d="M17.886.106c-.149-.144-.387-.14-.53.007L9.857 7.61c-.336.326.193.867.53.53L17.887.642c.152-.147.152-.39 0-.537zM8.139 9.85c-.148-.144-.386-.14-.53.008L.111 17.355c-.344.335.192.88.53.53L8.14 10.39c.153-.148.153-.392 0-.539zM.642.114C.313-.216-.227.303.11.644l17.245 17.241c.345.351.88-.183.53-.53L.642.113z"/>
+  <svg class="popup-more-smart-phone__close" width="16" height="16" viewBox="0 0 16 16">
+      <defs>
+        <path id="cnqolwu26a" d="M14.049.335c.446-.447 1.17-.447 1.616 0 .447.446.447 1.17 0 1.616L9.616 8l6.05 6.049c.446.446.446 1.17 0 1.616-.447.447-1.17.447-1.617 0L8 9.616l-6.049 6.05c-.414.414-1.068.443-1.517.088l-.1-.089c-.446-.446-.446-1.17 0-1.616L6.385 8 .334 1.951c-.446-.446-.446-1.17 0-1.616.447-.447 1.17-.447 1.617 0L8 6.384z"/>
+      </defs>
+      <g fill="none" fill-rule="evenodd">
+          <g>
+              <g>
+                  <g transform="translate(-173 -206) translate(0 182) translate(173 24)">
+                      <use fill="#EC8928" fill-rule="nonzero" xlink:href="#cnqolwu26a"/>
+                  </g>
+              </g>
+          </g>
+      </g>
     </svg>
     <?php
     //проверяем, существуют ли переменные в массиве POST
