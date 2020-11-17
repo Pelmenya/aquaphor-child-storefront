@@ -54,7 +54,7 @@
               </g>
           </g>
         </svg>
-        <p class="header__top-item-text">Москва&nbsp;и&nbsp;МО</p>
+        <p class="header__top-item-text">Ступино&nbsp;и&nbsp;МО</p>
       </a>
       <a href="tel:+7-499-577-03-79" class="header__top-item">
         <svg class="header__item-icon" width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -66,7 +66,7 @@
               </g>
           </g>
         </svg>
-        <p class="header__top-item-text">+7&nbsp;(499)&nbsp;577&#150;03&#150;79</p>
+        <p class="header__top-item-text">+7&nbsp;(49999999999)&nbsp;577&#150;03&#150;79</p>
       </a>
       <a href="https://yandex.ru/maps/10756/stupino/?ll=38.073319%2C54.901220&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Forg%3Foid%3D152679979252&z=18" class="header__top-item header__close-item">
         <svg class="header__item-icon" width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
