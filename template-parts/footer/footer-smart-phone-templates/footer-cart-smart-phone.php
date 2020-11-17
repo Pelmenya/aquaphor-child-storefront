@@ -1,11 +1,4 @@
-<footer class="footer-smart footer-smart_cart
-  <?php
-    global $woocommerce;
-    if ( $woocommerce->cart->cart_contents_count == 0 ) {
-      echo "footer-smart-display-none";
-    }
-  ?>
-   ">
+<footer class="footer-smart footer-smart_cart">
   <div class="footer-smart__item footer-smart__item_left">
     <h2 class="footer-smart__cart-total-title">ПОДЫТОГ</h2>
     <p class="footer-smart__cart-total-price">
