@@ -1,4 +1,8 @@
-<div class="popup popup-more-smart-phone popup-oneclick-smart-phone">
+<?php
+get_template_part('inc/get_top_term');
+?>
+
+<div class="popup popup-more-smart-phone  popup-oneclick-smart-phone">
   <div class="popup-more-smart-phone__content popup-more-smart-phone_oneclick popup-more-smart-phone__content_is-closed">
   <svg class="popup-more-smart-phone__close" width="16" height="16" viewBox="0 0 16 16">
       <defs>
@@ -21,24 +25,33 @@
           ?>
           <?php
           $product = wc_get_product( get_the_ID() );
+          $product_page_link = get_page_link($product->id);
           $product_name = $product->get_title();
           ?>
         <form class="popup-oneclick-smart-phone__form" name="popup_oneclick_smart_phone" method="post">
-          <div class="cart-smart-phone__card cart-smart-phone__card_one-click">
-            <a class="cart-smart-phone__pic" href="">
-              <img class="cart-smart-phone__pic"  src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ), 'thumbnail' );?>" class="popup-oneclick__pic" alt="<?php echo $product_name;?>">
-            </a>
-            <div class="cart-smart-phone__wrap">
-              <h1 class="cart-smart-phone__title"><?php echo $product->get_title();?></h1>
-              <p class="cart-smart-phone__price">
-                <?php echo $product->get_price();?>
-                    руб.
-              </p>
-              <div class="cart-smart-phone__counter-wrap cart-smart-phone__wrap_one-click">
-                <button type="button" class="cart-smart-phone__button minus"><span>-</span></button>
-                <input name="product_counter" class="cart-smart-phone__counter cart-smart-phone__counter_one-click" type="text" value="1">
-                <button type="button" class="cart-smart-phone__button plus">+</button>
+          <div class="cart-smart-phone__card cart-smart-phone__card_between cart-smart-phone__card_one-click">
+            <div class="cart-smart-phone__wrap-row">
+              <a class="cart-smart-phone__pic" href="<?php echo $product_page_link;?>">
+                <img class="cart-smart-phone__pic"  src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ), 'thumbnail' );?>" class="popup-oneclick__pic" alt="<?php echo $product_name;?>">
+              </a>
+              <div class="cart-smart-phone__wrap">
+                <h1 class="cart-smart-phone__title"><?php echo $product->get_title();?></h1>
+                <p class="cart-smart-phone__category">
+                  <?php
+                    $top_category = get_top_term('product_cat', $product_id);
+                    echo $top_category->name;
+                  ?>
+                </p>
+                <p class="cart-smart-phone__price">
+                  <?php echo $product->get_price();?>
+                      руб.
+                </p>
               </div>
+            </div>
+            <div class="cart-smart-phone__counter-wrap cart-smart-phone__wrap_one-click">
+              <button type="button" class="cart-smart-phone__button plus">+</button>
+              <input name="product_counter" class="cart-smart-phone__counter cart-smart-phone__counter_one-click" type="text" value="1">
+              <button type="button" class="cart-smart-phone__button minus"><span>-</span></button>
             </div>
           </div>
           <?php

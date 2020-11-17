@@ -1,12 +1,12 @@
 .orders-smart-phone__data {
   font-family: Proxima Nova Rg;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.67;
+  line-height: 1.5;
   letter-spacing: normal;
-  color: rgba(40, 41, 60, 0.25);
+  color: var(--dark-50);
   display: inline-block;
   text-align: left;
   width: 100%;

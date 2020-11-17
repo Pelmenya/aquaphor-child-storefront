@@ -55,7 +55,7 @@
               if ( $related_products[$i]->id != $product_id ) {
                 $img_url = wp_get_attachment_url( get_post_thumbnail_id($related_products[$i]->id), 'thumbnail' );
                 $img_alt = $related_products[$i]->get_title();
-                $product_page_link = get_page_link($related_products[$i]->id)
+                $product_page_link = get_page_link($related_products[$i]->id);
           ?>
           <a href="<?php echo $product_page_link ?>" class="swiper-slide  slider-product-smart-phone__slide">
             <img class="slider-product-smart-phone__pic" src="<?php echo $img_url ?>" alt="<?php echo $img_alt ?>">

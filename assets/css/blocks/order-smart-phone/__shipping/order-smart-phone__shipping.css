@@ -1,0 +1,13 @@
+.order-smart-phone__shipping {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 var(--dark-10);
+  background-color: #1054db;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}

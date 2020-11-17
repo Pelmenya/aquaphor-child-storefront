@@ -1,10 +1,10 @@
 .empty-cart-smart-phone__title {
   font-family: Proxima Nova Rg;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 600;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
+  line-height: 1.5;
   letter-spacing: normal;
   text-align: center;
   color: var(--dark);

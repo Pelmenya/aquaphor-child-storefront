@@ -1,11 +1,11 @@
-.orders-smart-phone__total-price {
+.order-smart-phone__shipping-text {
   font-family: Proxima Nova Rg;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.43;
+  line-height: 1.5;
   letter-spacing: normal;
-  color: var(--blue-blue);
+  color: var(--white-70);
   margin: 0;
 }

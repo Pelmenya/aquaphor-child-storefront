@@ -1,5 +1,5 @@
 a.empty-cart-smart-phone__button {
-  width: calc(100% - 40px);
+  width: 100%;
   padding-top: 16px;
   padding-bottom: 14px;
   border-radius: 5px;
@@ -13,9 +13,8 @@ a.empty-cart-smart-phone__button {
   letter-spacing: normal;
   text-align: center;
   color: var(--white);
-  margin-bottom: 70px;
-  margin-top: 80px;
   text-decoration: none;
+  margin: 0;
 }
 
 .hentry .entry-content a{
