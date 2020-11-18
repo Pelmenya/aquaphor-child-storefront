@@ -537,6 +537,8 @@ is_page( sanitize_title('о-сайте') );  правильно  */
   if (is_front_page()){
     enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'front-page/index.js', true);
     enqueue_versioned_style( 'front', AQUAPHOR_THEME_CSS . 'front-page.css', array());
+    enqueue_versioned_style( 'footer-checkout-smart-phone', AQUAPHOR_THEME_BLOCKS_CSS . 'footer-checkout-smart-phone/footer-checkout-smart-phone.css', array());
+
   }
 
   if (is_account_page()) {

@@ -76,6 +76,7 @@
 @import url(./__prev-page-button/header__prev-page-button.css);
 @import url(./__smart-phone-description-title/header__smart-phone-description-title.css);
 @import url(./__smart-phone-description-title/_align-center/header__smart-phone-description-title_align-center.css);
+@import url(./_smart-phone/header_smart-phone_is-closed.css);
 
 .header {
   width: 100%;
