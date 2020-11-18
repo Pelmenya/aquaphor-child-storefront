@@ -34,6 +34,9 @@ function aquaphor_smart_phone_endpoint_title( $title, $id ) {
   elseif ( is_wc_endpoint_url( 'edit-account' ) ) {
       $title = "Ваш профиль";
   }
+  elseif ( is_wc_endpoint_url( 'order-received' ) ) {
+  $title = "Оформлен";
+  }
   elseif ( is_view_order_page() ){
     // Вытаскиваем id заказа и его дату для хедера
     $url = $_SERVER['REQUEST_URI'];

@@ -89,3 +89,16 @@ ul.order_details li {
   padding-bottom: 18px;
 }
 
+.empty-cart-smart-phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 450px) {
+  div.woocommerce-order{
+      display: none;
+  }
+}
