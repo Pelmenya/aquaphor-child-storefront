@@ -24,6 +24,10 @@
     justify-content: initial;
   }
 
+  .header.header_smart-phone.header_smart-phone_is-closed {
+    display: none;
+  }
+
   /* буфер для липкого меню */
   .buffer-for-sticky {
     display: block;

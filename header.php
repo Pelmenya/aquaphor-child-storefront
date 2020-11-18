@@ -134,9 +134,7 @@
 </head>
 
 <body <?php body_class();?>>
-<?php
-  get_template_part('template-parts/preload/preload');
-?>
+
 <?php wp_body_open(); ?>
 
 <?php do_action( 'storefront_before_site' ); ?>

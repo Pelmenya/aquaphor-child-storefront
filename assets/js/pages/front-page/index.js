@@ -29,6 +29,8 @@ function main() {
         if (introSwiper.isEnd) {
           popupIntro.style.display = 'none';
           document.querySelector('.header.header_smart-phone').style.display = 'flex';
+          // КОСТЫЛЬ !!!
+          window.location.href = '?intro=false';
         }
       },
     },
@@ -66,7 +68,7 @@ function main() {
     if (popupPreload) {
       setTimeout(() => {
         popupPreload.style.display = 'none';
-      }, 1000);
+      }, 0);
     }
   });
 

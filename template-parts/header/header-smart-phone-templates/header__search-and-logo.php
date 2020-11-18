@@ -1,7 +1,7 @@
 <div class="header__search-container">
      <?php get_product_search_form(); ?>
 </div>
-<a class="header__logo-link" href="<?php echo SITE_URL?>">
+<a class="header__logo-link" href="<?php echo SITE_URL?>?intro=false">
   <svg  class="header__logo header__logo_smart-phone" xmlns="http://www.w3.org/2000/svg" width="366" height="68" viewBox="0 0 366 68">
     <metadata id="metadata8">image/svg+xml</metadata>
     <defs>
