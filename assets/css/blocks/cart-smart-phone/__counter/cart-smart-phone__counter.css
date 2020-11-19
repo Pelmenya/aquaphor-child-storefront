@@ -12,8 +12,6 @@ input[type="text"].cart-smart-phone__counter {
   padding: 0;
   background-color: var(--white);
   box-shadow: none;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
 input[type="text"].cart-smart-phone__counter.cart-smart-phone__counter_one-click {

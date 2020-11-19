@@ -647,24 +647,6 @@ th.product-total {
     box-sizing: border-box;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   .is-hidden {
     visibility: hidden;
   }
@@ -708,4 +690,5 @@ th.product-total {
   .woocommerce-billing-fields__field-wrapper p {
     margin-bottom: 20px;
   }
+
 }

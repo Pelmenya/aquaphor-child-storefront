@@ -7,7 +7,9 @@
 @import url(./__card/orders-smart-phone__card.css);
 @import url(./__status/_blue/orders-smart-phone__status_blue.css);
 @import url(./__status/_red/orders-smart-phone__status_red.css);
+@import url(./__status/_green/orders-smart-phone__status_green.css);
 @import url(./__total-price/orders-smart-phone__total-price.css);
+@import url(./__total-price/_grey/orders-smart-phone__total-price_grey.css);
 @import url(./__wrap-col/orders-smart-phone__wrap-col.css);
 
 .orders-smart-phone {

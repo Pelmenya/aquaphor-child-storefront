@@ -1,3 +1,4 @@
+@import url(./_is-closed/popup-intro_is-closed.css);
 
 .popup-intro {
   background-color: var(--white);
@@ -7,5 +8,8 @@
   display: flex;
   align-items: flex-start;
   z-index: 98;
+}
+
+.popup-intro_is-closed {
   display: none;
 }

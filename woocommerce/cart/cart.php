@@ -1,5 +1,6 @@
 <?php
 get_template_part('inc/view_array');
+get_template_part('inc/get_top_term');
 
 /**
  * Cart Page
@@ -207,16 +208,27 @@ do_action( 'woocommerce_before_cart' ); ?>
 				if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 					$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 					?>
-          <div class="cart-smart-phone__card">
+
+          <div class="cart-smart-phone__card cart-smart-phone__card_between">
+
+          <div class="cart-smart-phone__wrap-row">
+
             <a class="cart-smart-phone__pic" href="<?php echo esc_url( $product_permalink )?>">
               <img class="cart-smart-phone__pic" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($product_id), 'thumbnail' );?>" alt="<?php echo $_product->get_title();?>">
             </a>
             <div class="cart-smart-phone__wrap">
               <h6 class="cart-smart-phone__title"><?php echo $_product->get_title();?></h6>
+              <p class="cart-smart-phone__category">
+                <?php
+                  $top_category = get_top_term('product_cat', $product_id);
+                  echo $top_category->name;
+                ?>
+                </p>
               <p class="cart-smart-phone__price"><?php	echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.?></p>
-
-              <div class="cart-smart-phone__counter-wrap">
-                <button type="button" class="cart-smart-phone__button minus"><span>-</span></button>
+            </div>
+        </div>
+            <div class="cart-smart-phone__counter-wrap">
+                <button type="button" class="cart-smart-phone__button plus">+</button>
                 <?php
                   if ( $_product->is_sold_individually() ) {
                     $product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
@@ -236,9 +248,9 @@ do_action( 'woocommerce_before_cart' ); ?>
                   }
                     echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); // PHPCS: XSS ok.
                 ?>
-                <button type="button" class="cart-smart-phone__button plus">+</button>
+                <button type="button" class="cart-smart-phone__button minus"><span>-</span></button>
             </div>
-            </div>
+
             <?php
               echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
                 'woocommerce_cart_item_remove_link',

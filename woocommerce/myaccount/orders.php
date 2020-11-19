@@ -174,11 +174,14 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
     <a href="<?php echo $orders[$i]["url"];?>" class="orders-smart-phone__card">
       <div class="orders-smart-phone__wrap-col">
         <h6 class="orders-smart-phone__order">Заказ #<?php echo $orders[$i]["order_number"]?></h6>
-        <p class="orders-smart-phone__total-price"><?php echo $orders[$i]["order_total"]?></p>
-      </div>
-      <button class="orders-smart-phone__status
+        <p class="orders-smart-phone__total-price
         <?php
-          if (strcasecmp($orders[$i]["status_label_display"], "ГОТОВО") == 0) echo "orders-smart-phone__status_blue";
+          if (strcasecmp($orders[$i]["status_label_display"], "ОТМЕНЕН") == 0) echo "orders-smart-phone__total-price_grey";
+        ?>"><?php echo $orders[$i]["order_total"]?></p>
+      </div>
+      <button class="orders-smart-phone__status orders-smart-phone__status_blue
+        <?php
+          if (strcasecmp($orders[$i]["status_label_display"], "ВЫПОЛНЕН") == 0) echo "orders-smart-phone__status_green";
           if (strcasecmp($orders[$i]["status_label_display"], "ОТМЕНЕН") == 0) echo "orders-smart-phone__status_red";
         ?>">
         <?php echo $orders[$i]["status_label_display"];?>
