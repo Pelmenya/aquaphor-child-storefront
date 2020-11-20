@@ -135,9 +135,41 @@
 
 @media screen and (max-width: 450px) {
   .main {
-    padding-top: 25px;
+    padding-top: 0;
     padding-bottom: 25px;
     padding-left: 25px;
     padding-right: 25px;
+    font-size: 16px;
+    
   }
-}
+
+  /* Для страницы "О компании" */
+  
+  /* .description{
+    line-height: 24px; */
+    /* .title_about-company,
+    .sub-title {
+      display: none;
+  } */
+    /* .description{
+      line-height: 24px;
+      font-weight: normal;
+    } 
+    div.main p.description:nth-child(3),
+    div.main p.description:nth-child(4) {
+    display: none;
+    }
+    h4.description{
+      font-weight: bold;
+      margin: 0;
+    } */
+  
+     /* Для страницы "Доставка" */
+  
+     /* .title{
+       display: none;
+     }
+     */
+  }
+  
+

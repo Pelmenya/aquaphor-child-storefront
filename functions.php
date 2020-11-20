@@ -427,6 +427,11 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     enqueue_versioned_style( 'contacts', AQUAPHOR_THEME_CSS . 'contacts.css', array());
   }
 
+  if (is_page( 'guarantees' ) ){
+    enqueue_versioned_style( 'is-page', AQUAPHOR_THEME_CSS . 'is_page.css', array());
+    enqueue_versioned_style( 'page-guarantees', AQUAPHOR_THEME_CSS . 'page-guarantees.css', array());
+  }
+
   if (strcasecmp($url_str, $url_discounts) == 0){
     enqueue_versioned_style( 'is-product', AQUAPHOR_THEME_CSS . 'product.css', array());
     enqueue_versioned_style( 'products', AQUAPHOR_THEME_BLOCKS_CSS . 'products-smart-phone/products-smart-phone.css', array());
@@ -435,7 +440,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     enqueue_versioned_script( 'product-category', AQUAPHOR_THEME_JS . 'product-category/index.js', true);
   }
 
-  if (is_page( array('delivery', 'payment', 'guarantees', 'about-company', 'water-analysis', 'equipment-selection', 'repair' ) ) ){
+  if (is_page( array('delivery', 'payment', 'about-company', 'water-analysis', 'equipment-selection', 'repair' ) ) ){
     enqueue_versioned_style( 'is-page', AQUAPHOR_THEME_CSS . 'is_page.css', array());
   }
 
