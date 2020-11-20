@@ -3,6 +3,11 @@
   padding-bottom: 65px;
 }
 
+p{
+  margin: 0;
+}
+
+
 .title {
   font-family: Proxima Nova Rg;
   font-size: 30px;

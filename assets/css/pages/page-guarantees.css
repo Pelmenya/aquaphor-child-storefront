@@ -2,6 +2,7 @@
     @media screen and (max-width: 450px) {
         p{
           padding-top: 0;
+          margin: 0 0 1.41575em !important;
         }
         .main {
           padding-top: 0;
