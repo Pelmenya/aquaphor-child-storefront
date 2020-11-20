@@ -1,0 +1,30 @@
+@media screen and (max-width: 450px) {
+
+    .main {
+        padding-top: 32px;
+        padding-bottom: 25px; 
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 16px; 
+      }
+      h2,
+      p.description{
+          font-size: 16px;
+          font-weight: normal;
+          line-height: 24px;
+      }
+      h2{
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+      h1.title,
+      h3.sub-title,
+      .delivery-adress,
+      p.description:nth-child(3),
+      p.description:nth-child(10),
+      p.description:nth-child(12)
+      {
+          display: none;
+      }
+    
+}

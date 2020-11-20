@@ -442,6 +442,11 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     enqueue_versioned_style( 'about-company', AQUAPHOR_THEME_CSS . 'about-company.css', array());
   }
 
+  if (is_page( 'delivery' ) ){
+    enqueue_versioned_style( 'is-page', AQUAPHOR_THEME_CSS . 'is_page.css', array());
+    enqueue_versioned_style( 'delivery', AQUAPHOR_THEME_CSS . 'delivery.css', array());
+  }
+
 
   if (strcasecmp($url_str, $url_discounts) == 0){
     enqueue_versioned_style( 'is-product', AQUAPHOR_THEME_CSS . 'product.css', array());
@@ -451,7 +456,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     enqueue_versioned_script( 'product-category', AQUAPHOR_THEME_JS . 'product-category/index.js', true);
   }
 
-  if (is_page( array('delivery', 'about-company', 'water-analysis', 'equipment-selection', 'repair' ) ) ){
+  if (is_page( array('about-company', 'water-analysis', 'equipment-selection', 'repair' ) ) ){
     enqueue_versioned_style( 'is-page', AQUAPHOR_THEME_CSS . 'is_page.css', array());
   }
 

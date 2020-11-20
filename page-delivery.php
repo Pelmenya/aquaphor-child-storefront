@@ -21,6 +21,11 @@ get_header();
     <span class="description__insert"> Время доставки до 2 дней.</span>
   </p>
   <!-- для мобильной версии -->
+  <p class="description">
+    <span class="description__insert">
+       При оформлении заказа вы сможете выбрать способ доставки товара. 
+    </span>
+  </p>
   <h2 class="sub-title-mobile">Курьером - 400 руб.</h3>
   <p class="description">Заказ от 4000 руб. - бесплатно.</p>
   <h2 class="sub-title-mobile">Самовывоз - бесплатно.</h3>
