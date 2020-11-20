@@ -34,7 +34,7 @@ function aquaphor_smart_phone_endpoint_title( $title, $id ) {
   elseif ( is_wc_endpoint_url( 'edit-account' ) ) {
       $title = "Ваш профиль";
   }
-  elseif ( is_wc_endpoint_url( 'order-received' ) ) {
+  elseif ( is_order_received_page() ) {
       $title = "Оформлен";
   }
 

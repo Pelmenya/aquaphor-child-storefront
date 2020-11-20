@@ -91,8 +91,5 @@ defined( 'ABSPATH' ) || exit;
     <img class="empty-cart-smart-phone__pic" src="https://aquaphor.store/wp-content/uploads/2020/11/order_received.png" alt="Пустая корзина">
     <h1 class="empty-cart-smart-phone__title">Заказ успешно оформлен</h1>
     <p class=empty-cart-smart-phone__text>Благодарим Вас за покупку</p>
-    <!-- <a class="empty-cart-smart-phone__button" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-      Перейти в магазин
-    </a> -->
   </div>
 

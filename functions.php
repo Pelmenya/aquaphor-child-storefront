@@ -545,11 +545,8 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     if (preg_match("/$url_checkout_order_received/i", $url_str)){
       wp_deregister_script('amount');
       enqueue_versioned_script( 'new_index', AQUAPHOR_THEME_JS . 'checkout/checkout-order-received/index.js', true);
-      //enqueue_versioned_script( 'amount', AQUAPHOR_THEME_JS_FUNCTIONS . 'setAmountSetInterval.js', true);
       enqueue_versioned_style( 'checkout-order-received', AQUAPHOR_THEME_CSS . 'checkout-order-received.css', array());
-      // enqueue_versioned_style( 'empty-cart-smart-phone', AQUAPHOR_THEME_CSS . 'empty-cart-smart-phone/empty-cart-smart-phone.css', array());
       enqueue_versioned_style( 'cart-smart', AQUAPHOR_THEME_BLOCKS_CSS . 'cart-smart-phone/cart-smart-phone.css', array());
-      // enqueue_versioned_style( 'cart', AQUAPHOR_THEME_CSS . 'cart.css', array());
       enqueue_versioned_style( 'empty-cart-smart-phone', AQUAPHOR_THEME_BLOCKS_CSS . 'empty-cart-smart-phone/empty-cart-smart-phone.css', array());
     }
   }
