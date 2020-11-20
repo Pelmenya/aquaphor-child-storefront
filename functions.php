@@ -437,6 +437,12 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     enqueue_versioned_style( 'page-payment', AQUAPHOR_THEME_CSS . 'page-payment.css', array());
   }
 
+  if (is_page( 'about-company' ) ){
+    enqueue_versioned_style( 'is-page', AQUAPHOR_THEME_CSS . 'is_page.css', array());
+    enqueue_versioned_style( 'about-company', AQUAPHOR_THEME_CSS . 'about-company.css', array());
+  }
+
+
   if (strcasecmp($url_str, $url_discounts) == 0){
     enqueue_versioned_style( 'is-product', AQUAPHOR_THEME_CSS . 'product.css', array());
     enqueue_versioned_style( 'products', AQUAPHOR_THEME_BLOCKS_CSS . 'products-smart-phone/products-smart-phone.css', array());
