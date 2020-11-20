@@ -28,14 +28,12 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 	<div class="u-column1 col-1 display-none-smart-phone">
 
 <?php endif; ?>
-
     <h2>Добро пожаловать!</h2>
     <p class="form-description">Пожалуйста введите адрес эл. почты и пароль чтобы войти в ваш профиль</p>
 
 		<form class="woocommerce-form woocommerce-form-login login" method="post">
 
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
-
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 				<label for="username"><?php esc_html_e( 'Username or email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>

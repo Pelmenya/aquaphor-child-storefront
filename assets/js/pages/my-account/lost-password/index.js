@@ -27,7 +27,7 @@ function setDesctopScript() {
     formLostResetPasswordP[2].style.paddingTop = '0px';
     formLostResetPasswordP[2].style.marginTop = '0px';
 
-    formLostResetPassword.elements.user_login.placeholder = 'Введите вашу @почту';
+    formLostResetPassword.elements.user_login.placeholder = 'Введите эл.почту';
     formLostResetPassword.elements.user_login.paddingLeft = '20px';
 
     formLostResetPasswordBtn.style.backgroundColor = 'var(--blue-blue)';
