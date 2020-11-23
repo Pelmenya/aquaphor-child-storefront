@@ -2,8 +2,8 @@
   .main {
     padding-top: 32px;
     padding-bottom: 25px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 24px;
+    padding-right: 24px;
     font-size: 16px;
   }
   h2,
@@ -12,9 +12,10 @@
     font-weight: normal;
     line-height: 24px;
   }
-  h2 {
+  h2.sub-title-mobile {
     font-weight: bold;
     margin-bottom: 0;
+    margin-top: 25px;
   }
   h1.title,
   h3.sub-title,

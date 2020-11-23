@@ -71,11 +71,11 @@ th.product-remove {
 }
 
 th.product-remove::before {
-  content: 'Товар';
+  content: "Товар";
 }
 
 .product-subtotal::before {
-  content: 'Сумма';
+  content: "Сумма";
   font-size: 16px;
   padding: 1em;
   padding-left: 0px;
@@ -120,7 +120,7 @@ a.remove::before {
   font-variant: normal;
   font-weight: normal;
   line-height: 1;
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   line-height: inherit;
   vertical-align: baseline;
@@ -155,7 +155,7 @@ table.cart td.actions {
 }
 
 .cart_totals h2::after {
-  content: 'Сумма к оплате';
+  content: "Сумма к оплате";
   font-family: Proxima Nova Rg;
   font-size: 18px;
   font-weight: bold;
@@ -244,7 +244,7 @@ table.cart td.actions {
 }
 
 .wc-proceed-to-checkout .wc-forward::after {
-  content: '';
+  content: "";
 }
 
 .wc-proceed-to-checkout .button {
@@ -258,7 +258,7 @@ table.cart td.actions {
 }
 
 .product-subtotal::before {
-  content: '';
+  content: "";
 }
 /***********************/
 
@@ -277,14 +277,12 @@ table.cart td.actions {
   }
 }
 
-
 @media screen and (max-width: 450px) {
-
   .site-content {
     background-color: var(--dark-4);
   }
 
-    header.entry-header {
+  header.entry-header {
     display: none;
   }
 
@@ -296,8 +294,7 @@ table.cart td.actions {
     display: none;
   }
 
-  .cart-empty.woocommerce-info{
+  .cart-empty.woocommerce-info {
     display: none;
   }
-
 }
