@@ -23,13 +23,17 @@ get_header();
   <p>
   <p class="description">ООО «Аквафор Инжиниринг»
     <span class="description__insert">является официальным представительством и сервисным центром компании</span>
-      Аквафор
+    <span>Аквафор</span>
     <span class="description__insert">в Москве и Московской области.<br>При покупке в нашем интернет-магазине или физической точке продаж вы получаете товар, бланк заказа, чек и гарантийный талон. Вся продукция сертифицирована и имеет официальную гарантию производителя.<br>
     </span>
     </p>
-    <p>На все фильтры с отдельным краном гарантия  1 год.
+    <p class="description">
+    <span class="description__insert">На все фильтры с отдельным краном гарантия</span>
+    <span>1 год.</span>
+
     <span class="description__insert">На комплексные системы водоочистки WaterBoss и WaterMax гарантия</span>
-      5 лет.
+    <span>5 лет.</span>
+      
     </p>
    <p> <span class="description__insert">С подробными правилами покупки вы можете ознакомиться</span>
       <a class="description__link" href="<?php echo SITE_URL?>договор-оферта/">здесь</a>. </p>

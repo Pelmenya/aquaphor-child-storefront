@@ -34,6 +34,9 @@ function aquaphor_smart_phone_endpoint_title( $title, $id ) {
   elseif ( is_wc_endpoint_url( 'edit-account' ) ) {
       $title = "Ваш профиль";
   }
+  elseif ( is_page( 'guarantees' ) ) {
+    $title = "Гарантия";
+}
   elseif ( is_order_received_page() ) {
       $title = "Оформлен";
   }
