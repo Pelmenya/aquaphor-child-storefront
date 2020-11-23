@@ -68,7 +68,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 		<h2>Регистрация покупателя</h2>
 
-    <p class="form-description">Уже зарегистрированы?&nbsp;<span class="form-description form-description_link-button">Войти</span></p>
+    	<p class="form-description">Мы отправим пароль на эл. почту&nbsp;</p>
 
 		<form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
 
@@ -101,13 +101,14 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 			<?php endif; ?>
 
-			<?php do_action( 'woocommerce_register_form' ); ?>
+			<!-- <?php do_action( 'woocommerce_register_form' ); ?> -->
 
 			<p class="woocommerce-form-row form-row">
 				<?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
 				<button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
 			</p>
 
+			<p class="form-description">Уже зарегистрированы?&nbsp;<span class="form-description form-description_link-button">Войти</span></p>
 			<?php do_action( 'woocommerce_register_form_end' ); ?>
 
 		</form>

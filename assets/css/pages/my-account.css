@@ -32,7 +32,7 @@ p#billing_wooccm12_field {
   }
 
   .woocommerce-form-row.woocommerce-form-row--wide.form-row.form-row-wide {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
   .woocommerce-form__label.woocommerce-form__label-for-checkbox.woocommerce-form-login__rememberme {
     margin-bottom: 25px;
@@ -44,9 +44,9 @@ p#billing_wooccm12_field {
     border-radius: 5px;
   }
   .site-content {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 30px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 24px;
   }
   input[type="text"],
   input[type="number"],
@@ -95,7 +95,7 @@ p#billing_wooccm12_field {
 
   button.woocommerce-button.button {
     width: 100%;
-    height: 55px;
+    /* height: 55px; */
     border-radius: 5px;
     background-color: var(--blue-blue);
     color: var(--white);
@@ -177,23 +177,30 @@ p#billing_wooccm12_field {
   }
 
   h2 {
-    margin-bottom: 5px;
+    margin-bottom: 0;
     font-size: 21px;
     font-weight: 600;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.2;
+    line-height: 1.5;
     letter-spacing: normal;
     color: var(--dark);
     /* color: rgba(40, 41, 60, 0.87); */
   }
 
   .form-description {
-    display: inline-block;
-    font-size: 16px;
-    line-height: 1.5;
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0;
     color: var(--dark-70);
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+  }
+  .form-description:last-child {
+    text-align: center;
+  }
+  .form-description:first-child {
+    margin-bottom: 10px;
   }
 
   .form-description_link-button {
