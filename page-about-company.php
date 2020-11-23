@@ -48,19 +48,19 @@ get_header();
   <h4 class="description">Реализация продукции:</h4>
   <p class="description">
     <span class="description__insert description__insert_about-company">
-      ИП&nbsp;Ефимов&nbsp;А.В.&nbsp;ИНН&nbsp;504504369609
-      ОГРНИП&nbsp;313504526100015,&nbsp;ОКПО&nbsp;0187919682
-      Юридический&nbsp;адрес:&nbsp;г.&nbsp;Ступино,&nbsp;ул.&nbsp;Пристанционная&nbsp;6с3
-      ПАО&nbsp;&laquo;Сбербанк&raquo;,&nbsp;БИК&nbsp;044525225
+      ИП Ефимов А.В. ИНН 504504369609
+      ОГРНИП 313504526100015, ОКПО 0187919682
+      Юридический адрес: г. Ступино, ул. Пристанционная 6с3
+      ПАО &laquo;Сбербанк&raquo;, БИК 044525225
     </span>
   </p>
   <h4 class="description">Информационная поддержка:</h4>
   <p class="description">
     <span class="description__insert description__insert_about-company">
-      ООО&nbsp;&laquo;Аквафор&nbsp;Инжиниринг&raquo;&nbsp;ИНН&nbsp;7720460910
-      ОГРНИП&nbsp;313504526100015,&nbsp;ОКПО&nbsp;0187919682
-      Юридический&nbsp;адрес:&nbsp;г.&nbsp;Ступино,&nbsp;ул.&nbsp;Пристанционная&nbsp;6с3
-      ПАО&nbsp;&laquo;Сбербанк&raquo;,&nbsp;БИК&nbsp;044525225
+      ООО &laquo;Аквафор Инжиниринг&raquo;ИНН7720460910
+      ОГРНИП 313504526100015, ОКПО 0187919682
+      Юридический адрес: г. Ступино, ул. Пристанционная 6с3
+      ПАО &laquo;Сбербанк&raquo;,БИК 044525225
     </span>
   </p>
 </div>

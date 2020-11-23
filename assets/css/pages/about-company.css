@@ -3,11 +3,15 @@
     padding-top: 0;
     margin: 0 0 1.41575em !important;
   }
+
+  h4.description {
+    margin-top: 1.41575em;
+  }
   .main {
-    padding-top: 32px;
+    padding-top: 30px;
     padding-bottom: 25px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 24px;
+    padding-right: 24px;
     font-size: 16px;
   }
   .description {
