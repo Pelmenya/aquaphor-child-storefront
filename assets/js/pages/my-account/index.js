@@ -36,14 +36,14 @@ function setSmartPhoneScript() {
     formLoginLostPasswordLink.textContent = 'Забыли пароль?';
 
     formLogin.elements.username.placeholder = 'Введите эл. почту';
-    formLogin.elements.password.placeholder = 'Введите пароль';
+    formLogin.elements.password.placeholder = '';
     formRegister.elements.email.placeholder = 'Введите эл. почту';
 
     /** Кнопки */
     // вытаскиваем адрес сайта
 
-    formLogin.elements.login.value = 'Далее';
-    formLogin.elements.login.textContent = 'Далее';
+    formLogin.elements.login.value = 'Войти';
+    formLogin.elements.login.textContent = 'Войти';
 
     formRegister.elements.register.value = 'Зарегистрироваться';
     formRegister.elements.register.textContent = 'Зарегистрироваться';
