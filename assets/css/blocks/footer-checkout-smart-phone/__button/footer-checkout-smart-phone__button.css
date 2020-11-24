@@ -1,8 +1,8 @@
 .footer-checkout-smart-phone__button {
   height: 44px;
   border-radius: 5px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  box-shadow: 0 8px 10px 0 rgba(16, 84, 219, 0.3), inset 0 10px 10px 0 #1463ff;
+  background-image: linear-gradient(339deg, #1054db 66%, #135be9 35%);
   color: var(--white);
   width: 100%;
   font-family: Proxima Nova Rg;

@@ -3,3 +3,15 @@
   box-shadow: 0 2px 19px 0 rgba(222, 224, 226, 0.2);
   background-color: var(--white);
 }
+
+@media screen and (max-width: 450px) {
+  .footer-smart.footer-smart-cart {
+    height: initial;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    background-color: #f9f9f9;
+    box-shadow: none;
+  }
+}

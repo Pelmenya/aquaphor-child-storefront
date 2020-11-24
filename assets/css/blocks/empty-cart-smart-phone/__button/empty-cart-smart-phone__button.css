@@ -1,9 +1,9 @@
 a.empty-cart-smart-phone__button {
   width: calc(100% - 40px);
-  padding-top: 16px;
-  padding-bottom: 14px;
+  height: 44px;
+  box-shadow: 0 8px 10px 0 rgba(16, 84, 219, 0.3), inset 0 10px 10px 0 #1463ff;
+  background-image: linear-gradient(339deg, #1054db 66%, #135be9 35%);
   border-radius: 5px;
-  background-color: var(--blue-blue);
   font-family: Proxima Nova Rg;
   font-size: 16px;
   font-weight: bold;
@@ -12,12 +12,14 @@ a.empty-cart-smart-phone__button {
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
+  line-height: baseline;
   color: var(--white);
   margin-bottom: 70px;
   margin-top: 80px;
-  text-decoration: none;
+  text-decoration: none !important;
 }
-
-.hentry .entry-content a{
-  text-decoration: none;
+@media screen and (max-width: 450px) {
+  a.empty-cart-smart-phone__button {
+    display: none;
+  }
 }

@@ -280,6 +280,11 @@ table.cart td.actions {
 @media screen and (max-width: 450px) {
   .site-content {
     background-color: var(--dark-4);
+    margin-bottom: 0;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: calc(100vh - 100px);
   }
 
   header.entry-header {

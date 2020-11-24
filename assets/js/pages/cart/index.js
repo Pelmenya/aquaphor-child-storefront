@@ -57,7 +57,7 @@ function setSmartPhoneScript() {
   const emptyCart = document.querySelector('.empty-cart-smart-phone');
   if (emptyCart) {
     document.querySelector('.site-content').style.marginBottom = '0px';
-    document.querySelector('.site-content').style.height = `${window.screen.height}px`;
+    document.querySelector('.site-content').style.height = `auto`;
   }
 
   const updateBtn = document.querySelector('button.button');
