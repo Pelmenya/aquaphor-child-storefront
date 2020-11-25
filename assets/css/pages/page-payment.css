@@ -1,0 +1,21 @@
+@media screen and (max-width: 450px) {
+    .page-payment-destop{
+       display: none;
+   }
+   
+    .page-payment-mobile{
+        margin-top: 32px;
+        display: block;
+      }
+    .sub-title{
+        margin: 0;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    p{
+        margin-bottom: 30px;
+    }
+    
+}
+
+

@@ -18,8 +18,8 @@ function setDesctopScript() {
     formLostResetPasswordP[0].style.fontFamily = 'Proxima Nova Rg';
     formLostResetPasswordP[0].style.maxWidth = '748px';
 
-    formLostResetPasswordP[0].style.fontSize = '14px';
-    formLostResetPasswordP[0].style.color = '#223c52';
+    formLostResetPasswordP[0].style.fontSize = '16px';
+    formLostResetPasswordP[0].style.color = '#5f5f5f';
     formLostResetPasswordP[0].style.fontFamily = 'Proxima Nova Rg';
     formLostResetPasswordLabels[0].textContent = 'Email';
     formLostResetPasswordLabels[0].style.marginBottom = '6px';
@@ -27,7 +27,7 @@ function setDesctopScript() {
     formLostResetPasswordP[2].style.paddingTop = '0px';
     formLostResetPasswordP[2].style.marginTop = '0px';
 
-    formLostResetPassword.elements.user_login.placeholder = 'Введите вашу @почту';
+    formLostResetPassword.elements.user_login.placeholder = 'Введите эл.почту';
     formLostResetPassword.elements.user_login.paddingLeft = '20px';
 
     formLostResetPasswordBtn.style.backgroundColor = 'var(--blue-blue)';
@@ -44,11 +44,22 @@ function setDesctopScript() {
 
     if (window.screen.width < 450) {
       formLostResetPasswordP[0].textContent = 'Введите вашу эл. почту и мы вышлем вам инструкции по смене пароля';
-      formLostResetPasswordLabels[0].textContent = 'Эл.почта';
+      formLostResetPasswordLabels[0].textContent = 'Эл. адрес';
+      formLostResetPasswordLabels[0].style.fontSize = '16px';
+      formLostResetPasswordLabels[0].style.lineHeight = '24px';
+      formLostResetPasswordLabels[0].style.fontWeight = '600';
+      formLostResetPasswordP[0].style.letterSpacing = '0'
+      formLostResetPasswordP[0].style.lineHeight = '24px';
+      formLostResetPasswordP[0].style.marginBottom = '10px';
       formLostResetPasswordBtn.style.width = '100%';
       h1.textContent = 'Восстановить пароль';
       formLostResetPasswordBtn.style.fontSize = '16px';
-      formLostResetPasswordBtn.style.height = '55px';
+      formLostResetPasswordBtn.style.height = '44px';
+      formLostResetPasswordBtn.style.borderRadius = '5px';
+      formLostResetPasswordBtn.style.boxShadow = '0 8px 10px 0 rgba(16, 84, 219, 0.3), inset 0 10px 10px 0 #1463FF';
+         formLostResetPasswordBtn.style.backgroundImage = 'linear-gradient(339deg, #1054DB 66%, #135BE9 35%)';
+      formLostResetPasswordBtn.style.marginTop = '25px';
+      formLostResetPasswordBtn.value = 'Сбросить';
       formLostResetPasswordBtn.value = 'Сбросить';
       formLostResetPasswordBtn.textContent = 'Сбросить';
     }

@@ -17,10 +17,36 @@ p#billing_wooccm12_field {
 }
 
 @media screen and (max-width: 450px) {
+  p {
+    margin: 0;
+  }
+
+  p.form-row span {
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    /* line-height: 1.5; */
+    letter-spacing: normal;
+    color: rgba(40, 41, 60, 0.5);
+  }
+
+  .woocommerce-form-row.woocommerce-form-row--wide.form-row.form-row-wide {
+    margin-bottom: 24px;
+  }
+  .woocommerce-form__label.woocommerce-form__label-for-checkbox.woocommerce-form-login__rememberme {
+    margin-bottom: 25px;
+  }
+  button.woocommerce-button button.woocommerce-form-login__submit {
+    height: 44px;
+    margin: 24px 1px 12px 0;
+    padding: 12px 16px;
+    border-radius: 5px;
+  }
   .site-content {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 30px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 24px;
   }
   input[type="text"],
   input[type="number"],
@@ -31,9 +57,9 @@ p#billing_wooccm12_field {
   input[type="search"],
   textarea,
   .input-text::placeholder {
-    padding-top: 20px;
+    padding-top: 13px;
     padding-left: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 13px;
     padding-right: 20px;
     font-size: 14px;
     line-height: 14px;
@@ -57,34 +83,37 @@ p#billing_wooccm12_field {
   .u-column1 label,
   .u-column2 label {
     font-family: Proxima Nova Rg;
-    font-size: 14px;
-    font-weight: normal;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1;
     letter-spacing: normal;
-    color: rgba(40, 41, 60, 0.5);
+    color: var(--dark);
     margin-bottom: 8px;
   }
 
   button.woocommerce-button.button {
     width: 100%;
-    height: 55px;
+    height: 44px;
     border-radius: 5px;
-    background-color: var(--blue-blue);
+    background-image: linear-gradient(339deg, #1054db 66%, #135be9 35%);
+    box-shadow: 0 8px 10px 0 rgba(16, 84, 219, 0.3), inset 0 10px 10px 0 #1463ff;
     color: var(--white);
   }
 
   p.woocommerce-LostPassword.lost_password a {
-    margin-top: 30px;
+    text-align: center;
+    text-decoration: none !important;
+    margin-top: 12px;
     font-family: Proxima Nova Rg;
+    font-size: 14px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
-    line-height: normal;
+    line-height: 1.5;
     letter-spacing: normal;
     text-align: center;
-    text-decoration: none;
     color: var(--blue-blue);
     display: block;
     width: 100%;
@@ -111,7 +140,7 @@ p#billing_wooccm12_field {
     box-sizing: border-box;
   }
 
-  input[type=checkbox] + span:before {
+  input[type="checkbox"] + span:before {
     content: "\2713";
     color: var(--white);
     height: 20px;
@@ -120,11 +149,11 @@ p#billing_wooccm12_field {
     box-sizing: border-box;
   }
 
-  input[type=checkbox]:checked + span:before {
+  input[type="checkbox"]:checked + span:before {
     content: "\2713";
     border-radius: 3px;
     border: solid 1px var(--blue-blue);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
     font-size: 20px;
     font-weight: 900;
     color: var(--white);
@@ -149,21 +178,30 @@ p#billing_wooccm12_field {
   }
 
   h2 {
-    margin-bottom: 10px;
-    font-size: 20px;
+    margin-bottom: 0;
+    font-size: 21px;
     font-weight: 600;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.2;
+    line-height: 1.5;
     letter-spacing: normal;
-    color: rgba(40, 41, 60, 0.87);
+    color: var(--dark);
+    /* color: rgba(40, 41, 60, 0.87); */
   }
 
   .form-description {
-    display: inline-block;
+    display: block;
     font-size: 14px;
-    color: rgb(34, 60, 82);
-    margin-bottom: 25px;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: var(--dark-70);
+    margin-bottom: 15px;
+  }
+  .form-description:last-child {
+    text-align: center;
+  }
+  .form-description:first-child {
+    margin-bottom: 10px;
   }
 
   .form-description_link-button {

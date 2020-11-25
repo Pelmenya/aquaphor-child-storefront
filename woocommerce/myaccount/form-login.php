@@ -28,14 +28,12 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 	<div class="u-column1 col-1 display-none-smart-phone">
 
 <?php endif; ?>
-
     <h2>Добро пожаловать!</h2>
     <p class="form-description">Пожалуйста введите адрес эл. почты и пароль чтобы войти в ваш профиль</p>
 
 		<form class="woocommerce-form woocommerce-form-login login" method="post">
 
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
-
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 				<label for="username"><?php esc_html_e( 'Username or email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
@@ -70,7 +68,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 		<h2>Регистрация покупателя</h2>
 
-    <p class="form-description">Уже зарегистрированы?&nbsp;<span class="form-description form-description_link-button">Войти</span></p>
+    	<p class="form-description">Мы отправим пароль на эл. почту&nbsp;</p>
 
 		<form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
 
@@ -103,13 +101,14 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 			<?php endif; ?>
 
-			<?php do_action( 'woocommerce_register_form' ); ?>
+			<!-- <?php do_action( 'woocommerce_register_form' ); ?> -->
 
 			<p class="woocommerce-form-row form-row">
 				<?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
 				<button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
 			</p>
 
+			<p class="form-description">Уже зарегистрированы?&nbsp;<span class="form-description form-description_link-button">Войти</span></p>
 			<?php do_action( 'woocommerce_register_form_end' ); ?>
 
 		</form>

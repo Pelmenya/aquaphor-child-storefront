@@ -19,6 +19,7 @@ defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_lost_password_form' );
 ?>
+<h2>Востановить пароль</h2>
 
 <form method="post" class="woocommerce-ResetPassword lost_reset_password">
 

@@ -34,6 +34,13 @@ function aquaphor_smart_phone_endpoint_title( $title, $id ) {
   elseif ( is_wc_endpoint_url( 'edit-account' ) ) {
       $title = "Ваш профиль";
   }
+  elseif ( is_page( 'guarantees' ) ) {
+    $title = "Гарантия";
+}
+  elseif ( is_order_received_page() ) {
+      $title = "Оформлен";
+  }
+
   elseif ( is_view_order_page() ){
     // Вытаскиваем id заказа и его дату для хедера
     $url = $_SERVER['REQUEST_URI'];
@@ -56,7 +63,7 @@ add_filter( 'the_title', 'aquaphor_smart_phone_endpoint_title', 10, 2 );
 
 <div class="header header_smart-phone
   <?php
-    if (is_account_page()||is_cart()||is_checkout())
+    if (is_cart()||is_checkout())
       echo 'header_smart-phone_align';
   ?>
   <?php
@@ -71,7 +78,7 @@ add_filter( 'the_title', 'aquaphor_smart_phone_endpoint_title', 10, 2 );
       get_template_part('template-parts/header/header-smart-phone-templates/header__search-and-logo');
     }
     else {
-      if (is_checkout()||is_account_page()||is_cart()){
+      if (is_checkout()||is_cart()||(is_page( 'delivery' ) )||(is_page( 'guarantees' ) )||(is_page( 'payment' ) )||(is_page( 'contacts' ) )||(is_page( 'about-company' ) )){
         set_header_prev_button(get_the_title(), "header__smart-phone-description-title_align-center");
       }
       else {

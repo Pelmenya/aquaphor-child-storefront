@@ -27,30 +27,30 @@ function setSmartPhoneScript() {
       colFormRegister.classList.toggle('display-none-smart-phone');
     });
 
-    formLoginLabels[0].textContent = 'Эл. почта';
+    formLoginLabels[0].textContent = 'Эл. адрес';
     formLoginLabels[1].textContent = 'Пароль';
-    formRegistrLabels[0].textContent = 'Эл. почта';
+    formRegistrLabels[0].textContent = 'Эл. адрес';
 
     formLoginCheckBoxSave.textContent = 'Запомнить';
 
     formLoginLostPasswordLink.textContent = 'Забыли пароль?';
 
-    formLogin.elements.username.placeholder = 'Введите @почту';
-    formLogin.elements.password.placeholder = 'Введите пароль';
-    formRegister.elements.email.placeholder = 'Введите @почту';
+    formLogin.elements.username.placeholder = 'Введите эл. почту';
+    formLogin.elements.password.placeholder = '';
+    formRegister.elements.email.placeholder = 'Введите эл. почту';
 
     /** Кнопки */
     // вытаскиваем адрес сайта
 
-    formLogin.elements.login.value = 'Далее';
-    formLogin.elements.login.textContent = 'Далее';
+    formLogin.elements.login.value = 'Войти';
+    formLogin.elements.login.textContent = 'Войти';
 
-    formRegister.elements.register.value = 'Получить пароль';
-    formRegister.elements.register.textContent = 'Получить пароль';
+    formRegister.elements.register.value = 'Зарегистрироваться';
+    formRegister.elements.register.textContent = 'Зарегистрироваться';
 
     const arrayOfElementP = formRegister.querySelectorAll('p');
 
-    arrayOfElementP[0].style.marginBottom = '0px';
+    // arrayOfElementP[0].style.marginBottom = '0px';
 
     arrayOfElementP[1].textContent = 'Пароль будет отправлен на указанный адрес';
     arrayOfElementP[1].style.fontSize = '12px';
@@ -58,6 +58,7 @@ function setSmartPhoneScript() {
     arrayOfElementP[1].style.color = '#686976';
     arrayOfElementP[1].style.marginTop = '8px';
     arrayOfElementP[1].style.marginBottom = '16px';
+    arrayOfElementP[1].style.display = 'none';
 
     arrayOfElementP[2].style.marginTop = '0px';
     arrayOfElementP[2].style.fontSize = '16px';

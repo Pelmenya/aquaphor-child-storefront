@@ -42,7 +42,7 @@ function main() {
     formEditAccount.account_first_name.placeholder = 'Введите имя';
     formEditAccount.account_last_name.placeholder = 'Введите фамилию';
     formEditAccount.account_display_name.placeholder = 'Введите Ваше имя для отображения на сайте';
-    formEditAccount.account_email.placeholder = 'Введите @почту';
+    formEditAccount.account_email.placeholder = 'Введите почту';
     formEditAccount.password_current.placeholder = 'Текущий пароль';
     formEditAccount.password_1.placeholder = 'Новый пароль';
     formEditAccount.password_2.placeholder = 'Новый пароль';

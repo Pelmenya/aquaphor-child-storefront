@@ -1,0 +1,36 @@
+@media screen and (max-width: 450px) {
+  p {
+    padding-top: 0;
+    margin: 0 0 1.41575em !important;
+  }
+
+  h4.description {
+    margin-top: 1.41575em;
+  }
+  .main {
+    padding-top: 30px;
+    padding-bottom: 25px;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-size: 16px;
+  }
+  .description {
+    line-height: 24px;
+  }
+  .title.title_about-company {
+    display: none;
+  }
+  p.description:nth-child(4),
+  p.description:nth-child(3) {
+    display: none;
+  }
+
+  h3.sub-title {
+    display: none;
+  }
+
+  h4.description {
+    margin-bottom: 0;
+    line-height: 24px;
+  }
+}
