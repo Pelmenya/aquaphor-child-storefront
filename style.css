@@ -22,6 +22,26 @@
 @import url(./assets/css/pages/view-order.css);
 @import url(./assets/css/pages/equipment-selection.css);
 
+.swiper-pagination-bullet{
+  background: #bfbfbf;
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
+  transform: scale(1);
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
+  transform: scale(1);
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
+  transform: scale(1);
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
+  transform: scale(1);
+}
+
 div.ya-chat-widget {
   display: none;
 }
@@ -550,6 +570,7 @@ body {
   --dark: #28293c;
   --black-70: rgba(26, 26, 26, 0.7);
   --dark-70: rgba(40, 41, 60, 0.7);
+  --dark-50: rgba(40, 41, 60, 0.5);
   --dark-40: rgba(40, 41, 60, 0.4);
   --dark-24: rgba(40, 41, 60, 0.24);
   --dark-10: rgba(40, 41, 60, 0.1);

@@ -3,6 +3,10 @@
 @import url(./__wrap/order-smart-phone__wrap.css);
 @import url(./__price/order-smart-phone__price.css);
 @import url(./__card-description/order-smart-phone__card-description.css);
+@import url(./__shipping/order-smart-phone__shipping.css);
+@import url(./__shipping-text/order-smart-phone__shipping-text.css);
+@import url(./__shipping-address/order-smart-phone__shipping-address.css);
+
 
 .order-smart-phone {
   width: 100%;

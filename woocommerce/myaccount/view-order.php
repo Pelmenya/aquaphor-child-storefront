@@ -124,37 +124,51 @@ $show_downloads        = $order->has_downloadable_item() && $order->is_download_
     if ('payment_method' === $key){
       $payment_method_value = $total['value'];
     }
-
   }
+
+  $meta_data = get_post_meta($order_id);
+  if ($meta_data['_billing_wooccm12'][0] ===""){
+    $shipping_text = "Доставка курьером по адресу:";
+    $shipping_address = $meta_data['_billing_address_1'][0];
+  } elseif ($meta_data['_billing_address_1'][0] === "Самовывоз"){
+    $shipping_text = "Доставка в пункт самовывоза:";
+    $shipping_address = $meta_data['_billing_wooccm12'][0];
+  }
+
 ?>
 
-      <div class="order-smart-phone__container">
-        <div class=" checkout-smart-phone__wrap order-smart-phone__wrap">
-          <p class="checkout-smart-phone__card-description">Товары</p>
-          <div class="order-smart-phone__points checkout-smart-phone__points"></div>
-          <div class="order-smart-phone__price checkout-smart-phone__price">
-            <?php echo $cart_subtotal;?>
-          </div>
-        </div>
-        <p class="order-smart-phone__text"><?php echo $payment_method_value;?></p>
-        <div class="checkout-smart-phone__wrap order-smart-phone__wrap">
-          <p class="checkout-smart-phone__card-description">Доставка</p>
-          <div class="order-smart-phone__points checkout-smart-phone__points"></div>
-          <div class="order-smart-phone__price checkout-smart-phone__price checkout-smart-phone__price_delivery">
-            <?php echo $shipping_value?>
-          </div>
-        </div>
-        <p class="order-smart-phone__text"><?php echo $shipping_name;?></p>
-        <div class=" checkout-smart-phone__wrap order-smart-phone__wrap">
-          <p class="checkout-smart-phone__card-description order-smart-phone__card-description">Итого:</p>
-          <div class="order-smart-phone__points checkout-smart-phone__points"></div>
-          <div class="checkout-smart-phone__price order-smart-phone__price">
-            <?php echo $order_total;?>
-          </div>
-        </div>
+  <div class="order-smart-phone__container">
+    <div class=" checkout-smart-phone__wrap order-smart-phone__wrap">
+      <p class="checkout-smart-phone__card-description">Товары</p>
+      <div class="order-smart-phone__points checkout-smart-phone__points"></div>
+      <div class="order-smart-phone__price checkout-smart-phone__price">
+        <?php echo $cart_subtotal;?>
       </div>
-</div>
+    </div>
+    <p class="order-smart-phone__text"><?php echo $payment_method_value;?></p>
+    <div class="checkout-smart-phone__wrap order-smart-phone__wrap">
+      <p class="checkout-smart-phone__card-description">Доставка</p>
+      <div class="order-smart-phone__points checkout-smart-phone__points"></div>
+      <div class="order-smart-phone__price checkout-smart-phone__price checkout-smart-phone__price_delivery">
+        <?php echo $shipping_value?>
+      </div>
+    </div>
+    <p class="order-smart-phone__text"><?php echo $shipping_name;?></p>
+    <div class=" checkout-smart-phone__wrap order-smart-phone__wrap">
+      <p class="checkout-smart-phone__card-description order-smart-phone__card-description">Итого:</p>
+      <div class="order-smart-phone__points checkout-smart-phone__points"></div>
+      <div class="checkout-smart-phone__price order-smart-phone__price">
+        <?php echo $order_total;?>
+      </div>
+    </div>
+    <div class="order-smart-phone__shipping">
+    <p class="order-smart-phone__shipping-text"> <?php echo $shipping_text;?></p>
+    <p class="order-smart-phone__shipping-address"> <?php echo $shipping_address;?></p>
+  </div>
 
+  </div>
+
+</div>
 
 
 

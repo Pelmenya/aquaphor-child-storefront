@@ -1,3 +1,6 @@
+@import url(./__card-link/sub-categories__card-link.css);
+@import url(./__card-decor/sub-categories__card-decor.css);
+@import url(./__card-decor/_last/sub-categories__card-decor_last.css);
 @import url(./__card/sub-categories__card.css);
 @import url(./__pic/sub-categories__pic.css);
 @import url(./__price/sub-categories__price.css);

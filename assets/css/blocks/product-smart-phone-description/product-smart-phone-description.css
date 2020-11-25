@@ -4,13 +4,12 @@
 
 .product-smart-phone-description {
   font-family: Proxima Nova Rg;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: 2;
   letter-spacing: normal;
-  color: rgba(40, 41, 60, 0.5);
+  color: var(--dark);
   padding: 30px;
-  
 }

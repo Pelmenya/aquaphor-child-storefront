@@ -3,7 +3,8 @@
   left: initial;
   top: initial;
   margin: 0;
-  bottom: 10px;
+  bottom: initial;
+  position: relative;
 }
 
 .intro__swiper-next::after {
@@ -16,5 +17,5 @@
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  color: var(--dark-40);
+  color: var(--white);
 }

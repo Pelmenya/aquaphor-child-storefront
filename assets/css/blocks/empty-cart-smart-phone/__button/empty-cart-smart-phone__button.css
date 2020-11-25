@@ -18,6 +18,7 @@ a.empty-cart-smart-phone__button {
   margin-top: 80px;
   text-decoration: none !important;
 }
+
 @media screen and (max-width: 450px) {
   a.empty-cart-smart-phone__button {
     display: none;

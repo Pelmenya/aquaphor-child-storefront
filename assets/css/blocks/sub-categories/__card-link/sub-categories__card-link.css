@@ -1,0 +1,9 @@
+.sub-categories__card-link {
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 4;
+}
+
+.sub-categories__card-link:last-of-type {
+  margin-bottom: 0px;
+}

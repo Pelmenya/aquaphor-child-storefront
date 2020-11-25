@@ -65,7 +65,13 @@ add_filter( 'the_title', 'aquaphor_smart_phone_endpoint_title', 10, 2 );
   <?php
     if (is_cart()||is_checkout())
       echo 'header_smart-phone_align';
-  ?>">
+  ?>
+  <?php
+    if (is_front_page()){
+    if ($_GET["intro"] !== "false") echo 'header_smart-phone_is-closed';
+    }
+  ?>
+  ">
   <?php
     if (is_product() ) {
       get_template_part('template-parts/header/header-smart-phone-templates/header__prev-page-product-button');
@@ -76,11 +82,12 @@ add_filter( 'the_title', 'aquaphor_smart_phone_endpoint_title', 10, 2 );
         set_header_prev_button(get_the_title(), "header__smart-phone-description-title_align-center");
       }
       else {
-        get_template_part('template-parts/header/header-smart-phone-templates/header__search-button');
-        get_template_part('template-parts/header/header-smart-phone-templates/header__search-and-logo');
+          get_template_part('template-parts/header/header-smart-phone-templates/header__search-button');
+          get_template_part('template-parts/header/header-smart-phone-templates/header__search-and-logo');
       }
     };
 
   ?>
 </div>
+
 <div class="buffer-for-sticky"></div>

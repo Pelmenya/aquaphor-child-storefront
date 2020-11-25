@@ -1,3 +1,4 @@
+
 <!-- <footer class="footer-smart footer-smart_cart" -->
   <?php
     global $woocommerce;
