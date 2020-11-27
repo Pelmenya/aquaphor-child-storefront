@@ -450,10 +450,10 @@ is_page( sanitize_title('о-сайте') );  правильно  */
 
   if (strcasecmp($url_str, $url_discounts) == 0){
     enqueue_versioned_style( 'is-product', AQUAPHOR_THEME_CSS . 'product.css', array());
-    enqueue_versioned_style( 'products', AQUAPHOR_THEME_BLOCKS_CSS . 'products-smart-phone/products-smart-phone.css', array());
     enqueue_versioned_style( 'discounts', AQUAPHOR_THEME_BLOCKS_CSS . 'discounts/discounts.css', array());
     enqueue_versioned_style( 'is-product-category', AQUAPHOR_THEME_CSS . 'product-category.css', array());
     enqueue_versioned_script( 'product-category', AQUAPHOR_THEME_JS . 'product-category/index.js', true);
+    enqueue_versioned_style( 'products', AQUAPHOR_THEME_BLOCKS_CSS . 'products-smart-phone/products-smart-phone.css', array());
   }
 
   if (is_page( array('about-company', 'water-analysis', 'equipment-selection', 'repair' ) ) ){

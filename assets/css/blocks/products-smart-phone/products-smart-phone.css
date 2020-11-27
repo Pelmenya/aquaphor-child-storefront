@@ -3,11 +3,16 @@
 @import url(./__container/products-smart-phone__container.css);
 @import url(./__title/products-smart-phone__title.css);
 @import url(./__wrapper/products-smart-phone__wrapper.css);
+@import url(./__wrapper-btn-add/products-smart-phone__wrapper-btn-add.css);
 @import url(./__card/products-smart-phone__card.css);
 @import url(./__card-pic/products-smart-phone__card-pic.css);
 @import url(./__card-price/products-smart-phone__card-price.css);
-@import url(./__card-price/_sale/products-smart-phone__card-price_sale.css);
 @import url(./__card-title/products-smart-phone__card-title.css);
+@import url(./__add-button/products-smart-phone__add-button.css);
+@import url(./__add-button/_orange/products-smart-phone__add-button_orange.css);
+@import url(./__card-price/_sale/products-smart-phone__card-price_sale.css);
+@import url(./__regular-price/products-smart-phone__regular-price.css);
+@import url(./__sale-price/products-smart-phone__sale-price.css);
 
 .products-smart-phone {
   display: none;
@@ -21,7 +26,7 @@
     height: 100%;
   }
 
-  div#page{
+  div#page {
     background-color: #ecedf6;
   }
 
@@ -29,14 +34,12 @@
     padding: 0;
   }
 
-
-  div.col-full{
+  div.col-full {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0;
   }
-
 
   #primary.content-area {
     padding: 0;
@@ -54,4 +57,29 @@
     display: none;
   }
 
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"],
+  .button,
+  .wc-block-grid__products .wc-block-grid__product .wp-block-button__link,
+  .added_to_cart {
+    padding: 0;
+  }
+
+  .button.loading {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .button.product_type_simple.add_to_cart_button.ajax_add_to_cart {
+    padding: 0;
+    margin: 0;
+    height: 24px;
+    width: 24px;
+    border-radius: 0px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+  }
 }

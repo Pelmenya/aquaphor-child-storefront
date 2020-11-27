@@ -4,6 +4,8 @@
   box-shadow: 0 2px 19px 0 rgba(222, 224, 226, 0.2);
   background-color: var(--white);
   margin-top: 18px;
+  padding-bottom: 12px;
+  position: relative;
 }
 
 
