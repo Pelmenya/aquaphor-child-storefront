@@ -435,17 +435,19 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     enqueue_versioned_script( 'product-category', AQUAPHOR_THEME_JS . 'product-category/index.js', true);
   }
 
-  if (is_page( array('delivery', 'payment', 'guarantees', 'about-company', 'water-analysis', 'equipment-selection', 'repair' ) ) ){
+  if (is_page( 'equipment-selection' ) ){
+    enqueue_versioned_style( 'equipment-selection-smart-phone', AQUAPHOR_THEME_BLOCKS_CSS . 'equipment-selection-smart-phone/equipment-selection-smart-phone.css', array());
+    enqueue_versioned_script('equipment-selection', AQUAPHOR_THEME_JS . 'equipment-selection/index.js', true);
+  }
+
+
+  if (is_page( array('delivery', 'payment', 'guarantees', 'about-company', 'water-analysis', 'repair' ) ) ){
     enqueue_versioned_style( 'is-page', AQUAPHOR_THEME_CSS . 'is_page.css', array());
   }
 
   if (is_page( array('catalog', 'sub-categories') ) ){
     enqueue_versioned_style( 'sub-categories', AQUAPHOR_THEME_CSS . 'sub-categories.css', array());
     enqueue_versioned_script( 'sub-index', AQUAPHOR_THEME_JS . 'sub-categories/index.js', true);
-  }
-
-  if (is_page( 'equipment-selection' ) ){
-    enqueue_versioned_script('equipment-selection', AQUAPHOR_THEME_JS . 'equipment-selection/index.js', true);
   }
 
 

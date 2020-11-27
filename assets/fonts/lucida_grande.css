@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Lucida Grande';
+	src: url('../fonts/lucida_grande.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/lucida_grande.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/lucida_grande.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/lucida_grande.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/lucida_grande.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/lucida_grande.svg#lucida_grande') format('svg'); /* Chrome < 4, Legacy iOS */
+}

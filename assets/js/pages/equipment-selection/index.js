@@ -1,4 +1,11 @@
+
 function main() {
+
+  const mySwiper = new Swiper('.swiper-container', {
+    speed: 400,
+    spaceBetween: 100
+  });
+
   // результирующий массив оборудования
   let waterSystemFull = [];
   const equipmentSelectionForm = document.querySelector('.equipment-selection__form');

@@ -1,0 +1,18 @@
+@media screen and (max-width: 450px) {
+  p.description {
+    font-size: 14px;
+    line-height: 1.57;
+    color: var(--dark-70);
+    margin-bottom: 12px;
+  }
+  h4.description {
+    font-family: Proxima Nova Rg;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: var(--dark);
+    line-height: 1.5;
+  }
+}

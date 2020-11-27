@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  
+    
+    <table class="equipment-selection__table">
+        <thead>
+          <tr class="equipment-selection__choice-item">
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem"  for="pa_ph">Реакция среды pH</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_ph">
+            </td>
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="pa_oxidability">Окисляемость</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_oxidability">
+            </td>
+          </tr>
+          <tr class="equipment-selection__choice-item">
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="pa_tds">Минерализация</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_tds">
+            </td>
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="pa_mn">Марганец</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_mn">
+            </td>
+          </tr>
+          <tr class="equipment-selection__choice-item">
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="pa_tdh">Жесткость</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_tdh">
+            </td>
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="pa_ftor">Фториды</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_ftor">
+            </td>
+          </tr>
+          <tr class="equipment-selection__choice-item">
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="pa_ferrum">Железо</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_ferrum">
+            </td>
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="pa_h2s">Сероводород</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_h2s">
+            </td>
+          </tr>
+          <tr class="equipment-selection__choice-item">
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="pa_nitrate">Нитраты</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_nitrate">
+            </td>
+            <td class="equipment-selection__td">
+              <label class="equipment-selection__elem" for="pa_sulphide">Сульфиды</label>
+              <input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_sulphide">
+            </td>
+          </tr>
+        </thead>
+      </table>
+      <div class="equipment-selection__info">
+        <div class="equipment-selection__info-pointer"></div>
+        <p class="equipment-selection__description">
+            Введите данные полученные с помощью нашего <a href="<?php echo SITE_URL?>water-analysis" class="equipment-selection__link">анализа воды</a> или из другой лаборатории.
+        </p>
+      </div>
+      <button class="equipment-selection__calculate-button" disabled>Рассчитать</button>
+    </form>
+    <p class="equipment-selection__description equipment-selection__description_no-result">
+      Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
+      Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом<a>, чтобы найти другой способ решения.
+    </p>
+  </section>
+    <section class="results">
+    <div class="results__container"></>
+    <button class="equipment-selection__calculate-button results__add-to-cart-button">Добавить все в корзину</button>
+    </section>
+
+  </body>
+</html>
