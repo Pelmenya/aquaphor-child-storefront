@@ -1,0 +1,6 @@
+@media screen and (max-width: 450px) {
+  .cart-smart-phone__card_width {
+    width: 100vw;
+    transform: translateX(-24px);
+  }
+}

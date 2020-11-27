@@ -16,7 +16,7 @@
 
 @import url(./__update-btn/cart-smart-phone__update-btn.css);
 @import url(./__category/cart-smart-phone__category.css);
-
+@import url(./__card/_width/cart-smart-phone__card_width.css);
 
 .cart-smart-phone {
   display: none;

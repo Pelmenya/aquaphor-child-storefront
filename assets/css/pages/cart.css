@@ -280,8 +280,7 @@ table.cart td.actions {
 @media screen and (max-width: 450px) {
   .site-content {
     background-color: var(--dark-4);
-    margin-bottom: 0;
-    padding-top: 30px;
+    margin-bottom: 90px;
     padding-left: 24px;
     padding-right: 24px;
     height: calc(100vh - 123px);

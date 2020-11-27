@@ -209,7 +209,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 					$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 					?>
 
-          <div class="cart-smart-phone__card cart-smart-phone__card_between">
+          <div class="cart-smart-phone__card cart-smart-phone__card_between cart-smart-phone__card_width">
 
           <div class="cart-smart-phone__wrap-row">
 
