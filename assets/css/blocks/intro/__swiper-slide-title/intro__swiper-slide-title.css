@@ -1,12 +1,13 @@
 .intro__swiper-slide-title {
     font-family: Proxima Nova Rg;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: bold;
     font-stretch: normal;
     font-style: normal;
-    line-height: normal;
+    line-height: 1.5;
     letter-spacing: normal;
     text-align: center;
     color: #0352c4;
-    margin-top: 40px;
+    margin-top: 4%;
+    margin-bottom: 0;
 }

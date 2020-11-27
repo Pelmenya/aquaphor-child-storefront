@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="swiper-pagination intro__swiper-pagination"></div>
-      <footer class="footer-smart footer-checkout-smart-phone">
+      <footer class="footer-smart footer-checkout-smart-phone footer-smart_intro">
         <div class="swiper-button-next intro__swiper-next footer-checkout-smart-phone__button"></div>
       </footer>
     </div>

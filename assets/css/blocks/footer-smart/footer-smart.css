@@ -9,6 +9,7 @@
 @import url(./__cart-checkout-btn/footer-smart__cart-checkout-btn.css);
 @import url(./__cart-total-title/footer-smart__cart-total-title.css);
 @import url(./__cart-total-price/footer-smart__cart-total-price.css);
+@import url(./_intro/footer-smart_intro.css);
 
 .footer-smart {
   display: none;

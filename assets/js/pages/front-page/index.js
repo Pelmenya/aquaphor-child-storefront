@@ -5,6 +5,8 @@ function main() {
   const popupContentImg = popUp.querySelector('.popup__content_img');
   const popupPreload = document.querySelector('.popup.popup-preload');
   const popupIntro = document.querySelector('.popup.popup-intro');
+  const introSwiperNextBtn = document.querySelector('.intro__swiper-next');
+
   // для мобильного слайдера
   const marginLeft = window.screen.width - 325;
   if (window.screen.width < 450) {
@@ -31,6 +33,21 @@ function main() {
           document.querySelector('.header.header_smart-phone').style.display = 'flex';
           // КОСТЫЛЬ !!!
           window.location.href = '?intro=false';
+        }
+      },
+      slideChange: () => {
+        switch (introSwiper.activeIndex) {
+          case 0:
+            introSwiperNextBtn.textContent = 'Далее';
+            break;
+          case 1:
+            introSwiperNextBtn.textContent = 'Далее';
+            break;
+          case 2:
+            introSwiperNextBtn.textContent = 'Открыть сайт';
+            break;
+          default:
+            break;
         }
       },
     },
@@ -67,6 +84,7 @@ function main() {
   document.addEventListener('DOMContentLoaded', () => {
     if (popupPreload) {
       setTimeout(() => {
+        introSwiperNextBtn.textContent = 'Далее';
         popupPreload.style.display = 'none';
       }, 0);
     }

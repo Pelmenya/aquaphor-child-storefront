@@ -5,10 +5,6 @@
   margin: 0;
   bottom: initial;
   position: relative;
-}
-
-.intro__swiper-next::after {
-  content: 'ДАЛЕЕ';
   font-family: Proxima Nova Rg;
   font-size: 16px;
   font-weight: bold;
@@ -18,4 +14,8 @@
   letter-spacing: normal;
   text-align: center;
   color: var(--white);
+}
+
+.intro__swiper-next::after {
+  content: '';
 }

@@ -1,12 +1,11 @@
-@import url(./__logo-svg/popup-preload__logo-svg.css);
-
+@import url(./__logo/popup-preload__logo.css);
+@import url(./__logo-pic/popup-preload__logo-pic.css);
 
 .popup-preload {
-  background-color: var(--white);
+  background-color: var(--blue-blue);
   display: flex;
   align-items: center;
-  padding-left: 25px;
-  padding-right: 25px;
   flex-direction: column;
   z-index: 99;
+  width: 100%;
 }
