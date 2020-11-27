@@ -1,6 +1,6 @@
 .products-smart-phone__card-pic {
   height: 122px;
-  width: 100%;
+  width: calc(100% - 25px);
   background-color: transparent;
   border-radius: 5px 5px 0 0;
 }

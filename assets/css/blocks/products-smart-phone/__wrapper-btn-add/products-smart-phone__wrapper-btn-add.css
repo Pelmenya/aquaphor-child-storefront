@@ -1,0 +1,6 @@
+.products-smart-phone__wrapper-btn-add {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}

@@ -1,0 +1,12 @@
+.products-smart-phone__add-button {
+    width: 24px;
+    height: 24px;
+    border-radius: 0px 5px 0px 5px;
+    background-image: linear-gradient(135deg, #258def, #1054db);
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--white);
+    text-align: center;
+    display: block;
+}

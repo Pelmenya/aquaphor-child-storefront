@@ -1,16 +1,14 @@
 .products-smart-phone__card-price {
   font-family: Proxima Nova Rg;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.43;
   letter-spacing: normal;
-  color: var(--white);
-  background-color: var(--blue-blue);
-  padding-top: 9px;
-  padding-bottom: 6px;
-  padding-left: 10px;
+  color: var(--blue-blue);
+  background-color: transparent;
+  padding-left: 12px;
   border-radius: 0 0 5px 5px;
   margin: 0;
 }

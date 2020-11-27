@@ -59,4 +59,4 @@ function main() {
   }
 }
 
-main();
+if (window.screen.width > 450) main();
