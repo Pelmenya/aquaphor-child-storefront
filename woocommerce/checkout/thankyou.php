@@ -89,7 +89,7 @@ defined( 'ABSPATH' ) || exit;
 
   <div class="empty-cart-smart-phone">
     <img class="empty-cart-smart-phone__pic" src="https://aquaphor.store/wp-content/uploads/2020/11/order_received.png" alt="Пустая корзина">
-    <h1 class="empty-cart-smart-phone__title">Заказ успешно оформлен</h1>
+    <h1 class="empty-cart-smart-phone__title title-checkout_smart-phone">Заказ успешно оформлен</h1>
     <p class=empty-cart-smart-phone__text>Благодарим Вас за покупку</p>
   </div>
 

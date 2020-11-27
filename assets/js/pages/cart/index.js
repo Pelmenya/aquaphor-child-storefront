@@ -47,17 +47,26 @@ function setSmartPhoneScript() {
   // удаляем темплейт для desktop версии)
 
   const desktop = document.querySelector('.cart-desktop');
+  const cartHeight = document.querySelector('#content');
   desktop.parentNode.removeChild(desktop);
-
-  // - высота хедера - высота футера
-  if (document.querySelector('.site-content').offsetHeight < window.screen.height - 58 - 65) {
-    document.querySelector('.site-content').style.height = `${window.screen.height - 58 - 65}px`;
+  if (document.body.clientWidth < 450) {
+    console.log(cartHeight.scrollHeight);
+    document.querySelector('.site-content').style.height = `${cartHeight.scrollHeight}px`;
   }
 
+  // - высота хедера - высота футера
+  // if (document.querySelector('.site-content').offsetHeight < window.screen.height - 58 - 65) {
+  //   document.querySelector('.site-content').style.height = `${window.screen.height - 58 - 65}px`;
+  //   console.log(cartHeight.scrollHeight);
+  //   document.querySelector('.site-content').style.height = `${cartHeight.scrollHeight}px`;
+  // }
+
   const emptyCart = document.querySelector('.empty-cart-smart-phone');
+
   if (emptyCart) {
     document.querySelector('.site-content').style.marginBottom = '0px';
     document.querySelector('.site-content').style.height = 'auto';
+    cartHeight.style.height = 'auto';
   }
 
   const updateBtn = document.querySelector('button.button');

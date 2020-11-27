@@ -1,6 +1,6 @@
 .empty-cart-smart-phone__title {
   font-family: Proxima Nova Rg;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
@@ -8,5 +8,9 @@
   letter-spacing: normal;
   text-align: center;
   color: var(--dark);
-  margin-bottom: 12px;
+  margin-bottom: 0;
+}
+
+.empty-cart-smart-phone__title.title-checkout_smart-phone {
+  color: var(--blue-blue);
 }

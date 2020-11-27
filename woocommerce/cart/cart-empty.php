@@ -33,7 +33,7 @@ if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
 		</a>
   </p>
   <div class="empty-cart-smart-phone">
-    <img class="empty-cart-smart-phone__pic" src="<?php echo SITE_URL; ?>wp-content/uploads/2020/10/cart-empty.png" alt="Пустая корзина">
+    <img class="empty-cart-smart-phone__pic" src="<?php echo SITE_URL; ?>wp-content/uploads/2020/10/cart-empty-black.png" alt="Пустая корзина">
     <h1 class="empty-cart-smart-phone__title">Ой! Ваша корзина пуста</h1>
     <p class=empty-cart-smart-phone__text>Самое время в неё что-нибудь добавить</p>
   </div>

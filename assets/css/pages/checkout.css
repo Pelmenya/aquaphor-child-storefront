@@ -188,7 +188,11 @@ tr.woocommerce-shipping-totals.shipping th {
   color: var(--white);
 }
 
-#payment .payment_methods li input[type="radio"]:first-child:checked + label::before {
+#payment
+  .payment_methods
+  li
+  input[type="radio"]:first-child:checked
+  + label::before {
   font-size: 20px;
   color: var(--blue-blue);
   content: "\f110";
@@ -202,7 +206,7 @@ tr.woocommerce-shipping-totals.shipping th {
   font-variant: normal;
   font-weight: normal;
   line-height: 1;
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: 100;
   line-height: inherit;
   vertical-align: baseline;
@@ -288,11 +292,11 @@ table.shop_table.woocommerce-checkout-review-order-table {
   display: none;
 }
 
-input[type='radio'].shipping_method {
+input[type="radio"].shipping_method {
   cursor: pointer;
 }
 
-input[type='radio'].shipping_method {
+input[type="radio"].shipping_method {
   position: relative;
   height: 14px;
   width: 14px;
@@ -302,8 +306,8 @@ input[type='radio'].shipping_method {
   outline: none;
 }
 
-input[type='radio'].shipping_method::before {
-  content: '';
+input[type="radio"].shipping_method::before {
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -315,8 +319,8 @@ input[type='radio'].shipping_method::before {
   border: 1px solid var(--blue-blue);
 }
 
-input[type='radio'].shipping_method:checked::after {
-  content: '';
+input[type="radio"].shipping_method:checked::after {
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -433,9 +437,9 @@ th.product-total {
     background-color: #f9f9f9;
     margin-bottom: 0;
     padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: calc(100vh - 100px);
+    padding-left: 24px;
+    padding-right: 24px;
+    height: auto;
   }
 
   form.checkout.woocommerce-checkout {
@@ -492,7 +496,10 @@ th.product-total {
   /**
     стилизация инпутов, отключение элементов списка li
   */
-  #payment .payment_methods li.wc_payment_method > input[type="radio"]:first-child {
+  #payment
+    .payment_methods
+    li.wc_payment_method
+    > input[type="radio"]:first-child {
     border: 0;
     clip: initial;
     -webkit-clip-path: initial;
@@ -518,7 +525,7 @@ th.product-total {
     content: "";
   }
 
-  input[type='radio'].shipping_method {
+  input[type="radio"].shipping_method {
     position: relative;
     height: 20px;
     width: 20px;
@@ -528,7 +535,7 @@ th.product-total {
     outline: none;
   }
 
-  input[type='radio'].shipping_method::before {
+  input[type="radio"].shipping_method::before {
     content: "";
     color: var(--white);
     position: absolute;
@@ -542,8 +549,8 @@ th.product-total {
     border: 2px solid var(--blue-blue);
   }
 
-  input[type='radio'].shipping_method:checked::after {
-    content: '';
+  input[type="radio"].shipping_method:checked::after {
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -572,11 +579,11 @@ th.product-total {
     box-sizing: border-box;
   }
 
-  input[type=radio]:checked:before {
+  input[type="radio"]:checked:before {
     content: "\2713";
     border-radius: 3px;
     border: solid 1px var(--blue-blue);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
     font-size: 20px;
     font-weight: 900;
     color: var(--white);
@@ -610,7 +617,7 @@ th.product-total {
   }
 
   input.input-radio:checked::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -638,7 +645,7 @@ th.product-total {
     content: "\2713";
     border-radius: 3px;
     border: solid 1px var(--blue-blue);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
     font-size: 20px;
     font-weight: 900;
     color: var(--white);
@@ -690,5 +697,4 @@ th.product-total {
   .woocommerce-billing-fields__field-wrapper p {
     margin-bottom: 20px;
   }
-
 }
