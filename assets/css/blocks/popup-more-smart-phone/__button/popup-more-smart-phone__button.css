@@ -1,0 +1,7 @@
+@media screen and (max-width: 450px) {
+  .popup-more-smart-phone__button {
+    display: block;
+    transform: rotate(180deg);
+    fill: var(--dark);
+  }
+}

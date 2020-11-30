@@ -3,6 +3,7 @@
 @import url(./__close/popup-more-smart-phone__close.css);
 @import url(./__close/_help/popup-more-smart-phone__close_help.css);
 @import url(./_my-account/popup-more-smart-phone_my-account.css);
+@import url(./__button/popup-more-smart-phone__button.css);
 
 .popup-more-smart-phone {
   display: none;
@@ -12,7 +13,7 @@
   .popup-more-smart-phone {
     height: calc(100% - 58px);
     width: 100%;
-    padding-top: 57%;
+    padding-top: 80%;
     cursor: pointer;
     top: 0;
     bottom: 58px;
