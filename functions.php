@@ -479,16 +479,10 @@ is_page( sanitize_title('о-сайте') );  правильно  */
   if (strcasecmp($url_str, $url_cart) == 0){
     enqueue_versioned_script( 'custom', AQUAPHOR_THEME_JS . 'cart/index.js', array('jquery') );
     enqueue_versioned_style( 'cart', AQUAPHOR_THEME_CSS . 'cart.css', array());
-    enqueue_versioned_style( 'footer-cart-smart-phone', AQUAPHOR_THEME_BLOCKS_CSS . 'footer-cart-smart-phone/footer-cart-smart-phone.css', array());
     enqueue_versioned_style( 'cart-smart', AQUAPHOR_THEME_BLOCKS_CSS . 'cart-smart-phone/cart-smart-phone.css', array());
     enqueue_versioned_style( 'footer-checkout-smart-phone', AQUAPHOR_THEME_BLOCKS_CSS . 'footer-checkout-smart-phone/footer-checkout-smart-phone.css', array());
   }
-   if (strcasecmp($url_str, $url_cart) > 0){
-    enqueue_versioned_style( 'cart-smart-phone__card_width', AQUAPHOR_THEME_BLOCKS_CSS . 'cart-smart-phone__card_width/cart-smart-phone__card_width', array());
-    enqueue_versioned_script( 'custom', AQUAPHOR_THEME_JS . 'cart/index.js', array('jquery') );
-
-   }
-
+  
   if (strcasecmp($url_str, $url_my_account) == 0){
     enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'my-account/index.js', true);
   }

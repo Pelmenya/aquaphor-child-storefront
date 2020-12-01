@@ -1,4 +1,5 @@
 function setFooterSmartScript(footer) {
+
   const buttons = footer.querySelectorAll('.footer-smart__item');
 
   const popupMore = document.querySelector('.popup-more-smart-phone');
@@ -91,6 +92,9 @@ function setFooterSmartScript(footer) {
 
   function openPopupMore(popup, content) {
     popup.classList.add('popup_is-opened');
+    popupMoreContent.classList.add('open-popup');
+    popupHelpContent.classList.add('open-popup');
+    document.body.style.overflow = 'hidden';
     setTimeout(() => {
       content.classList.remove('popup-more-smart-phone__content_is-closed');
     }, 0);
@@ -101,6 +105,13 @@ function setFooterSmartScript(footer) {
       event.target.classList.contains('popup')
       || event.target.classList.contains('popup-more-smart-phone__close')
     ) {
+      popupMoreContent.classList.remove('open-popup');
+      popupHelpContent.classList.remove('open-popup');
+      popupHelpContent.classList.add('open-popup');
+      popupMoreContent.classList.add('close-popup');
+      popupMoreContent.style.animation = 'close-popup ease-in-out 0.6s';
+      popupHelpContent.style.animation = 'close-popup ease-in-out 0.6s';
+      document.body.style.overflow = 'auto';
       popupMoreContent.classList.add('popup-more-smart-phone__content_is-closed');
       popupHelpContent.classList.add('popup-more-smart-phone__content_is-closed');
       Object.keys(buttons).forEach((btn) => {
@@ -108,9 +119,15 @@ function setFooterSmartScript(footer) {
       });
 
       setTimeout(() => {
+        popupHelpContent.classList.remove('close-popup');
+        popupHelpContent.classList.add('open-popup');
+        popupMoreContent.classList.remove('close-popup');
+        popupMoreContent.classList.add('open-popup');
         popupMore.classList.remove('popup_is-opened');
         popupHelp.classList.remove('popup_is-opened');
-      }, 350);
+        popupMoreContent.style.animation = 'open-popup ease-in-out 0.6s';
+        popupHelpContent.style.animation = 'open-popup ease-in-out 0.6s';
+      }, 600);
     }
   }
 

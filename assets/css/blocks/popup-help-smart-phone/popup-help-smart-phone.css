@@ -14,6 +14,23 @@
 @import url(./__wrap-col/_content/popup-help-smart-phone__wrap-col_content.css);
 @import url(./__pic/popup-help-smart-phone__pic.css);
 
-.popup-help-smart-phone {
+@keyframes close-popup {
+  from {
+    transform: translateY(0%);
+    animation-timing-function: ease-in-out;
+  }
+  to {
+    transform: translateY(120%);
+    animation-timing-function: ease-in-out;
+  }
+}
 
+.popup-help-smart-phone {
+}
+
+.open-popup {
+  animation: open-popup ease-in-out 0.8s;
+}
+.close-popup {
+  animation: close-popup ease-in-out 0.8s;
 }
