@@ -1,21 +1,19 @@
-.product-smart-phone__button-add-to-card {
+.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.product-smart-phone__button-add-to-card {
   font-family: Proxima Nova Rg;
-  font-size: 14px;
-  font-weight: normal;
+  width: 116px;
+  height: 40px;
+  padding: 0;
+  border-radius: 5px;
+  border: solid 1px rgba(22, 50, 92, 0.1);
+  font-size: 16px;
+  font-weight: 600;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
+  line-height: 1.5;
   letter-spacing: normal;
   text-align: center;
-  color: var(--white);
-  text-transform: uppercase;
-  margin-right: 15px;
-  padding-top: 13px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 10px;
-  border-radius: 3px;
-  background-color: var(--blue-blue);
+  color: var(--blue-blue);
+  background-color: transparent;
 }
 
 .product-smart-phone__button-add-to-card:hover {

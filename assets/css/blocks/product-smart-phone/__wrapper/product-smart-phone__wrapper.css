@@ -2,7 +2,8 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 23px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(22, 50, 92, 0.1);
 }

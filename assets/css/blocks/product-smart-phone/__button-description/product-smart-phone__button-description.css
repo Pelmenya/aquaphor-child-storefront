@@ -1,19 +1,12 @@
 .product-smart-phone__button-description {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 100%;
-  border-radius: 5px;
-  border: solid 1px var(--dark-40);
-  background-color: var(--white);
-}
-
-.product-smart-phone__button-description:active {
-  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+  padding: 0;
+  width: 24px;
+  height: 22px;
+  background-color: transparent;
 }
 
 .product-smart-phone__button-description:hover {
-  background-color: var(--pale-grey);
+  background-color: transparent;
 }

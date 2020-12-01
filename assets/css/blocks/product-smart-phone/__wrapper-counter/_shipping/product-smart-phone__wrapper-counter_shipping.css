@@ -1,0 +1,8 @@
+.product-smart-phone__wrapper-counter_shipping {
+  margin-top: 12px;
+}
+
+.product-smart-phone__wrapper-counter_shipping:nth-last-child(2) {
+  margin-top: 0px;
+  margin-bottom: 16px;
+}

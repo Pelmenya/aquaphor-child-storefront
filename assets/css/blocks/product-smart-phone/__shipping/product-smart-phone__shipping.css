@@ -1,0 +1,12 @@
+.product-smart-phone__shipping {
+  font-family: Proxima Nova Rg;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: var(--dark-70);
+  margin: 0;
+  margin-left: 8px;
+}

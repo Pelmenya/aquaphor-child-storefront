@@ -63,6 +63,10 @@ add_filter( 'the_title', 'aquaphor_smart_phone_endpoint_title', 10, 2 );
 
 <div class="header header_smart-phone
   <?php
+    if (is_product())
+      echo 'header_smart-phone_blue';
+  ?>
+  <?php
     if (is_cart()||is_checkout())
       echo 'header_smart-phone_align';
   ?>

@@ -1,0 +1,18 @@
+.product-smart-phone__short-description {
+  font-family: Proxima Nova Rg;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: var(--dark);
+  margin: 0;
+  max-height: 84px;
+  min-height: 21px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  margin-bottom: 12px;
+}

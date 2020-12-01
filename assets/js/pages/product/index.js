@@ -25,7 +25,7 @@ function setSmartPhoneScript() {
   const mainProductSmartPhone = document.querySelector('.main-product-smart-phone');
   const headerSmartPhone = document.querySelector('.header_smart-phone');
   const footerSmartPhone = document.querySelector('.footer-smart');
-  const addToCartBtn = mainProductSmartPhone.querySelector('.add_to_cart_button');
+  const addToCartBtn = mainProductSmartPhone.querySelector('.product-smart-phone__button-add-to-card');
   const productSmartPhoneDescriptionBtn = mainProductSmartPhone.querySelector('.product-smart-phone__button-description');
   const headerPrevPageButton = headerSmartPhone.querySelector('.header__prev-page-button');
   const headerPrevPageButtonDescription = headerSmartPhone.querySelector('.header__prev-page-button_description');
@@ -34,6 +34,28 @@ function setSmartPhoneScript() {
   const headerLogo = headerSmartPhone.querySelector('.header__logo');
   const headerCartButton = headerSmartPhone.querySelector('.header__cart-button');
   const productSmartPhoneDescription = mainProductSmartPhone.querySelector('.product-smart-phone-description');
+  const priceLabel = mainProductSmartPhone.querySelector('.product-smart-phone__price');
+  if (priceLabel) {
+    const counterInput = mainProductSmartPhone.querySelector('.input-text.qty.text');
+    const plusBtn = mainProductSmartPhone.querySelector('.plus');
+    const minusBtn = mainProductSmartPhone.querySelector('.minus');
+
+    const priceOneProduct = Number(priceLabel.textContent.replace('руб.', '').trim());
+
+    const minusBtnClick = () => {
+      if (Number(counterInput.value > 1)) {
+        counterInput.value = String(Number(counterInput.value) - 1);
+        priceLabel.textContent = `${priceOneProduct * Number(counterInput.value)}  руб.`;
+      } else counterInput.value = 1;
+    };
+
+    const plusBtnClick = () => {
+      counterInput.value = String(Number(counterInput.value) + 1);
+      priceLabel.textContent = `${priceOneProduct * Number(counterInput.value)}  руб.`;
+    };
+    minusBtn.addEventListener('click', minusBtnClick);
+    plusBtn.addEventListener('click', plusBtnClick);
+  }
 
   function toggleDescriptionProduct() {
     productSmartPhoneDescription.classList.toggle('is-close');
@@ -62,7 +84,7 @@ function setSmartPhoneScript() {
       spaceBetween: 15,
     });
     if (addToCartBtn) {
-      addToCartBtn.textContent = 'Добавить в корзину';
+      addToCartBtn.textContent = 'Отложить';
     }
     if (productSmartPhoneDescriptionBtn) {
       productSmartPhoneDescriptionBtn.addEventListener('click', () => {

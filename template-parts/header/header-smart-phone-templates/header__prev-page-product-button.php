@@ -1,7 +1,26 @@
-<svg class="header__prev-page-button" width="18" height="18" viewBox="0 0 18 18">
-  <path fill="#28293C" d="M9 16.875c-.003-.098-.043-.201-.113-.27L.904 8.625 8.883.645c.351-.338-.193-.883-.53-.531L.11 8.356c-.147.148-.147.385 0 .531l8.247 8.249c.224.229.643.091.643-.261zm9-8.25c0 .208-.167.375-.375.375h-15c-.208 0-.375-.167-.375-.375s.167-.375.375-.375h15c.208 0 .375.167.375.375z"/>
+<svg class ="header__prev-page-button header__prev-page-button_white" width="11" height="18" viewBox="0 0 11 18">
+  <defs>
+      <path id="mfv2jkcdba" d="M26.716 28l7.08 7.08c.439.439.439 1.151 0 1.59-.44.44-1.152.44-1.591 0l-7.875-7.875c-.44-.439-.44-1.151 0-1.59l7.875-7.875c.439-.44 1.151-.44 1.59 0 .44.439.44 1.151 0 1.59L26.716 28z"/>
+  </defs>
+  <g fill-rule="evenodd">
+      <g>
+          <g transform="translate(-24 -19)">
+              <use  fill-rule="nonzero" xlink:href="#mfv2jkcdba"/>
+          </g>
+      </g>
+  </g>
 </svg>
-<svg class="header__prev-page-button header__prev-page-button_description is-close" width="18" height="18" viewBox="0 0 18 18">
-  <path fill="#28293C" d="M9 16.875c-.003-.098-.043-.201-.113-.27L.904 8.625 8.883.645c.351-.338-.193-.883-.53-.531L.11 8.356c-.147.148-.147.385 0 .531l8.247 8.249c.224.229.643.091.643-.261zm9-8.25c0 .208-.167.375-.375.375h-15c-.208 0-.375-.167-.375-.375s.167-.375.375-.375h15c.208 0 .375.167.375.375z"/>
+<svg class ="header__prev-page-button header__prev-page-button_description is-close" width="11" height="18" viewBox="0 0 11 18">
+  <defs>
+      <path id="mfv2jkcdba" d="M26.716 28l7.08 7.08c.439.439.439 1.151 0 1.59-.44.44-1.152.44-1.591 0l-7.875-7.875c-.44-.439-.44-1.151 0-1.59l7.875-7.875c.439-.44 1.151-.44 1.59 0 .44.439.44 1.151 0 1.59L26.716 28z"/>
+  </defs>
+  <g fill-rule="evenodd">
+      <g>
+          <g transform="translate(-24 -19)">
+              <use  fill-rule="nonzero" xlink:href="#mfv2jkcdba"/>
+          </g>
+      </g>
+  </g>
 </svg>
-<h1 class="header__smart-phone-description-title is-close">Описание и характеристики</h1>
+
+<h1 class="header__smart-phone-description-title is-close">Описание</h1>
