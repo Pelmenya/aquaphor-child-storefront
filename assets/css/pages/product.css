@@ -4,6 +4,7 @@
 @import url(../blocks/slider-product-smart-phone/slider-product-smart-phone.css);
 @import url(../blocks/popup-product-smart-phone/popup-product-smart-phone.css);
 @import url(../blocks/product-smart-phone-description/product-smart-phone-description.css);
+@import url(../blocks/product-pictures/product-pictures.css);
 
 /*рисунок*/
 .woocommerce-product-gallery__wrapper {

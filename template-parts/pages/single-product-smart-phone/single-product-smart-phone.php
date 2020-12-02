@@ -23,16 +23,20 @@
   <main class="main-product-smart-phone">
   <div class="product-smart-phone">
       <div class="product-smart-phone__pic-wrapper">
-        <div class="swiper-container slider-product-smart-phone__container">
-          <div class="swiper-pagination slider-product-smart-phone__pagination"></div>
-          <div class="swiper-wrapper slider-product-smart-phone__wrapper">
+        <div class="swiper-container product-pictures">
+          <div class="swiper-wrapper product-pictures__wrapper">
             <?php
               for ($i = 0; $i < count($product_images_urls); ++$i) { ?>
-                  <img class="slider-product-smart-phone__pic-full" src="<?php echo $product_images_urls[$i]; ?>" alt="<?php echo $product_title ?>">
+                <div class="swiper-slide product-pictures__slide">
+                  <div class="product-pictures__pic-wrapper">
+                    <img class="product-pictures__pic" src="<?php echo $product_images_urls[$i]; ?>" alt="<?php echo $product_title ?>">
+                  </div>
+                </div>
                 <?php
               }
             ?>
           </div>
+          <div class="swiper-pagination product-pictures__pagination"></div>
         </div>
         <div class="product-smart-phone__decor"></div>
       </div>

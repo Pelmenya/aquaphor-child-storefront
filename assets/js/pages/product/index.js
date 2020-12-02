@@ -4,7 +4,7 @@ function createElementDOM(
   classElement,
   textContent = '',
   styleElement = '',
-  datetime = '',
+  datetime = ''
 ) {
   const newElement = document.createElement(element);
   newElement.className = classElement;
@@ -25,15 +25,23 @@ function setSmartPhoneScript() {
   const mainProductSmartPhone = document.querySelector('.main-product-smart-phone');
   const headerSmartPhone = document.querySelector('.header_smart-phone');
   const footerSmartPhone = document.querySelector('.footer-smart');
-  const addToCartBtn = mainProductSmartPhone.querySelector('.product-smart-phone__button-add-to-card');
-  const productSmartPhoneDescriptionBtn = mainProductSmartPhone.querySelector('.product-smart-phone__button-description');
+  const addToCartBtn = mainProductSmartPhone.querySelector(
+    '.product-smart-phone__button-add-to-card'
+  );
+  const productSmartPhoneDescriptionBtn = mainProductSmartPhone.querySelector(
+    '.product-smart-phone__button-description'
+  );
   const headerPrevPageButton = headerSmartPhone.querySelector('.header__prev-page-button');
-  const headerPrevPageButtonDescription = headerSmartPhone.querySelector('.header__prev-page-button_description');
+  const headerPrevPageButtonDescription = headerSmartPhone.querySelector(
+    '.header__prev-page-button_description'
+  );
   const productSmartPhone = mainProductSmartPhone.querySelector('.product-smart-phone');
   const sliderSmartPhone = mainProductSmartPhone.querySelector('.slider-product-smart-phone');
   const headerLogo = headerSmartPhone.querySelector('.header__logo');
   const headerCartButton = headerSmartPhone.querySelector('.header__cart-button');
-  const productSmartPhoneDescription = mainProductSmartPhone.querySelector('.product-smart-phone-description');
+  const productSmartPhoneDescription = mainProductSmartPhone.querySelector(
+    '.product-smart-phone-description'
+  );
   const priceLabel = mainProductSmartPhone.querySelector('.product-smart-phone__price');
   if (priceLabel) {
     const counterInput = mainProductSmartPhone.querySelector('.input-text.qty.text');
@@ -41,6 +49,13 @@ function setSmartPhoneScript() {
     const minusBtn = mainProductSmartPhone.querySelector('.minus');
 
     const priceOneProduct = Number(priceLabel.textContent.replace('руб.', '').trim());
+
+    const picturesSlider = new Swiper('.product-pictures', {
+      pagination: {
+        el: '.product-pictures__pagination',
+        dynamicBullets: true,
+      },
+    });
 
     const minusBtnClick = () => {
       if (Number(counterInput.value > 1)) {
@@ -133,7 +148,7 @@ function main() {
     const entrySummary = contentArea.querySelector('.entry-summary');
     entrySummary.querySelector('.woocommerce-Price-amount').style.fontFamily = 'Proxima Nova Rg';
     const shortDescription = entrySummary.querySelector(
-      '.woocommerce-product-details__short-description',
+      '.woocommerce-product-details__short-description'
     );
 
     if (shortDescription) {
@@ -176,14 +191,14 @@ function main() {
     const relatedProducts = document.querySelector('.related.products');
     if (relatedProducts) {
       const relatedProductsButtons = relatedProducts.querySelectorAll(
-        '.button.product_type_simple.add_to_cart_button.ajax_add_to_cart',
+        '.button.product_type_simple.add_to_cart_button.ajax_add_to_cart'
       );
       Object.keys(relatedProductsButtons).forEach((i) => {
         relatedProductsButtons[i].textContent = 'Добавить в корзину';
       });
     }
     const tabTitleAdditionalInformation = document.querySelector(
-      '#tab-title-additional_information a',
+      '#tab-title-additional_information a'
     );
     if (tabTitleAdditionalInformation) {
       tabTitleAdditionalInformation.textContent = 'Тех. характеристики';
