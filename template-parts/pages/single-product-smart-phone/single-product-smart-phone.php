@@ -36,7 +36,11 @@
               }
             ?>
           </div>
-          <div class="swiper-pagination product-pictures__pagination"></div>
+          <div class="swiper-pagination product-pictures__pagination
+            <?php
+              if (count($product_images_urls) < 2) echo "is-close";
+            ?>">
+          </div>
         </div>
         <div class="product-smart-phone__decor"></div>
       </div>

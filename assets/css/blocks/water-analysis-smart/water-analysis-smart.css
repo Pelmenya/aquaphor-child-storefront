@@ -1,0 +1,23 @@
+@import url(./__card/water-analysis-smart__card.css);
+@import url(./__pic/water-analysis-smart__pic.css);
+@import url(./__slide/water-analysis-smart__slide.css);
+@import url(./__slider/water-analysis-smart__slider.css);
+@import url(./__text/water-analysis-smart__text.css);
+@import url(./__text/_bold/water-analysis-smart__text_bold.css);
+@import url(./__wrapper/water-analysis-smart__wrapper.css);
+@import url(./__footer/water-analysis-smart__footer.css);
+@import url(./__list/water-analysis-smart__list.css);
+
+
+.water-analysis-smart {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .water-analysis-smart {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+}

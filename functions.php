@@ -469,6 +469,12 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     enqueue_versioned_script('equipment-selection', AQUAPHOR_THEME_JS . 'equipment-selection/index.js', true);
   }
 
+  if (is_page('water-analysis')){
+    enqueue_versioned_script('water-analysis-script', AQUAPHOR_THEME_JS . 'water-analysis/index.js', true);
+    enqueue_versioned_style( 'footer-checkout-smart-phone', AQUAPHOR_THEME_BLOCKS_CSS . 'footer-checkout-smart-phone/footer-checkout-smart-phone.css', array());
+    enqueue_versioned_style( 'water-analysis', AQUAPHOR_THEME_CSS . 'water-analysis.css', array());
+  }
+
 
   if (is_page(array('products') ) ){
         enqueue_versioned_style( 'products', AQUAPHOR_THEME_BLOCKS_CSS . 'products-smart-phone/products-smart-phone.css', array());

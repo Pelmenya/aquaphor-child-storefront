@@ -36,7 +36,10 @@ function aquaphor_smart_phone_endpoint_title( $title, $id ) {
   }
   elseif ( is_page( 'guarantees' ) ) {
     $title = "Гарантия";
-}
+  }
+  elseif ( is_page( 'water-analysis' ) ) {
+    $title = "Подготовка";
+  }
   elseif ( is_order_received_page() ) {
       $title = "Оформлен";
   }
@@ -82,8 +85,11 @@ add_filter( 'the_title', 'aquaphor_smart_phone_endpoint_title', 10, 2 );
       get_template_part('template-parts/header/header-smart-phone-templates/header__search-and-logo');
     }
     else {
-      if (is_checkout()||is_cart()||(is_page( 'delivery' ) )||(is_page( 'guarantees' ) )||(is_page( 'payment' ) )||(is_page( 'contacts' ) )||(is_page( 'about-company' ) )){
-        set_header_prev_button(get_the_title(), "header__smart-phone-description-title_align-center");
+      if (is_checkout()||is_cart()||(is_page(array('water-analysis','delivery','guarantees', 'payment', 'contacts','about-company')))){
+        if (is_page('water-analysis')){
+          set_header_prev_button(get_the_title(), "header__smart-phone-description-title_align-center header__smart-phone-description-title_align-center_margin-left");
+          get_template_part('template-parts/header/header-smart-phone-templates/header__cross');
+          } else set_header_prev_button(get_the_title(), "header__smart-phone-description-title_align-center");
       }
       else {
           get_template_part('template-parts/header/header-smart-phone-templates/header__search-button');

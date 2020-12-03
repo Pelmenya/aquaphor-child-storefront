@@ -1,0 +1,18 @@
+.water-analysis-smart__list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.water-analysis-smart__list li {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+
+.water-analysis-smart__list li:last-of-type {
+  margin-bottom: 30px;
+}
+

@@ -1,0 +1,13 @@
+@import url(../blocks/water-analysis-smart/water-analysis-smart.css);
+
+
+@media screen and (max-width: 450px) {
+  .desktop-is-close {
+    display: none;
+  }
+
+  .smart-phone-is-closed{
+    display: none;
+  }
+
+}

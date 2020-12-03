@@ -4,11 +4,11 @@
 @media screen and (max-width: 450px) {
   .footer-checkout-smart-phone {
     height: initial;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
     padding-top: 18px;
     padding-bottom: 18px;
-    background-color: #f9f9f9;;
+    background-color: transparent;
     box-shadow: none;
     /* border-radius: 10px 10px 0px 0px; */
     /* box-shadow: 0 0 4px 0 rgba(40, 41, 60, 0.2); */
