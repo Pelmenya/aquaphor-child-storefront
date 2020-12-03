@@ -17,11 +17,11 @@
 @keyframes close-popup {
   from {
     transform: translateY(0%);
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear 0.2s;
   }
   to {
     transform: translateY(120%);
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear 0.2s;
   }
 }
 
@@ -29,8 +29,8 @@
 }
 
 .open-popup {
-  animation: open-popup ease-in-out 0.8s;
+  animation: open-popup linear 0.2s;
 }
 .close-popup {
-  animation: close-popup ease-in-out 0.8s;
+  animation: close-popup linear 0.2s;
 }

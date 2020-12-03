@@ -16,7 +16,8 @@
   }
 
   p.description {
-    line-height: 24px !important;
+    line-height: 1.5;
+    color: var(--dark);
   }
   p.description span {
     font-weight: normal;
@@ -27,7 +28,7 @@
     display: none;
   }
   .description {
-    line-height: 24px;
+    line-height: 1.5;
     font-weight: normal;
   }
   .main .description:last-child {

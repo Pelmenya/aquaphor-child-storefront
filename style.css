@@ -22,7 +22,7 @@
 @import url(./assets/css/pages/view-order.css);
 @import url(./assets/css/pages/equipment-selection.css);
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
   background: #bfbfbf;
 }
 
@@ -206,7 +206,7 @@ table th {
 }
 
 .addresses header.title a::before {
-  content: 'Адрес доставки ';
+  content: "Адрес доставки ";
   width: 200px;
   font-family: Proxima Nova Rg;
   text-align: left;
@@ -220,8 +220,8 @@ table th {
 }
 
 .span-icon::before {
-  content: '\f044';
-  font-family: 'Font Awesome 5 Free';
+  content: "\f044";
+  font-family: "Font Awesome 5 Free";
   color: var(--blue-blue);
   margin-left: 120px;
   text-align: start;
@@ -271,29 +271,32 @@ table th {
   border-bottom: none;
 }
 
-.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--orders a::before {
-  content: '';
+.woocommerce-MyAccount-navigation
+  ul
+  li.woocommerce-MyAccount-navigation-link--orders
+  a::before {
+  content: "";
 }
 
 .woocommerce-MyAccount-navigation
   ul
   li.woocommerce-MyAccount-navigation-link--edit-address
   a::before {
-  content: '';
+  content: "";
 }
 
 .woocommerce-MyAccount-navigation
   ul
   li.woocommerce-MyAccount-navigation-link--edit-account
   a::before {
-  content: '';
+  content: "";
 }
 
 .woocommerce-MyAccount-navigation
   ul
   li.woocommerce-MyAccount-navigation-link--customer-logout
   a::before {
-  content: '';
+  content: "";
 }
 
 .woocommerce-MyAccount-navigation {
@@ -423,8 +426,8 @@ label {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.125);
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='12px' height='7px' viewBox='0 0 12 7' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 58 (84663) - https://sketch.com --%3E%3Ctitle%3EShape%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Design' stroke='%23164cb5' stroke-width='1' fill='%23164cb5' fill-rule='evenodd'%3E%3Cg id='81-mini-icons' transform='translate(-209.000000, -55.000000)' fill='%23164cb5' fill-rule='nonzero'%3E%3Cg id='icon-' transform='translate(203.000000, 46.000000)'%3E%3Cpath d='M7.28033009,9.21966991 C6.98743687,8.9267767 6.51256313,8.9267767 6.21966991,9.21966991 C5.9267767,9.51256313 5.9267767,9.98743687 6.21966991,10.2803301 L11.2196699,15.2803301 C11.5125631,15.5732233 11.9874369,15.5732233 12.2803301,15.2803301 L17.2803301,10.2803301 C17.5732233,9.98743687 17.5732233,9.51256313 17.2803301,9.21966991 C16.9874369,8.9267767 16.5125631,8.9267767 16.2196699,9.21966991 L11.75,13.6893398 L7.28033009,9.21966991 Z' id='Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-repeat: no-repeat, repeat;
-  background-position: right .7em top 50%, 0 0;
-  background-size: .65em auto, 100%;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
 }
 
 option {
@@ -567,7 +570,7 @@ body {
   --cornflower-blue: #4b7dd7;
   --pale-grey: #f1f6ff;
   --dull-orange: #ec8928;
-  --dark: #28293c;
+  --dark: #16325c;
   --black-70: rgba(26, 26, 26, 0.7);
   --dark-70: rgba(40, 41, 60, 0.7);
   --dark-50: rgba(40, 41, 60, 0.5);
@@ -643,4 +646,3 @@ table.cart td.actions .coupon {
 * {
   font-family: Proxima Nova Rg, sans-serif;
 }
-
