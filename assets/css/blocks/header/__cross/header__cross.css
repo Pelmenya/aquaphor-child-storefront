@@ -4,3 +4,7 @@
   cursor: pointer;
   display: none;
 }
+
+.header__cross_view {
+  display: block;
+}

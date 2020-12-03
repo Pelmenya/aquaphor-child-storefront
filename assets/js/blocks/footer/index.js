@@ -47,7 +47,8 @@ function setFooterSmartScript(footer) {
         priceLabel.textContent = `${priceOneProduct * Number(counterInput.value)}  руб.`;
       };
 
-      const openPopupOneClick = () => {
+      const openPopupOneClick = (e) => {
+        e.preventDefault();
         popupOneClickSmartPhone.classList.add('popup_is-opened');
         setTimeout(() => {
           popupOneClickContent.classList.remove('popup-more-smart-phone__content_is-closed');

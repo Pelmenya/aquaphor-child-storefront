@@ -24,6 +24,11 @@
     justify-content: initial;
   }
 
+  .header.header_smart-phone.header_smart-phone_blue {
+    background-color: var(--blue-blue);
+    box-shadow: none;
+  }
+
   .header.header_smart-phone.header_smart-phone_is-closed {
     display: none;
   }

@@ -1,0 +1,6 @@
+.product-smart-phone__decor {
+  height: 18px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 10px 10px 0px 0px;
+}

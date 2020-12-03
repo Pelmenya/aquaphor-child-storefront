@@ -76,7 +76,13 @@
 @import url(./__prev-page-button/header__prev-page-button.css);
 @import url(./__smart-phone-description-title/header__smart-phone-description-title.css);
 @import url(./__smart-phone-description-title/_align-center/header__smart-phone-description-title_align-center.css);
+@import url(./__smart-phone-description-title/_align-center/header__smart-phone-description-title_align-center_margin-left.css);
 @import url(./_smart-phone/header_smart-phone_is-closed.css);
+@import url(./__logo-blue/header__logo-blue.css);
+@import url(./__logo-white/header__logo-white.css);
+@import url(./__cart-button/_white/header__cart-button_white.css);
+@import url(./__prev-page-button/_white/header__prev-page-button_white.css);
+
 
 .header {
   width: 100%;

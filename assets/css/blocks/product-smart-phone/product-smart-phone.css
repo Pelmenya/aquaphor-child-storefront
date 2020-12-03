@@ -4,13 +4,18 @@
 @import url(./__pic-wrapper/product-smart-phone__pic-wrapper.css);
 @import url(./__pic/product-smart-phone__pic.css);
 @import url(./__price/product-smart-phone__price.css);
+@import url(./__price/_sale/product-smart-phone__price_sale.css);
 @import url(./__title/product-smart-phone__title.css);
 @import url(./__wrapper/product-smart-phone__wrapper.css);
 @import url(./__wrapper/_row/product-smart-phone__wrapper_row.css);
 @import url(./__button-add-to-card/product-smart-phone__button-add-to-card.css);
 @import url(./__button-one-click/product-smart-phone__button-one-click.css);
-
-
+@import url(./__decor/product-smart-phone__decor.css);
+@import url(./__short-description/product-smart-phone__short-description.css);
+@import url(./__wrapper-counter/product-smart-phone__wrapper-counter.css);
+@import url(./__button-counter/product-smart-phone__button-counter.css);
+@import url(./__shipping/product-smart-phone__shipping.css);
+@import url(./__wrapper-counter/_shipping/product-smart-phone__wrapper-counter_shipping.css);
 
 .product-smart-phone {
   display: none;
@@ -21,8 +26,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 16px;
   }
 }
 

@@ -1,0 +1,12 @@
+@import url(./__slide/product-pictures__slide.css);
+@import url(./__pic/product-pictures__pic.css);
+@import url(./__pic-wrapper/product-pictures__pic-wrapper.css);
+@import url(./__slide/product-pictures__slide.css);
+
+.product-pictures {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 32px;
+}

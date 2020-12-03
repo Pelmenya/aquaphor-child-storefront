@@ -11,9 +11,10 @@
  * @package storefront
  */
 
+get_template_part('inc/view_array');
 get_header();
 ?>
-<div class="main">
+<main class="main desktop-is-close">
   <h1 class="title">Анализ воды</h1>
   <h3 class="sub-title">Подготовка</h3>
   <ul class="records">
@@ -70,9 +71,45 @@ get_header();
       проконсультирует вас и даст рекомендации по подбору оборудования.
     </span>
   </p>
-</div>
+</main>
 
+<main class="water-analysis-smart">
+  <div class="water-analysis-smart__wrapper">
+    <img class="water-analysis-smart__pic" src="<?php echo SITE_URL;?>wp-content/uploads/2020/12/water-analysis-page.png" alt="Анализ воды">
+  </div>
+  <div class="swiper-container water-analysis-smart__slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide water-analysis-smart__slide">
+        <ul class="water-analysis-smart__list">
+          <li>
+            &bull; Возьмите литровую пластиковую бутылку только из-под негазированной минеральной воды.
+          </li>
+          <li>
+            &bull; Ополосните её отбираемой водой, чтобы исключить наличие посторонних примесей.
+          </li>
+          <li>
+            &bull; Налейте до перелива через край в бутылку и пробку. Закройте так, чтобы в бутылке не было пузырьков воздуха.
+          </li>
+          <li>
+            &bull; Проба воды должна быть доставлена на анализ в течение суток.
+          </li>
+        </ul>
+      </div>
+      <div class="swiper-slide water-analysis-smart__slide">
+
+      </div>
+      <div class="swiper-slide water-analysis-smart__slide">
+        fasdf
+      </div>
+    </div>
+    <div class="swiper-pagination water-analysis-smart__pagination"></div>
+    <?php
+      get_template_part('template-parts/footer/footer-smart-phone-templates/footer-water-analysis-smart-phone');
+    ?>
+  </div>
+</main>
 <?php
 get_footer();
-
+  $table= get_postdata( 1419 );
+  echo $table['Content'];
 ?>

@@ -50,7 +50,6 @@ function setSmartPhoneScript() {
   const cartHeight = document.querySelector('#content');
   desktop.parentNode.removeChild(desktop);
   if (document.body.clientWidth < 450) {
-    console.log(cartHeight.scrollHeight);
     document.querySelector('.site-content').style.height = `${cartHeight.scrollHeight}px`;
   }
 
