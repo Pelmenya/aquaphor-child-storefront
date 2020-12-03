@@ -13,7 +13,33 @@
 @import url(./__button/_place/popup__button_place.css);
 @import url(./__wrap/popup__wrap.css);
 
+@keyframes add-overlay {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    animation-timing-function: ease-in-out;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.5);
+    animation-timing-function: ease-in-out;
+  }
+}
 
+@keyframes close-overlay {
+  from {
+    background-color: rgba(0, 0, 0, 0.5);
+    animation-timing-function: linear;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0);
+    animation-timing-function: linear;
+  }
+}
+.add-overlay {
+  animation: add-overlay linear 0.2s;
+}
+.close-overlay {
+  animation: close-overlay linear 0.2s;
+}
 
 .popup {
   position: fixed;
@@ -22,11 +48,10 @@
   max-width: 100%;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   display: none;
   z-index: 96;
 }
-

@@ -1,28 +1,20 @@
 <footer class="footer-smart">
 <?php echo $slug; ?>
-  <a href="<?php echo SITE_URL?>catalog/?slug=catalog" class="footer-smart__item footer-smart__item_catalog">
-    <svg class="footer-smart__icon
-      <?php if ($_GET["slug"] == "catalog") echo "footer-smart__icon_active";?>" fill="#28293c" width="26" height="24" viewBox="0 0 26 24">
-      <path d="M7.104 13.764c1.632 0 2.95 1.273 3.043 2.892l.005.181v4.091c0 1.632-1.26 2.973-2.868 3.067l-.18.005H3.048c-1.62 0-2.95-1.283-3.043-2.892L0 20.928v-4.09c0-1.644 1.272-2.976 2.87-3.069l.178-.005h4.056zm13.848 0c1.68 0 3.048 1.37 3.048 3.073v4.091C24 22.62 22.632 24 20.952 24h-4.056c-1.692 0-3.048-1.38-3.048-3.072v-4.09c0-1.705 1.356-3.074 3.048-3.074zM7.104 0c1.632 0 2.95 1.283 3.043 2.893l.005.18v4.091c0 1.643-1.26 2.974-2.868 3.067l-.18.005H3.048c-1.62 0-2.95-1.272-3.043-2.89L0 7.163v-4.09C0 1.44 1.272.098 2.87.004L3.047 0h4.056zm9.792 0h4.056c1.62 0 2.95 1.283 3.043 2.893l.005.18v4.091c0 1.643-1.272 2.974-2.869 3.067l-.179.005h-4.056c-1.631 0-2.95-1.272-3.043-2.89l-.005-.182v-4.09c0-1.634 1.261-2.975 2.868-3.069l.18-.005h4.056z" transform="translate(-51 -588) translate(0 576) translate(41 12) translate(10)"/>
-    </svg>
+  <a href="<?php echo SITE_URL?>catalog/?slug=catalog" class="footer-smart__item ">
+    <div class="footer-smart__item_catalog <?php if ($_GET["slug"] == "catalog") echo "footer-smart__item_catalog_active";?>"></div>
     <p class="footer-smart__text  <?php if ($_GET["slug"] == "catalog") echo "footer-smart__text_active";?>">Каталог</p>
   </a>
-  <a href="<?php echo SITE_URL?>discounts/?slug=discounts" class="footer-smart__item footer-smart__item_sales">
-    <svg class="footer-smart__icon <?php if ($_GET["slug"] == "discounts") echo "footer-smart__icon_active";?>"width="24" height="24" viewBox="0 0 24 24">
-    <path d="M3.353 6.067c0-1.499 1.216-2.714 2.713-2.714h1.235c.715 0 1.403-.284 1.912-.789l.863-.864C11.133.638 12.85.633 13.913 1.69l.011.01.864.864c.508.505 1.195.789 1.912.789h1.233c1.499 0 2.715 1.215 2.715 2.714v1.232c0 .718.283 1.404.788 1.913l.864.864c1.062 1.057 1.068 2.775.01 3.838l-.01.01-.864.865c-.505.506-.788 1.195-.788 1.91v1.235c0 1.499-1.216 2.713-2.715 2.713H16.7c-.717 0-1.404.284-1.912.79l-.864.862c-1.056 1.064-2.774 1.068-3.838.011l-.01-.01-.863-.863c-.509-.506-1.197-.79-1.912-.79H6.066c-1.497 0-2.713-1.214-2.713-2.713v-1.235c0-.715-.284-1.404-.79-1.91l-.862-.864C.638 12.867.633 11.149 1.69 10.087l.01-.01.864-.865c.505-.509.79-1.195.79-1.913V6.067" transform="translate(-128 -587) translate(0 576) translate(41 12) translate(79) translate(9)"/>
-    </svg>
+
+  <a href="<?php echo SITE_URL?>discounts/?slug=discounts" class="footer-smart__item">
+    <div class="footer-smart__item_discounts  <?php if ($_GET["slug"] == "discounts") echo "footer-smart__item_discounts_active";?>"></div>
     <p class="footer-smart__text <?php if ($_GET["slug"] == "discounts") echo "footer-smart__text_active";?>">Скидки</p>
   </a>
   <div class="footer-smart__item footer-smart__item_help">
-    <svg class="footer-smart__icon" width="24" height="24" viewBox="0 0 24 24">
-    <path d="M12.07 0c4.984.037 9.428 3.142 11.171 7.805 1.743 4.663.421 9.917-3.321 13.204-3.743 3.288-9.128 3.927-13.539 1.609l-.055-.02c-.008-.005-.01-.009-.011-.015l-.82-.463c-.166-.068-.351-.08-.464-.05-.851.305-1.721.557-2.605.752l-.162.02c-.973.02-1.463-.61-1.463-1.529l.024-.197c.22-.913.497-1.812.813-2.645.048-.157.032-.328-.052-.486l-.22-.43c-1.95-3.728-1.804-8.203.387-11.795C3.943 2.168 7.856-.017 12.07 0zM6.74 10.631c.755 0 1.369.613 1.369 1.37 0 .755-.614 1.368-1.37 1.368-.756 0-1.37-.613-1.37-1.369s.614-1.369 1.37-1.369zm5.323 0c.757 0 1.37.613 1.37 1.37 0 .755-.613 1.368-1.37 1.368-.756 0-1.37-.613-1.37-1.369s.614-1.369 1.37-1.369zm5.325 0c.756 0 1.37.613 1.37 1.37 0 .755-.614 1.368-1.37 1.368-.756 0-1.37-.613-1.37-1.369s.614-1.369 1.37-1.369zM2.565 21.07l.474-.124c.325-.09.652-.189.984-.298l.503-.173c.53-.146 1.094-.112 1.65.117.117.056.262.134.444.237l.507.291.022.006-.015-.002.345.173c3.63 1.753 7.956 1.238 11.071-1.32l.265-.225c3.22-2.828 4.357-7.348 2.858-11.36-1.5-4.013-5.325-6.685-9.615-6.717l-.337.005c-3.495.1-6.713 1.958-8.539 4.953-1.884 3.09-2.01 6.94-.33 10.153l.217.423c.289.54.35 1.174.152 1.806-.307.816-.564 1.65-.769 2.496l.113-.441z" transform="translate(-208 -588) translate(0 576) translate(41 12) translate(155) translate(12)"/>
-    </svg>
+    <div class="footer-smart__item_helpImg"></div>
     <p class="footer-smart__text">Помощь</p>
   </div>
   <div class="footer-smart__item footer-smart__item_more">
-    <svg class="footer-smart__icon" width="24" height="24" viewBox="0 0 24 24">
-    <path d="M17.2 0C21.286 0 24 2.915 24 7.1v9.8c0 4.185-2.715 7.1-6.8 7.1H6.798C2.714 24 0 21.085 0 16.9V7.1C0 2.92 2.72 0 6.798 0zm0 1.8H6.799C3.744 1.8 1.8 3.886 1.8 7.1v9.8c0 3.218 1.938 5.3 4.998 5.3H17.2c3.061 0 5-2.082 5-5.3V7.1c0-3.218-1.939-5.3-5-5.3zm-5.213 8.552c.456 0 .832.339.892.778l.008.122v5.303c0 .497-.403.9-.9.9-.455 0-.832-.339-.892-.778l-.008-.122v-5.303c0-.497.403-.9.9-.9zM12 6.545c.497 0 .9.403.9.9 0 .456-.338.832-.778.892l-.134.008c-.497 0-.9-.403-.9-.9 0-.456.339-.832.778-.892l.134-.008z" transform="translate(-285 -588) translate(0 576) translate(41 12) translate(244)"/>
-    </svg>
+    <div class="footer-smart__item_moreImg"></div>
     <p class="footer-smart__text">Еще</p>
   </div>
 </footer>

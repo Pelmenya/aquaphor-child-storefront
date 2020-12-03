@@ -488,7 +488,7 @@ is_page( sanitize_title('о-сайте') );  правильно  */
     enqueue_versioned_style( 'cart-smart', AQUAPHOR_THEME_BLOCKS_CSS . 'cart-smart-phone/cart-smart-phone.css', array());
     enqueue_versioned_style( 'footer-checkout-smart-phone', AQUAPHOR_THEME_BLOCKS_CSS . 'footer-checkout-smart-phone/footer-checkout-smart-phone.css', array());
   }
-
+  
   if (strcasecmp($url_str, $url_my_account) == 0){
     enqueue_versioned_script( 'index', AQUAPHOR_THEME_JS . 'my-account/index.js', true);
   }

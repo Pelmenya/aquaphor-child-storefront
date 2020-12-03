@@ -7,7 +7,7 @@
   padding-top: 25px;
   display: flex;
   align-items: flex-start;
-  z-index: 98;
+  z-index: 1001;
 }
 
 .popup-intro_is-closed {

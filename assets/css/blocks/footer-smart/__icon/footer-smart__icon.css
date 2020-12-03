@@ -1,3 +1,10 @@
 .footer-smart__icon {
-  fill: #28293c;
+  /* fill: #fff;
+  stroke: #28293c; */
+}
+
+.footer-smart__icon-castom {
+  /* fill: none;
+  stroke: #28293c;
+  stroke-width: 2; */
 }
