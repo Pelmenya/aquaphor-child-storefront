@@ -11,6 +11,7 @@
  * @package storefront
  */
 
+get_template_part('inc/view_array');
 get_header();
 ?>
 <main class="main desktop-is-close">
@@ -95,7 +96,7 @@ get_header();
         </ul>
       </div>
       <div class="swiper-slide water-analysis-smart__slide">
-        asdf
+
       </div>
       <div class="swiper-slide water-analysis-smart__slide">
         fasdf
@@ -109,5 +110,6 @@ get_header();
 </main>
 <?php
 get_footer();
-
+  $table= get_postdata( 1419 );
+  echo $table['Content'];
 ?>
