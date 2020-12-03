@@ -179,7 +179,7 @@ function setFooterSmartScript(footer) {
       Object.keys(buttons).forEach((btn) => {
         if (btn === 2 || btn === 3) setColorActiveItem(buttons[btn]);
         Object.keys(popups).forEach((popup) => {
-          if (popups[popup].classList.contains('popup_is-opened'))popups[popup].classList.remove('popup_is-opened');
+          if (popups[popup].classList.contains('popup_is-opened')) popups[popup].classList.remove('popup_is-opened');
           if (item !== btn) removeColorActiveItem(buttons[btn]);
         });
       });
