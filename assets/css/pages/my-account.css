@@ -68,8 +68,7 @@ p#billing_wooccm12_field {
     font-stretch: normal;
     font-style: normal;
     letter-spacing: normal;
-    background-color: var(--white);
-    border: solid 1px #dcdcdc;
+    background-color: transparent;
   }
 
   .show-password-input {

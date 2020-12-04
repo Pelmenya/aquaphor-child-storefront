@@ -86,7 +86,7 @@ function main() {
       setTimeout(() => {
         introSwiperNextBtn.textContent = 'Далее';
         popupPreload.style.display = 'none';
-      }, 1000);
+      }, 2000);
     }
   });
 

@@ -1,9 +1,9 @@
-input[type='radio'].checkout-smart-phone__radio-btn {
+input[type="radio"].checkout-smart-phone__radio-btn {
   cursor: pointer;
   z-index: 11;
 }
 
-input[type='radio'].checkout-smart-phone__radio-btn {
+input[type="radio"].checkout-smart-phone__radio-btn {
   position: relative;
   height: 36px;
   width: 36px;
@@ -13,29 +13,43 @@ input[type='radio'].checkout-smart-phone__radio-btn {
   outline: none;
 }
 
-input[type='radio'].checkout-smart-phone__radio-btn::before {
-  content: '';
+input[type="radio"].checkout-smart-phone__radio-btn:not(:checked)::before {
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 36px;
-  height: 36px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
-  border: 2px solid var(--blue-blue);
+  background-color: rgba(22, 50, 92, 0.1);
 }
 
-input[type='radio'].checkout-smart-phone__radio-btn:checked::after {
-  content: '';
+input[type="radio"].checkout-smart-phone__radio-btn:checked::after {
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 18px;
-  height: 18px;
+  width: 8px;
+  height: 8px;
   border-radius: 18px;
-  background-color: var(--blue-blue);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -60%);
   visibility: visible;
+  margin: 2px 0 2px 1px;
+  border: solid 4px #1054db;
+  background-color: var(--white);
+  z-index: 10;
 }
 
+input[type="radio"].checkout-smart-phone__radio-btn:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 18px;
+  transform: translate(-50%, -60%);
+  visibility: visible;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cg fill='none' fill-rule='evenodd' opacity='.698'%3E%3Cg fill='%231054DB'%3E%3Cg%3E%3Cpath d='M6 0c3.314 0 6 2.686 6 6s-2.686 6-6 6-6-2.686-6-6 2.686-6 6-6zm2.586 3L5 6.354 3.414 4.871 2 6.194 5 9l5-4.677L8.586 3z' transform='translate(-43 -82) translate(43 82)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}

@@ -1,11 +1,11 @@
 .cart-smart-phone__card {
+  display: flex;
   width: 100%;
-  box-shadow: 0 2px 19px 0 rgba(222, 224, 226, 0.2);
-  background-color: var(--white);
   padding-left: 24px;
   padding-top: 16px;
   padding-bottom: 16px;
   padding-right: 24px;
   margin-bottom: 16px;
-  display: flex;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(22, 50, 92, 0.1);
 }

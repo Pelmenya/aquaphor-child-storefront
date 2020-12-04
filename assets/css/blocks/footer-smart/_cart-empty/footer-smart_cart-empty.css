@@ -1,7 +1,5 @@
 .footer-smart.footer-smart_cart-empty {
   background-color: var(--white);
-  box-shadow: none;
-
   height: initial;
   padding-left: 24px;
   padding-right: 24px;

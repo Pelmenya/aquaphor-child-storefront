@@ -156,20 +156,23 @@ function setFooterSmartScript(footer) {
       document.body.style.overflow = 'auto';
       popupMoreContent.classList.add('popup-more-smart-phone__content_is-closed');
       popupHelpContent.classList.add('popup-more-smart-phone__content_is-closed');
+      // popupMore.classList.remove('popup_is-opened');
+      // popupHelp.classList.remove('popup_is-opened');
+      // popupMoreContent.style.animation = 'open-popup linear 0.2s';
+      // popupHelpContent.style.animation = 'open-popup linear 0.2s';
       Object.keys(buttons).forEach((btn) => {
         removeColorActiveItem(buttons[btn]);
       });
-
       setTimeout(() => {
-        popupHelpContent.classList.remove('close-popup');
-        popupHelpContent.classList.add('open-popup');
-        popupMoreContent.classList.remove('close-popup');
-        popupMoreContent.classList.add('open-popup');
         popupMore.classList.remove('popup_is-opened');
         popupHelp.classList.remove('popup_is-opened');
         popupMoreContent.style.animation = 'open-popup linear 0.2s';
         popupHelpContent.style.animation = 'open-popup linear 0.2s';
-      }, 200);
+        popupHelpContent.classList.remove('close-popup');
+        popupHelpContent.classList.add('open-popup');
+        popupMoreContent.classList.remove('close-popup');
+        popupMoreContent.classList.add('open-popup');
+      }, 190);
     }
   }
 
