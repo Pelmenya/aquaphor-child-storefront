@@ -7,11 +7,11 @@
 @media screen and (max-width: 450px) {
   .footer-smart.footer-smart-cart {
     height: initial;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
     padding-top: 18px;
     padding-bottom: 18px;
-    background-color: #f9f9f9;
-    box-shadow: none;
+    background-color: var(--white);
+    box-shadow: 0 -16px 40px 0 rgba(22, 50, 92, 0.05);
   }
 }

@@ -434,7 +434,7 @@ th.product-total {
   }
 
   div.site-content {
-    background-color: #f9f9f9;
+    background-color: var(--white);
     margin-bottom: 0;
     padding-top: 30px;
     padding-left: 24px;
