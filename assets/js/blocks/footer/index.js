@@ -18,6 +18,9 @@ function setFooterSmartScript(footer) {
   const popupOneClickSmartPhone = document.querySelector('.popup-oneclick-smart-phone');
 
   if (popupOneClickSmartPhone) {
+    const popupOneclick = popupOneClickSmartPhone.querySelector(
+      '.popup-more-smart-phone_oneclick',
+    );
     const popupOneClickContent = popupOneClickSmartPhone.querySelector(
       '.popup-more-smart-phone__content',
     );
@@ -50,6 +53,8 @@ function setFooterSmartScript(footer) {
       const openPopupOneClick = (e) => {
         e.preventDefault();
         popupOneClickSmartPhone.classList.add('popup_is-opened');
+        document.body.style.overflow = 'hidden';
+        popupMoreContent.style.animation = 'close-popup linear 0.2s';
         setTimeout(() => {
           popupOneClickContent.classList.remove('popup-more-smart-phone__content_is-closed');
         }, 0);
@@ -64,12 +69,14 @@ function setFooterSmartScript(footer) {
         ) {
           minusBtn.addEventListener('click', minusBtnClick);
           plusBtn.addEventListener('click', plusBtnClick);
-
+          popupOneclick.style.animation = 'close-popup linear 0.2s';
           popupOneClickContent.classList.add('popup-more-smart-phone__content_is-closed');
+          document.body.style.overflow = 'auto';
 
           setTimeout(() => {
+            popupOneclick.style.animation = 'open-popup linear 0.2s';
             popupOneClickSmartPhone.classList.remove('popup_is-opened');
-          }, 350);
+          }, 200);
         }
       };
 
@@ -156,10 +163,6 @@ function setFooterSmartScript(footer) {
       document.body.style.overflow = 'auto';
       popupMoreContent.classList.add('popup-more-smart-phone__content_is-closed');
       popupHelpContent.classList.add('popup-more-smart-phone__content_is-closed');
-      // popupMore.classList.remove('popup_is-opened');
-      // popupHelp.classList.remove('popup_is-opened');
-      // popupMoreContent.style.animation = 'open-popup linear 0.2s';
-      // popupHelpContent.style.animation = 'open-popup linear 0.2s';
       Object.keys(buttons).forEach((btn) => {
         removeColorActiveItem(buttons[btn]);
       });
@@ -217,5 +220,4 @@ if (window.screen.width < 450) {
   const footerSmart = document.querySelector('.footer-smart');
   if (footerSmart) setFooterSmartScript(footerSmart);
 }
-
 main();

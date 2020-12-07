@@ -1,4 +1,4 @@
-<footer class="footer-smart">
+<footer class="footer-smart <?php if (is_product()) echo "footer-smart-display-none";?>">
 <?php echo $slug; ?>
   <a href="<?php echo SITE_URL?>catalog/?slug=catalog" class="footer-smart__item ">
     <div class="footer-smart__item_catalog <?php if ($_GET["slug"] == "catalog") echo "footer-smart__item_catalog_active";?>"></div>
