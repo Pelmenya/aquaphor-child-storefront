@@ -20,9 +20,22 @@
 
 @import url(../card/card.css);
 
-
 .equipment-selection {
   display: flex;
   flex-direction: column;
   max-width: 768px;
+}
+
+.for-smart-phone {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .for-dekstop {
+    display: none;
+  }
+
+  .for-smart-phone {
+    display: block;
+  }
 }

@@ -1,0 +1,21 @@
+@import url(./__description/equipment-selection-smart-phone__description.css);
+@import url(./__description-insert/equipment-selection-smart-phone__description-insert.css);
+@import url(./__choice/equipment-selection-smart-phone__choice.css);
+@import url(./__choice-col/equipment-selection-smart-phone__choice-col.css);
+@import url(./__choice-item/equipment-selection-smart-phone__choice-item.css);
+@import url(./__select/equipment-selection-smart-phone__select.css);
+@import url(./__elem-value/equipment-selection-smart-phone__elem-value.css);
+@import url(./__elem/equipment-selection-smart-phone__elem.css);
+@import url(./__table/equipment-selection-smart-phone__table.css);
+@import url(./__info/equipment-selection-smart-phone__info.css);
+@media screen and (max-width: 450px) {
+  main {
+    background-color: var(--white);
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .for-smart-phone {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}

@@ -17,11 +17,10 @@ get_header();
 
 <section class="for-smart-phone">
 
-	<div class="swiper-container">
-
+<div class="swiper-container equipment-selectionsmart__slider">
 		<div class="swiper-wrapper">
 				<!-- Slides -->
-				<div class="swiper-slide">
+				<div class="swiper-slide equipment-selection-smart__slide">
 				 <p class="description">
 					 <span class="description__insert">
 							Если у вас есть <a>анализ воды</a>, введите данные и калькулятор
@@ -85,7 +84,7 @@ get_header();
 					</div>
 
 					<div class="equipment-selection__choice-item">
-						<h4 class="description">Необходимая вода</h4>
+						<h4 class="description">Необходимая вода:</h4>
 						<form action="formdata" method="post" name="selection-sourse">
 							<select name="list-sourse">
 								<option
@@ -115,7 +114,7 @@ get_header();
 					</div>
 
 					<div class="equipment-selection__choice-item">
-						<h4 class="description">Точки водоразбора?</h4>
+						<h4 class="description">Точки водоразбора:</h4>
 						<input
 							class="equipment-selection__point-water"
 							type="range"
@@ -125,97 +124,84 @@ get_header();
 							step="1"
 							name="pa_water_points"/>
 						<label class="equipment-selection__choice-color equipment-selection__choice-color_water-points"
-							for="pa_water_points">От 1 до 5 точек</label>
+							for="pa_water_points">От 1 до 5</label>
 					</div>
 							</div>
 						</form>
 					</section>
 				</div>
-				<div class="swiper-slide">
+				<div class="swiper-slide equipment-selection-smart__slide">
 				 <div class="equipment-selection__info">
 					<div class="equipment-selection__info-pointer"></div>
 						<p class="equipment-selection__description">
-						Введите данные полученные с помощью нашего <a href="<?php echo SITE_URL?>water-analysis" class="equipment-selection__link">анализа воды</a> или из другой лаборатории.
+						Введите данные полученные с помощью <a href="<?php echo SITE_URL?>water-analysis" class="equipment-selection__link"> нашего анализа</a> или из другой лаборатории.
 						</p>
 					 </div>
-				<table class="equipment-selection__table">
-				<thead>
-					<tr class="equipment-selection__choice-item">
-						<td class="equipment-selection__td">
-							<label class="equipment-selection__elem"  for="pa_ph">Реакция среды pH</label>
-							<input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_ph">
-						</td>
-						<td class="equipment-selection__td">
-							<label class="equipment-selection__elem" for="pa_oxidability">Окисляемость</label>
-							<input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_oxidability">
-						</td>
-					</tr>
-					<tr class="equipment-selection__choice-item">
-						<td class="equipment-selection__td">
-							<label class="equipment-selection__elem" for="pa_tds">Минерализация</label>
-							<input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_tds">
-						</td>
-						<td class="equipment-selection__td">
-							<label class="equipment-selection__elem" for="pa_mn">Марганец</label>
-							<input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_mn">
-						</td>
-					</tr>
-					<tr class="equipment-selection__choice-item">
-						<td class="equipment-selection__td">
-							<label class="equipment-selection__elem" for="pa_tdh">Жесткость</label>
-							<input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_tdh">
-						</td>
-						<td class="equipment-selection__td">
-							<label class="equipment-selection__elem" for="pa_ftor">Фториды</label>
-							<input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_ftor">
-						</td>
-					</tr>
-					<tr class="equipment-selection__choice-item">
-						<td class="equipment-selection__td">
-							<label class="equipment-selection__elem" for="pa_ferrum">Железо</label>
-							<input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_ferrum">
-						</td>
-						<td class="equipment-selection__td">
-							<label class="equipment-selection__elem" for="pa_h2s">Сероводород</label>
-							<input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_h2s">
-						</td>
-					</tr>
-					<tr class="equipment-selection__choice-item">
-						<td class="equipment-selection__td">
-							<label class="equipment-selection__elem" for="pa_nitrate">Нитраты</label>
-							<input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_nitrate">
-						</td>
-						<td class="equipment-selection__td">
-							<label class="equipment-selection__elem" for="pa_sulphide">Сульфиды</label>
-							<input class="equipment-selection__elem-value" placeholder="Введите значение..." type="text" name="pa_sulphide">
-						</td>
-					</tr>
-				</thead>
-			</table>
-			
-			<!-- <button class="equipment-selection__calculate-button" disabled>Рассчитать</button> -->
-		</form>
-		<p class="equipment-selection__description equipment-selection__description_no-result">
-			Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
-			Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом<a>, чтобы найти другой способ решения.
-		</p>
-	</section>
-	<section class="results">
-	<div class="results__container"></div>
-	<button class="equipment-selection__calculate-button results__add-to-cart-button">Добавить все в корзину</button>
-</section>
+				<div class="equipment-selection__table">
+		
+					<div class="equipment-selection__choice-item choice-item__wight ">
+						<label class="equipment-selection__elem"  for="pa_ph">Реакция среды pH:</label>
+						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_ph">
+					</div>
+
+					<div class="equipment-selection__choice-item choice-item__wight ">
+						<label class="equipment-selection__elem" for="pa_oxidability">Окисляемость:</label>
+						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_oxidability">
+					</div>
+		
+					<div class="equipment-selection__choice-item choice-item__wight ">
+							<label class="equipment-selection__elem" for="pa_tds">Минерализация:</label>
+							<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_tds">
+					</div>
+					
+					<div class="equipment-selection__choice-item choice-item__wight ">
+						<label class="equipment-selection__elem" for="pa_mn">Марганец:</label>
+						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_mn">
+					</div>
+
+					<div class="equipment-selection__choice-item choice-item__wight ">
+						<label class="equipment-selection__elem" for="pa_tdh">Жесткость:</label>
+						<input class="equipment-selection__elem-value" placeholder=0" type="text" name="pa_tdh">
+					</div>
+	
+					<div class="equipment-selection__choice-item choice-item__wight ">
+						<label class="equipment-selection__elem" for="pa_ftor">Фториды:</label>
+						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_ftor">
+					</div>
+
+					<div class="equipment-selection__choice-item choice-item__wight ">
+						<label class="equipment-selection__elem" for="pa_ferrum">Железо:</label>
+						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_ferrum">
+					
+					</div>
+
+					<div class="equipment-selection__choice-item choice-item__wight ">
+						<label class="equipment-selection__elem" for="pa_h2s">Сероводород:</label>
+						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_h2s">
+					</div>
+
+					<div class="equipment-selection__choice-item choice-item__wight ">
+						<label class="equipment-selection__elem" for="pa_nitrate">Нитраты:</label>
+						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_nitrate">
+					</div>
+				
+					<div class="equipment-selection__choice-item choice-item__wight ">
+						<label class="equipment-selection__elem" for="pa_sulphide">Сульфиды:</label>
+						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_sulphide">
+					</div>
 				</div>
-			</div>
-		<!-- If we need pagination -->
-		<div class="swiper-pagination"></div>
-
-		<!-- If we need navigation buttons -->
-		<div class="swiper-button-prev"></div>
-		<div class="swiper-button-next"></div>
-
-		<!-- If we need scrollbar -->
-		<div class="swiper-scrollbar"></div>
-	</div>
+				<!-- <button class="equipment-selection__calculate-button" disabled>Рассчитать</button> -->
+				<p class="equipment-selection__description equipment-selection__description_no-result">
+					Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
+					Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом<a>, чтобы найти другой способ решения.
+				</p>
+				</section>
+				<section class="results">
+					<div class="results__container"></div>
+						<button class="equipment-selection__calculate-button results__add-to-cart-button">Добавить все в корзину</button>
+				</section>
+		</div>
+		<div class="swiper-pagination equipment-selection__pagination"></div>
 </section>
 
 
@@ -227,8 +213,8 @@ get_header();
 			Если вы уже сделали анализ воды, можете ввести данные и калькулятор
 			подберет вам индивидуально оборудование под ваши требования.
 		</span>
-	</p>
-	<section class="equipment-selection">
+		</p>
+		<section class="equipment-selection">
 		<h3 class="sub-title">Калькулятор системы водоподготовки</h3>
 		<form class="equipment-selection__form" name="equipmentSelection">
 			<div class="equipment-selection__choice">
@@ -341,11 +327,10 @@ get_header();
 			Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
 			Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом<a>, чтобы найти другой способ решения.
 		</p>
-	</section>
-	<section class="results">
+		</section>
+		<section class="results">
 	<div class="results__container"></div>
-	<button class="equipment-selection__calculate-button results__add-to-cart-button">Добавить все в корзину</button>
-</section>
+	<button class="equipment-selection__calculate-button results__add-to-cart-button">Добавить все в корзину</button></section></section>
 </section>
 </main>
 <script>

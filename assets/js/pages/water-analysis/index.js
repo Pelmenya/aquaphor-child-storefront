@@ -39,5 +39,4 @@ function main() {
     setSmartPhoneScript();
   }
 }
-
 main();

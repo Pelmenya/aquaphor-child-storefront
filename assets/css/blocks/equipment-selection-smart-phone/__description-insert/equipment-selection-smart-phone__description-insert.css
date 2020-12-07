@@ -1,0 +1,11 @@
+@media screen and (max-width: 450px) {
+  .description__insert {
+    font-size: 14px;
+    line-height: 1.57;
+    color: var(--dark-70);
+  }
+  .description__insert a {
+    color: var(--blue-blue);
+    cursor: pointer;
+  }
+}

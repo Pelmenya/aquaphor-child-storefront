@@ -1,4 +1,39 @@
+
+function setSmartPhoneScript() {
+  const waterSwiperNextBtn = document.querySelector('.water-analysis-smart__next');
+  // eslint-disable-next-line no-undef
+  const waterSwiper = new Swiper('.equipment-selectionsmart__slider', {
+    pagination: {
+      el: '.equipment-selection-smart__pagination',
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: '.water-analysis-smart__next',
+      disabledClass: '.none',
+    },
+    on: {
+      click: () => {
+        if (waterSwiper.isEnd){
+      }
+      },
+      slideChange: () => {
+        switch (waterSwiper.activeIndex) {
+          case 0:
+            waterSwiperNextBtn.textContent = 'Далее';
+            break;
+          case 1:
+            waterSwiperNextBtn.textContent = 'Далее';
+            break;
+          default:
+        }
+      },
+    },
+  });
+}
 function main() {
+  if (window.screen.width < 450) {
+    setSmartPhoneScript();
+  }
   // результирующий массив оборудования
   let waterSystemFull = [];
   const equipmentSelectionForm = document.querySelector('.equipment-selection__form');
@@ -207,3 +242,5 @@ function main() {
 }
 
 main();
+
+
