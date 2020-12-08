@@ -14,12 +14,10 @@
 get_header();
 ?>
 <main class="main">
-
-<section class="for-smart-phone">
-
-<div class="swiper-container equipment-selectionsmart__slider">
-		<div class="swiper-wrapper">
-				<!-- Slides -->
+	<section class="for-smart-phone">
+		<div class="swiper-container equipment-select-smart__slider">
+			<div class="swiper-wrapper">
+					<!-- Slides -->
 				<div class="swiper-slide equipment-selection-smart__slide">
 				 <p class="description">
 					 <span class="description__insert">
@@ -132,12 +130,11 @@ get_header();
 				</div>
 				<div class="swiper-slide equipment-selection-smart__slide">
 				 <div class="equipment-selection__info">
-					<div class="equipment-selection__info-pointer"></div>
 						<p class="equipment-selection__description">
 						Введите данные полученные с помощью <a href="<?php echo SITE_URL?>water-analysis" class="equipment-selection__link"> нашего анализа</a> или из другой лаборатории.
 						</p>
 					 </div>
-				<div class="equipment-selection__table">
+					<div class="equipment-selection__table">
 		
 					<div class="equipment-selection__choice-item choice-item__wight ">
 						<label class="equipment-selection__elem"  for="pa_ph">Реакция среды pH:</label>
@@ -161,7 +158,7 @@ get_header();
 
 					<div class="equipment-selection__choice-item choice-item__wight ">
 						<label class="equipment-selection__elem" for="pa_tdh">Жесткость:</label>
-						<input class="equipment-selection__elem-value" placeholder=0" type="text" name="pa_tdh">
+						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_tdh">
 					</div>
 	
 					<div class="equipment-selection__choice-item choice-item__wight ">
@@ -189,72 +186,75 @@ get_header();
 						<label class="equipment-selection__elem" for="pa_sulphide">Сульфиды:</label>
 						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_sulphide">
 					</div>
+				
+						<p class="equipment-selection__description equipment-selection__description_no-result">
+							Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
+							Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом<a>, чтобы найти другой способ решения.
+						</p>
+					
+						<section class="results">
+							<div class="results__container"></div>
+							<!-- <button class="equipment-selection__calculate-button results__add-to-cart-button">Добавить все в корзину</button> -->
+						</section>
 				</div>
-				<!-- <button class="equipment-selection__calculate-button" disabled>Рассчитать</button> -->
-				<p class="equipment-selection__description equipment-selection__description_no-result">
-					Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
-					Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом<a>, чтобы найти другой способ решения.
-				</p>
-				</section>
-				<section class="results">
-					<div class="results__container"></div>
-						<button class="equipment-selection__calculate-button results__add-to-cart-button">Добавить все в корзину</button>
-				</section>
-		</div>
-		<div class="swiper-pagination equipment-selection__pagination"></div>
-</section>
-
-
-
-<section class="for-dekstop">
-	<h1 class="title title_about-company">Подбор оборудования</h1>
-	<p class="description">
-		<span class="description__insert">
-			Если вы уже сделали анализ воды, можете ввести данные и калькулятор
-			подберет вам индивидуально оборудование под ваши требования.
-		</span>
-		</p>
-		<section class="equipment-selection">
-		<h3 class="sub-title">Калькулятор системы водоподготовки</h3>
-		<form class="equipment-selection__form" name="equipmentSelection">
-			<div class="equipment-selection__choice">
-			<div class="equipment-selection__choice-col">
-					<h4 class="description">Источник воды:</h4>
-					<div class="equipment-selection__choice-item">
-						<input class="equipment-selection__choice-radio" value="1" type="radio" checked name="water_source" id="water_source_one">
-						<label class="equipment-selection__choice-color" for="water_source_one">Водопровод</label>
+			 </div>	
+			 	
+		</div>	
+		 <!-- If we need pagination -->
+		 <div class="swiper-pagination equipment-selection__pagination"></div>
+		<?php
+     	 	get_template_part('template-parts/footer/footer-smart-phone-templates/footer-water-analysis-smart-phone');
+		?>	
+	</section>
+	<section class="for-dekstop">
+		<h1 class="title title_about-company">Подбор оборудования</h1>
+		<p class="description">
+			<span class="description__insert">
+				Если вы уже сделали анализ воды, можете ввести данные и калькулятор
+				подберет вам индивидуально оборудование под ваши требования.
+			</span>
+			</p>
+			<section class="equipment-selection">
+			<h3 class="sub-title">Калькулятор системы водоподготовки</h3>
+			<form class="equipment-selection__form" name="equipmentSelection">
+				<div class="equipment-selection__choice">
+					<div class="equipment-selection__choice-col">
+						<h4 class="description">Источник воды:</h4>
+						<div class="equipment-selection__choice-item">
+							<input class="equipment-selection__choice-radio" value="1" type="radio" checked name="water_source" id="water_source_one">
+							<label class="equipment-selection__choice-color" for="water_source_one">Водопровод</label>
+						</div>
+						<div class="equipment-selection__choice-item">
+							<input  class="equipment-selection__choice-radio" value="2" type="radio" name="water_source" id="water_source_two">
+							<label class="equipment-selection__choice-color" for="water_source_two">Скважина</label>
+						</div>
+						<div class="equipment-selection__choice-item">
+							<input  class="equipment-selection__choice-radio" value="3" type="radio" name="water_source" id="water_source_three">
+							<label class="equipment-selection__choice-color" for="water_source_three">Колодец</label>
+						</div>
 					</div>
-					<div class="equipment-selection__choice-item">
-						<input  class="equipment-selection__choice-radio" value="2" type="radio" name="water_source" id="water_source_two">
-						<label class="equipment-selection__choice-color" for="water_source_two">Скважина</label>
+					<div class="equipment-selection__choice-col">
+						<h4 class="description">Какая сейчас вода?</h4>
+						<div class="equipment-selection__choice-item">
+							<input class="equipment-selection__choice-radio" value="1" type="radio" checked name="pa_clear_turbidity" id="pa_clear_turbidity_one">
+							<label class="equipment-selection__choice-color" for="pa_clear_turbidity_one">Прозрачная</label>
+						</div>
+						<div class="equipment-selection__choice-item">
+							<input  class="equipment-selection__choice-radio" value="2" type="radio" name="pa_clear_turbidity" id="pa_clear_turbidity_two">
+							<label class="equipment-selection__choice-color" for="pa_clear_turbidity_two">Мутная</label>
+						</div>
 					</div>
-					<div class="equipment-selection__choice-item">
-						<input  class="equipment-selection__choice-radio" value="3" type="radio" name="water_source" id="water_source_three">
-						<label class="equipment-selection__choice-color" for="water_source_three">Колодец</label>
-					</div>
-				</div>
-				<div class="equipment-selection__choice-col">
-					<h4 class="description">Какая сейчас вода?</h4>
-					<div class="equipment-selection__choice-item">
-						<input class="equipment-selection__choice-radio" value="1" type="radio" checked name="pa_clear_turbidity" id="pa_clear_turbidity_one">
-						<label class="equipment-selection__choice-color" for="pa_clear_turbidity_one">Прозрачная</label>
-					</div>
-					<div class="equipment-selection__choice-item">
-						<input  class="equipment-selection__choice-radio" value="2" type="radio" name="pa_clear_turbidity" id="pa_clear_turbidity_two">
-						<label class="equipment-selection__choice-color" for="pa_clear_turbidity_two">Мутная</label>
-					</div>
-				</div>
-				<div class="equipment-selection__choice-col">
-					<h4 class="description">Какая нужна вода?</h4>
-					<div class="equipment-selection__choice-item">
-						<input class="equipment-selection__choice-radio" value="1" type="radio" checked name="choiceTaste" id="choiceTaste_one">
-						<label class="equipment-selection__choice-color" for="choiceTaste_one">Питьевая</label>
-					</div>
+					<div class="equipment-selection__choice-col">
+						<h4 class="description">Какая нужна вода?</h4>
+						<div class="equipment-selection__choice-item">
+							<input class="equipment-selection__choice-radio" value="1" type="radio" checked name="choiceTaste" id="choiceTaste_one">
+							<label class="equipment-selection__choice-color" for="choiceTaste_one">Питьевая</label>
+						</div>
 					<div class="equipment-selection__choice-item">
 						<input  class="equipment-selection__choice-radio" value="2" type="radio" name="choiceTaste" id="choiceTaste_two">
 						<label class="equipment-selection__choice-color" for="choiceTaste_two">Техническая</label>
 					</div>
-				</div>
+			
 				<div class="equipment-selection__choice-col">
 					<h4 class="description">Точки водоразбора?</h4>
 					<input  class="equipment-selection__point-water" type="range" value="7" min="1" max="7" step="1" name="pa_water_points">

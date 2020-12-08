@@ -2,9 +2,9 @@
 function setSmartPhoneScript() {
   const waterSwiperNextBtn = document.querySelector('.water-analysis-smart__next');
   // eslint-disable-next-line no-undef
-  const waterSwiper = new Swiper('.equipment-selectionsmart__slider', {
+  const waterSwiper = new Swiper('.equipment-select-smart__slider', {
     pagination: {
-      el: '.equipment-selection-smart__pagination',
+      el: '.equipment-selection__pagination',
       dynamicBullets: true,
     },
     navigation: {
@@ -22,7 +22,7 @@ function setSmartPhoneScript() {
             waterSwiperNextBtn.textContent = 'Далее';
             break;
           case 1:
-            waterSwiperNextBtn.textContent = 'Далее';
+            waterSwiperNextBtn.textContent = 'Рассчитать';
             break;
           default:
         }
@@ -34,6 +34,7 @@ function main() {
   if (window.screen.width < 450) {
     setSmartPhoneScript();
   }
+
   // результирующий массив оборудования
   let waterSystemFull = [];
   const equipmentSelectionForm = document.querySelector('.equipment-selection__form');
@@ -240,7 +241,3 @@ function main() {
   // добавить все товары в корзину
   addToCartAllProductsBtn.addEventListener('click', addToCart);
 }
-
-main();
-
-

@@ -1,4 +1,4 @@
-<svg class="header__cross <?php if (is_page('water-analysis')) echo 'header__cross_view'; ?>" width="16" height="16" viewBox="0 0 16 16">
+<svg class="header__cross <?php if (is_page('water-analysis') || is_page('equipment-selection') ) echo 'header__cross_view'; ?>" width="16" height="16" viewBox="0 0 16 16">
   <g fill="none" fill-rule="evenodd">
       <g fill="var(--dark)">
           <g>

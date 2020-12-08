@@ -1,5 +1,6 @@
 @media screen and (max-width: 450px) {
   .equipment-selection__choice {
     display: block;
+    margin-bottom: 0;
   }
 }

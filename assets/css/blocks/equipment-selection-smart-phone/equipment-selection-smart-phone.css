@@ -8,14 +8,27 @@
 @import url(./__elem/equipment-selection-smart-phone__elem.css);
 @import url(./__table/equipment-selection-smart-phone__table.css);
 @import url(./__info/equipment-selection-smart-phone__info.css);
+@import url(./__pagination/equipment-selection-smart-phone__pagination.css);
+@import url(./__pagination-bullet/equipment-selection-smart-phone__pagination-bullet.css);
 @media screen and (max-width: 450px) {
   main {
+    position: relative;
     background-color: var(--white);
-    padding-left: 24px;
-    padding-right: 24px;
+    overflow: hidden;
   }
   .for-smart-phone {
     padding-top: 20px;
-    padding-bottom: 20px;
   }
+}
+
+.footer-smart {
+  display: none;
+}
+
+.footer-smart.footer-checkout-smart-phone.water-analysis-smart__footer {
+  display: block;
+}
+
+.header__prev-page-button.smart-phone-is-closed {
+  display: none;
 }
