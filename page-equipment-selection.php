@@ -19,8 +19,8 @@ get_header();
 			<div class="swiper-wrapper">
 					<!-- Slides -->
 				<div class="swiper-slide equipment-selection-smart__slide">
-				 <p class="description">
-					 <span class="description__insert">
+				 	<p class="description">
+					 <span	span class="description__insert">
 							Если у вас есть <a>анализ воды</a>, введите данные и калькулятор
 							подберет нужное оборудование.
 						</span>
@@ -129,82 +129,86 @@ get_header();
 					</section>
 				</div>
 				<div class="swiper-slide equipment-selection-smart__slide">
-				 <div class="equipment-selection__info">
+					<div class="equipment-selection__info">
 						<p class="equipment-selection__description">
 						Введите данные полученные с помощью <a href="<?php echo SITE_URL?>water-analysis" class="equipment-selection__link"> нашего анализа</a> или из другой лаборатории.
 						</p>
-					 </div>
+					</div>
 					<div class="equipment-selection__table">
 		
-					<div class="equipment-selection__choice-item choice-item__wight ">
-						<label class="equipment-selection__elem"  for="pa_ph">Реакция среды pH:</label>
-						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_ph">
-					</div>
+						<div class="equipment-selection__choice-item choice-item__wight ">
+							<label class="equipment-selection__elem"  for="pa_ph">Реакция среды pH:</label>
+							<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_ph">
+						</div>
 
-					<div class="equipment-selection__choice-item choice-item__wight ">
-						<label class="equipment-selection__elem" for="pa_oxidability">Окисляемость:</label>
-						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_oxidability">
-					</div>
+						<div class="equipment-selection__choice-item choice-item__wight ">
+							<label class="equipment-selection__elem" for="pa_oxidability">Окисляемость:</label>
+							<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_oxidability">
+						</div>
 		
-					<div class="equipment-selection__choice-item choice-item__wight ">
+						<div class="equipment-selection__choice-item choice-item__wight ">
 							<label class="equipment-selection__elem" for="pa_tds">Минерализация:</label>
 							<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_tds">
-					</div>
+						</div>
 					
-					<div class="equipment-selection__choice-item choice-item__wight ">
-						<label class="equipment-selection__elem" for="pa_mn">Марганец:</label>
-						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_mn">
-					</div>
+						<div class="equipment-selection__choice-item choice-item__wight ">
+							<label class="equipment-selection__elem" for="pa_mn">Марганец:</label>
+							<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_mn">
+						</div>
 
-					<div class="equipment-selection__choice-item choice-item__wight ">
-						<label class="equipment-selection__elem" for="pa_tdh">Жесткость:</label>
-						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_tdh">
-					</div>
+						<div class="equipment-selection__choice-item choice-item__wight ">
+							<label class="equipment-selection__elem" for="pa_tdh">Жесткость:</label>
+							<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_tdh">
+						</div>
 	
-					<div class="equipment-selection__choice-item choice-item__wight ">
-						<label class="equipment-selection__elem" for="pa_ftor">Фториды:</label>
-						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_ftor">
-					</div>
+						<div class="equipment-selection__choice-item choice-item__wight ">
+							<label class="equipment-selection__elem" for="pa_ftor">Фториды:</label>
+							<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_ftor">
+						</div>
 
-					<div class="equipment-selection__choice-item choice-item__wight ">
-						<label class="equipment-selection__elem" for="pa_ferrum">Железо:</label>
-						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_ferrum">
-					
-					</div>
+						<div class="equipment-selection__choice-item choice-item__wight ">
+							<label class="equipment-selection__elem" for="pa_ferrum">Железо:</label>
+							<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_ferrum">
+						</div>
 
-					<div class="equipment-selection__choice-item choice-item__wight ">
-						<label class="equipment-selection__elem" for="pa_h2s">Сероводород:</label>
-						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_h2s">
-					</div>
+						<div class="equipment-selection__choice-item choice-item__wight ">
+							<label class="equipment-selection__elem" for="pa_h2s">Сероводород:</label>
+							<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_h2s">
+						</div>
 
-					<div class="equipment-selection__choice-item choice-item__wight ">
-						<label class="equipment-selection__elem" for="pa_nitrate">Нитраты:</label>
-						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_nitrate">
-					</div>
+						<div class="equipment-selection__choice-item choice-item__wight ">
+							<label class="equipment-selection__elem" for="pa_nitrate">Нитраты:</label>
+							<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_nitrate">
+						</div>
 				
-					<div class="equipment-selection__choice-item choice-item__wight ">
-						<label class="equipment-selection__elem" for="pa_sulphide">Сульфиды:</label>
-						<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_sulphide">
+						<div class="equipment-selection__choice-item choice-item__wight ">
+							<label class="equipment-selection__elem" for="pa_sulphide">Сульфиды:</label>
+							<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_sulphide">
+						</div>
 					</div>
-				
-						<p class="equipment-selection__description equipment-selection__description_no-result">
-							Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
-							Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом<a>, чтобы найти другой способ решения.
-						</p>
+					<p class="equipment-selection__description equipment-selection__description_no-result">
+						Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
+						Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом<a>, чтобы найти другой способ решения.
+					</p>
 					
-						<section class="results">
-							<div class="results__container"></div>
-							<!-- <button class="equipment-selection__calculate-button results__add-to-cart-button">Добавить все в корзину</button> -->
-						</section>
+					<section class="results">
+						<div class="results__container"></div>
+						<!-- <button class="equipment-selection__calculate-button results__add-to-cart-button">Добавить все в корзину</button> -->
+					</section>
 				</div>
-			 </div>	
-			 	
+			</div>
+			 <!-- If we need pagination -->
+			 <div class="swiper-pagination equipment-selection__pagination"></div>
 		</div>	
-		 <!-- If we need pagination -->
-		 <div class="swiper-pagination equipment-selection__pagination"></div>
 		<?php
-     	 	get_template_part('template-parts/footer/footer-smart-phone-templates/footer-water-analysis-smart-phone');
+			  get_template_part('template-parts/footer/footer-smart-phone-templates/footer-water-analysis-smart-phone');
 		?>	
+			<p class="equipment-selection__description equipment-selection__description_no-result">
+			Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
+			Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом<a>, чтобы найти другой способ решения.
+			</p>
+			<section class="results">
+			</section>
 	</section>
 	<section class="for-dekstop">
 		<h1 class="title title_about-company">Подбор оборудования</h1>
@@ -333,6 +337,11 @@ get_header();
 	<button class="equipment-selection__calculate-button results__add-to-cart-button">Добавить все в корзину</button></section></section>
 </section>
 </main>
+<?php
+get_footer();
+  $table= get_postdata( 1419 );
+  echo $table['Content'];
+?>
 <script>
 // Инициализация глобальных переменных для JS
 	window.obj = {};

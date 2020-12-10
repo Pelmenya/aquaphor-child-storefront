@@ -1,7 +1,9 @@
-.equipment-selection__table {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  border-top: none;
-  border-right: none;
+@media screen and (max-width: 450px) {
+  .equipment-selection__table {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: none;
+    border-right: none;
+  }
 }

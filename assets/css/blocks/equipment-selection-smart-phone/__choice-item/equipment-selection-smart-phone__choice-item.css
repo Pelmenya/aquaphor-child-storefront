@@ -13,11 +13,11 @@
     padding-bottom: 0;
     margin-bottom: 0;
   }
-}
 
-.choice-item__wight {
-  width: 50%;
-  height: 75px;
-  padding-left: 21px;
-  box-shadow: none;
+  .choice-item__wight {
+    width: 50%;
+    height: 75px;
+    padding-left: 21px;
+    box-shadow: none;
+  }
 }

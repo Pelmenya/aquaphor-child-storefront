@@ -19,16 +19,15 @@
   .for-smart-phone {
     padding-top: 20px;
   }
-}
+  .footer-smart {
+    display: none;
+  }
 
-.footer-smart {
-  display: none;
-}
+  .footer-smart.footer-checkout-smart-phone.water-analysis-smart__footer {
+    display: block;
+  }
 
-.footer-smart.footer-checkout-smart-phone.water-analysis-smart__footer {
-  display: block;
-}
-
-.header__prev-page-button.smart-phone-is-closed {
-  display: none;
+  .header__prev-page-button.smart-phone-is-closed {
+    display: none;
+  }
 }

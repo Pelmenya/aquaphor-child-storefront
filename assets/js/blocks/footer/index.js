@@ -219,5 +219,10 @@ function main() {
 if (window.screen.width < 450) {
   const footerSmart = document.querySelector('.footer-smart');
   if (footerSmart) setFooterSmartScript(footerSmart);
+  const closeBtn = document.querySelector('.header__cross');
+  closeBtn.addEventListener('click', () => {
+    window.history.back();
+
+  });
 }
 main();

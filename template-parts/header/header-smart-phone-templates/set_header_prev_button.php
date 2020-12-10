@@ -3,7 +3,7 @@ function set_header_prev_button( $title, $style ){
 ?>
 <svg
   <?php
-    if (!is_page('water-analysis') || !is_page('equipment-selection')) echo 'onClick="window.history.back()"';
+    // if (!is_page('water-analysis') || !is_page('equipment-selection')) echo 'onClick="window.history.back()';
   ?>
   class ="header__prev-page-button <?php if (is_page('water-analysis') || is_page('equipment-selection')) echo 'smart-phone-is-closed' ?> " width="11" height="18" viewBox="0 0 11 18">
   <defs>
