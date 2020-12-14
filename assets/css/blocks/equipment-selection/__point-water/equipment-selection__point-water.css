@@ -1,9 +1,8 @@
-input[type=range].equipment-selection__point-water {
-  -webkit-appearance: none;
+input[type="range"].equipment-selection__point-water {
   width: 100%;
 }
 
-input[type=range].equipment-selection__point-water:focus {
+/* input[type=range].equipment-selection__point-water:focus {
   outline: none;
 }
 
@@ -87,4 +86,4 @@ input[type=range].equipment-selection__point-water:focus::-ms-fill-lower {
 
 input[type=range].equipment-selection__point-water:focus::-ms-fill-upper {
   background: #367ebd;
-}
+} */

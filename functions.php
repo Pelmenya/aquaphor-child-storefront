@@ -466,6 +466,8 @@ is_page( sanitize_title('о-сайте') );  правильно  */
   }
 
   if (is_page( 'equipment-selection' ) ){
+    enqueue_versioned_style( 'footer-checkout-smart-phone', AQUAPHOR_THEME_BLOCKS_CSS . 'footer-checkout-smart-phone/footer-checkout-smart-phone.css', array());
+    enqueue_versioned_style( 'equipment-selection-smart-phone', AQUAPHOR_THEME_BLOCKS_CSS . 'equipment-selection-smart-phone/equipment-selection-smart-phone.css', array());
     enqueue_versioned_script('equipment-selection', AQUAPHOR_THEME_JS . 'equipment-selection/index.js', true);
   }
 

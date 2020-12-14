@@ -1,0 +1,23 @@
+@media screen and (max-width: 450px) {
+  .equipment-selection__choice-item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    height: 100px;
+    margin-bottom: 12px;
+    padding: 12px 17px 0px 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 var(--dark-10);
+    background-color: var(--white);
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .choice-item__wight {
+    width: 50%;
+    height: 75px;
+    padding-left: 21px;
+    box-shadow: none;
+  }
+}

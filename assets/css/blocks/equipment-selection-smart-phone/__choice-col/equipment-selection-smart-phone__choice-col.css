@@ -1,0 +1,6 @@
+@media screen and (max-width: 450px) {
+  .equipment-selection__choice-col {
+    display: flex;
+    flex-direction: column;
+  }
+}

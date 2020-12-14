@@ -1,0 +1,11 @@
+.equipment-selection__info {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: var(--dark);
+  background-color: transparent;
+  padding: 0;
+}

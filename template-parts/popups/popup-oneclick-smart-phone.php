@@ -59,8 +59,8 @@ get_template_part('inc/get_top_term');
         ?>
           <input class="popup-oneclick-smart-phone__name" required type="text" name="user_name" placeholder="Введите имя">
           <input class="popup-oneclick-smart-phone__phone" required type="tel" name="phone" placeholder="Введите телефон" pattern="^(\+7|8)\s?(\(\d{3}\)|\d{3})\s?[\-]?\d{3}[\-]?\d{2}[\-]?\d{2}$">
-          <input class="popup-oneclick-smart-phone__email" required type="email" name="email" placeholder="Введите @почту" pattern="^[A-Za-z]((\.|-)?[A-Za-z0-9]+)+@[A-Za-z0-9](-?[A-Za-z0-9]+)+(\.[A-Za-z]{2,})+$">
-          <button type="submit" class="popup-oneclick-smart-phone__button">Отправить</button>
+          <input class="popup-oneclick-smart-phone__email" required type="email" name="email" placeholder="Введите эл. почту" pattern="^[A-Za-z]((\.|-)?[A-Za-z0-9]+)+@[A-Za-z0-9](-?[A-Za-z0-9]+)+(\.[A-Za-z]{2,})+$">
+          <button type="submit" class="popup-oneclick-smart-phone__button">Заказать</button>
           <p class="popup-oneclick-smart-phone__text">Менеджер перезвонит для подтверждения заказа</p>
         </form>
       <?php
