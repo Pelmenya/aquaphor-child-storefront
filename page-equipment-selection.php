@@ -200,15 +200,19 @@ get_header();
 			 <!-- If we need pagination -->
 			 <div class="swiper-pagination equipment-selection__pagination"></div>
 		</div>	
+		<p class="equipment-selection__description equipment-selection__description_no-result">
+		Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
+		Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом<a>, чтобы найти другой способ решения.
+		</p>
+		<section class="results">
+		<?php 
+			//  echo do_shortcode('[products]');
+			 get_template_part('inc/get_samle_products.php');
+		?>
+		</section>
 		<?php
 			  get_template_part('template-parts/footer/footer-smart-phone-templates/footer-water-analysis-smart-phone');
 		?>	
-			<p class="equipment-selection__description equipment-selection__description_no-result">
-			Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
-			Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом<a>, чтобы найти другой способ решения.
-			</p>
-			<section class="results">
-			</section>
 	</section>
 	<section class="for-dekstop">
 		<h1 class="title title_about-company">Подбор оборудования</h1>
@@ -431,7 +435,7 @@ get_footer();
 			</script>
 			<?php
 		}
-		//echo "<pre>"; print_r($systems[0][0]); echo "</pre>";
+		// echo "<pre>"; print_r($systems[0][0]); echo "</pre>";
  ?>
 <?php
 get_footer();
