@@ -57,7 +57,7 @@ get_header();
 					<div class="equipment-selection__choice-item">
 						<h4 class="description">Состояние воды:</h4>
 						<form action="formdata" method="post" name="selection-condition">
-							<select name="list-sourse">
+							<select name="list-sourse__condition">
 								<option
 									value="0"
 									checked
@@ -204,7 +204,7 @@ get_header();
 		Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
 		Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом<a>, чтобы найти другой способ решения.
 		</p>
-		<section class="results">
+		<section class="results_phone">
 		<?php 
 			//  echo do_shortcode('[products]');
 			 get_template_part('inc/get_samle_products.php');

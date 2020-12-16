@@ -1,0 +1,9 @@
+@import url(./__pic/card-equipment-smart-phone__pic.css);
+@import url(./__title/card-equipment-smart-phone__title.css);
+@import url(./__price/card-equipment-smart-phone__price.css);
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: none;
+}

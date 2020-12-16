@@ -1,40 +1,46 @@
 const selects = document.querySelectorAll('select');
-const results = document.querySelector('.results');
+const results = document.querySelector('.results_phone');
 const waterSwiperNextBtn = document.querySelector('.water-analysis-smart__next');
+
+const condition = document.querySelector('select[name=list-sourse__condition]');
+// Слайдер
+const waterSwiper = new Swiper('.equipment-select-smart__slider', {
+  pagination: {
+    el: '.equipment-selection__pagination',
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: '.water-analysis-smart__next',
+    disabledClass: 'none',
+    // waterSwiper.update ();
+  },
+  observer: true,
+  observerParents: true,
+  observerSlideChildren: true,
+  on: {
+    observerUpdate: () => {
+      if (waterSwiper.isEnd) {
+        console.log('fffff');
+      }
+    },
+    slideChange: () => {
+      switch (waterSwiper.activeIndex) {
+        case 0:
+          waterSwiperNextBtn.textContent = 'Далее';
+          break;
+        case 1:
+          waterSwiperNextBtn.textContent = 'Рассчитать';
+          break;
+        case 2:
+          waterSwiperNextBtn.textContent = 'Результат';
+          break;  
+        default:
+      }
+    },
+  },
+});
+
 function setSmartPhoneScript() {
-  // Слайдер
-  const waterSwiper = new Swiper('.equipment-select-smart__slider', {
-    pagination: {
-      el: '.equipment-selection__pagination',
-      dynamicBullets: true,
-    },
-    navigation: {
-      nextEl: '.water-analysis-smart__next',
-      disabledClass: 'none',
-      // waterSwiper.update ();
-    },
-    observer: true,
-    observerParents: true,
-    observerSlideChildren: true,
-    on: {
-      observerUpdate: () => {
-        if (waterSwiper.isEnd) {
-          console.log('fffff');
-        }
-      },
-      slideChange: () => {
-        switch (waterSwiper.activeIndex) {
-          case 0:
-            waterSwiperNextBtn.textContent = 'Далее';
-            break;
-          case 1:
-            waterSwiperNextBtn.textContent = 'Рассчитать';
-            break;
-          default:
-        }
-      },
-    },
-  });
   // Обработчик select
   Object.keys(selects).forEach((item) => {
     selects[item].addEventListener('click', () => {
@@ -78,19 +84,29 @@ function sortProducts() {
   const systems = window.systems;
   let resultIds = [];
   let itemAtr = [];
-  console.log(systems);
-  console.log(e);
+  // console.log(systems);
+  // console.log(e);
   systems.forEach((item) => {
     console.log(item);
     for (let i = item.attributes.length - 1; i >= 0; i--) {
       itemAtr = item.attributes[i];
-      //Сравнимаем инпуты с атрибутами
+      // Сравнимаем инпуты с атрибутами
       for (let key in itemAtr) {
-        if (itemAtr[key] === 'pa_comparison') {
-          if(e == itemAtr[++key]) {
-            resultIds.push(item);
-            console.log('Нужно создавать массив' ); 
+        // console.log(itemAtr[key]);
+        // condition.addEventListener('change', () => {
+        //   let cot = condition.value;
+        //   console.log(cot);
+        //   });
+        if (itemAtr[key] == 'pa_clear_turbidity' && itemAtr[++key] =='Нет' && condition.value =='1') {
+          if (!resultIds.includes(item)) resultIds.push(item);
+          console.log("Убирать мутность не нужно");
+        } elseif (itemAtr[key] == 'pa_clear_turbidity' && itemAtr[++key] =='Да' && condition.value =='2') {
+          if (!resultIds.includes(item)) resultIds.push(item);
+          console.log("Убирать мутность нужно !!!!!!!!!!");
           }
+        if (itemAtr[key] === 'pa_comparison' && e == itemAtr[++key] && resultIds.length > 0) {
+          console.log('Нужно создавать массив' ); 
+           if (!resultIds.includes(item)) ? resultIds.push(item) :resultIds.
           console.log(resultIds);
         }
       }
@@ -99,22 +115,25 @@ function sortProducts() {
   return (resultIds);
 }
 function drawresult(resultIds) {
-  if(resultIds.length > 0) {
+  if (resultIds.length > 0) {
+    waterSwiper.appendSlide([
+      '<div class="swiper-slide"><h2>Результат подбора</h2></div>',
+    ]);
+    waterSwiper.updateSlides ();
     resultIds.forEach((index) => {
-      console.log(index.product.slug);
-      console.log(index.product.name);
-      console.log(index.urlPic);
-      results.insertAdjacentHTML(
-        'afterBegin',
+      waterSwiper.slides[2].insertAdjacentHTML(
+        'beforeEnd',
         `<a href="${index.product.slug}" class="card">
         <img src="${index.urlPic}" class="card__pic">
+        <div class__wrapper-info
         <h4 class=card__title>${index.product.name}</h4>
         <p class="card__price">${index.product.price} руб.</p>
+        </div>
         </a>`);
-        console.log(results);
     });
+    waterSwiper.updateSlides ();
   } else {
-    alert('хуйня ваши анализы')
+    alert('хуйня ваши анализы');
 
   }
 }
@@ -323,7 +342,6 @@ function main() {
           window.location.href = 'cart';
         }
       }
-
 
       // бегунок
       waterPoints.addEventListener('change', changeWaterPoints);
