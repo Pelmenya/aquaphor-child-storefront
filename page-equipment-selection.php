@@ -118,7 +118,7 @@ get_header();
 							type="range"
 							value="5"
 							min="1"
-							max="5"
+							max="7"
 							step="1"
 							name="pa_water_points"/>
 						<label class="equipment-selection__choice-color equipment-selection__choice-color_water-points"

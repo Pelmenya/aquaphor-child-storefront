@@ -1,6 +1,13 @@
+
 const selects = document.querySelectorAll('select');
 const results = document.querySelector('.results_phone');
 const waterSwiperNextBtn = document.querySelector('.water-analysis-smart__next');
+const waterPoints = 0;
+const waterPoinsText = document.querySelector('.equipment-selection__choice-color_water-points');
+const waterPoinsInput = document.querySelector('.equipment-selection__point-water');
+
+console.log(waterPoinsText);
+console.log(waterPoinsInput);
 
 const condition = document.querySelector('select[name=list-sourse__condition]');
 // Слайдер
@@ -30,10 +37,15 @@ const waterSwiper = new Swiper('.equipment-select-smart__slider', {
           break;
         case 1:
           waterSwiperNextBtn.textContent = 'Рассчитать';
+          waterSwiperNextBtn.addEventListener('click', () => {
+            drawresult(sortProducts());
+            // window.location.href='https://aquaphor.store/equipment-selection/result';
+          });
+
           break;
         case 2:
           waterSwiperNextBtn.textContent = 'Результат';
-          break;  
+          break;
         default:
       }
     },
@@ -52,6 +64,10 @@ function setSmartPhoneScript() {
   });
 }
 
+function addInputText() {
+  console.log(waterPoinsInput.value);
+  waterPoinsText.textContent = 'От 1 до ' + waterPoinsInput.value;
+}
 
 // Инпуты анализа воды
 function sortProducts() {
@@ -66,6 +82,7 @@ function sortProducts() {
   console.log(e);
 
   // присваемываем  нужную компесированную жесткость
+  // eslint-disable-next-line default-case
   switch (+e) {
     case e <= 12 && e > 0 ? e : true:
       e = 12;
@@ -83,37 +100,69 @@ function sortProducts() {
 
   const systems = window.systems;
   let resultIds = [];
+  let resultIds1 = [];
+  let resultIds2 = [];
+  let resultIdsurbidity = [];
+  let resultIdWaterPoint = [];
+  let resultIdComparison = [];
   let itemAtr = [];
-  // console.log(systems);
+  console.log(systems);
   // console.log(e);
   systems.forEach((item) => {
     console.log(item);
+    console.log(item.attributes);
+    
     for (let i = item.attributes.length - 1; i >= 0; i--) {
       itemAtr = item.attributes[i];
-      // Сравнимаем инпуты с атрибутами
-      for (let key in itemAtr) {
-        // console.log(itemAtr[key]);
-        // condition.addEventListener('change', () => {
-        //   let cot = condition.value;
-        //   console.log(cot);
-        //   });
-        if (itemAtr[key] == 'pa_clear_turbidity' && itemAtr[++key] =='Нет' && condition.value =='1') {
-          if (!resultIds.includes(item)) resultIds.push(item);
-          console.log("Убирать мутность не нужно");
-        } elseif (itemAtr[key] == 'pa_clear_turbidity' && itemAtr[++key] =='Да' && condition.value =='2') {
-          if (!resultIds.includes(item)) resultIds.push(item);
-          console.log("Убирать мутность нужно !!!!!!!!!!");
+        for (let key in itemAtr) {
+          // Сравнимаем инпуты с атрибутами(Состояние воды)
+          if (condition.value =='1' && itemAtr[key] == 'pa_clear_turbidity' && itemAtr[++key] =='Нет') {
+            resultIdsurbidity.push(item);
+            console.log("Убирать мутность не нужно");
           }
-        if (itemAtr[key] === 'pa_comparison' && e == itemAtr[++key] && resultIds.length > 0) {
-          console.log('Нужно создавать массив' ); 
-           if (!resultIds.includes(item)) ? resultIds.push(item) :resultIds.
-          console.log(resultIds);
+          if (condition.value =='2' && itemAtr[key] == 'pa_clear_turbidity' && itemAtr[++key] =='Да') {
+            console.log("Убирать мутность нужно !!!!!!!!!!");
+            resultIdsurbidity.push(item);
+          }
+          // Точки водозбора
+          if (itemAtr[key] == 'pa_water_points') {
+            console.log("ТОчки водозбора");
+            if (itemAtr[++key] >= waterPoinsInput.value) {
+              resultIdWaterPoint.push(item);
+            }
+          }
+          //  resultIds1 = resultIdsurbidity.filter(item => resultIdWaterPoint.includes(item));
+          // Компенсированная жесткость
+          if (itemAtr[key] === 'pa_comparison' && e == itemAtr[++key]) {
+            console.log('Нужно создавать массив' ); 
+            resultIdComparison.push(item);
+          }
+          // resultIds = resultIds1.filter(item => resultIdcomparison.includes(item));
         }
-      }
+        // return (resultIds);
     }
   });
+  console.log(resultIdsurbidity);
+  console.log(resultIdWaterPoint);
+  console.log(resultIdComparison);
+
+  if (resultIdsurbidity.length >= resultIdWaterPoint.length) {
+    resultIds1 = resultIdsurbidity.filter(item => resultIdWaterPoint.includes(item));
+  } else {
+    resultIds1 = resultIdWaterPoint.filter(item => resultIdsurbidity.includes(item));
+  }
+  console.log(resultIds1);
+  console.log(resultIds1.length);
+  if (resultIdComparison.length >= resultIds1.length) {
+    resultIds = resultIdComparison.filter(item => resultIds1.includes(item));
+  } else {
+    resultIds = resultIds1.filter(item => resultIdComparison.includes(item));
+  }
+  console.log(resultIds);
+  console.log(resultIds.length);
   return (resultIds);
 }
+
 function drawresult(resultIds) {
   if (resultIds.length > 0) {
     waterSwiper.appendSlide([
@@ -134,21 +183,23 @@ function drawresult(resultIds) {
     waterSwiper.updateSlides ();
   } else {
     alert('хуйня ваши анализы');
-
   }
+  // бегунок
+ 
 }
 
 // Обработчик кнопки Рассчитать
-waterSwiperNextBtn.addEventListener('click', () => {
-  if (waterSwiperNextBtn.classList.contains('none')) {
-    drawresult(sortProducts());
-    // window.location.href='https://aquaphor.store/equipment-selection/result';
-  }
-});
+// waterSwiperNextBtn.addEventListener('click', () => {
+//   if (!waterSwiperNextBtn.textContent == 'Рассчитать') {
+//     drawresult(sortProducts());
+//     // window.location.href='https://aquaphor.store/equipment-selection/result';
+//   }
+// });
 function main() {
   // console.log(choiceItem);
   if (window.screen.width < 450) {
     setSmartPhoneScript();
+    waterPoinsInput.addEventListener('change', addInputText);
   }
   if (window.screen.width > 450) {
     // результирующий массив оборудования
@@ -196,34 +247,7 @@ function main() {
       }
 
       // eslint-disable-next-line no-inner-declarations
-      function changeWaterPoints() {
-        switch (Number(waterPoints.value)) {
-          case 1:
-            equipmentSelectionWaterPointsLabel.textContent = '1 точка';
-            break;
-          case 2:
-            equipmentSelectionWaterPointsLabel.textContent = 'От 1 до 2 точек';
-            break;
-          case 3:
-            equipmentSelectionWaterPointsLabel.textContent = 'От 1 до 3 точек';
-            break;
-          case 4:
-            equipmentSelectionWaterPointsLabel.textContent = 'От 1 до 4 точек';
-            break;
-          case 5:
-            equipmentSelectionWaterPointsLabel.textContent = 'От 1 до 5 точек';
-            break;
-          case 6:
-            equipmentSelectionWaterPointsLabel.textContent = 'От 1 до 6 точек';
-            break;
-          case 7:
-            equipmentSelectionWaterPointsLabel.textContent = 'От 1 до 7 точек';
-            break;
-          default:
-            equipmentSelectionWaterPointsLabel.textContent = 'одна';
-        }
-      }
-
+      
       // eslint-disable-next-line no-inner-declarations
       function inputEquipmentSelectionForm() {
         equipmentSelectionCalculateBtn.disabled = true;
@@ -344,7 +368,8 @@ function main() {
       }
 
       // бегунок
-      waterPoints.addEventListener('change', changeWaterPoints);
+      waterPoinsInput.addEventListener('change',
+        waterPoinsText.textContent = waterPoinsInput.value);
       // ввод на форме
       equipmentSelectionForm.addEventListener('input', inputEquipmentSelectionForm);
       // submit формы
