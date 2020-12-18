@@ -18,7 +18,7 @@ get_header();
 		<div class="swiper-container equipment-select-smart__slider">
 			<div class="swiper-wrapper">
 					<!-- Slides -->
-				<div class="swiper-slide equipment-selection-smart__slide">
+				<div data-id="1" class="swiper-slide equipment-selection-smart__slide">
 				 	<p class="description">
 					 <span	span class="description__insert">
 							Если у вас есть <a>анализ воды</a>, введите данные и калькулятор
@@ -128,7 +128,7 @@ get_header();
 						</form>
 					</section>
 				</div>
-				<div class="swiper-slide equipment-selection-smart__slide">
+				<div data-id="2" class="swiper-slide equipment-selection-smart__slide" data-swiper-autoplay="200">
 					<div class="equipment-selection__info">
 						<p class="equipment-selection__description">
 						Введите данные полученные с помощью <a href="<?php echo SITE_URL?>water-analysis" class="equipment-selection__link"> нашего анализа</a> или из другой лаборатории.
@@ -186,11 +186,7 @@ get_header();
 							<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_sulphide">
 						</div>
 					</div>
-					<p class="equipment-selection__description equipment-selection__description_no-result">
-						Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
-						Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом<a>, чтобы найти другой способ решения.
-					</p>
-					
+				
 					<section class="results">
 						<div class="results__container"></div>
 						<!-- <button class="equipment-selection__calculate-button results__add-to-cart-button">Добавить все в корзину</button> -->
@@ -200,13 +196,8 @@ get_header();
 			 <!-- If we need pagination -->
 			 <div class="swiper-pagination equipment-selection__pagination"></div>
 		</div>	
-		<p class="equipment-selection__description equipment-selection__description_no-result">
-		Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
-		Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом<a>, чтобы найти другой способ решения.
-		</p>
 		<section class="results_phone">
 		<?php 
-			//  echo do_shortcode('[products]');
 			 get_template_part('inc/get_samle_products.php');
 		?>
 		</section>
