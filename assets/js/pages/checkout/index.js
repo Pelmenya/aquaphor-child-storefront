@@ -65,7 +65,7 @@ function main() {
     if (shipings) {
       const header = createElementDOM('h3', 'shiping-head', 'Доставка');
 
-      const billingWooccm12 = entryContent.querySelector('#billing_wooccm12');
+      const billingWooccm11 = entryContent.querySelector('#billing_wooccm11');
       const adressShipping = entryContent.querySelector('#billing_address_1');
 
       adressShipping.value = '';
@@ -202,7 +202,7 @@ function main() {
       }
 
       if (window.screen.width > 450) {
-        shipingWrapper.prepend(billingWooccm12);
+        shipingWrapper.prepend(billingWooccm11);
         shipingWrapper.prepend(shipings[1]);
         shipingWrapper.prepend(adressShipping);
         shipingWrapper.prepend(shipings[0]);
@@ -213,13 +213,13 @@ function main() {
           adressShipping.style.visibility = 'hidden';
         }
         delivery[0].addEventListener('change', () => {
-          billingWooccm12.disabled = true;
+          billingWooccm11.disabled = true;
           adressShipping.value = '';
           // adressShipping.style.visibility = 'visible';
         });
 
         delivery[1].addEventListener('change', () => {
-          billingWooccm12.disabled = false;
+          billingWooccm11.disabled = false;
           // adressShipping.style.visibility = 'hidden';
           adressShipping.value = 'Самовывоз';
         });
@@ -272,10 +272,10 @@ function main() {
               woocommerceBillingLabels[item].textContent = '';
             }
           }
-          if (woocommerceBillingLabels[item].attributes.for.nodeValue === 'billing_wooccm11') {
+          if (woocommerceBillingLabels[item].attributes.for.nodeValue === 'billing_wooccm12') {
             woocommerceBillingLabels[item].textContent = 'Отчество';
           }
-          if (woocommerceBillingLabels[item].attributes.for.nodeValue === 'billing_wooccm12') {
+          if (woocommerceBillingLabels[item].attributes.for.nodeValue === 'billing_wooccm11') {
             woocommerceBillingLabels[item].textContent = '';
           }
           if (woocommerceBillingLabels[item].attributes.for.nodeValue === 'billing_city') {
@@ -327,7 +327,7 @@ function main() {
                 pickupRadioBtn.classList.add('is-hidden');
                 deliveryRadioBtn.checked = 'true';
                 adressShipping.readOnly = false;
-                billingWooccm12.readOnly = true;
+                billingWooccm11.readOnly = true;
                 totalDelivery.textContent = '400 руб.';
               });
             }
@@ -342,7 +342,7 @@ function main() {
               woocommerceBillingLabels[item].style.marginBottom = '0px';
               woocommerceBillingLabels[item].textContent = 'Пункт самовывоза (Бесплатно)';
               const cardWrap = cardPickup.querySelector('.checkout-smart-phone__wrap');
-              cardPickup.prepend(billingWooccm12);
+              cardPickup.prepend(billingWooccm11);
               cardPickup.prepend(cardWrap);
               const radioBtn = shipings[1].querySelector('input');
               radioBtn.classList.add('is-hidden');
@@ -356,7 +356,7 @@ function main() {
                 pickupRadioBtn.classList.remove('is-hidden');
                 pickupRadioBtn.checked = 'true';
                 adressShipping.readOnly = true;
-                billingWooccm12.readOnly = false;
+                billingWooccm11.readOnly = false;
               });
             }
           }

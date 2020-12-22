@@ -96,7 +96,21 @@ get_header();
         </ul>
       </div>
       <div class="swiper-slide water-analysis-smart__slide">
-
+      <p>Выберите место в котором вам будет удобнее оставить свою пробу воды:</p>
+      <select placeholder="Выберите город" name="list-sourse" id="">
+        <option value="0">Ступино</option>
+        <option value="1">Раменоское</option>
+        <option value="2">Чехов</option>
+        <option value="3">Рязань</option>
+        <option value="4">Коломна</option>
+        <option value="5">Серпухов</option>
+        <option value="6">Домодедово</option>
+        <option value="7">Люберцы</option>
+        <option value="8">Видное</option>
+      </select>
+      <div class="wrapper-water-analysis_points-sale">
+       
+      </div>
       </div>
       <div class="swiper-slide water-analysis-smart__slide">
         fasdf

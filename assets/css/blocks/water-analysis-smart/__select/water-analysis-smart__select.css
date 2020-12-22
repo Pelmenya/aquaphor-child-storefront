@@ -1,5 +1,5 @@
 @media screen and (max-width: 450px) {
-  .equipment-selection__choice-item select {
+  .swiper-slide select {
     width: 100%;
     height: 40px;
     padding: 9px 16px 9px 13px;

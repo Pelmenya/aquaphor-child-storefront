@@ -18,7 +18,7 @@ get_header();
 		<div class="swiper-container equipment-select-smart__slider">
 			<div class="swiper-wrapper">
 					<!-- Slides -->
-				<div class="swiper-slide equipment-selection-smart__slide">
+				<div data-id="1" class="swiper-slide equipment-selection-smart__slide">
 				 	<p class="description">
 					 <span	span class="description__insert">
 							Если у вас есть <a>анализ воды</a>, введите данные и калькулятор
@@ -57,7 +57,7 @@ get_header();
 					<div class="equipment-selection__choice-item">
 						<h4 class="description">Состояние воды:</h4>
 						<form action="formdata" method="post" name="selection-condition">
-							<select name="list-sourse">
+							<select name="list-sourse__condition">
 								<option
 									value="0"
 									checked
@@ -118,7 +118,7 @@ get_header();
 							type="range"
 							value="5"
 							min="1"
-							max="5"
+							max="7"
 							step="1"
 							name="pa_water_points"/>
 						<label class="equipment-selection__choice-color equipment-selection__choice-color_water-points"
@@ -128,7 +128,7 @@ get_header();
 						</form>
 					</section>
 				</div>
-				<div class="swiper-slide equipment-selection-smart__slide">
+				<div data-id="2" class="swiper-slide equipment-selection-smart__slide" data-swiper-autoplay="200">
 					<div class="equipment-selection__info">
 						<p class="equipment-selection__description">
 						Введите данные полученные с помощью <a href="<?php echo SITE_URL?>water-analysis" class="equipment-selection__link"> нашего анализа</a> или из другой лаборатории.
@@ -186,11 +186,7 @@ get_header();
 							<input class="equipment-selection__elem-value" placeholder="0" type="text" name="pa_sulphide">
 						</div>
 					</div>
-					<p class="equipment-selection__description equipment-selection__description_no-result">
-						Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
-						Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом<a>, чтобы найти другой способ решения.
-					</p>
-					
+				
 					<section class="results">
 						<div class="results__container"></div>
 						<!-- <button class="equipment-selection__calculate-button results__add-to-cart-button">Добавить все в корзину</button> -->
@@ -200,15 +196,14 @@ get_header();
 			 <!-- If we need pagination -->
 			 <div class="swiper-pagination equipment-selection__pagination"></div>
 		</div>	
+		<section class="results_phone">
+		<?php 
+			 get_template_part('inc/get_samle_products.php');
+		?>
+		</section>
 		<?php
 			  get_template_part('template-parts/footer/footer-smart-phone-templates/footer-water-analysis-smart-phone');
 		?>	
-			<p class="equipment-selection__description equipment-selection__description_no-result">
-			Неудача! К сожалению мы не смогли подобрать систему на основе ваших показателей. :(
-			Вы можете <a href="<?php echo SITE_URL?>" class="equipment-selection__link">связаться со специалистом<a>, чтобы найти другой способ решения.
-			</p>
-			<section class="results">
-			</section>
 	</section>
 	<section class="for-dekstop">
 		<h1 class="title title_about-company">Подбор оборудования</h1>
@@ -431,7 +426,7 @@ get_footer();
 			</script>
 			<?php
 		}
-		//echo "<pre>"; print_r($systems[0][0]); echo "</pre>";
+		// echo "<pre>"; print_r($systems[0][0]); echo "</pre>";
  ?>
 <?php
 get_footer();

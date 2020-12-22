@@ -1,0 +1,12 @@
+.card__price {
+  font-family: Proxima Nova Rg;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: normal;
+  color: var(--dark);
+  max-width: 254px;
+  margin-bottom: 0;
+}
