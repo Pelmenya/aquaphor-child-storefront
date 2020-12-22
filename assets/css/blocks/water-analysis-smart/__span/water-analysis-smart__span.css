@@ -1,0 +1,22 @@
+@media screen and (max-width: 450px) {
+  span.points-sale__adress,
+  span.points-sale__time {
+    display: inherit;
+  }
+  span.points-sale__time {
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #353a61;
+  }
+  span.points-sale__adress {
+    font-family: ProximaNova;
+    font-size: 14px;
+    line-height: 22px;
+    color: #353a61;
+    mix-blend-mode: normal;
+    opacity: 0.7;
+  }
+}

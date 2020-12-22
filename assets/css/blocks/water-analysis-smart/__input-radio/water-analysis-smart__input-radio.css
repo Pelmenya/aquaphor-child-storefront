@@ -1,0 +1,7 @@
+@media screen and (max-width: 450px) {
+  input[type="radio"] {
+    position: absolute;
+    right: calc(5%);
+    top: calc(50% - 7px);
+  }
+}

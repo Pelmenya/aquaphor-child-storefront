@@ -7,7 +7,10 @@
 @import url(./__wrapper/water-analysis-smart__wrapper.css);
 @import url(./__footer/water-analysis-smart__footer.css);
 @import url(./__list/water-analysis-smart__list.css);
-
+@import url(./__select/water-analysis-smart__select.css);
+@import url(./__radio/water-analysis-smart__radio.css);
+@import url(./__input-radio/water-analysis-smart__input-radio.css);
+@import url(./__span/water-analysis-smart__span.css);
 
 .water-analysis-smart {
   display: none;
@@ -19,5 +22,8 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
+  }
+  .swiper-slide p {
+    margin-bottom: 16px;
   }
 }

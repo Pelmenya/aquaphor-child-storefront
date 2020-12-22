@@ -24,12 +24,12 @@ if( ! defined('AQUAPHOR_THEME_BLOCKS_CSS') )    define('AQUAPHOR_THEME_BLOCKS_CS
 
 if( ! defined('SITE_URL') )                     define('SITE_URL', get_site_url() . '/' );
 if( ! defined('AQUAPHOR_THEME_JS') )            define('AQUAPHOR_THEME_JS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/pages/' );
-if( ! defined('AQUAPHOR_THEME_JS_BLOCKS') )            define('AQUAPHOR_THEME_JS_BLOCKS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/blocks/' );
+if( ! defined('AQUAPHOR_THEME_JS_BLOCKS') )     define('AQUAPHOR_THEME_JS_BLOCKS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/blocks/' );
 if( ! defined('AQUAPHOR_THEME_JS_FUNCTIONS') )  define('AQUAPHOR_THEME_JS_FUNCTIONS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/functions/' );
-if( ! defined('AQUAPHOR_THEME_JS_WIDGETS') )  define('AQUAPHOR_THEME_JS_WIDGETS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/widgets/' );
+if( ! defined('AQUAPHOR_THEME_JS_WIDGETS') )    define('AQUAPHOR_THEME_JS_WIDGETS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/js/widgets/' );
 
-if( ! defined('AQUAPHOR_THEME_CSS') )           define('AQUAPHOR_THEME_CSS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/css/pages/' );
-if( ! defined('AQUAPHOR_THEME_TEMPLATE_PARTS') ) define('AQUAPHOR_THEME_TEMPLATE_PARTS', get_theme_root_uri() . '/aquaphor-child-storefront/template-parts/' );
+if( ! defined('AQUAPHOR_THEME_CSS') )             define('AQUAPHOR_THEME_CSS', get_theme_root_uri() . '/aquaphor-child-storefront/assets/css/pages/' );
+if( ! defined('AQUAPHOR_THEME_TEMPLATE_PARTS') )  define('AQUAPHOR_THEME_TEMPLATE_PARTS', get_theme_root_uri() . '/aquaphor-child-storefront/template-parts/' );
 
 
 
